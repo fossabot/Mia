@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02317FFC5E8D9F88ABF4A2EB017AACE6 /* Mia.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B8A0A5560062676BC854B5CDCED07F /* Mia.swift */; };
 		0DDA23C5D850AB15F1A21F167B8B0059 /* Pods-Mia_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BC2F94DC35D58FF178D43ACD25DC41E /* Pods-Mia_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		104514E5601DBC37543C48E5B7937A98 /* Pods-Mia_ExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D75334361B6B1D913887065B7323E1 /* Pods-Mia_ExampleTests-dummy.m */; };
-		213C9C908F4BD4BA4EE127AE709D1B46 /* Mia-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7318FB3B97693100D3F044D04C562F07 /* Mia-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16C2337BACABAFF8589E95713D8C6BEB /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE0AFCF74C65E4E0F9F751D5DA2393 /* Formatter.swift */; };
+		19C6E45583AA37F6242FC3AA62F9A181 /* Mia-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFF59EEA44F55DC30A12380333BDFC /* Mia-dummy.m */; };
+		262AE556B3A17556F34D79D267E9F367 /* LogLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E6FA5367C1C572812DE244F9650AA /* LogLevels.swift */; };
 		59649BF4E60B29AF944340A5B5A666F0 /* Pods-Mia_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14966A56C5584CE14A33551FC45E94DC /* Pods-Mia_Example-dummy.m */; };
+		834F983BE927CD1FF958C87DDD5FA0E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		84D598ADB925BE256129524C4B342682 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		B984F90A761FBBCF8F362822854A01F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		BE305D3F40FC0AEA7380DB0DB41A50C1 /* Mia-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 867894C91311C1EE2AF38796EB2305C2 /* Mia-dummy.m */; };
-		D7B88661B4BB47DE6730BEDBD806A1E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		BC2BE491936D296B06338F95B5EA623E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679850BC0BE6D5BF2A04BE83611CD83 /* Helpers.swift */; };
+		C0DF2FC746768E41118483346EB070CA /* Mia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0908FF0A9AEC9B0C70AD7DD3D323221 /* Mia.swift */; };
+		CF7A861785DA50B6F5B33CCE9FDD9964 /* Rosewood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894A48BDEF8EFE8A28E6DB9D48448D5 /* Rosewood.swift */; };
+		DCBCDA0938044732F9D04113F04BB352 /* Mia-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42605800790FE348DB724DA9538A8221 /* Mia-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE454886DA2764CE4D64EA7AAC130449 /* Pods-Mia_ExampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE5EACCE0A387107A0CDA8175616D6CB /* Pods-Mia_ExampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -24,7 +28,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1B139913D40BC9A709A1315EFCFA9B30;
+			remoteGlobalIDString = 3A34FA905C5FB62A9BA4454A9D16754A;
 			remoteInfo = Mia;
 		};
 /* End PBXContainerItemProxy section */
@@ -32,52 +36,56 @@
 /* Begin PBXFileReference section */
 		10B26B394E8DBF0B315A1F65948E1E81 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14966A56C5584CE14A33551FC45E94DC /* Pods-Mia_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mia_Example-dummy.m"; sourceTree = "<group>"; };
-		27BD0F34B44CC0895F25E1C947F8DC30 /* Mia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Mia.framework; path = Mia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		28CDBEF755E85E81329662EAACA8D4B3 /* Pods_Mia_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Mia_Example.framework; path = "Pods-Mia_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		39CBEC10CFC17FC7305277E54DF17952 /* Pods-Mia_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Mia_Example.modulemap"; sourceTree = "<group>"; };
+		1894A48BDEF8EFE8A28E6DB9D48448D5 /* Rosewood.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Rosewood.swift; sourceTree = "<group>"; };
+		25BE0AFCF74C65E4E0F9F751D5DA2393 /* Formatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		27BD0F34B44CC0895F25E1C947F8DC30 /* Mia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		282DB765461A6F1EE4A077FC829D6838 /* Mia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mia.xcconfig; sourceTree = "<group>"; };
+		28CDBEF755E85E81329662EAACA8D4B3 /* Pods_Mia_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39CBEC10CFC17FC7305277E54DF17952 /* Pods-Mia_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Mia_Example.modulemap"; sourceTree = "<group>"; };
+		42605800790FE348DB724DA9538A8221 /* Mia-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mia-umbrella.h"; sourceTree = "<group>"; };
 		426911CC139A7C26E2DA0F2C8A91D5AE /* Pods-Mia_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mia_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		46DF96FC3A6301398B4DDBA2AC32BF7A /* Pods_Mia_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Mia_ExampleTests.framework; path = "Pods-Mia_ExampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		466808809E2FBCCCE161D36124F4CD84 /* Mia-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mia-prefix.pch"; sourceTree = "<group>"; };
+		46DF96FC3A6301398B4DDBA2AC32BF7A /* Pods_Mia_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8B77B449690D0E6CF85821C982E8A0 /* Pods-Mia_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mia_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		52F9EB4F07AC99F19AFBBCE53A273629 /* Mia-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mia-prefix.pch"; sourceTree = "<group>"; };
-		54CC69B420FF3C59CF143E768CE06DBF /* Mia.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Mia.modulemap; sourceTree = "<group>"; };
-		62694B881FD729CB0F3AA2C9A63115B9 /* Pods-Mia_ExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Mia_ExampleTests.modulemap"; sourceTree = "<group>"; };
+		5679850BC0BE6D5BF2A04BE83611CD83 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		573265DA807E8D053484742ACCB63032 /* Mia.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Mia.modulemap; sourceTree = "<group>"; };
+		62694B881FD729CB0F3AA2C9A63115B9 /* Pods-Mia_ExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Mia_ExampleTests.modulemap"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6FA4C4FBE58F41B14A58AEB774C93661 /* Pods-Mia_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mia_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7318FB3B97693100D3F044D04C562F07 /* Mia-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mia-umbrella.h"; sourceTree = "<group>"; };
-		79151EBAA58B3F4348746530B3311AAF /* Mia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mia.xcconfig; sourceTree = "<group>"; };
 		7BC2F94DC35D58FF178D43ACD25DC41E /* Pods-Mia_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mia_Example-umbrella.h"; sourceTree = "<group>"; };
 		85C3C796619C979B18BE4E75391F3C91 /* Pods-Mia_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mia_Example.release.xcconfig"; sourceTree = "<group>"; };
-		867894C91311C1EE2AF38796EB2305C2 /* Mia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mia-dummy.m"; sourceTree = "<group>"; };
-		888B88BD4DB49C602400021C99F0A18A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EFFF59EEA44F55DC30A12380333BDFC /* Mia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mia-dummy.m"; sourceTree = "<group>"; };
 		92F7FB337553C6C3ED027CB4B38EEC1B /* Pods-Mia_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mia_Example-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99890CF7C3A7D60EAAFB503DCE0843E8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AFB4170A67403463F3C0E458A477359 /* Pods-Mia_ExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mia_ExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A3B8A0A5560062676BC854B5CDCED07F /* Mia.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Mia.swift; sourceTree = "<group>"; };
 		A9F43E83BA2C51984F9CC50F36F67614 /* Pods-Mia_ExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mia_ExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AF9306C3D8E83F288AF04AA5C58DB4F3 /* Pods-Mia_ExampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mia_ExampleTests-resources.sh"; sourceTree = "<group>"; };
+		B51E6FA5367C1C572812DE244F9650AA /* LogLevels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogLevels.swift; sourceTree = "<group>"; };
 		C589007D975F680186EA301DEC8F4A25 /* Pods-Mia_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mia_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE5EACCE0A387107A0CDA8175616D6CB /* Pods-Mia_ExampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mia_ExampleTests-umbrella.h"; sourceTree = "<group>"; };
 		D4D75334361B6B1D913887065B7323E1 /* Pods-Mia_ExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mia_ExampleTests-dummy.m"; sourceTree = "<group>"; };
 		D9B25FF992104D02D7268712F4F6C86F /* Pods-Mia_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mia_Example-resources.sh"; sourceTree = "<group>"; };
+		E0908FF0A9AEC9B0C70AD7DD3D323221 /* Mia.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Mia.swift; sourceTree = "<group>"; };
 		EA45DBF486BC6488151B8F64FD28471D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA8F5215FBA1C11A6A14D8E677131E8F /* Pods-Mia_ExampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mia_ExampleTests-frameworks.sh"; sourceTree = "<group>"; };
 		EB2A400341FABDAAE3C367E607FF9EAE /* Pods-Mia_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mia_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		30077D86B26777AEFFFF86336C112669 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D7B88661B4BB47DE6730BEDBD806A1E5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		66F204783D6F3371F8C35FEDA70B01A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B984F90A761FBBCF8F362822854A01F5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF328086C0593542689B77955B62D7F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834F983BE927CD1FF958C87DDD5FA0E5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,12 +118,12 @@
 			path = "Target Support Files/Pods-Mia_ExampleTests";
 			sourceTree = "<group>";
 		};
-		40EDBFD96F2EC6CBE9E4760FCCB0917E /* Development Pods */ = {
+		2BD355A5C967137AA86E63C0CD130596 /* Mia */ = {
 			isa = PBXGroup;
 			children = (
-				A7F346E31AE5232564D04F8E3320CC3A /* Mia */,
+				C1692B3A697984613488AC5BC853ADFD /* Rosewood */,
 			);
-			name = "Development Pods";
+			path = Mia;
 			sourceTree = "<group>";
 		};
 		44686B47D5AD3A38BA078591BF84B6D7 /* Pods-Mia_Example */ = {
@@ -136,25 +144,45 @@
 			path = "Target Support Files/Pods-Mia_Example";
 			sourceTree = "<group>";
 		};
+		47DF8AF217E89E32702CAD34E7A01F9D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD9260155B4EC35FEF0CA0690FA04E35 /* Mia */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5174C2CD0CBB9EDDAC5E9A4EC219D3F7 /* Mia */ = {
+			isa = PBXGroup;
+			children = (
+				E0908FF0A9AEC9B0C70AD7DD3D323221 /* Mia.swift */,
+			);
+			path = Mia;
+			sourceTree = "<group>";
+		};
+		5602A992A743AE17058F2851B2C30055 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				99890CF7C3A7D60EAAFB503DCE0843E8 /* Info.plist */,
+				573265DA807E8D053484742ACCB63032 /* Mia.modulemap */,
+				282DB765461A6F1EE4A077FC829D6838 /* Mia.xcconfig */,
+				8EFFF59EEA44F55DC30A12380333BDFC /* Mia-dummy.m */,
+				466808809E2FBCCCE161D36124F4CD84 /* Mia-prefix.pch */,
+				42605800790FE348DB724DA9538A8221 /* Mia-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Mia";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				40EDBFD96F2EC6CBE9E4760FCCB0917E /* Development Pods */,
+				47DF8AF217E89E32702CAD34E7A01F9D /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				B85A46838F6DA4F086AA329D94411E89 /* Products */,
 				CA0C8841FF17CB46153217A8BEEAC451 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		A7F346E31AE5232564D04F8E3320CC3A /* Mia */ = {
-			isa = PBXGroup;
-			children = (
-				C6911D35336A85D6F193505EF85CEAE8 /* Mia */,
-				F136C1D0B5EB7448FB8EDF9F98AAE674 /* Support Files */,
-			);
-			name = Mia;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		B85A46838F6DA4F086AA329D94411E89 /* Products */ = {
@@ -167,6 +195,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B87BCCC9A2669A20638F86A2A3166A80 /* Rosewood */ = {
+			isa = PBXGroup;
+			children = (
+				2BD355A5C967137AA86E63C0CD130596 /* Mia */,
+			);
+			name = Rosewood;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,13 +211,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C6911D35336A85D6F193505EF85CEAE8 /* Mia */ = {
+		C1692B3A697984613488AC5BC853ADFD /* Rosewood */ = {
 			isa = PBXGroup;
 			children = (
-				A3B8A0A5560062676BC854B5CDCED07F /* Mia.swift */,
+				25BE0AFCF74C65E4E0F9F751D5DA2393 /* Formatter.swift */,
+				5679850BC0BE6D5BF2A04BE83611CD83 /* Helpers.swift */,
+				B51E6FA5367C1C572812DE244F9650AA /* LogLevels.swift */,
+				1894A48BDEF8EFE8A28E6DB9D48448D5 /* Rosewood.swift */,
 			);
-			name = Mia;
-			path = Mia;
+			path = Rosewood;
 			sourceTree = "<group>";
 		};
 		CA0C8841FF17CB46153217A8BEEAC451 /* Targets Support Files */ = {
@@ -193,6 +231,17 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		CD9260155B4EC35FEF0CA0690FA04E35 /* Mia */ = {
+			isa = PBXGroup;
+			children = (
+				5174C2CD0CBB9EDDAC5E9A4EC219D3F7 /* Mia */,
+				B87BCCC9A2669A20638F86A2A3166A80 /* Rosewood */,
+				5602A992A743AE17058F2851B2C30055 /* Support Files */,
+			);
+			name = Mia;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,28 +250,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		F136C1D0B5EB7448FB8EDF9F98AAE674 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				888B88BD4DB49C602400021C99F0A18A /* Info.plist */,
-				54CC69B420FF3C59CF143E768CE06DBF /* Mia.modulemap */,
-				79151EBAA58B3F4348746530B3311AAF /* Mia.xcconfig */,
-				867894C91311C1EE2AF38796EB2305C2 /* Mia-dummy.m */,
-				52F9EB4F07AC99F19AFBBCE53A273629 /* Mia-prefix.pch */,
-				7318FB3B97693100D3F044D04C562F07 /* Mia-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Mia";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		97F019CECD378CFCF50D92899B3D1F2B /* Headers */ = {
+		7C1FF9A9B0A4643203C5A57D02901061 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				213C9C908F4BD4BA4EE127AE709D1B46 /* Mia-umbrella.h in Headers */,
+				DCBCDA0938044732F9D04113F04BB352 /* Mia-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,13 +280,13 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1B139913D40BC9A709A1315EFCFA9B30 /* Mia */ = {
+		3A34FA905C5FB62A9BA4454A9D16754A /* Mia */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 917353D5E1FA7FF0D245A56FC4818C56 /* Build configuration list for PBXNativeTarget "Mia" */;
+			buildConfigurationList = 393F0959D851060499D92E4EB5E86DDF /* Build configuration list for PBXNativeTarget "Mia" */;
 			buildPhases = (
-				BF714C8F2023E821C0E1E65168BE0B10 /* Sources */,
-				30077D86B26777AEFFFF86336C112669 /* Frameworks */,
-				97F019CECD378CFCF50D92899B3D1F2B /* Headers */,
+				04E8D5E375DA1E2EC5E1EB971803FA9F /* Sources */,
+				AF328086C0593542689B77955B62D7F1 /* Frameworks */,
+				7C1FF9A9B0A4643203C5A57D02901061 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -318,7 +353,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B139913D40BC9A709A1315EFCFA9B30 /* Mia */,
+				3A34FA905C5FB62A9BA4454A9D16754A /* Mia */,
 				56D6A72C0999BD247A13132093BFBFC6 /* Pods-Mia_Example */,
 				8B86D5D781AFE9A1ABED7580055C7010 /* Pods-Mia_ExampleTests */,
 			);
@@ -326,20 +361,24 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		04E8D5E375DA1E2EC5E1EB971803FA9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C2337BACABAFF8589E95713D8C6BEB /* Formatter.swift in Sources */,
+				BC2BE491936D296B06338F95B5EA623E /* Helpers.swift in Sources */,
+				262AE556B3A17556F34D79D267E9F367 /* LogLevels.swift in Sources */,
+				19C6E45583AA37F6242FC3AA62F9A181 /* Mia-dummy.m in Sources */,
+				C0DF2FC746768E41118483346EB070CA /* Mia.swift in Sources */,
+				CF7A861785DA50B6F5B33CCE9FDD9964 /* Rosewood.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A185AFD42C09347A2E33F44E68F2A67E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				104514E5601DBC37543C48E5B7937A98 /* Pods-Mia_ExampleTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF714C8F2023E821C0E1E65168BE0B10 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE305D3F40FC0AEA7380DB0DB41A50C1 /* Mia-dummy.m in Sources */,
-				02317FFC5E8D9F88ABF4A2EB017AACE6 /* Mia.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,50 +396,15 @@
 		F8169A55EC581B80DDA76BA4CB8FA483 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Mia;
-			target = 1B139913D40BC9A709A1315EFCFA9B30 /* Mia */;
+			target = 3A34FA905C5FB62A9BA4454A9D16754A /* Mia */;
 			targetProxy = 1E3446AEA699EC71E9EED38C29070EB7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1D4851180D567A94C8B5522AE9BD1611 /* Release */ = {
+		2235DB09135721434D211C228B4AC011 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79151EBAA58B3F4348746530B3311AAF /* Mia.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Mia/Mia-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Mia/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Mia/Mia.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Mia;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		508A14C96043423CF80051AC781066A2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79151EBAA58B3F4348746530B3311AAF /* Mia.xcconfig */;
+			baseConfigurationReference = 282DB765461A6F1EE4A077FC829D6838 /* Mia.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -582,6 +586,41 @@
 			};
 			name = Release;
 		};
+		89F694F2136CD5696A8FE85CC4F8A4CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 282DB765461A6F1EE4A077FC829D6838 /* Mia.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Mia/Mia-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Mia/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Mia/Mia.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Mia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		97803B46811A9BDB5E70FA1303AFBFFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -687,6 +726,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		393F0959D851060499D92E4EB5E86DDF /* Build configuration list for PBXNativeTarget "Mia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2235DB09135721434D211C228B4AC011 /* Debug */,
+				89F694F2136CD5696A8FE85CC4F8A4CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4ECC0F28C575C112552B86B0C4D1DC4D /* Build configuration list for PBXNativeTarget "Pods-Mia_ExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -701,15 +749,6 @@
 			buildConfigurations = (
 				79CC17BA694DCF83DFFC612DBE9DF435 /* Debug */,
 				86319AE4AE19D2F313FDADA2F8F3A5DF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		917353D5E1FA7FF0D245A56FC4818C56 /* Build configuration list for PBXNativeTarget "Mia" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				508A14C96043423CF80051AC781066A2 /* Debug */,
-				1D4851180D567A94C8B5522AE9BD1611 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

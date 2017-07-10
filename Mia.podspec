@@ -8,39 +8,26 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Mia'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of Mia.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '0.1.1'
+  s.summary          = 'A list of tools to steamline my developement.'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A list of tools to steamline my developement.
+
+Rosewood: A simple to use logging tool.
+
                        DESC
 
   s.homepage         = 'https://github.com/multinerd/Mia'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'multinerd' => 'multinerd@users.noreply.github.com' }
   s.source           = { :git => 'https://github.com/multinerd/Mia.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'Mia/Mia.{swift}'
   
-  # s.resource_bundles = {
-  #   'Mia' => ['Mia/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  
-
-  
+  s.subspec 'Rosewood' do |sp|
+      sp.source_files = 'MIA/Rosewood/**/*.{swift}'
+  end
   
 end

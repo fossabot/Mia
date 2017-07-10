@@ -1,19 +1,14 @@
 platform :ios, '9.0'
 
 
-
 target 'Mia_Example' do
-    use_frameworks!
-    
-    
-    
+  use_frameworks!
+
+
   pod 'Mia', :path => '../'
 
-  
-  
-  
-  
+
   target 'Mia_ExampleTests' do
-      inherit! :search_paths
+    inherit! :search_paths
   end
 end

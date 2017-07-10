@@ -1,5 +1,7 @@
 PODS:
-  - Mia (0.1.0)
+  - Mia (0.1.0):
+    - Mia/Rosewood (= 0.1.0)
+  - Mia/Rosewood (0.1.0)
 
 DEPENDENCIES:
   - Mia (from `../`)
@@ -9,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Mia: 50d7db1b7c79491e26ddd0a30ae166254807f89d
+  Mia: d8ee60f32d378e72a10ab85e43c00a429f1c8054
 
 PODFILE CHECKSUM: f577096cf9e309eae9218864bac27ae52eccef32
 

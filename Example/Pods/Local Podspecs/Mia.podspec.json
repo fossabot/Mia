@@ -18,5 +18,11 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "Mia/Mia.{swift}"
+  "source_files": "Mia/Mia.{swift}",
+  "subspecs": [
+    {
+      "name": "Rosewood",
+      "source_files": "MIA/Rosewood/**/*.{swift}"
+    }
+  ]
 }
