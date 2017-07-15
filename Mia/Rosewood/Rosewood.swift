@@ -35,9 +35,7 @@ public class Rosewood {
         
     }
     
-    private init() {
-    
-    }
+    private init() { }
     
     
     func printToDebugger(_ message: String) -> Void {

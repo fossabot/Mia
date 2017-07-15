@@ -1,8 +1,8 @@
 {
   "name": "Mia",
-  "version": "0.1.0",
-  "summary": "A short description of Mia.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.1.1",
+  "summary": "A list of tools to steamline my developement.",
+  "description": "A list of tools to steamline my developement.\n\nRosewood: A simple to use logging tool.\nMonica: A toolkit to measure performance.",
   "homepage": "https://github.com/multinerd/Mia",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/multinerd/Mia.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.0"
@@ -23,6 +23,10 @@
     {
       "name": "Rosewood",
       "source_files": "MIA/Rosewood/**/*.{swift}"
+    },
+    {
+      "name": "Monica",
+      "source_files": "MIA/Monica/**/*.{swift}"
     }
   ]
 }

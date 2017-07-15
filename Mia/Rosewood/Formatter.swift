@@ -118,7 +118,7 @@ extension Formatter {
     }
     
     
-    // For other use
+    // For prettyprint use
     func format(level: LogLevel, item: String, file: String, line: Int, function: String) -> String {
         
         let arguments = components.map { (component: Component) -> CVarArg in

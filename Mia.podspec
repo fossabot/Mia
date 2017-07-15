@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
 A list of tools to steamline my developement.
 
 Rosewood: A simple to use logging tool.
+Monica: A toolkit to measure performance.
 
                        DESC
 
@@ -28,6 +29,10 @@ Rosewood: A simple to use logging tool.
   
   s.subspec 'Rosewood' do |sp|
       sp.source_files = 'MIA/Rosewood/**/*.{swift}'
+  end
+  
+  s.subspec 'Monica' do |sp|
+      sp.source_files = 'MIA/Monica/**/*.{swift}'
   end
   
 end
