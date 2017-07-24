@@ -7,7 +7,6 @@ class Mia_RosewoodTests: XCTestCase {
         
         let rosewood = Rosewood.shared
         
-        //rosewood.verbose("Reset to ", nil)
         rosewood.verbose("Who am I?: ", self)
         rosewood.debug("1 + 1 = ", 1 + 1)
         rosewood.info("IsMainThread: ", Thread.current.isMainThread)
@@ -52,6 +51,43 @@ class Mia_RosewoodTests: XCTestCase {
         Thread.sleep(forTimeInterval: 1.0)
         
     }
+    
+    
+    
+        var count = 0
+    
+        func longtask() -> Void {
+    
+            count += 1
+            if count % 2 == 0 {
+                Thread.sleep(forTimeInterval: 0.25)
+            } else {
+                Thread.sleep(forTimeInterval: 0.5)
+            }
+        }
+    
+    
+        func testRosewoodBenchmark() -> Void {
+            let rosewood = Rosewood.shared
+    
+            rosewood.benchmark("Tough Math 1", block: longtask)
+    
+            rosewood.benchmark("Tough Math 10", iterations: 5, block: longtask)
+    
+            rosewood.benchmark("Tough Math Inline", block: {
+                longtask()
+                rosewood.benchmarkLog(message: "Hello", includeTimeStamp: true)
+                longtask()
+                longtask()
+                longtask()
+                rosewood.benchmarkLog(message: "Hi", includeTimeStamp: true)
+                longtask()
+            })
+    
+            Thread.sleep(forTimeInterval: 1.0)
+    
+        }
+    
     
 }
 
