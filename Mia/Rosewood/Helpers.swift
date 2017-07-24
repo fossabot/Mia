@@ -1,5 +1,3 @@
-// MARK: - String Extensions
-
 extension String {
     
     var lastPathComponent: String {
@@ -13,14 +11,20 @@ extension String {
 }
 
 
-// MARK: - NSObject Extensions
+extension Double {
+    
+    var milliSeconds: String {
+        return String(format: "%03.2fms", self * 1000)
+    }
+    
+}
+
 
 extension NSObject {
     
     public class func reflect(objects: NSArray) -> [Any] {
         
         return objects.map { value -> Any in
-            
             // strings
             if let value = value as? String {
                 return value
@@ -75,7 +79,6 @@ extension NSObject {
         var dictionary: [String: Any] = [:]
         
         Mirror(reflecting: object).children.forEach { label, value in
-            
             // strings
             if let key = label, let value = value as? String {
                 dictionary.updateValue(value, forKey: key)

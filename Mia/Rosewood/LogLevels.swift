@@ -1,5 +1,6 @@
 // MARK: - LogLevel
 
+/// Enum representation of the different log leve.s
 public enum LogLevel {
     case pretty
     case measure
@@ -11,14 +12,14 @@ public enum LogLevel {
     
     var description: String {
         switch self {
-        case .pretty:   return "💖Prettify".uppercased()
-        case .measure:  return "🖤Measure ".uppercased()
-        case .verbose:  return "💚Verbose ".uppercased()
-        case .info:     return "💙Info    ".uppercased()
-        case .warning:  return "💛Warning ".uppercased()
-        case .debug:    return "💜Debug   ".uppercased()
-        case .error:    return "❤️️Error   ".uppercased()
-        
+            case .pretty:   return "💖Prettify".uppercased()
+            case .measure:  return "🖤Measure ".uppercased()
+            case .verbose:  return "💚Verbose ".uppercased()
+            case .info:     return "💙Info    ".uppercased()
+            case .warning:  return "💛Warning ".uppercased()
+            case .debug:    return "💜Debug   ".uppercased()
+            case .error:    return "❤️️Error   ".uppercased()
+            
         }
     }
     
@@ -26,16 +27,15 @@ public enum LogLevel {
 
 
 // MARK: - Private Extensions
-
 extension LogLevel: Comparable {
     
-    static public func ==(x: LogLevel, y: LogLevel) -> Bool {
+    public static func ==(x: LogLevel, y: LogLevel) -> Bool {
         
         return x.hashValue == y.hashValue
     }
     
     
-    static public func <(x: LogLevel, y: LogLevel) -> Bool {
+    public static func <(x: LogLevel, y: LogLevel) -> Bool {
         
         return x.hashValue < y.hashValue
     }

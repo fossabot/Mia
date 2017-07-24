@@ -1,27 +1,29 @@
 // MARK: - Components
-
-/// The log components.
-///
-/// - date: The log date.
-/// - file: The log file path.
-/// - function: The log function.
-/// - line: The log line number.
-/// - level: The severity level.
-/// - message: The log message.
-/// - block->Any?: The log block.
 public enum Component {
+    /// The log date.
     case date(String)
+    
+    /// The log file path.
     case file(fullPath: Bool, fileExtension: Bool)
+    
+    /// The log function.
     case function
+    
+    /// The log line number.
     case line
+    
+    /// The severity level.
     case level
+    
+    /// The log message.
     case message
+    
+    /// The log block.
     case block(() -> Any?)
 }
 
 
 // MARK: - Formatter Configurations
-
 public class Formatter {
     
     /// The formatter format.
@@ -29,9 +31,6 @@ public class Formatter {
     
     /// The formatter components.
     var components: [Component]
-    
-    /// The formatter logger.
-    weak var logger: Rosewood!
     
     /// The formatter textual representation.
     var description: String {
@@ -66,7 +65,6 @@ public class Formatter {
 
 
 // MARK: - Formatter Presets
-
 extension Formatter {
     
     /// Default formatter provided for your convenience
@@ -82,7 +80,6 @@ extension Formatter {
 
 
 // MARK: - Formatter Logging Methods
-
 extension Formatter {
     
     // For logging use
@@ -90,26 +87,26 @@ extension Formatter {
         
         let arguments = components.map { (component: Component) -> CVarArg in
             switch component {
-            case .date(let dateFormat):
-                return format(date: Date(), dateFormat: dateFormat)
-            
-            case .file(let fullPath, let fileExtension):
-                return format(file: file, fullPath: fullPath, fileExtension: fileExtension)
-            
-            case .function:
-                return String(function)
-            
-            case .line:
-                return String(line)
-            
-            case .level:
-                return level.description
-            
-            case .message:
-                return items.map({ String(describing: $0) }).joined(separator: separator)
-            
-            case .block(let block):
-                return block().flatMap({ String(describing: $0) }) ?? ""
+                case .date(let dateFormat):
+                    return format(date: Date(), dateFormat: dateFormat)
+                
+                case .file(let fullPath, let fileExtension):
+                    return format(file: file, fullPath: fullPath, fileExtension: fileExtension)
+                
+                case .function:
+                    return String(function)
+                
+                case .line:
+                    return String(line)
+                
+                case .level:
+                    return level.description
+                
+                case .message:
+                    return items.map({ String(describing: $0) }).joined(separator: separator)
+                
+                case .block(let block):
+                    return block().flatMap({ String(describing: $0) }) ?? ""
                 
             }
         }
@@ -123,26 +120,26 @@ extension Formatter {
         
         let arguments = components.map { (component: Component) -> CVarArg in
             switch component {
-            case .date(let dateFormat):
-                return format(date: Date(), dateFormat: dateFormat)
-            
-            case .file(let fullPath, let fileExtension):
-                return format(file: file, fullPath: fullPath, fileExtension: fileExtension)
-            
-            case .function:
-                return String(function)
-            
-            case .line:
-                return String(line)
-            
-            case .level:
-                return level.description
-            
-            case .message:
-                return item
-            
-            case .block(let block):
-                return block().flatMap({ String(describing: $0) }) ?? ""
+                case .date(let dateFormat):
+                    return format(date: Date(), dateFormat: dateFormat)
+                
+                case .file(let fullPath, let fileExtension):
+                    return format(file: file, fullPath: fullPath, fileExtension: fileExtension)
+                
+                case .function:
+                    return String(function)
+                
+                case .line:
+                    return String(line)
+                
+                case .level:
+                    return level.description
+                
+                case .message:
+                    return item
+                
+                case .block(let block):
+                    return block().flatMap({ String(describing: $0) }) ?? ""
                 
             }
         }
@@ -154,7 +151,6 @@ extension Formatter {
 
 
 // MARK: - Formatter Private Methods
-
 extension Formatter {
     
     func format(date: Date, dateFormat: String) -> String {
