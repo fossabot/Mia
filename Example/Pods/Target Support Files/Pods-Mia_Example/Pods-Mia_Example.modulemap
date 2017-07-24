@@ -1,6 +1,0 @@
-framework module Pods_Mia_Example {
-  umbrella header "Pods-Mia_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
