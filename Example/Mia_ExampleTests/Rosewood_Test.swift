@@ -71,11 +71,11 @@ class Mia_RosewoodTests: XCTestCase {
     
             Rosewood.benchmark("Tough Math Inline", block: {
                 longtask()
-                rosewood.benchmarkLog(message: "Hello", includeTimeStamp: true)
+                Rosewood.benchmarkLog(message: "Hello", includeTimeStamp: true)
                 longtask()
                 longtask()
                 longtask()
-                rosewood.benchmarkLog(message: "Hi", includeTimeStamp: true)
+                Rosewood.benchmarkLog(message: "Hi", includeTimeStamp: true)
                 longtask()
             })
     
