@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/Mia.svg?style=flat)](http://cocoapods.org/pods/Mia)
 [![Platform](https://img.shields.io/cocoapods/p/Mia.svg?style=flat)](http://cocoapods.org/pods/Mia)
 [![codebeat badge](https://codebeat.co/badges/c2d27f95-2d07-4e0f-a321-2c98c629fd1f)](https://codebeat.co/projects/github-com-multinerd-mia-master)
+[![codecov](https://codecov.io/gh/multinerd/Mia/branch/master/graph/badge.svg)](https://codecov.io/gh/multinerd/Mia)
 
 ## Example
 
