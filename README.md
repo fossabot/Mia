@@ -1,5 +1,6 @@
 # Mia
 
+[![codebeat badge](https://codebeat.co/badges/c2d27f95-2d07-4e0f-a321-2c98c629fd1f)](https://codebeat.co/projects/github-com-multinerd-mia-master)
 [![CI Status](http://img.shields.io/travis/multinerd/Mia.svg?style=flat)](https://travis-ci.org/multinerd/Mia)
 [![Version](https://img.shields.io/cocoapods/v/Mia.svg?style=flat)](http://cocoapods.org/pods/Mia)
 [![License](https://img.shields.io/cocoapods/l/Mia.svg?style=flat)](http://cocoapods.org/pods/Mia)
