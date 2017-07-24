@@ -1,0 +1,44 @@
+{
+  "name": "Mia",
+  "version": "0.1.2",
+  "summary": "A list of tools to steamline my developement.",
+  "description": "A list of tools to steamline my developement.\n\nRosewood: A simple to use logging tool.\nMonica: A toolkit to measure performance.",
+  "homepage": "https://github.com/multinerd/Mia",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "multinerd": "multinerd@users.noreply.github.com"
+  },
+  "source": {
+    "git": "https://github.com/multinerd/Mia.git",
+    "tag": "0.1.2"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "Mia/*.{swift}",
+  "subspecs": [
+    {
+      "name": "Rosewood",
+      "source_files": "Mia/Rosewood/**/*.{swift}"
+    },
+    {
+      "name": "Wrappers",
+      "source_files": "Mia/Wrappers/**/*.{swift}"
+    },
+    {
+      "name": "Extensions",
+      "source_files": "Mia/Extensions/**/*.{swift}"
+    },
+    {
+      "name": "Monica",
+      "source_files": "Mia/Monica/**/*.{swift}"
+    },
+    {
+      "name": "Reflect",
+      "source_files": "Mia/Reflect/**/*.{swift}"
+    }
+  ]
+}
