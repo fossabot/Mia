@@ -10,8 +10,8 @@ before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - pod install --project-directory=Example
 script:
-- cd Example
 - pod lib lint
+- cd Example
 - xcodebuild -workspace Mia.xcworkspace -scheme Mia-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build test
 - xcodebuild -workspace Mia.xcworkspace -scheme Mia-ExampleTest -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build test
 after_success:
