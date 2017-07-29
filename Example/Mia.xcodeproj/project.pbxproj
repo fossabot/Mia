@@ -47,7 +47,7 @@
 		95C4D5D983F5C817484BAFDE /* Pods-Mia_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_Example/Pods-Mia_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A1C569D8325646DE21B963AF /* Pods-Mia_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_ExampleTests/Pods-Mia_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A594C278B9DC60DA0E666ADF /* Pods_Mia_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE2D81192D0E32C441539FB7 /* Mia.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Mia.podspec; path = ../Mia.podspec; sourceTree = "<group>"; };
+		BE2D81192D0E32C441539FB7 /* Mia.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 1; includeInIndex = 1; name = Mia.podspec; path = ../Mia.podspec; sourceTree = "<group>"; };
 		C0FEAC2062BF0A514A420216 /* Pods_Mia_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D164CBEDF968D9EB1C927526 /* Pods_Mia_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */

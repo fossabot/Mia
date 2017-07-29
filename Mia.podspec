@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Mia'
-  s.version          = '0.1.1'
+  s.version          = '0.1.3'
   s.summary          = 'A list of tools to steamline my developement.'
   s.description      = <<-DESC
 A list of tools to steamline my developement.
@@ -22,17 +22,26 @@ Monica: A toolkit to measure performance.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'multinerd' => 'multinerd@users.noreply.github.com' }
   s.source           = { :git => 'https://github.com/multinerd/Mia.git', :tag => s.version.to_s }
-  
+
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'Mia/Mia.{swift}'
-  
+  s.source_files = 'Mia/*.{swift}'
+
   s.subspec 'Rosewood' do |sp|
-      sp.source_files = 'MIA/Rosewood/**/*.{swift}'
+      sp.source_files = 'Mia/Rosewood/**/*.{swift}'
   end
-  
-  s.subspec 'Monica' do |sp|
-      sp.source_files = 'MIA/Monica/**/*.{swift}'
+
+  s.subspec 'Reflect' do |sp|
+    sp.source_files = 'Mia/Reflect/**/*.{swift}'
   end
-  
+
+  s.subspec 'Wrappers' do |sp|
+    sp.source_files = 'Mia/Wrappers/**/*.{swift}'
+  end
+
+  s.subspec 'Extensions' do |sp|
+    sp.source_files = 'Mia/Extensions/**/*.{swift}'
+  end
+
+
 end

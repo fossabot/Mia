@@ -17,6 +17,10 @@ extension Double {
         return String(format: "%03.2fms", self * 1000)
     }
     
+    var seconds: String {
+        return String(format: "%03.2fs", self)
+    }
+    
 }
 
 

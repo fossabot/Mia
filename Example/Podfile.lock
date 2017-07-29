@@ -1,15 +1,13 @@
 PODS:
-  - Mia (0.1.2):
-    - Mia/Extensions (= 0.1.2)
-    - Mia/Monica (= 0.1.2)
-    - Mia/Reflect (= 0.1.2)
-    - Mia/Rosewood (= 0.1.2)
-    - Mia/Wrappers (= 0.1.2)
-  - Mia/Extensions (0.1.2)
-  - Mia/Monica (0.1.2)
-  - Mia/Reflect (0.1.2)
-  - Mia/Rosewood (0.1.2)
-  - Mia/Wrappers (0.1.2)
+  - Mia (0.1.3):
+    - Mia/Extensions (= 0.1.3)
+    - Mia/Reflect (= 0.1.3)
+    - Mia/Rosewood (= 0.1.3)
+    - Mia/Wrappers (= 0.1.3)
+  - Mia/Extensions (0.1.3)
+  - Mia/Reflect (0.1.3)
+  - Mia/Rosewood (0.1.3)
+  - Mia/Wrappers (0.1.3)
 
 DEPENDENCIES:
   - Mia (from `../`)
@@ -19,7 +17,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Mia: 315799ca6a3ba18cc0f19955237a7e2c2da5b49c
+  Mia: cf4378844c4cd4cb245be2b4db7eb63be0b4e7b0
 
 PODFILE CHECKSUM: 330aaf8b99f7110f6c38fc3659462aa3c9615823
 
