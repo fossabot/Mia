@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Mia'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A list of tools to steamline my developement.'
   s.description      = <<-DESC
 A list of tools to steamline my developement.
 
 Rosewood: A simple to use logging tool.
-Monica: A toolkit to measure performance.
+HTMLtoPDF: Convert HTML strings to PDF.
 
                        DESC
 
