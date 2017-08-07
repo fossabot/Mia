@@ -1,6 +1,6 @@
 internal let queue = DispatchQueue(label: "Multinerd.Rosewood")
 
-public typealias MeasuredBlock = () -> ()
+public typealias BenchmarkBlock = () -> ()
 
 
 // MARK: - Rosewood Delegate
@@ -11,30 +11,31 @@ public protocol RosewoodDelegate: NSObjectProtocol {
 
 // MARK: - Rosewood Configurations
 public struct Rosewood {
-    
+
     /// The logging delegate.
     public static weak var delegate: RosewoodDelegate?
-    
+
+
     /// The logging configurations.
     public struct Configuration {
-        
+
         /// The logger state.
         public static var enabled: Bool = true
-        
+
         /// The minimum level of severity.
         public static var minLevel: LogLevel = .verbose
-        
+
         /// The logger formatter.
-        public static var formatter: Formatter = .default
-        
+        public static var formatter: LogFormatter = .default
+
         /// The logger state.
         public static var isAsync: Bool = true
-        
+
     }
-    
-    
+
+
     static func printToDebugger(_ message: String) -> Void {
-        
+
         if Configuration.isAsync {
             queue.async {
                 Swift.print(message)
@@ -46,15 +47,15 @@ public struct Rosewood {
                 Rosewood.delegate?.rosewoodDidLog(message: message)
             }
         }
-        
+
     }
-    
+
 }
 
 
 // MARK: - Rosewood Logging
 extension Rosewood {
-    
+
     /// Logs a message with a verbose severity level.
     ///
     /// - Parameters:
@@ -64,11 +65,10 @@ extension Rosewood {
     ///   - line: The line at which the log happens.
     ///   - function: The function in which the log happens.
     public static func verbose(_ items: Any..., separator: String = " ", file: String = #file, line: Int = #line, function: String = #function) {
-        
+
         log(.verbose, items, separator, file, line, function)
     }
-    
-    
+
     /// Logs a message with a debug severity level.
     ///
     /// - Parameters:
@@ -78,11 +78,10 @@ extension Rosewood {
     ///   - line: The line at which the log happens.
     ///   - function: The function in which the log happens.
     public static func debug(_ items: Any..., separator: String = " ", file: String = #file, line: Int = #line, function: String = #function) {
-        
+
         log(.debug, items, separator, file, line, function)
     }
-    
-    
+
     /// Logs a message with a info severity level.
     ///
     /// - Parameters:
@@ -92,11 +91,10 @@ extension Rosewood {
     ///   - line: The line at which the log happens.
     ///   - function: The function in which the log happens.
     public static func info(_ items: Any..., separator: String = " ", file: String = #file, line: Int = #line, function: String = #function) {
-        
+
         log(.info, items, separator, file, line, function)
     }
-    
-    
+
     /// Logs a message with a warning severity level.
     ///
     /// - Parameters:
@@ -106,11 +104,10 @@ extension Rosewood {
     ///   - line: The line at which the log happens.
     ///   - function: The function in which the log happens.
     public static func warning(_ items: Any..., separator: String = " ", file: String = #file, line: Int = #line, function: String = #function) {
-        
+
         log(.warning, items, separator, file, line, function)
     }
-    
-    
+
     /// Logs a message with a error severity level.
     ///
     /// - Parameters:
@@ -120,28 +117,27 @@ extension Rosewood {
     ///   - line: The line at which the log happens.
     ///   - function: The function in which the log happens.
     public static func error(_ items: Any..., separator: String = " ", file: String = #file, line: Int = #line, function: String = #function) {
-        
+
         log(.error, items, separator, file, line, function)
     }
-    
-    
+
     private static func log(_ level: LogLevel, _ items: [Any], _ separator: String, _ file: String, _ line: Int, _ function: String) {
-        
+
         guard Configuration.enabled && level >= Configuration.minLevel else {
             return
         }
-        
+
         let result = Configuration.formatter.format(level: level, items: items, separator: separator, file: file, line: line, function: function)
         printToDebugger(result)
-        
+
     }
-    
+
 }
 
 
 // MARK: - Rosewood PrettyPrint
 extension Rosewood {
-    
+
     /// Prettyprint an item.
     ///
     /// - Parameters:
@@ -150,24 +146,23 @@ extension Rosewood {
     ///   - line: The line at which the log happens.
     ///   - function: The function in which the log happens.
     public static func prettyprint(_ items: Any?..., file: String = #file, line: Int = #line, function: String = #function) {
-        
+
         for item in items {
             log(.pretty, item, file, line, function)
         }
     }
-    
-    
+
     private static func log(_ level: LogLevel, _ item: Any?, _ file: String, _ line: Int, _ function: String) {
-        
+
         guard Configuration.enabled else {
             return
         }
-        
+
         var type = "nil"
         if let x = item {
             type = String(describing: Mirror(reflecting: x).subjectType)//.trimmingCharacters(in: CharacterSet.letters.inverted)
         };
-        
+
         var jsonString: String? = nil
         if let x = item {
             switch x {
@@ -176,41 +171,40 @@ extension Rosewood {
                 case (is Float): break
                 case (is String): break
                 case (is Bool): break
-                
+
                 case (is NSArray):
                     jsonString = prettyPrint(NSObject.reflect(objects: x as! NSArray))
                     break
-                
+
                 case (is NSDictionary):
                     jsonString = prettyPrint(x) ?? "\n\(x)"
                     break
-                
+
                 case (is NSError):
                     let error = x as! NSError
                     let properties: [String: Any] = [ "domain": error.domain, "code": error.code, "localizedDescription": error.localizedDescription, "userInfo": error.userInfo ]
                     jsonString = prettyPrint(properties)
                     break
-                
+
                 case (is NSObject):
                     let dictionary = NSObject.reflect(object: x)
                     if !dictionary.isEmpty {
                         jsonString = prettyPrint(dictionary)
                     }
                     break
-                
+
                 default:
                     break
             }
         }
-        
+
         let message = "[\(type)] \(jsonString ?? addDash(item ?? "nil"))"
         let result = Configuration.formatter.format(level: .pretty, item: message, file: file, line: line, function: function)
         printToDebugger(result)
     }
-    
-    
+
     private static func prettyPrint(_ object: Any) -> String? {
-        
+
         do {
             if JSONSerialization.isValidJSONObject(object) {
                 let data = try JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
@@ -223,14 +217,13 @@ extension Rosewood {
             return nil
         }
     }
-    
-    
+
     private static func addDash(_ x: Any) -> String {
-        
+
         let string = "\(x)"
         return "- " + (string.isEmpty ? "\"\"" : string)
     }
-    
+
 }
 
 
@@ -251,7 +244,7 @@ private var now: Double {
 
 
 extension Rosewood {
-    
+
     /// Calls a set of code the specified number of times, returning the average in the form of a dictionary.
     ///
     /// - Parameters:
@@ -259,118 +252,113 @@ extension Rosewood {
     ///   - iterations: The number of times to run code
     ///   - block: The code to run
     /// - Returns: Returns a dictionary with the time for each run.
-    @discardableResult public static func benchmark(_ name: String, iterations: Int = 1, block: () -> ()) -> [String: Double] {
-        
+    @discardableResult public static func benchmark(_ name: String, iterations: Int = 1, block: BenchmarkBlock) -> [String: Double] {
+
         guard Configuration.enabled else {
             return [:]
         }
-        
+
         precondition(iterations > 0, "Iterations must be a positive integer")
-        
+
         var data: [String: Double] = [:]
-        
+
         var total: Double = 0
         var samples = [ Double ]()
-        
+
         printToDebugger("\n🖤Measure \(name)")
-        
+
         if iterations == 1 {
             let took = benchmark(name, forBlock: block).first!
-            
+
             samples.append(took.value)
             total += took.value
-            
+
             data["1"] = took.value
         } else {
             for i in 0..<iterations {
                 let took = benchmark("Iteration \(i + 1)", forBlock: block).first!
-                
+
                 samples.append(took.value)
                 total += took.value
-                
+
                 data["\(i + 1)"] = took.value
             }
-            
+
             let average = total / Double(iterations)
             var deviation = 0.0
             for result in samples {
-                
+
                 let difference = result - average
                 deviation += difference * difference
             }
-            
+
             let variance = deviation / Double(iterations)
-            
+
             printToDebugger("🖤\t- Total: \(total.milliSeconds)")
             printToDebugger("🖤\t- Average: \(average.milliSeconds)")
             printToDebugger("🖤\t- STD Dev: \(variance.milliSeconds)")
-            
+
         }
-        
+
         return data
     }
-    
-    
+
     /// Prints a message with an optional timestamp from start of measurement.
     ///
     /// - Parameters:
     ///   - message: The message to log.
     ///   - includeTimeStamp: Bool value to show time.
     public static func benchmarkLog(message: String, includeTimeStamp: Bool = false) {
-        
+
         reportContaining()
-        
+
         if includeTimeStamp {
             let currentTime = now
             let timeStamp = currentTime - timingStack[timingStack.count - 1].startTime
-            
+
             printToDebugger("🖤\(depthIndent)\(message)  \(timeStamp.milliSeconds)")
         } else {
             printToDebugger("🖤\(depthIndent)\(message)")
         }
     }
-    
-    
-    private static func benchmark(_ name: String, forBlock block: () -> ()) -> [String: Double] {
-        
+
+    private static func benchmark(_ name: String, forBlock block: BenchmarkBlock) -> [String: Double] {
+
         startBenchmark(name)
         block()
-        
+
         return stopBenchmark()
     }
-    
-    
+
     private static func startBenchmark(_ name: String) {
-        
+
         reportContaining()
         timingStack.append((now, name, false))
         depth += 1
     }
-    
-    
+
     private static func stopBenchmark() -> [String: Double] {
-        
+
         let endTime = now
         precondition(depth > 0, "Attempt to stop a measurement when none has been started")
-        
+
         let beginning = timingStack.removeLast()
         depth -= 1
-        
+
         let took = endTime - beginning.startTime
-        
+
         let log = "🖤\(depthIndent)\(beginning.name): \(took.milliSeconds)"
         printToDebugger(log)
-        
+
         return [ log: took ]
     }
-    
-    
+
     private static func reportContaining() {
-        
+
         if depth > 0 && Configuration.enabled && .debug >= Configuration.minLevel {
             for stackPointer in 0..<timingStack.count {
                 let containingMeasurement = timingStack[stackPointer]
-                
+
                 if !containingMeasurement.reported {
                     //Swift.print(String(repeating: "\t" + "Measuring \(containingMeasurement.name):", count: stackPointer))
                     timingStack[stackPointer] = (containingMeasurement.startTime, containingMeasurement.name, true)
@@ -378,5 +366,5 @@ extension Rosewood {
             }
         }
     }
-    
+
 }

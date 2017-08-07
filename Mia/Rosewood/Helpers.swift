@@ -1,33 +1,33 @@
 extension String {
-    
+
     var lastPathComponent: String {
         return NSString(string: self).lastPathComponent
     }
-    
+
     var stringByDeletingPathExtension: String {
         return NSString(string: self).deletingPathExtension
     }
-    
+
 }
 
 
 extension Double {
-    
+
     var milliSeconds: String {
         return String(format: "%03.2fms", self * 1000)
     }
-    
+
     var seconds: String {
         return String(format: "%03.2fs", self)
     }
-    
+
 }
 
 
 extension NSObject {
-    
+
     public class func reflect(objects: NSArray) -> [Any] {
-        
+
         return objects.map { value -> Any in
             // strings
             if let value = value as? String {
@@ -35,12 +35,12 @@ extension NSObject {
             } else if let value = value as? [String] {
                 return value
             }
-            
+
             // booleans
             else if value is Bool {
                 return value
             }
-            
+
             // numbers
             else if let value = value as? Int {
                 return value
@@ -55,33 +55,32 @@ extension NSObject {
             } else if let value = value as? [Double] {
                 return value
             }
-            
+
             // dictionaries
             else if let value = value as? NSDictionary {
                 return value
             }
-            
+
             // arrays
             else if let value = value as? NSArray {
                 return NSObject.reflect(objects: value)
             }
-            
+
             // objects
             else {
                 return NSObject.reflect(object: value)
             }
         }
     }
-    
-    
+
     public class func reflect(object: Any?) -> [String: Any] {
-        
+
         guard let object = object else {
             return [:]
         }
-        
+
         var dictionary: [String: Any] = [:]
-        
+
         Mirror(reflecting: object).children.forEach { label, value in
             // strings
             if let key = label, let value = value as? String {
@@ -89,7 +88,7 @@ extension NSObject {
             } else if let key = label, let value = value as? [String] {
                 dictionary.updateValue(value, forKey: key)
             }
-            
+
             // numbers
             else if let key = label, let value = value as? Int {
                 dictionary.updateValue(value, forKey: key)
@@ -104,19 +103,19 @@ extension NSObject {
             } else if let key = label, let value = value as? [Double] {
                 dictionary.updateValue(value, forKey: key)
             }
-            
+
             // booleans
             else if let key = label, let value = value as? Bool {
                 dictionary.updateValue(value, forKey: key)
             } else if let key = label, let value = value as? [Bool] {
                 dictionary.updateValue(value, forKey: key)
             }
-            
+
             // dictionaries
             else if let key = label, let value = value as? NSDictionary {
                 dictionary.updateValue(value, forKey: key)
             }
-            
+
             // objects
             else if let key = label, let value = value as? NSArray {
                 let objects = NSObject.reflect(objects: value)
@@ -141,8 +140,8 @@ extension NSObject {
                 }
             }
         }
-        
+
         return dictionary
     }
-    
+
 }

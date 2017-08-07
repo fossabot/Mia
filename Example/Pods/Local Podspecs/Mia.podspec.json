@@ -35,6 +35,10 @@
     {
       "name": "Extensions",
       "source_files": "Mia/Extensions/**/*.{swift}"
+    },
+    {
+      "name": "HTMLtoPDF",
+      "source_files": "Mia/HTMLtoPDF/**/*.{swift}"
     }
   ]
 }

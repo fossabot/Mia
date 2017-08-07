@@ -9,7 +9,7 @@ public enum LogLevel {
     case warning
     case debug
     case error
-    
+
     var description: String {
         switch self {
             case .pretty:   return "💖Prettify".uppercased()
@@ -19,25 +19,24 @@ public enum LogLevel {
             case .warning:  return "💛Warning ".uppercased()
             case .debug:    return "💜Debug   ".uppercased()
             case .error:    return "❤️️Error   ".uppercased()
-            
+
         }
     }
-    
+
 }
 
 
 // MARK: - Private Extensions
 extension LogLevel: Comparable {
-    
+
     public static func ==(x: LogLevel, y: LogLevel) -> Bool {
-        
+
         return x.hashValue == y.hashValue
     }
-    
-    
+
     public static func <(x: LogLevel, y: LogLevel) -> Bool {
-        
+
         return x.hashValue < y.hashValue
     }
-    
+
 }

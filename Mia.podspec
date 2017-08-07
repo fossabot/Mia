@@ -28,7 +28,7 @@ Monica: A toolkit to measure performance.
   s.source_files = 'Mia/*.{swift}'
 
   s.subspec 'Rosewood' do |sp|
-      sp.source_files = 'Mia/Rosewood/**/*.{swift}'
+    sp.source_files = 'Mia/Rosewood/**/*.{swift}'
   end
 
   s.subspec 'Reflect' do |sp|
@@ -43,5 +43,8 @@ Monica: A toolkit to measure performance.
     sp.source_files = 'Mia/Extensions/**/*.{swift}'
   end
 
+  s.subspec 'HTMLtoPDF' do |sp|
+    sp.source_files = 'Mia/HTMLtoPDF/**/*.{swift}'
+  end
 
 end

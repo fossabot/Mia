@@ -1,24 +1,39 @@
 PODS:
+  - Alamofire (4.5.0)
+  - BNHtmlPdfKit (0.5.0)
   - Mia (0.1.3):
     - Mia/Extensions (= 0.1.3)
+    - Mia/HTMLtoPDF (= 0.1.3)
     - Mia/Reflect (= 0.1.3)
     - Mia/Rosewood (= 0.1.3)
     - Mia/Wrappers (= 0.1.3)
   - Mia/Extensions (0.1.3)
+  - Mia/HTMLtoPDF (0.1.3)
   - Mia/Reflect (0.1.3)
   - Mia/Rosewood (0.1.3)
   - Mia/Wrappers (0.1.3)
 
 DEPENDENCIES:
+  - Alamofire
+  - BNHtmlPdfKit (from `https://github.com/brentnycum/BNHtmlPdfKit`)
   - Mia (from `../`)
 
 EXTERNAL SOURCES:
+  BNHtmlPdfKit:
+    :git: https://github.com/brentnycum/BNHtmlPdfKit
   Mia:
     :path: ../
 
+CHECKOUT OPTIONS:
+  BNHtmlPdfKit:
+    :commit: f68e54bb0bed047306a7c25ff42ed95c689ea921
+    :git: https://github.com/brentnycum/BNHtmlPdfKit
+
 SPEC CHECKSUMS:
-  Mia: cf4378844c4cd4cb245be2b4db7eb63be0b4e7b0
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  BNHtmlPdfKit: 566b27d1c802ade48ed042abafdc16aeb5ddc4e1
+  Mia: c0d701fd7e2445f5fbfba64e5bd9daaf83ae04c5
 
-PODFILE CHECKSUM: 330aaf8b99f7110f6c38fc3659462aa3c9615823
+PODFILE CHECKSUM: 19737bba96b4ed52fd8d6ebaaf414c74d94bd600
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.0
