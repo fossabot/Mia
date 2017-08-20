@@ -6,19 +6,9 @@
 
 // TODO: - JSON
 // TODO: [Reflect] Document all the things
-
+// TODO: [Reflect] Replace With EVReflection
 
 // TODO: - PDF
 // TODO: [HTMLtoPDF] Extension methods to save data to file and return file path
 
 
-public func getTopMostController() -> UIViewController? {
-
-    if var topController = UIApplication.shared.keyWindow?.rootViewController {
-        while let presentedViewController = topController.presentedViewController {
-            topController = presentedViewController
-        }
-        return topController
-    }
-    return nil
-}

@@ -34,7 +34,7 @@ public struct Rosewood {
     }
 
 
-    static func printToDebugger(_ message: String) -> Void {
+    static internal func printToDebugger(_ message: String) -> Void {
 
         if Configuration.isAsync {
             queue.async {
@@ -47,7 +47,6 @@ public struct Rosewood {
                 Rosewood.delegate?.rosewoodDidLog(message: message)
             }
         }
-
     }
 
 }
@@ -128,8 +127,8 @@ extension Rosewood {
         }
 
         let result = Configuration.formatter.format(level: level, items: items, separator: separator, file: file, line: line, function: function)
-        printToDebugger(result)
 
+        printToDebugger(result)
     }
 
 }
@@ -159,12 +158,11 @@ extension Rosewood {
         }
 
         var type = "nil"
-        if let x = item {
-            type = String(describing: Mirror(reflecting: x).subjectType)//.trimmingCharacters(in: CharacterSet.letters.inverted)
-        };
-
         var jsonString: String? = nil
         if let x = item {
+
+            type = String(describing: Mirror(reflecting: x).subjectType)//.trimmingCharacters(in: CharacterSet.letters.inverted)
+
             switch x {
                 case (is Int): break
                 case (is Double): break

@@ -1,6 +1,7 @@
 import Foundation
 import AdSupport
 import SystemConfiguration.CaptiveNetwork
+import UIKit
 
 
 public struct Device {
@@ -19,13 +20,8 @@ public struct Device {
     }
 
     /// Returns the Devices current vendor identifier
-    static public var vendorIdentifier: String {
-        return UIDevice.current.identifierForVendor!.uuidString
-    }
-
-    /// Returns the Devices current advertising identifier
-    static public var advertisingIdentifier: String {
-        return ASIdentifierManager.shared().advertisingIdentifier.uuidString
+    static public var vendorIdentifier: UUID? {
+        return UIDevice.current.identifierForVendor!
     }
 
 
@@ -82,7 +78,7 @@ public struct Device {
 
         /// String representation of the current firmware.
         public static var currentVersion: String {
-            return "\(UIDevice.current.systemVersion.floatValue!)"
+            return "\(UIDevice.current.systemVersion)"
         }
 
 
@@ -117,7 +113,7 @@ public struct Device {
         /// - Returns: Returns a Bool value the indicates the device is equal to the specified firmware.
         public static func isFirmware(_ firmware: Firmwares) -> Bool {
 
-            return UIDevice.current.systemVersion.floatValue! >= firmware.rawValue && UIDevice.current.systemVersion.floatValue! < (firmware.rawValue + 1.0)
+            return Float(UIDevice.current.systemVersion)! >= firmware.rawValue && Float(UIDevice.current.systemVersion)! < (firmware.rawValue + 1.0)
         }
 
         /// Check if device is on a specific firmware or later.
@@ -126,7 +122,7 @@ public struct Device {
         /// - Returns: Returns a Bool value the indicates the device is newer than the specified firmware.
         public static func isFirmwareOrLater(_ firmware: Firmwares) -> Bool {
 
-            return UIDevice.current.systemVersion.floatValue! >= firmware.rawValue
+            return Float(UIDevice.current.systemVersion)! >= firmware.rawValue
         }
 
         /// Check if device is earlier than a specific firmware.
@@ -135,7 +131,7 @@ public struct Device {
         /// - Returns: Returns a Bool value the indicates the device is older than the specified firmware.
         public static func isFirmwareOrEarlier(_ firmware: Firmwares) -> Bool {
 
-            return UIDevice.current.systemVersion.floatValue! < (firmware.rawValue + 1.0)
+            return Float(UIDevice.current.systemVersion)! < (firmware.rawValue + 1.0)
         }
 
     }

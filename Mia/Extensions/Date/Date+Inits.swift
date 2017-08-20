@@ -1,25 +1,17 @@
 import Foundation
 
 
-/**
- *  Extends the Date class by adding convenient initializers based on components
- *  and format strings.
- */
-
 public extension Date {
 
-    // MARK: - Initializers
-
-    /**
-     *  Init date with components.
-     *
-     *  - parameter year: Year component of new date
-     *  - parameter month: Month component of new date
-     *  - parameter day: Day component of new date
-     *  - parameter hour: Hour component of new date
-     *  - parameter minute: Minute component of new date
-     *  - parameter second: Second component of new date
-     */
+    /// Init date with components.
+    ///
+    /// - Parameters:
+    ///   - year: Year component of new date
+    ///   - month: Month component of new date
+    ///   - day: Day component of new date
+    ///   - hour: Hour component of new date
+    ///   - minute: Minute component of new date
+    ///   - second: Second component of new date
     public init(year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int) {
 
         var dateComponents = DateComponents()
@@ -37,71 +29,57 @@ public extension Date {
         self = date
     }
 
-    /**
-     *  Init date with components. Hour, minutes, and seconds set to zero.
-     *
-     *  - parameter year: Year component of new date
-     *  - parameter month: Month component of new date
-     *  - parameter day: Day component of new date
-     */
+    /// Init date with components. Hour, minutes, and seconds set to zero.
+    ///
+    /// - Parameters:
+    ///   - year: Year component of new date
+    ///   - month: Month component of new date
+    ///   - day: Day component of new date
     public init(year: Int, month: Int, day: Int) {
 
         self.init(year: year, month: month, day: day, hour: 0, minute: 0, second: 0)
     }
 
-    /**
-     *  Init date from string, given a format string, according to Apple's date formatting guide, and time zone.
-     *
-     *  - parameter dateString: Date in the formatting given by the format parameter
-     *  - parameter format: Format style using Apple's date formatting guide
-     *  - parameter timeZone: Time zone of date
-     */
-    public init(dateString: String, format: String, timeZone: TimeZone) {
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .none;
-        dateFormatter.timeStyle = .none;
-        dateFormatter.timeZone = timeZone;
-        dateFormatter.dateFormat = format;
-
-        guard let date = dateFormatter.date(from: dateString) else {
-            self = Date()
-            return
-        }
-        self = date
-    }
-
-    /**
-     *  Init date from string, given a format string, according to Apple's date formatting guide.
-     *  Time Zone automatically selected as the current time zone.
-     *
-     *  - parameter dateString: Date in the formatting given by the format parameter
-     *  - parameter format: Format style using Apple's date formatting guide
-     */
-    public init(dateString: String, format: String) {
-
-        self.init(dateString: dateString, format: format, timeZone: TimeZone.autoupdatingCurrent)
-    }
-
-    public init(fromString: String) {
-
-        let formatArray: [String] = [ Constants.DateRFC822DateFormat1, Constants.DateISO8601DateFormat1, Constants.DateISO8601DateFormat2, Constants.DateISO8601DateFormat3, Constants.DateShortDateFormat1, Constants.DateShortDateFormat2, Constants.DateLongDateFormat1 ]
+    /// Init Date from an array of known date formats. 
+    /// Returns nil if `dateString` is not valid or date format is not in DateFormats.array.
+    ///
+    /// - Parameter dateString: THe string value to parse.
+    public init?(dateString: String) {
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .none;
         dateFormatter.timeStyle = .none;
         dateFormatter.timeZone = TimeZone.current;
 
-        var parsedDate: Date? = nil
-        for format: String in formatArray {
-            if parsedDate == nil {
-                dateFormatter.dateFormat = format;
-                parsedDate = dateFormatter.date(from: fromString)
+        for format: String in DateFormats.array {
+
+            dateFormatter.dateFormat = format;
+
+            guard let parsedDate = dateFormatter.date(from: dateString) else {
+                continue
             }
+            self = parsedDate
+        }
+        return nil
+    }
+
+    /// Init Date from a C# DateTime string such as `Date(1440156888750-0700)`.
+    /// Returns nil if `dateTimeString` is not valid.
+    ///
+    /// - Parameter dateTimeString: The string value to parse.
+    public init?(dateTimeString: String) {
+
+        let pattern = "\\\\?/Date\\((\\d+)(([+-]\\d{2})(\\d{2}))?\\)\\\\?/"
+        let regex = try! NSRegularExpression(pattern: pattern)
+        guard let match = regex.firstMatch(in: dateTimeString, range: NSRange(location: 0, length: dateTimeString.utf16.count)) else {
+            Rosewood.info("Failed to find a match")
+            return nil
         }
 
-        self = parsedDate!
+        let dateString = (dateTimeString as NSString).substring(with: match.rangeAt(1))     // Extract milliseconds
+        let timeStamp = Double(dateString)! / 1000.0 // Convert to UNIX timestamp in seconds
 
+        self.init(timeIntervalSince1970: timeStamp) // Create Date from timestamp
     }
 
 }

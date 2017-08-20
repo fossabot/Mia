@@ -1,24 +1,24 @@
 // MARK: - LogLevel
 
-/// Enum representation of the different log leve.s
+/// Enum representation of the different log levels
 public enum LogLevel {
-    case pretty
-    case measure
     case verbose
     case info
     case warning
     case debug
     case error
+    case pretty
+    case measure
 
     var description: String {
         switch self {
-            case .pretty:   return "💖Prettify".uppercased()
-            case .measure:  return "🖤Measure ".uppercased()
-            case .verbose:  return "💚Verbose ".uppercased()
-            case .info:     return "💙Info    ".uppercased()
-            case .warning:  return "💛Warning ".uppercased()
-            case .debug:    return "💜Debug   ".uppercased()
-            case .error:    return "❤️️Error   ".uppercased()
+            case .verbose:  return "💚VERBOSE "
+            case .info:     return "💙INFO    "
+            case .warning:  return "💛WARNING "
+            case .debug:    return "💜DEBUG   "
+            case .error:    return "❤️️ERROR   "
+            case .pretty:   return "💖PRETTIFY"
+            case .measure:  return "🖤MEASURE "
 
         }
     }

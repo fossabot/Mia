@@ -1,8 +1,8 @@
 {
   "name": "Mia",
-  "version": "0.1.3",
+  "version": "0.1.6",
   "summary": "A list of tools to steamline my developement.",
-  "description": "A list of tools to steamline my developement.\n\nRosewood: A simple to use logging tool.\nMonica: A toolkit to measure performance.",
+  "description": "A list of tools to steamline my developement.",
   "homepage": "https://github.com/multinerd/Mia",
   "license": {
     "type": "MIT",
@@ -13,10 +13,10 @@
   },
   "source": {
     "git": "https://github.com/multinerd/Mia.git",
-    "tag": "0.1.3"
+    "tag": "0.1.6"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "10.0"
   },
   "source_files": "Mia/*.{swift}",
   "subspecs": [
@@ -25,20 +25,24 @@
       "source_files": "Mia/Rosewood/**/*.{swift}"
     },
     {
-      "name": "Reflect",
-      "source_files": "Mia/Reflect/**/*.{swift}"
-    },
-    {
-      "name": "Wrappers",
-      "source_files": "Mia/Wrappers/**/*.{swift}"
+      "name": "Themes",
+      "source_files": "Mia/Themes/**/*.{swift}"
     },
     {
       "name": "Extensions",
       "source_files": "Mia/Extensions/**/*.{swift}"
     },
     {
+      "name": "UIKit",
+      "source_files": "Mia/UIKit/**/*.{swift}"
+    },
+    {
       "name": "HTMLtoPDF",
       "source_files": "Mia/HTMLtoPDF/**/*.{swift}"
+    },
+    {
+      "name": "Testing",
+      "source_files": "Mia/Testing/**/*.{swift}"
     }
   ]
 }
