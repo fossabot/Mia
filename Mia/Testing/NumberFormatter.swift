@@ -1,6 +1,34 @@
 import Foundation
 
 
+// MARK: - Colors
+public func UIColorFromRGB(_ rgbValue: String) -> UIColor {
+    return UIColor(
+        red: CGFloat((rgbValue.hexaToInt & 0xFF0000) >> 16) / 255.0,
+        green: CGFloat((rgbValue.hexaToInt & 0x00FF00) >> 8) / 255.0,
+        blue: CGFloat(rgbValue.hexaToInt & 0x0000FF) / 255.0,
+        alpha: CGFloat(1.0)
+    )
+}
+
+extension String {
+    var hexaToInt      : Int    { return Int(strtoul(self, nil, 16))      }
+    var hexaToDouble   : Double { return Double(strtoul(self, nil, 16))   }
+    var hexaToBinary   : String { return String(hexaToInt, radix: 2)      }
+    var decimalToHexa  : String { return String(Int(self) ?? 0, radix: 16)}
+    var decimalToBinary: String { return String(Int(self) ?? 0, radix: 2) }
+    var binaryToInt    : Int    { return Int(strtoul(self, nil, 2))       }
+    var binaryToDouble : Double { return Double(strtoul(self, nil, 2))   }
+    var binaryToHexa   : String { return String(binaryToInt, radix: 16)  }
+}
+
+extension Int {
+    var binaryString: String { return String(self, radix: 2)  }
+    var hexaString  : String { return String(self, radix: 16) }
+    var doubleValue : Double { return Double(self) }
+}
+
+
 // MARK: - String
 public extension String {
 

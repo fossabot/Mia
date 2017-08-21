@@ -19,19 +19,20 @@ public extension UITableView {
         refresh.addTarget(target, action: action, for: .valueChanged)
         refresh.attributedTitle = NSAttributedString(string: myString, attributes: myAttribute)
 
-        addSubview(refresh)
+        refreshControl = refresh
+//        addSubview(refresh)
 
     }
 
     func endRefreshing() {
 
         reloadData()
-
-        for view in subviews {
-            if view is UIRefreshControl {
-                (view as! UIRefreshControl).endRefreshing()
-            }
-        }
+        refreshControl?.endRefreshing()
+//        for view in subviews {
+//            if view is UIRefreshControl {
+//                (view as! UIRefreshControl).endRefreshing()
+//            }
+//        }
     }
 
 }

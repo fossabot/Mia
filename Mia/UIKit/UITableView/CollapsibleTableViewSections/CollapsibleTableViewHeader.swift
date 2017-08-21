@@ -1,25 +1,28 @@
 import UIKit
 
 
-protocol CollapsibleTableViewHeaderDelegate {
-    func toggleSection(_ section: Int)
+public protocol CollapsibleTableViewHeaderDelegate {
+    func toggleSection(_ sender: CollapsibleTableViewHeader, _ section: Int)
 }
 
 
 open class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
 
-    var delegate: CollapsibleTableViewHeaderDelegate?
-    var section: Int = 0
+    public var delegate: CollapsibleTableViewHeaderDelegate?
+    public var section: Int = 0
 
-    let titleLabel = UILabel()
-    let arrowLabel = UILabel()
+    public let titleLabel = UILabel()
+    public let arrowLabel = UILabel()
 
-    override public init(reuseIdentifier: String?) {
-
+    public init(reuseIdentifier: String?, section: Int, delegate: CollapsibleTableViewHeaderDelegate?) {
+        
+        self.section = section
+        self.delegate = delegate
+        
         super.init(reuseIdentifier: reuseIdentifier)
-
+        
         let marginGuide = contentView.layoutMarginsGuide
-
+        
         contentView.addSubview(arrowLabel)
         arrowLabel.textColor = UIColor.white
         arrowLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +30,7 @@ open class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
         arrowLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
         arrowLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
         arrowLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
-
+        
         contentView.addSubview(titleLabel)
         titleLabel.textColor = UIColor.white
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -35,32 +38,70 @@ open class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
         titleLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
         titleLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
-
-        contentView.backgroundColor = UIColor(hex: 0x2E3944)
-
+        
+        contentView.backgroundColor = UIColor(hex6: 0x2E3944)
+        
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CollapsibleTableViewHeader.tapHeader(_:))))
     }
+
 
     required public init?(coder aDecoder: NSCoder) {
 
         fatalError("init(coder:) has not been implemented")
     }
 
-    func tapHeader(_ gestureRecognizer: UITapGestureRecognizer) {
+    public func tapHeader(_ gestureRecognizer: UITapGestureRecognizer) {
 
         guard let cell = gestureRecognizer.view as? CollapsibleTableViewHeader else {
             return
         }
 
-        _ = delegate?.toggleSection(cell.section)
+        _ = delegate?.toggleSection(self, cell.section)
     }
 
-    func setCollapsed(_ collapsed: Bool) {
+    public func setCollapsed(_ collapsed: Bool) {
 
-        arrowLabel.rotate(collapsed ? 0.0 : .pi / 2)
+        arrowLabel.rotate(collapsed ? 0.0 : -(.pi / 2))
     }
 
 }
 
 
+public class CollapsibleTableViewHeaderHelper: UITableViewHeaderFooterView {
+    
+    public var shouldCollapseByDefault: Bool = false
+    
+    public var shouldCollapseOthers: Bool = false
+    
+    
+    public var sectionsState = [ Int: Bool ]()
+    
+    public func isSectionCollapsed(_ section: Int) -> Bool {
+        
+        if sectionsState.index(forKey: section) == nil {
+            sectionsState[section] = shouldCollapseByDefault
+        }
+        return sectionsState[section]!
+    }
+    
 
+    
+    public func getSectionsNeedReload(_ section: Int) -> [Int] {
+        
+        var sectionsNeedReload = [ section ]
+        
+        let isCollapsed = !isSectionCollapsed(section)
+        sectionsState[section] = isCollapsed
+        
+        if !isCollapsed && shouldCollapseOthers {
+            let filteredSections = sectionsState.filter { !$0.value && $0.key != section }
+            let sectionsNeedCollapse = filteredSections.map { $0.key }
+            
+            for item in sectionsNeedCollapse { sectionsState[item] = true }
+            
+            sectionsNeedReload.append(contentsOf: sectionsNeedCollapse)
+        }
+        
+        return sectionsNeedReload
+    }
+}

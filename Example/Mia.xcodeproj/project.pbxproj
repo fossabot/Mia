@@ -42,6 +42,7 @@
 		3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosewoodTest.swift; sourceTree = "<group>"; };
 		3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollapsibleDataSource.swift; path = CollapsibleTableViewDemo/CollapsibleDataSource.swift; sourceTree = "<group>"; };
 		3BC26BF41F4A552600437A26 /* MiaTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiaTheme.swift; sourceTree = "<group>"; };
+		3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableViewDemo.swift; path = CollapsibleTableViewDemo/DefaultTableViewDemo.swift; sourceTree = "<group>"; };
 		3BD014031F4670A600CC3150 /* IBOutletTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IBOutletTableViewDemo.swift; path = CollapsibleTableViewDemo/IBOutletTableViewDemo.swift; sourceTree = "<group>"; };
 		3DA42F71B04516A77849EDD6 /* Pods-Mia_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_ExampleTests/Pods-Mia_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for Mia */,
 				3B06DE6B1F0B25D700804181 /* ExampleTests for Mia */,
@@ -329,13 +331,21 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mia_Example/Pods-Mia_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BNHtmlPdfKit/BNHtmlPdfKit.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicColor/DynamicColor.framework",
+				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
+				"${BUILT_PRODUCTS_DIR}/HxColor/HxColor.framework",
 				"${BUILT_PRODUCTS_DIR}/Mia/Mia.framework",
+				"${BUILT_PRODUCTS_DIR}/RandomColorSwift/RandomColorSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BNHtmlPdfKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicColor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HxColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RandomColorSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -1,6 +1,9 @@
 PODS:
   - Alamofire (4.5.0)
   - BNHtmlPdfKit (0.5.0)
+  - DynamicColor (3.3)
+  - Hue (2.0.1)
+  - HxColor (3.0.0)
   - Mia (0.1.6):
     - Mia/Extensions (= 0.1.6)
     - Mia/HTMLtoPDF (= 0.1.6)
@@ -14,11 +17,16 @@ PODS:
   - Mia/Testing (0.1.6)
   - Mia/Themes (0.1.6)
   - Mia/UIKit (0.1.6)
+  - RandomColorSwift (1.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - BNHtmlPdfKit (from `https://github.com/brentnycum/BNHtmlPdfKit`)
+  - DynamicColor
+  - Hue
+  - HxColor
   - Mia (from `../`)
+  - RandomColorSwift
 
 EXTERNAL SOURCES:
   BNHtmlPdfKit:
@@ -34,8 +42,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   BNHtmlPdfKit: 566b27d1c802ade48ed042abafdc16aeb5ddc4e1
+  DynamicColor: 3cdaa1e01c16e93ba744e0630f768373e0fc7a7d
+  Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
+  HxColor: 0089ec6aa108788cfd09768123e2e763dc57098e
   Mia: 6c1a92c36e2c6347466ae599e1efabb21932e562
+  RandomColorSwift: 9f85058b721665d52d239ca166a913e083506444
 
-PODFILE CHECKSUM: c6f04be3910ecc89959b6c7a94c4461dbbe7da3c
+PODFILE CHECKSUM: ef2b8d8ec73ed7e32ea7068277e120b3dc3dc172
 
 COCOAPODS: 1.3.1

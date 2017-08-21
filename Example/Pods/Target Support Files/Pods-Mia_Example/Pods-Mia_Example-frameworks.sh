@@ -104,12 +104,20 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BNHtmlPdfKit/BNHtmlPdfKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DynamicColor/DynamicColor.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Hue/Hue.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/HxColor/HxColor.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Mia/Mia.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RandomColorSwift/RandomColorSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BNHtmlPdfKit/BNHtmlPdfKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DynamicColor/DynamicColor.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Hue/Hue.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/HxColor/HxColor.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Mia/Mia.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RandomColorSwift/RandomColorSwift.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -29,18 +29,40 @@ public extension ThemeUser {
     ///   - type: The type of your own theme.
     ///   - apply: The function that gets called. (ThemeUser, Theme)
     func use<T:Theme>(_ type: T.Type, apply: @escaping (Self, T) -> Void) {
-
+        
         if let theme = ThemeManager.shared.currentTheme as? T {
             apply(self, theme)
         }
-
+        
         theme_handler.mapping[String(describing: type.self)] = { (themeUser: ThemeUser, theme: Theme) in
             guard let themeUser = themeUser as? Self,
-                  let theme = theme as? T else {
-                return
+                let theme = theme as? T else {
+                    return
             }
-
+            
             apply(themeUser, theme)
+        }
+    }
+
+    
+    
+    func useAnimated<T:Theme>(_ type: T.Type, apply: @escaping (Self, T) -> Void) {
+        
+        if let theme = ThemeManager.shared.currentTheme as? T {
+            UIView.animate(withDuration: 0.4, animations: { 
+                apply(self, theme)
+            })
+        }
+        
+        theme_handler.mapping[String(describing: type.self)] = { (themeUser: ThemeUser, theme: Theme) in
+            guard let themeUser = themeUser as? Self,
+                let theme = theme as? T else {
+                    return
+            }
+            
+            UIView.animate(withDuration: 0.4, animations: {
+                apply(themeUser, theme)
+            })
         }
     }
 

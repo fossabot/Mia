@@ -137,4 +137,67 @@ public extension UITableView {
         return viewHeader
     }
 
+    func blurSeperator() {
+        if (!UIAccessibilityIsReduceTransparencyEnabled()) {
+            self.backgroundColor = UIColor.clear
+            let blurEffect = UIBlurEffect(style: .light)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            self.backgroundView = blurEffectView
+ 
+            //if you want translucent vibrant table view separator lines
+            self.separatorEffect = UIVibrancyEffect(blurEffect: blurEffect)
+        }
+    }
+    
+    
+    
+    public func basicCleanup() {
+        self.tableFooterView = UIView()
+        self.separatorInset = .zero
+        self.layoutMargins = .zero
+    }
+}
+
+
+
+
+public extension UIColor { // testing
+    
+    public convenience init(hex3: UInt16, alpha: CGFloat = 1) {
+        //print(String(describing: hex3).characters.count, String(describing: hex3.description))
+        let divisor = CGFloat(15)
+        let red     = CGFloat((hex3 & 0xF00) >> 8) / divisor
+        let green   = CGFloat((hex3 & 0x0F0) >> 4) / divisor
+        let blue    = CGFloat( hex3 & 0x00F      ) / divisor
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
+    public convenience init(hex4: UInt16) {
+        //print(String(describing: hex4).characters.count, String(describing: hex4.description))
+        let divisor = CGFloat(15)
+        let red     = CGFloat((hex4 & 0xF000) >> 12) / divisor
+        let green   = CGFloat((hex4 & 0x0F00) >>  8) / divisor
+        let blue    = CGFloat((hex4 & 0x00F0) >>  4) / divisor
+        let alpha   = CGFloat( hex4 & 0x000F       ) / divisor
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
+    public convenience init(hex6: UInt32, alpha: CGFloat = 1) {
+        //print(String(describing: hex6).characters.count, String(describing: hex6.description))
+        let divisor = CGFloat(255)
+        let red     = CGFloat((hex6 & 0xFF0000) >> 16) / divisor
+        let green   = CGFloat((hex6 & 0x00FF00) >>  8) / divisor
+        let blue    = CGFloat( hex6 & 0x0000FF       ) / divisor
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
+    public convenience init(hex8: UInt32) {
+        //print(String(describing: hex8).characters.count, String(describing: hex8.description))
+        let divisor = CGFloat(255)
+        let red     = CGFloat((hex8 & 0xFF000000) >> 24) / divisor
+        let green   = CGFloat((hex8 & 0x00FF0000) >> 16) / divisor
+        let blue    = CGFloat((hex8 & 0x0000FF00) >>  8) / divisor
+        let alpha   = CGFloat( hex8 & 0x000000FF       ) / divisor
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
 }
