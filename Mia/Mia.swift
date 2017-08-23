@@ -11,4 +11,60 @@
 // TODO: - PDF
 // TODO: [HTMLtoPDF] Extension methods to save data to file and return file path
 
+public func getTopMostController() -> UIViewController? {
+    
+    if var topController = UIApplication.shared.keyWindow?.rootViewController {
+        while let presentedViewController = topController.presentedViewController {
+            topController = presentedViewController
+        }
+        return topController
+    }
+    return nil
+}
+
+
+
+public typealias NetworkActivityBlock = () -> ()
+
+var __internalActivityCount: Int = 0 {
+    didSet {
+        print("Network.Count: \(__internalActivityCount)")
+    }
+}
+
+
+
+
+public func showNetworkActivity() {
+    let shared = UIApplication.shared
+    let lockQueue = DispatchQueue(label: "self")
+    lockQueue.async {
+        __internalActivityCount += 1
+        DispatchQueue.main.async(execute: {() -> Void in
+            if !shared.isNetworkActivityIndicatorVisible && __internalActivityCount > 0 {
+                shared.isNetworkActivityIndicatorVisible = true
+                GradientLoadingBar.shared.show()
+                
+            }
+        })
+    }
+}
+
+public func hideNetworkActivity(_ completion: NetworkActivityBlock? = nil) {
+    let shared = UIApplication.shared
+    let lockQueue = DispatchQueue(label: "self")
+    lockQueue.async {
+        if __internalActivityCount == 0 {
+            return
+        }
+        __internalActivityCount -= 1
+        DispatchQueue.main.async(execute: {() -> Void in
+            if shared.isNetworkActivityIndicatorVisible && __internalActivityCount == 0 {
+                shared.isNetworkActivityIndicatorVisible = false
+                GradientLoadingBar.shared.hide()
+                completion?()
+            }
+        })
+    }
+}
 

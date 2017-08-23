@@ -20,32 +20,25 @@ A list of tools to steamline my developement.
   s.source           = { :git => 'https://github.com/multinerd/Mia.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
+  
+  s.dependency 'Alamofire', '~> 4.4'
+#  s.dependency 'EVReflection'
+#  s.dependency 'EVReflection/Alamofire', '~> 1.5.5'
+  
 
   s.source_files = 'Mia/*.{swift}'
-
-
-  s.subspec 'Rosewood' do |sp|
-    sp.source_files = 'Mia/Rosewood/**/*.{swift}'
-  end
-  
-  s.subspec 'Themes' do |sp|
-      sp.source_files = 'Mia/Themes/**/*.{swift}'
-  end
 
   s.subspec 'Extensions' do |sp|
     sp.source_files = 'Mia/Extensions/**/*.{swift}'
   end
 
-  s.subspec 'UIKit' do |sp|
-      sp.source_files = 'Mia/UIKit/**/*.{swift}'
+  s.subspec 'UI' do |sp|
+      sp.source_files = 'Mia/UI/**/*.{swift}'
   end
 
-  s.subspec 'HTMLtoPDF' do |sp|
-      sp.source_files = 'Mia/HTMLtoPDF/**/*.{swift}'
+  s.subspec 'Libraries' do |sp|
+      sp.source_files = 'Mia/Libraries/**/*.{swift}'
   end
 
-  s.subspec 'Testing' do |sp|
-    sp.source_files = 'Mia/Testing/**/*.{swift}'
-  end
 
 end

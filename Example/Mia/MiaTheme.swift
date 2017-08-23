@@ -13,12 +13,12 @@ struct MiaTheme: Theme {
 struct MiaThemes {
 
     let dayTheme = MiaTheme(name: "Day",
-                            mainTextColor: UIColor(hex: 0x3498db),
-                            mainBackgroundColor: UIColor(hex: 0xECF0F1))
+                            mainTextColor: UIColor(hex6Value: 0x3498db),
+                            mainBackgroundColor: UIColor(hex6Value: 0xECF0F1))
 
     let nightTheme = MiaTheme(name: "Night",
-                              mainTextColor: UIColor(hex: 0x34495e),
-                              mainBackgroundColor: UIColor(hex: 0x6C7A89))
+                              mainTextColor: UIColor(hex6Value: 0x34495e),
+                              mainBackgroundColor: UIColor(hex6Value: 0x6C7A89))
 
 }
 

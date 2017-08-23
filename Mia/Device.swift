@@ -1,29 +1,28 @@
-import Foundation
 import AdSupport
+import Foundation
 import SystemConfiguration.CaptiveNetwork
 import UIKit
 
 
 public struct Device {
 
+    /// Returns the Devices current name
+   public static  var name: String {
+        return UIDevice.current.name
+    }
+
+    /// Returns the Devices current vendor identifier
+    public static var vendorIdentifier: UUID? {
+        return UIDevice.current.identifierForVendor!
+    }
+
     /// Returns the Devices current battery level
-    static public var batteryLevel: String {
+    public static var batteryLevel: String {
         if UIDevice.current.isBatteryMonitoringEnabled == false {
             UIDevice.current.isBatteryMonitoringEnabled = true
         }
         return "\(UIDevice.current.batteryLevel * 100)"
     }
-
-    /// Returns the Devices current name
-    static public var name: String {
-        return UIDevice.current.name
-    }
-
-    /// Returns the Devices current vendor identifier
-    static public var vendorIdentifier: UUID? {
-        return UIDevice.current.identifierForVendor!
-    }
-
 
     public struct Network {
 
@@ -52,7 +51,6 @@ public struct Device {
         }
     }
 
-
     public struct `Type` {
 
         /// Check to see if device is an iPhone
@@ -73,14 +71,12 @@ public struct Device {
 
     }
 
-
     public struct Firmware {
 
         /// String representation of the current firmware.
         public static var currentVersion: String {
             return "\(UIDevice.current.systemVersion)"
         }
-
 
         /// Enum representation of iOS versions.
         public enum Firmwares: Float {
@@ -105,7 +101,6 @@ public struct Device {
             /// iOS 11.0
             case eleven = 11.0
         }
-
 
         /// Check if device is on a specific firmware.
         ///
@@ -136,7 +131,6 @@ public struct Device {
 
     }
 
-
     public struct Size {
 
         /// Enum representation of various iOS screen sizes.
@@ -157,6 +151,11 @@ public struct Device {
 
         }
 
+        /// Get the current device's screen height.
+        public static let screenHeight = UIScreen.main.bounds.size.height
+
+        /// Get the current device's screen width.
+        public static let screenWidth = UIScreen.main.bounds.size.width
 
         /// Check if device screen size is equal a specific screen size
         ///
@@ -186,7 +185,6 @@ public struct Device {
         }
 
     }
-
 
     public struct Setings {
 
@@ -237,7 +235,6 @@ public struct Device {
             case doNotDisturb = "DO_NOT_DISTURB"
 
         }
-
 
         public static func open(_ preferenceType: PreferenceType) {
 

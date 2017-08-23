@@ -12,8 +12,6 @@ target 'Mia_Example' do
     
     #pod 'ChameleonFramework/Swift' # throws errors. check later
     pod 'DynamicColor'
-    pod 'HxColor'
-    pod 'Hue'
     pod 'RandomColorSwift'
     
     
