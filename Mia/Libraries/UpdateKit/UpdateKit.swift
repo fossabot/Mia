@@ -97,7 +97,9 @@ public class UpdateKit {
 
     public func onFreshInstall(_ completion: CheckBlock) {
 
-        completion()
+        if checkLastAppVersion() == .freshInstall {
+            completion()
+        }
     }
 
     public func onUpdate(_ completion: @escaping CheckBlock) {
