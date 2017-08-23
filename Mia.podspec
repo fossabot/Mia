@@ -40,5 +40,10 @@ A list of tools to steamline my developement.
       sp.source_files = 'Mia/Libraries/**/*.{swift}'
   end
 
+  s.subspec 'Testing' do |sp|
+    sp.source_files = 'Mia/Testing/**/*.{swift}'
+  end
+
+
 
 end
