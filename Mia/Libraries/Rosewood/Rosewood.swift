@@ -25,7 +25,7 @@ public struct Rosewood {
         public static var minLevel: LogLevel = .verbose
 
         /// The logger formatter.
-        public static var formatter: LogFormatter = .default
+        public static var formatter: LogFormatter = .oneline
 
         /// The logger state.
         public static var isAsync: Bool = true
@@ -305,9 +305,9 @@ extension Rosewood {
 
             let variance = deviation / Double(iterations)
 
-            printToDebugger("🖤\t- Total: \(total.milliSeconds)")
-            printToDebugger("🖤\t- Average: \(average.milliSeconds)")
-            printToDebugger("🖤\t- STD Dev: \(variance.milliSeconds)")
+            printToDebugger("🖤\t- Total: \(total.asMilliSeconds)")
+            printToDebugger("🖤\t- Average: \(average.asMilliSeconds)")
+            printToDebugger("🖤\t- STD Dev: \(variance.asMilliSeconds)")
 
         }
 
@@ -327,7 +327,7 @@ extension Rosewood {
             let currentTime = now
             let timeStamp = currentTime - timingStack[timingStack.count - 1].startTime
 
-            printToDebugger("🖤\(depthIndent)\(message)  \(timeStamp.milliSeconds)")
+            printToDebugger("🖤\(depthIndent)\(message)  \(timeStamp.asMilliSeconds)")
         } else {
             printToDebugger("🖤\(depthIndent)\(message)")
         }
@@ -360,7 +360,7 @@ extension Rosewood {
 
         let took = endTime - beginning.startTime
 
-        let log = "🖤\(depthIndent)\(beginning.name): \(took.milliSeconds)"
+        let log = "🖤\(depthIndent)\(beginning.name): \(took.asMilliSeconds)"
         printToDebugger(log)
 
         return [ log: took ]

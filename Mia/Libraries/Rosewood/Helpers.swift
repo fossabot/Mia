@@ -14,11 +14,11 @@ extension String {
 // MARK: - Double
 extension Double {
 
-    var milliSeconds: String {
+    var asMilliSeconds: String {
         return String(format: "%03.2fms", self * 1000)
     }
 
-    var seconds: String {
+    var asSeconds: String {
         return String(format: "%03.2fs", self)
     }
 

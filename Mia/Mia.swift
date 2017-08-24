@@ -28,12 +28,20 @@ public typealias NetworkActivityBlock = () -> ()
 
 var __internalActivityCount: Int = 0 {
     didSet {
-        print("Network.Count: \(__internalActivityCount)")
+        Rosewood.verbose("Network.Count: \(__internalActivityCount)")
     }
 }
 
 
 
+
+//public postfix func ++ (networkActivityObserver: NetworkActivityIndicatorObserver) {
+//    networkActivityObserver.increment()
+//}
+//
+//public postfix func -- (networkActivityObserver: NetworkActivityIndicatorObserver) {
+//    networkActivityObserver.decrement()
+//}
 
 public func showNetworkActivity() {
     let shared = UIApplication.shared
