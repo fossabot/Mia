@@ -50,7 +50,7 @@ open class NavigationStack: UINavigationController {
 
     var scaleRatio: Float = 14.0
 
-    var scaleValue: Float = 0.99
+    var scaleValue: Float = 1.1
 
     fileprivate var screens = [ UIImage ]()
 

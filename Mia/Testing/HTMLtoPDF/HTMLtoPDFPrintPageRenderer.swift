@@ -1,5 +1,3 @@
-import UIK
-
 
 class HTMLtoPDFPrintPageRenderer: UIPrintPageRenderer {
 
