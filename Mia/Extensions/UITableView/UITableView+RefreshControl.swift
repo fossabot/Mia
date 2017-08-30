@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 
 
@@ -20,19 +19,15 @@ public extension UITableView {
         refresh.attributedTitle = NSAttributedString(string: myString, attributes: myAttribute)
 
         refreshControl = refresh
-//        addSubview(refresh)
 
     }
+
 
     func endRefreshing() {
 
         reloadData()
         refreshControl?.endRefreshing()
-//        for view in subviews {
-//            if view is UIRefreshControl {
-//                (view as! UIRefreshControl).endRefreshing()
-//            }
-//        }
+
     }
 
 }

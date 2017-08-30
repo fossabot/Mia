@@ -1,9 +1,11 @@
 private let queue = DispatchQueue(label: "Multinerd.Rosewood")
 
+
 // MARK: - Delegate
 public protocol RosewoodDelegate: NSObjectProtocol {
     func rosewoodDidLog(message: String)
 }
+
 
 // MARK: - Rosewood
 public struct Rosewood {
@@ -32,9 +34,11 @@ public struct Rosewood {
 
     }
 
+
     // MARK: Init/Deinit
 
     private init() {}
+
 
     // MARK: Private Methods
 
@@ -55,6 +59,7 @@ public struct Rosewood {
 
 }
 
+
 // MARK: - Rosewood Logging
 extension Rosewood {
 
@@ -73,6 +78,7 @@ extension Rosewood {
         log(.verbose, items, separator, file, line, function)
     }
 
+
     /// Logs a message with a debug severity level.
     ///
     /// - Parameters:
@@ -85,6 +91,7 @@ extension Rosewood {
 
         log(.debug, items, separator, file, line, function)
     }
+
 
     /// Logs a message with a info severity level.
     ///
@@ -99,6 +106,7 @@ extension Rosewood {
         log(.info, items, separator, file, line, function)
     }
 
+
     /// Logs a message with a warning severity level.
     ///
     /// - Parameters:
@@ -112,6 +120,7 @@ extension Rosewood {
         log(.warning, items, separator, file, line, function)
     }
 
+
     /// Logs a message with a error severity level.
     ///
     /// - Parameters:
@@ -124,6 +133,7 @@ extension Rosewood {
 
         log(.error, items, separator, file, line, function)
     }
+
 
     // MARK: Private Methods
 
@@ -139,6 +149,7 @@ extension Rosewood {
     }
 
 }
+
 
 // MARK: - Rosewood PrettyPrint
 extension Rosewood {
@@ -158,6 +169,7 @@ extension Rosewood {
             log(.pretty, item, file, line, function)
         }
     }
+
 
     // MARK: Private Methods
 
@@ -211,6 +223,7 @@ extension Rosewood {
         printToDebugger(result)
     }
 
+
     private static func prettyPrint(_ object: Any) -> String? {
 
         do {
@@ -226,6 +239,7 @@ extension Rosewood {
         }
     }
 
+
     private static func addDash(_ x: Any) -> String {
 
         let string = "\(x)"
@@ -233,6 +247,7 @@ extension Rosewood {
     }
 
 }
+
 
 // MARK: - Rosewood Benchmark
 
@@ -251,6 +266,7 @@ private var now: Double {
 private var depthIndent: String {
     return String(repeating: "\t", count: depth)
 }
+
 
 extension Rosewood {
 
@@ -314,6 +330,7 @@ extension Rosewood {
         return data
     }
 
+
     /// Prints a message with an optional timestamp from start of measurement.
     ///
     /// - Parameters:
@@ -333,6 +350,7 @@ extension Rosewood {
         }
     }
 
+
     // MARK: Private Methods
 
     private static func benchmark(_ name: String, forBlock block: BenchmarkBlock) -> [String: Double] {
@@ -343,12 +361,14 @@ extension Rosewood {
         return stopBenchmark()
     }
 
+
     private static func startBenchmark(_ name: String) {
 
         reportContaining()
         timingStack.append((now, name, false))
         depth += 1
     }
+
 
     private static func stopBenchmark() -> [String: Double] {
 
@@ -365,6 +385,7 @@ extension Rosewood {
 
         return [ log: took ]
     }
+
 
     private static func reportContaining() {
 

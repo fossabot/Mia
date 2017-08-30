@@ -12,7 +12,7 @@
 // TODO: [HTMLtoPDF] Extension methods to save data to file and return file path
 
 public func getTopMostController() -> UIViewController? {
-    
+
     if var topController = UIApplication.shared.keyWindow?.rootViewController {
         while let presentedViewController = topController.presentedViewController {
             topController = presentedViewController
@@ -21,7 +21,6 @@ public func getTopMostController() -> UIViewController? {
     }
     return nil
 }
-
 
 
 public typealias NetworkActivityBlock = () -> ()
@@ -33,8 +32,6 @@ var __internalActivityCount: Int = 0 {
 }
 
 
-
-
 //public postfix func ++ (networkActivityObserver: NetworkActivityIndicatorObserver) {
 //    networkActivityObserver.increment()
 //}
@@ -44,21 +41,24 @@ var __internalActivityCount: Int = 0 {
 //}
 
 public func showNetworkActivity() {
+
     let shared = UIApplication.shared
     let lockQueue = DispatchQueue(label: "self")
     lockQueue.async {
         __internalActivityCount += 1
-        DispatchQueue.main.async(execute: {() -> Void in
+        DispatchQueue.main.async(execute: { () -> Void in
             if !shared.isNetworkActivityIndicatorVisible && __internalActivityCount > 0 {
                 shared.isNetworkActivityIndicatorVisible = true
                 GradientLoadingBar.shared.show()
-                
+
             }
         })
     }
 }
 
+
 public func hideNetworkActivity(_ completion: NetworkActivityBlock? = nil) {
+
     let shared = UIApplication.shared
     let lockQueue = DispatchQueue(label: "self")
     lockQueue.async {
@@ -66,7 +66,7 @@ public func hideNetworkActivity(_ completion: NetworkActivityBlock? = nil) {
             return
         }
         __internalActivityCount -= 1
-        DispatchQueue.main.async(execute: {() -> Void in
+        DispatchQueue.main.async(execute: { () -> Void in
             if shared.isNetworkActivityIndicatorVisible && __internalActivityCount == 0 {
                 shared.isNetworkActivityIndicatorVisible = false
                 GradientLoadingBar.shared.hide()
@@ -76,3 +76,26 @@ public func hideNetworkActivity(_ completion: NetworkActivityBlock? = nil) {
     }
 }
 
+
+// MARK: - Delegate
+
+
+// MARK: - Shared
+
+
+// MARK: - Configurations
+
+
+// MARK: - Init/Deinit
+
+
+// MARK: - Variables
+
+
+// MARK: - Public Methods
+
+
+// MARK: - Private Methods
+
+
+// MARK: - Helpers

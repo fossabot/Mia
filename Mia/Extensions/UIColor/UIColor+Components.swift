@@ -10,10 +10,32 @@ public typealias XYZComponentsType = (x: CGFloat, y: CGFloat, z: CGFloat)
 
 public extension UIColor {
 
+    // MARK: - Hex Components
+
+    /// Returns a hexadecimal string of the color.
+    public final var hexString: String {
+        return String(format: "#%08X", hex)
+    }
+
+    /// Returns a hexadecimal UInt32 of the color.
+    public final var hex: UInt32 {
+        func roundToHex(_ x: CGFloat) -> UInt32 {
+
+            return UInt32(roundf(Float(x) * 255.0))
+        }
+
+
+        let rgba = rgbaComponents
+        let colorToInt = roundToHex(rgba.r) << 24 | roundToHex(rgba.g) << 16 | roundToHex(rgba.b) << 8 | roundToHex(rgba.a)
+
+        return colorToInt
+    }
+
+
     // MARK: - RGBA Components
 
     /// Returns an object with UIColor's RGBA components.
-    public var rgbaComponents: RGBAComponentsType {
+    public final var rgbaComponents: RGBAComponentsType {
 
         var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
         getRed(&r, green: &g, blue: &b, alpha: &a)
@@ -21,29 +43,30 @@ public extension UIColor {
     }
 
     /// The red component.
-    public var redComponent: CGFloat {
+    public final var redComponent: CGFloat {
         return rgbaComponents.r
     }
 
     /// The green component.
-    public var greenComponent: CGFloat {
+    public final var greenComponent: CGFloat {
         return rgbaComponents.g
     }
 
     /// The blue component.
-    public var blueComponent: CGFloat {
+    public final var blueComponent: CGFloat {
         return rgbaComponents.b
     }
 
     /// The alpha component.
-    public var alphaComponent: CGFloat {
+    public final var alphaComponent: CGFloat {
         return rgbaComponents.a
     }
+
 
     // MARK: - HSBA Components
 
     /// Returns an object with UIColor's HSBA components.
-    public var hsbaComponents: HSBAComponentsType {
+    public final var hsbaComponents: HSBAComponentsType {
 
         var h: CGFloat = 0, s: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
         getHue(&h, saturation: &s, brightness: &b, alpha: &a)
@@ -51,26 +74,37 @@ public extension UIColor {
     }
 
     /// The hue component.
-    public var hueComponent: CGFloat {
+    public final var hueComponent: CGFloat {
         return hsbaComponents.h
     }
 
     /// The saturation component.
-    public var saturationComponent: CGFloat {
+    public final var saturationComponent: CGFloat {
         return hsbaComponents.s
     }
 
     /// The brightness component.
-    public var brightnessComponent: CGFloat {
+    public final var brightnessComponent: CGFloat {
         return hsbaComponents.b
     }
+
+
+    // MARK: - HSL Components
+
+    /// Returns the UIColor's HSL (hue, saturation, lightness) components.
+    /// Notes that the hue value is between 0.0 and 360.0 degree.
+    public final var hslComponents: HSLComponentsType {
+        let hsl = HSL(color: self)
+        return (hsl.h * 360, hsl.s, hsl.l)
+    }
+
 
     // MARK: - Lab Components
 
     /// Returns an object with UIColor's LAB (lightness, red-green axis, yellow-blue axis) components.
     /// It is based on the CIE XYZ color space with an observer at 2° and a D65 illuminant.
     /// Notes that L values are between 0 to 100.0, a values are between -128 to 127.0 and b values are between -128 to 127.0.
-    public var labComponents: LABComponentsType {
+    public final var labComponents: LABComponentsType {
         let normalized = { (c: CGFloat) -> CGFloat in
             c > 0.008856 ? pow(c, 1.0 / 3) : 7.787 * c + 16.0 / 116
         }
@@ -87,12 +121,13 @@ public extension UIColor {
         return (l: l, a: a, b: b)
     }
 
+
     // MARK: - XYZ Components
 
     /// Returns an object with UIColor's XYZ (lightness, red-green axis, yellow-blue axis) components.
     /// It is based on an observer at 2° and a D65 illuminant.
     /// Notes that X values are between 0 to 95.05, Y values are between 0 to 100.0 and Z values are between 0 to 108.9.
-    public var xyzComponents: XYZComponentsType {
+    public final var xyzComponents: XYZComponentsType {
         let toSRGB = { (c: CGFloat) -> CGFloat in
             c > 0.04045 ? pow((c + 0.055) / 1.055, 2.4) : c / 12.92
         }
@@ -109,13 +144,4 @@ public extension UIColor {
         return (x: x, y: y, z: z)
     }
 
-    // MARK: - HSL Components
-
-    /// Returns the UIColor's HSL (hue, saturation, lightness) components.
-    /// Notes that the hue value is between 0.0 and 360.0 degree.
-    public var hslComponents: HSLComponentsType {
-        let hsl = HSL(color: self)
-        return (hsl.h * 360, hsl.s, hsl.l)
-    }
 }
-

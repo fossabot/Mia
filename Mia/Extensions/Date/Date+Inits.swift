@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 
 public extension Date {
@@ -29,6 +29,7 @@ public extension Date {
         self = date
     }
 
+
     /// Init date with components. Hour, minutes, and seconds set to zero.
     ///
     /// - Parameters:
@@ -40,7 +41,8 @@ public extension Date {
         self.init(year: year, month: month, day: day, hour: 0, minute: 0, second: 0)
     }
 
-    /// Init Date from an array of known date formats. 
+
+    /// Init Date from an array of known date formats.
     /// Returns nil if `dateString` is not valid or date format is not in DateFormats.array.
     ///
     /// - Parameter dateString: THe string value to parse.
@@ -62,6 +64,7 @@ public extension Date {
         }
         return nil
     }
+
 
     /// Init Date from a C# DateTime string such as `Date(1440156888750-0700)`.
     /// Returns nil if `dateTimeString` is not valid.

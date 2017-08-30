@@ -12,6 +12,7 @@ public extension UIViewController {
         showAlert(title, message: message, alertActions: [ cancelAction ])
     }
 
+
     /// Present an UIAlertController with title, message and custom UIAlertAction
     /// - Parameters:
     ///   - title: Title for alert
@@ -21,6 +22,7 @@ public extension UIViewController {
 
         internal_showAlert(title, message: message, preferredStyle: .alert, alertActions: alertActions)
     }
+
 
     // MARK: Action Sheet Style
 
@@ -34,6 +36,7 @@ public extension UIViewController {
         showActionSheet(title, message: message, alertActions: [ cancelAction ])
     }
 
+
     /// Present an UIAlertController with title, message and OK button
     /// - Parameters:
     ///   - title: Title for alert
@@ -43,6 +46,7 @@ public extension UIViewController {
 
         internal_showAlert(title, message: message, preferredStyle: .actionSheet, alertActions: alertActions)
     }
+
 
     // MARK: Private
 

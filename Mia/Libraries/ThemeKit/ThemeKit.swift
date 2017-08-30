@@ -1,10 +1,11 @@
-import Foundation
+import UIKit
 
 
 // MARK: - Theme
 
 public protocol Theme {
 }
+
 
 // MARK: - ThemeManager
 
@@ -19,4 +20,11 @@ public class ThemeKit {
             NotificationCenter.default.post(name: Notification.Name.themeDidChange, object: self)
         }
     }
+}
+
+
+// MARK: - Notification
+
+public extension Notification.Name {
+    static let themeDidChange = Notification.Name("Themes.ThemeDidChangeNotification")
 }

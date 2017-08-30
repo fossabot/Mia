@@ -10,9 +10,8 @@ target 'Mia_Example' do
     pod 'Mia', :path => '../'
     
     
-    #pod 'ChameleonFramework/Swift' # throws errors. check later
-    pod 'DynamicColor'
-    pod 'RandomColorSwift'
+   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+
     
     
     target 'Mia_ExampleTests' do

@@ -1,5 +1,5 @@
 import AdSupport
-import Foundation
+
 import SystemConfiguration.CaptiveNetwork
 import UIKit
 
@@ -7,7 +7,7 @@ import UIKit
 public struct Device {
 
     /// Returns the Devices current name
-   public static  var name: String {
+    public static var name: String {
         return UIDevice.current.name
     }
 
@@ -23,6 +23,7 @@ public struct Device {
         }
         return "\(UIDevice.current.batteryLevel * 100)"
     }
+
 
     public struct Network {
 
@@ -51,6 +52,7 @@ public struct Device {
         }
     }
 
+
     public struct `Type` {
 
         /// Check to see if device is an iPhone
@@ -71,12 +73,14 @@ public struct Device {
 
     }
 
+
     public struct Firmware {
 
         /// String representation of the current firmware.
         public static var currentVersion: String {
             return "\(UIDevice.current.systemVersion)"
         }
+
 
         /// Enum representation of iOS versions.
         public enum Firmwares: Float {
@@ -102,6 +106,7 @@ public struct Device {
             case eleven = 11.0
         }
 
+
         /// Check if device is on a specific firmware.
         ///
         /// - Parameter version: The firmware to check against.
@@ -111,6 +116,7 @@ public struct Device {
             return Float(UIDevice.current.systemVersion)! >= firmware.rawValue && Float(UIDevice.current.systemVersion)! < (firmware.rawValue + 1.0)
         }
 
+
         /// Check if device is on a specific firmware or later.
         ///
         /// - Parameter version: The firmware to check against.
@@ -119,6 +125,7 @@ public struct Device {
 
             return Float(UIDevice.current.systemVersion)! >= firmware.rawValue
         }
+
 
         /// Check if device is earlier than a specific firmware.
         ///
@@ -130,6 +137,7 @@ public struct Device {
         }
 
     }
+
 
     public struct Size {
 
@@ -151,6 +159,7 @@ public struct Device {
 
         }
 
+
         /// Get the current device's screen height.
         public static let screenHeight = UIScreen.main.bounds.size.height
 
@@ -166,6 +175,7 @@ public struct Device {
             return UIScreen.main.bounds.size.height == size.rawValue
         }
 
+
         /// Check if device screen size is larger or equal to a specific screen size
         ///
         /// - Parameter size: The size to check against.
@@ -174,6 +184,7 @@ public struct Device {
 
             return UIScreen.main.bounds.size.height >= size.rawValue
         }
+
 
         /// Check if device screen size is smaller or equal to a specific screen size
         ///
@@ -185,6 +196,7 @@ public struct Device {
         }
 
     }
+
 
     public struct Setings {
 
@@ -235,6 +247,7 @@ public struct Device {
             case doNotDisturb = "DO_NOT_DISTURB"
 
         }
+
 
         public static func open(_ preferenceType: PreferenceType) {
 

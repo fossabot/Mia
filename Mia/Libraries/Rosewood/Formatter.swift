@@ -20,6 +20,7 @@ public enum LoggingComponent {
 
 }
 
+
 // MARK: - LogFormatter
 public class LogFormatter {
 
@@ -50,6 +51,7 @@ public class LogFormatter {
         self.format = format
         self.components = components
     }
+
 
     // MARK: Private Methods
 
@@ -82,6 +84,7 @@ public class LogFormatter {
         return String(format: format, arguments: arguments)
     }
 
+
     // For prettyprint use
     func format(level: LogLevel, item: String, file: String, line: Int, function: String) -> String {
 
@@ -111,6 +114,7 @@ public class LogFormatter {
         return String(format: format, arguments: arguments)
     }
 
+
     // MARK: Helpers Methods
 
     func format(date: Date, dateFormat: String) -> String {
@@ -119,6 +123,7 @@ public class LogFormatter {
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: date)
     }
+
 
     func format(file: String, fullPath: Bool, fileExtension: Bool) -> String {
 
@@ -135,6 +140,7 @@ public class LogFormatter {
     }
 
 }
+
 
 // MARK: - LogFormatter Presets
 extension LogFormatter {

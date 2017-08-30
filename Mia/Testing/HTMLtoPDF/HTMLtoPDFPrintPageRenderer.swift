@@ -1,4 +1,4 @@
-import Foundation
+import UIK
 
 
 class HTMLtoPDFPrintPageRenderer: UIPrintPageRenderer {

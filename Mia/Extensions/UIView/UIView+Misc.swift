@@ -20,6 +20,7 @@ public extension UIView {
         return all
     }
 
+
     //https://stackoverflow.com/questions/32151637/swift-get-all-subviews-of-a-specific-type-and-add-to-an-array
     /// Recursively get array of subviews of type 'T'
     ///
@@ -28,6 +29,7 @@ public extension UIView {
     public func subViewsRecursive<T:UIView>(type: T.Type) -> [T] {
 
         var all = [ T ]()
+
 
         func getSubview(view: UIView) {
 
@@ -38,10 +40,12 @@ public extension UIView {
             view.subviews.forEach { getSubview(view: $0) }
         }
 
+
         getSubview(view: self)
 
         return all
     }
+
 
     /// Takes a screenshot of the current view.
     ///

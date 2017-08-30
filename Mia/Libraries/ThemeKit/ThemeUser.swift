@@ -1,10 +1,11 @@
-import Foundation
+import UKIit
 
 
 // MARK: - ThemeUser
 
 public protocol ThemeUser: class {
 }
+
 
 public extension ThemeUser {
 
@@ -15,6 +16,7 @@ public extension ThemeUser {
     /// - Parameters:
     ///   - type: The type of your own theme.
     ///   - apply: The function that gets called. (ThemeUser, Theme)
+    @available(*, message: "use `useAnimated` instead!")
     func use<T:Theme>(_ type: T.Type, apply: @escaping (Self, T) -> ()) {
 
         if let theme = ThemeKit.shared.currentTheme as? T {
@@ -30,6 +32,7 @@ public extension ThemeUser {
             apply(themeUser, theme)
         }
     }
+
 
     /// This is called immediately and when current theme changes.
     ///
@@ -56,6 +59,7 @@ public extension ThemeUser {
         }
     }
 
+
     // MARK: Private Methods
 
     private var theme_handler: Handler {
@@ -72,8 +76,10 @@ public extension ThemeUser {
     }
 }
 
+
 extension NSObject: ThemeUser {
 }
+
 
 // MARK: - Handler
 
@@ -85,15 +91,18 @@ fileprivate class Handler {
 
     var mapping = [ String: (ThemeUser, Theme) -> Void ]()
 
+
     init(host: ThemeUser) {
 
         self.host = host
     }
 
+
     deinit {
 
         NotificationCenter.default.removeObserver(observer)
     }
+
 
     func observe() {
 
@@ -101,6 +110,7 @@ fileprivate class Handler {
             self?.handle()
         })
     }
+
 
     func handle() {
 

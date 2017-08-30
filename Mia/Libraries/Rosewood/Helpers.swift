@@ -11,6 +11,7 @@ extension String {
 
 }
 
+
 // MARK: - Double
 extension Double {
 
@@ -23,6 +24,7 @@ extension Double {
     }
 
 }
+
 
 // MARK: - NSObject
 extension NSObject {
@@ -73,6 +75,7 @@ extension NSObject {
             }
         }
     }
+
 
     public class func reflect(object: Any?) -> [String: Any] {
 

@@ -11,8 +11,26 @@ class ViewController: UIViewController {
 
         super.viewDidLoad()
 
+        
+        let colors = [UIColor.black, UIColor.orange, .purple]
+        
+        let asd = colors.gradient { gradient in
+            print(gradient.colors!.count)
+            gradient.frame = self.view.bounds
+            gradient.speed = 1.0
+            self.view.layer.insertSublayer(gradient, at: 0)
+            return gradient
+        }
+        
+        navigationController?.navigationBar.backgroundColor = colors.pickColorAt(scale: 0.95)
+        
+        
+
+//        view.layer.insertSublayer(gradient2, at: 0)
     }
 
+
+    
 }
 
 

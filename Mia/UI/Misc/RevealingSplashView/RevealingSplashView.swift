@@ -4,6 +4,7 @@ import UIKit
 public typealias RevealingSplashViewCompletion = () -> Void
 public typealias RevealingSplashViewExecution = () -> Void
 
+
 public enum SplashAnimation: String {
 
     case `default`
@@ -15,6 +16,7 @@ public enum SplashAnimation: String {
     case heartBeat
 
 }
+
 
 public class RevealingSplashView: UIView {
 
@@ -46,11 +48,9 @@ public class RevealingSplashView: UIView {
 
     ///The icon color of the image. Defaults to white.
     public var iconColor: UIColor = UIColor.white {
-
         didSet {
             imageView?.tintColor = iconColor
         }
-
     }
 
     /// The repeat counter for heart beat animation, default to 1
@@ -108,10 +108,12 @@ public class RevealingSplashView: UIView {
 
     }
 
+
     public required init?(coder aDecoder: NSCoder) {
 
         fatalError("init(coder:) has not been implemented")
     }
+
 
     // MARK:  Public Methods
 
@@ -145,7 +147,8 @@ public class RevealingSplashView: UIView {
 
     }
 
-    // MARK: - Private Methods
+
+    // MARK: Private Methods
 
     private func playTwitterAnimation(_ completion: RevealingSplashViewCompletion? = nil) {
 
@@ -168,6 +171,7 @@ public class RevealingSplashView: UIView {
         }
     }
 
+
     private func playSqueezeAnimation(_ completion: RevealingSplashViewCompletion? = nil) {
 
         if let imageView = self.imageView {
@@ -188,6 +192,7 @@ public class RevealingSplashView: UIView {
             })
         }
     }
+
 
     private func playRotateOutAnimation(_ completion: RevealingSplashViewCompletion? = nil) {
 
@@ -216,6 +221,7 @@ public class RevealingSplashView: UIView {
 
         }
     }
+
 
     private func playWobbleAnimation(_ completion: RevealingSplashViewCompletion? = nil) {
 
@@ -249,6 +255,7 @@ public class RevealingSplashView: UIView {
         }
     }
 
+
     private func playSwingAnimation(_ completion: RevealingSplashViewCompletion? = nil) {
 
         if let imageView = self.imageView {
@@ -272,6 +279,7 @@ public class RevealingSplashView: UIView {
         }
     }
 
+
     private func playPopAnimation(_ completion: RevealingSplashViewCompletion? = nil) {
 
         if let imageView = self.imageView {
@@ -294,6 +302,7 @@ public class RevealingSplashView: UIView {
         }
     }
 
+
     private func playZoomOutAnimation(_ completion: RevealingSplashViewCompletion? = nil) {
 
         if let imageView = imageView {
@@ -313,6 +322,7 @@ public class RevealingSplashView: UIView {
             })
         }
     }
+
 
     private func playHeartBeatAnimation(_ completion: RevealingSplashViewCompletion? = nil) {
 
@@ -340,19 +350,22 @@ public class RevealingSplashView: UIView {
         }
     }
 
+
     /// End the heartbeat animation. Does nothing unless animationType is 'heartBeat'.
     public func finishHeartBeatAnimation() {
 
         self.heartAttack = true
     }
 
-    // MARK: - Helpers
+
+    // MARK: Helpers
 
     private func getZoomOutTransform() -> CGAffineTransform {
 
         let zoomOutTransform: CGAffineTransform = CGAffineTransform(scaleX: 20, y: 20)
         return zoomOutTransform
     }
+
 
     private func animateLayer(_ animation: RevealingSplashViewExecution, completion: RevealingSplashViewCompletion? = nil) {
 

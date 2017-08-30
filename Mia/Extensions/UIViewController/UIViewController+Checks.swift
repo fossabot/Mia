@@ -1,8 +1,4 @@
-//
-// Created by Michael Hedaitulla on 8/22/17.
-//
-
-import Foundation
+import UIKIt
 
 
 public extension UIViewController {

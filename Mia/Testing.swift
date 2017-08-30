@@ -1,54 +1,69 @@
-import Foundation
+import UIKit
 
 
 // MARK: - Colors
 public func UIColorFromRGB(_ rgbValue: String) -> UIColor {
+
     return UIColor(
-        red: CGFloat((rgbValue.hexaToInt & 0xFF0000) >> 16) / 255.0,
-        green: CGFloat((rgbValue.hexaToInt & 0x00FF00) >> 8) / 255.0,
-        blue: CGFloat(rgbValue.hexaToInt & 0x0000FF) / 255.0,
-        alpha: CGFloat(1.0)
+            red: CGFloat((rgbValue.hexaToInt & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue.hexaToInt & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue.hexaToInt & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
     )
 }
 
+
 extension String {
-    var hexaToInt      : Int    { return Int(strtoul(self, nil, 16))      }
-    var hexaToDouble   : Double { return Double(strtoul(self, nil, 16))   }
-    var hexaToBinary   : String { return String(hexaToInt, radix: 2)      }
-    var decimalToHexa  : String { return String(Int(self) ?? 0, radix: 16)}
+    var hexaToInt: Int { return Int(strtoul(self, nil, 16)) }
+
+    var hexaToDouble: Double { return Double(strtoul(self, nil, 16)) }
+
+    var hexaToBinary: String { return String(hexaToInt, radix: 2) }
+
+    var decimalToHexa: String { return String(Int(self) ?? 0, radix: 16) }
+
     var decimalToBinary: String { return String(Int(self) ?? 0, radix: 2) }
-    var binaryToInt    : Int    { return Int(strtoul(self, nil, 2))       }
-    var binaryToDouble : Double { return Double(strtoul(self, nil, 2))   }
-    var binaryToHexa   : String { return String(binaryToInt, radix: 16)  }
+
+    var binaryToInt: Int { return Int(strtoul(self, nil, 2)) }
+
+    var binaryToDouble: Double { return Double(strtoul(self, nil, 2)) }
+
+    var binaryToHexa: String { return String(binaryToInt, radix: 16) }
 }
+
 
 extension Int {
-    var binaryString: String { return String(self, radix: 2)  }
-    var hexaString  : String { return String(self, radix: 16) }
-    var doubleValue : Double { return Double(self) }
-}
+    var binaryString: String { return String(self, radix: 2) }
 
+    var hexaString: String { return String(self, radix: 16) }
+
+    var doubleValue: Double { return Double(self) }
+}
 
 
 extension Double {
-    public var millisecond: TimeInterval  { return self / 1000 }
+    public var millisecond: TimeInterval { return self / 1000 }
+
     public var milliseconds: TimeInterval { return self / 1000 }
-    public var ms: TimeInterval           { return self / 1000 }
-    
-    public var second: TimeInterval       { return self }
-    public var seconds: TimeInterval      { return self }
-    
-    public var minute: TimeInterval       { return self * 60 }
-    public var minutes: TimeInterval      { return self * 60 }
-    
-    public var hour: TimeInterval         { return self * 3600 }
-    public var hours: TimeInterval        { return self * 3600 }
-    
-    public var day: TimeInterval          { return self * 3600 * 24 }
-    public var days: TimeInterval         { return self * 3600 * 24 }
+
+    public var ms: TimeInterval { return self / 1000 }
+
+    public var second: TimeInterval { return self }
+
+    public var seconds: TimeInterval { return self }
+
+    public var minute: TimeInterval { return self * 60 }
+
+    public var minutes: TimeInterval { return self * 60 }
+
+    public var hour: TimeInterval { return self * 3600 }
+
+    public var hours: TimeInterval { return self * 3600 }
+
+    public var day: TimeInterval { return self * 3600 * 24 }
+
+    public var days: TimeInterval { return self * 3600 * 24 }
 }
-
-
 
 
 // MARK: - String
@@ -71,6 +86,7 @@ public extension String {
         return formatter.string(from: amount)!
     }
 
+
     func currencyWithoutChange() -> String {
 
         guard let amount = NSDecimalNumber(string: self) as NSDecimalNumber! else {
@@ -86,6 +102,7 @@ public extension String {
 
         return formatter.string(from: amount)!
     }
+
 
     // MARK: Number Methods
     func numberWithDecimal(_ decimalPlaces: Int = 2) -> String {
@@ -104,6 +121,7 @@ public extension String {
         return formatter.string(from: amount)!
     }
 
+
     func numberWithoutDecimal() -> String {
 
         guard let amount = NSDecimalNumber(string: self) as NSDecimalNumber! else {
@@ -120,6 +138,7 @@ public extension String {
 
         return formatter.string(from: amount)!
     }
+
 
     func kValue() -> String {
 
@@ -158,6 +177,7 @@ public extension NSNumber {
         return formatter.string(from: self)!
     }
 
+
     func currencyWithoutChange() -> String {
 
         let formatter: NumberFormatter = NumberFormatter()
@@ -170,6 +190,7 @@ public extension NSNumber {
 
         return formatter.string(from: self)!
     }
+
 
     // MARK: Number Methods
     func numberWithDecimal(_ decimalPlaces: Int = 2) -> String {
@@ -185,6 +206,7 @@ public extension NSNumber {
         return formatter.string(from: self)!
     }
 
+
     func numberWithoutDecimal() -> String {
 
         let formatter: NumberFormatter = NumberFormatter()
@@ -197,6 +219,7 @@ public extension NSNumber {
 
         return formatter.string(from: self)!
     }
+
 
     func kValue(_ decimalPlaces: Int = 0) -> String {
 
@@ -215,6 +238,7 @@ public extension NSNumber {
 
     }
 
+
     func percentValue(_ decimalPlaces: Int = 0) -> String {
 
         let formatter: NumberFormatter = NumberFormatter()
@@ -231,30 +255,18 @@ public extension NSNumber {
 }
 
 
-
-public enum SectionViewType {
-    case button, label
-}
-
-
 // MARK: - Header / Footer
 public extension UITableView {
-    
+
     func hideAllCellSeparators() {
-        
+
         separatorColor = UIColor.clear
     }
-    
-    func hideUnnecessaryCellSeparators() {
-        
-        let view = UIView()
-        view.backgroundColor = UIColor.clear
-        tableFooterView = view
-    }
-    
+
+
     // ???: Use this or tableviewcell method?
     func setSeparatorInsetLeft() {
-        
+
         if responds(to: #selector(setter:self.separatorInset)) {
             separatorInset = .zero
         }
@@ -276,159 +288,60 @@ public extension UITableView {
             }
         }
     }
-    
-    func viewForSection(_ label: String, _ target: Any, _ action: Selector, _ useDarkColors: Bool = true) -> UIView? {
-        
-        let viewHeader = self.viewForSection(label, useDarkColors)
-        
-        let button = UIButton(frame: viewHeader.frame)
-        button.addTarget(target, action: action, for: .touchUpInside)
-        viewHeader.addSubview(button)
-        
-        return viewHeader
-    }
-    
-    func viewForSection(_ label: String, _ useDarkColors: Bool = true) -> UIView {
-        
-        let viewHeader = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: 30))
-        viewHeader.autoresizingMask = [ .flexibleWidth, .flexibleLeftMargin, .flexibleRightMargin ]
-        
-        let backgroundColor = (useDarkColors) ? UIColor.black : UIColor.white
-        let textColor = (useDarkColors) ? UIColor.white : UIColor.black
-        
-        let viewLabel = UILabel(frame: viewHeader.frame)
-        
-        viewLabel.text = "   \(label)"
-        viewLabel.backgroundColor = backgroundColor
-        viewLabel.textColor = textColor;
-        
-        viewLabel.font = UIFont(name: "HelveticaNeue-Light", size: 12.0)
-        viewLabel.textAlignment = .left
-        
-        viewHeader.addSubview(viewLabel)
-        
-        return viewHeader
-    }
-    
+
+
     func blurSeperator() {
+
         if (!UIAccessibilityIsReduceTransparencyEnabled()) {
             self.backgroundColor = UIColor.clear
             let blurEffect = UIBlurEffect(style: .light)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
             self.backgroundView = blurEffectView
-            
+
             //if you want translucent vibrant table view separator lines
             self.separatorEffect = UIVibrancyEffect(blurEffect: blurEffect)
         }
     }
-    
-    
-    
+
+
     public func basicCleanup() {
+
         self.tableFooterView = UIView()
         self.separatorInset = .zero
         self.layoutMargins = .zero
     }
+
 }
 
 
-public extension Array where Element : UIColor {
-    
-    public func gradient(_ transform: ((_ gradient: inout CAGradientLayer) -> CAGradientLayer)? = nil) -> CAGradientLayer {
-        var gradient = CAGradientLayer()
-        gradient.colors = self.map { $0.cgColor }
-        
-        if let transform = transform {
-            gradient = transform(&gradient)
-        }
-        
-        return gradient
-    }
-}
+extension UIView {
+    // use self instead of passing view
+    func insertBlurView(_ view: UIView, style: UIBlurEffectStyle) {
 
+        view.backgroundColor = UIColor.clear
 
+        let blurEffect = UIBlurEffect(style: style)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        view.insertSubview(blurEffectView, at: 0)
+    }
 
-
-
-extension UIColor {
-    
-    /// Make color lighter (closer to white) by altering RGB values
-    /// - Returns: UIColor closer to white
-    public final var mn_lighterColorRGBA: UIColor? {
-        var r: CGFloat = 0
-        var g: CGFloat = 0
-        var b: CGFloat = 0
-        var a: CGFloat = 0
-        
-        guard self.getRed(&r, green: &g, blue: &b, alpha: &a) else { return nil }
-        return UIColor.init(red: CGFloat(min(r + 0.2, 1.0)),
-                            green: CGFloat(min(g + 0.2, 1.0)),
-                            blue: CGFloat(min(b + 0.2, 1.0)),
-                            alpha: a)
-    }
-    
-    
-    /// Make color darker (closer to black) by altering RGB values
-    /// - Returns: UIColor closer to black
-    public final var mn_darkerColorRGBA: UIColor? {
-        var r: CGFloat = 0
-        var g: CGFloat = 0
-        var b: CGFloat = 0
-        var a: CGFloat = 0
-        
-        guard self.getRed(&r, green: &g, blue: &b, alpha: &a) else { return nil }
-        return UIColor.init(red: CGFloat(max(r - 0.2, 0.0)),
-                            green: CGFloat(max(g - 0.2, 0.0)),
-                            blue: CGFloat(max(b - 0.2, 0.0)),
-                            alpha: a)
-    }
-    
-    
-    /// Make color lighter by altering brightness
-    /// - Returns: UIColor with more brightness
-    public final var mn_lighterColorHSBA: UIColor? {
-        var h: CGFloat = 0
-        var s: CGFloat = 0
-        var b: CGFloat = 0
-        var a: CGFloat = 0
-        
-        guard self.getHue(&h, saturation: &s, brightness: &b, alpha: &a) else { return nil }
-        return UIColor.init(hue: h,
-                            saturation: s,
-                            brightness: CGFloat(min(b * 1.3, 1.0)),
-                            alpha: a)
-    }
-    
-    
-    /// Make color darker by altering brightness
-    /// - Returns: UIColor with less brightness
-    public final var mn_darkerColorHSBA: UIColor? {
-        var h: CGFloat = 0
-        var s: CGFloat = 0
-        var b: CGFloat = 0
-        var a: CGFloat = 0
-        
-        guard self.getHue(&h, saturation: &s, brightness: &b, alpha: &a) else { return nil }
-        return UIColor.init(hue: h,
-                            saturation: s,
-                            brightness: CGFloat(b * 0.75),
-                            alpha: a)
-    }
-    
-    
-    
 }
 
 
 class CountedColor {
     let color: UIColor
+
     let count: Int
-    
+
+
     init(color: UIColor, count: Int) {
+
         self.color = color
         self.count = count
     }
 }
+
 
 //extension UIImage {
 //    

@@ -24,6 +24,7 @@ public enum LogLevel {
 
 }
 
+
 //MARK: - LogLevel Comparable
 
 extension LogLevel: Comparable {
@@ -32,6 +33,7 @@ extension LogLevel: Comparable {
 
         return x.hashValue == y.hashValue
     }
+
 
     public static func <(x: LogLevel, y: LogLevel) -> Bool {
 

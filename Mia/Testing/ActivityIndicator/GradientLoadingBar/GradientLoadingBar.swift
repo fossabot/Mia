@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 
 
@@ -8,31 +7,30 @@ public class GradientLoadingBar {
     // Instance variable for singleton
     public static var shared: GradientLoadingBar = GradientLoadingBar()
 
+
     private struct DefaultValues {
 
         static let height = 20.0
 
         static let durations = Durations(fadeIn: 0.33, fadeOut: 0.33, progress: 3.33)
 
-//        public static let gradientColors: GradientColors = [
-//            UIColor(hexString: "#4cd964").cgColor,
-//            UIColor(hexString: "#5ac8fa").cgColor,
-//            UIColor(hexString: "#007aff").cgColor,
-//            UIColor(hexString: "#34aadc").cgColor,
-//            UIColor(hexString: "#5856d6").cgColor,
-//            UIColor(hexString: "#ff2d55").cgColor
-//        ]
-        
+        //        public static let gradientColors: GradientColors = [
+        //            UIColor(hexString: "#4cd964").cgColor,
+        //            UIColor(hexString: "#5ac8fa").cgColor,
+        //            UIColor(hexString: "#007aff").cgColor,
+        //            UIColor(hexString: "#34aadc").cgColor,
+        //            UIColor(hexString: "#5856d6").cgColor,
+        //            UIColor(hexString: "#ff2d55").cgColor
+        //        ]
+
         public static let gradientGreenColors: GradientColors = [
-            UIColor(hexString: "#D0E9DD").cgColor,
-            UIColor(hexString: "#08EE82").cgColor,
-            UIColor(hexString: "#009A5E").cgColor,
-            UIColor(hexString: "#006847").cgColor,
-            UIColor(hexString: "#089F5A").cgColor,
-            UIColor(hexString: "#03693A").cgColor,
-            UIColor(hexString: "#011C17").cgColor
+            UIColor(hexString: "#14C3A2").cgColor,
+            UIColor(hexString: "#0DE5A8").cgColor,
+            UIColor(hexString: "#7CF49A").cgColor,
+            UIColor(hexString: "#B8FD99").cgColor
         ]
     }
+
 
     // View contain the gradient bar
     private let gradientView: GradientView
@@ -46,6 +44,7 @@ public class GradientLoadingBar {
     // Height of gradient bar
     private var height = 0.0
 
+
     // MARK: - Initializers
 
     public init(height: Double = DefaultValues.height, durations: Durations = DefaultValues.durations, gradientColors: GradientColors = DefaultValues.gradientGreenColors) {
@@ -58,12 +57,14 @@ public class GradientLoadingBar {
         )
     }
 
+
     deinit {
 
         if addedToKeyWindow {
             gradientView.removeFromSuperview()
         }
     }
+
 
     // MARK: - Layout
 
@@ -82,6 +83,7 @@ public class GradientLoadingBar {
         setupConstraints(keyWindow: keyWindow)
     }
 
+
     private func setupConstraints(keyWindow: UIWindow) {
 
         gradientView.leadingAnchor.constraint(equalTo: keyWindow.leadingAnchor).isActive = true
@@ -91,12 +93,14 @@ public class GradientLoadingBar {
         gradientView.heightAnchor.constraint(equalToConstant: CGFloat(height)).isActive = true
     }
 
+
     // MARK: - Helper to use as a Singleton
 
     public func saveInstance() {
 
         type(of: self).shared = self
     }
+
 
     // MARK: - Show / Hide
 
@@ -115,6 +119,7 @@ public class GradientLoadingBar {
         }
     }
 
+
     public func hide() {
 
         if isVisible {
@@ -123,6 +128,7 @@ public class GradientLoadingBar {
             gradientView.hide()
         }
     }
+
 
     public func toggle() {
 

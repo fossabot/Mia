@@ -5,8 +5,10 @@ private let queue = DispatchQueue(label: "Multinerd.UpdateKit")
 
 public typealias CheckBlock = () -> ()
 
+
 // MARK: - UpdateType
 public enum UpdateType {
+
     /// Allow the user to ignore updates.
     case normal
 
@@ -15,8 +17,10 @@ public enum UpdateType {
 
 }
 
+
 // MARK: - LastRunType
 public enum LastRunType {
+
     // The app has not changed.
     case noChanges
 
@@ -26,44 +30,60 @@ public enum LastRunType {
     /// The app has been updated.
     case updated
 
+    /// The app has been downgraded.
+    case downgraded
+
     /// I cannot think of any reason this would be called.
     case unknown
 
 }
 
+
 // MARK: - UpdateKit
-public class UpdateKit {
+public struct UpdateKit {
 
     // MARK: Shared
 
     public static let shared = UpdateKit()
 
+
     // MARK: Configurations
 
     public struct Configurations {
 
+        /// FOR DEBUGGING ONLY. Setting this to false will ensure the current version will not be saved. Use to test 'onFreshInstall' and 'onUpdate'
+        public static var willSaveCurrentVersion: Bool = true
+
         /// Set the update type.
         public static var updateType: UpdateType = .normal
 
-        /// Set the URL to check. NOTE: incompatible with appstore links. TODO: appstore implementation.
-        public static var updateURL: String = "https://dl.dropbox.com/s/jsne1fsvha446qv/cactusReportsV2.plist"
+        /// Set the URL to check.
+        public static var updateURL: String = ""
 
         fileprivate static var updateLink = "itms-services://?action=download-manifest&url=\(updateURL)"
 
     }
 
+
     // MARK: Variables
 
     private let versionKey: String = "Multinerd.UpdateKit.CurrentVersion"
+
 
     // MARK: Init/Deinit
 
     private init() {}
 
+
     // MARK: Public Methods
 
     /// Check for updates OTA
     public func checkForUpdates() {
+
+        if Configurations.updateURL.isEmpty {
+            Rosewood.error("App.Update: 'Configurations.updateURL' is empty.")
+            return
+        }
 
         Rosewood.verbose("App.Update: Checking...")
         Alamofire.request(Configurations.updateURL).responsePropertyList(completionHandler: { response in
@@ -75,14 +95,29 @@ public class UpdateKit {
                 case .success(let value):
                     queue.async {
                         if PropertyListSerialization.propertyList(value, isValidFor: .xml) {
-                            guard let dict = value as? [String: Any] else { return }
-                            guard let items = dict["items"] as? [[String: Any]] else { return }
-                            guard let meta = items[0]["metadata"] as? [String: Any] else { return }
-                            guard let newVersion = meta["bundle-version"] as? String else { return }
+                            guard let dict = value as? [String: Any] else {
+                                self.failedToParse()
+                                return
+                            }
+                            guard let items = dict["items"] as? [[String: Any]] else {
+                                self.failedToParse()
+                                return
+                            }
+                            guard let meta = items[0]["metadata"] as? [String: Any] else {
+                                self.failedToParse()
+                                return
+                            }
+                            guard let newVersion = meta["bundle-version"] as? String else {
+                                self.failedToParse()
+                                return
+                            }
 
-                            guard let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String else { return }
+                            guard let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String else {
+                                self.failedToParse()
+                                return
+                            }
 
-                            let updateAvailable = self.compare(current: currentVersion, new: newVersion)
+                            let updateAvailable = newVersion.compare(currentVersion, options: .numeric) == .orderedDescending
 
                             if updateAvailable {
                                 Rosewood.verbose("App.Update: Update Available | New: \(newVersion) | Cur: \(currentVersion)")
@@ -97,22 +132,50 @@ public class UpdateKit {
 
     }
 
+
+    /// Compares the last ran version with the current version.
+    ///
+    /// - Returns: A LastRunType value.
+    public func checkLastAppVersion() -> LastRunType {
+
+        if let lastSavedVersion = UserDefaults.standard.string(forKey: versionKey) {
+
+            if Application.currentVersion.compare(lastSavedVersion, options: .numeric) == .orderedSame { return .noChanges }
+            if Application.currentVersion.compare(lastSavedVersion, options: .numeric) == .orderedDescending { return .updated }
+            if Application.currentVersion.compare(lastSavedVersion, options: .numeric) == .orderedAscending { return .downgraded }
+
+            return .unknown
+
+        } else {
+            return .freshInstall
+        }
+    }
+
+
+    /// Checks if the app was a fresh install.
+    ///
+    /// - Parameter completion: The callback block.
     public func onFreshInstall(_ completion: CheckBlock) {
 
         if self.checkLastAppVersion() == .freshInstall {
-            saveCurrentVersion()
+            if Configurations.willSaveCurrentVersion { saveCurrentVersion() }
             completion()
         }
 
     }
 
+
+    /// Checks if the app was a updated.
+    ///
+    /// - Parameter completion: The callback block.
     public func onUpdate(_ completion: CheckBlock) {
 
         if self.checkLastAppVersion() == .updated {
-            saveCurrentVersion()
+            if Configurations.willSaveCurrentVersion { saveCurrentVersion() }
             completion()
         }
     }
+
 
     // MARK: Private Methods
 
@@ -127,7 +190,7 @@ public class UpdateKit {
 
         alert.addAction(UIAlertAction(title: okButtonTitle, style: .default, handler: { Void in
             guard let url = URL(string: Configurations.updateLink) else { return }
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }))
 
         if Configurations.updateType == .normal {
@@ -137,30 +200,18 @@ public class UpdateKit {
         getTopMostController()?.present(alert, animated: true, completion: nil)
     }
 
+
     // MARK: Helpers
-
-    private func compare(current: String = Application.currentVersion, new: String) -> Bool {
-
-        return new.compare(current, options: .numeric) == .orderedDescending
-    }
-
-    public func checkLastAppVersion() -> LastRunType {
-
-        if let lastSavedVersion = UserDefaults.standard.string(forKey: versionKey) {
-
-            if lastSavedVersion.isEqual(Application.currentVersion) { return .noChanges }
-            if compare(current: lastSavedVersion, new: Application.currentVersion) { return .updated }
-
-            return .unknown
-
-        } else {
-            return .freshInstall
-        }
-    }
 
     private func saveCurrentVersion() {
 
         UserDefaults.standard.set(Application.currentVersion, forKey: versionKey)
+    }
+
+
+    private func failedToParse() {
+
+        Rosewood.error("App.Update: Failed to parse results.")
     }
 
 }
