@@ -242,7 +242,7 @@ Rosewood.verbose("Who am I?: ", self)
 
 ```swift
 class func getUserID() -> String {
-return "User: 123"
+    return "User: 123"
 }
 
 let block = LogFormatter("[%@] %@: %@", [.block(RosewoodTest.getUserID), .level, .message])

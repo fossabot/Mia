@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name             = 'Mia'
-    s.version          = '0.1.7'
+    s.version          = '0.1.2'
     s.summary          = 'A list of tools to steamline my developement.'
     s.description      = <<-DESC
     A collection of tools and utilities to streamline .
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '10.0'
     
     s.framework = 'UIKit'
-    s.dependency 'Alamofire', '~> 4.4'
+    s.dependency 'Alamofire', '~> 4.5.0'
     
     s.source_files = 'Mia/*.{swift}'
     

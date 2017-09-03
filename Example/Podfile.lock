@@ -1,19 +1,19 @@
 PODS:
   - Alamofire (4.5.0)
   - Mia (0.1.7):
-    - Alamofire (~> 4.4)
+    - Alamofire (~> 4.5.0)
     - Mia/Extensions (= 0.1.7)
     - Mia/Libraries (= 0.1.7)
     - Mia/Testing (= 0.1.7)
     - Mia/UI (= 0.1.7)
   - Mia/Extensions (0.1.7):
-    - Alamofire (~> 4.4)
+    - Alamofire (~> 4.5.0)
   - Mia/Libraries (0.1.7):
-    - Alamofire (~> 4.4)
+    - Alamofire (~> 4.5.0)
   - Mia/Testing (0.1.7):
-    - Alamofire (~> 4.4)
+    - Alamofire (~> 4.5.0)
   - Mia/UI (0.1.7):
-    - Alamofire (~> 4.4)
+    - Alamofire (~> 4.5.0)
 
 DEPENDENCIES:
   - Mia (from `../`)
@@ -24,8 +24,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  Mia: cb894372996e6a26790cad1c7c6dcd44890cb134
+  Mia: 47188f70ff1becc0dabc55f1a41275ea8dcd318d
 
-PODFILE CHECKSUM: 1184201a31addae28c7e621f5da34ab312d2e0aa
+PODFILE CHECKSUM: 8c5c0f6f8482bcdb1b98a5ae6dca83666370d3c9
 
 COCOAPODS: 1.3.1
