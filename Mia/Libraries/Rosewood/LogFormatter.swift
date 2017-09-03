@@ -18,6 +18,9 @@ public enum LoggingComponent {
     /// The log message.
     case message
 
+    /// The log block.
+    case block(() -> Any?)
+
 }
 
 
@@ -78,6 +81,9 @@ public class LogFormatter {
                 case .message:
                     return items.map({ String(describing: $0) }).joined(separator: separator)
 
+                case .block(let block):
+                    return block().flatMap({ String(describing: $0) }) ?? ""
+
             }
         }
 
@@ -107,6 +113,9 @@ public class LogFormatter {
 
                 case .message:
                     return item
+
+                case .block(let block):
+                    return block().flatMap({ String(describing: $0) }) ?? ""
 
             }
         }

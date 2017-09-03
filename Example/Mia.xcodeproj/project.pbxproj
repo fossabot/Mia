@@ -11,6 +11,7 @@
 		3B0F87B01F37E6A100111280 /* HTMLtoPDFTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F87AF1F37E6A100111280 /* HTMLtoPDFTest.swift */; };
 		3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B81E1201F535436000D1007 /* Storyboard.storyboard */; };
 		3B8EF8D31F1315CB002D8387 /* RosewoodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */; };
+		3BA9F8651F5B868500553ABB /* Rosewood.md in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9F8641F5B868500553ABB /* Rosewood.md */; };
 		3BC26BED1F4A37A800437A26 /* CollapsibleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */; };
 		3BC26BF51F4A552600437A26 /* MiaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BF41F4A552600437A26 /* MiaTheme.swift */; };
 		3BD013FB1F466AAF00CC3150 /* DefaultTableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */; };
@@ -42,6 +43,7 @@
 		3B0F87AF1F37E6A100111280 /* HTMLtoPDFTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLtoPDFTest.swift; sourceTree = "<group>"; };
 		3B81E1201F535436000D1007 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosewoodTest.swift; sourceTree = "<group>"; };
+		3BA9F8641F5B868500553ABB /* Rosewood.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Rosewood.md; path = ../Documentation/Rosewood.md; sourceTree = "<group>"; };
 		3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollapsibleDataSource.swift; path = CollapsibleTableViewDemo/CollapsibleDataSource.swift; sourceTree = "<group>"; };
 		3BC26BF41F4A552600437A26 /* MiaTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiaTheme.swift; sourceTree = "<group>"; };
 		3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 			);
 			name = "ExampleTests for Mia";
 			path = Mia_ExampleTests;
+			sourceTree = "<group>";
+		};
+		3BA9F8621F5B5D3A00553ABB /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				3BA9F8641F5B868500553ABB /* Rosewood.md */,
+			);
+			name = Documentation;
 			sourceTree = "<group>";
 		};
 		3BD013E51F466A5000CC3150 /* CollapsibleTableViewDemo */ = {
@@ -160,6 +170,7 @@
 				BE2D81192D0E32C441539FB7 /* Mia.podspec */,
 				2189604B4F2559702815B670 /* README.md */,
 				4A73506625B529139DF2C083 /* LICENSE */,
+				3BA9F8621F5B5D3A00553ABB /* Documentation */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -334,15 +345,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mia_Example/Pods-Mia_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BNHtmlPdfKit/BNHtmlPdfKit.framework",
-				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Mia/Mia.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BNHtmlPdfKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mia.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				3BA9F8651F5B868500553ABB /* Rosewood.md in Sources */,
 				3BD014041F4670A600CC3150 /* IBOutletTableViewDemo.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				3BD013FB1F466AAF00CC3150 /* DefaultTableViewDemo.swift in Sources */,

@@ -4,16 +4,8 @@ platform :ios, '10.0'
 target 'Mia_Example' do
     use_frameworks!
     
-    pod 'Alamofire'
-    pod 'BNHtmlPdfKit', :git => 'https://github.com/brentnycum/BNHtmlPdfKit'
-    
     pod 'Mia', :path => '../'
-    
-    
-   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
-    
-    
     target 'Mia_ExampleTests' do
         inherit! :search_paths
     end

@@ -1,9 +1,5 @@
 PODS:
   - Alamofire (4.5.0)
-  - BNHtmlPdfKit (0.5.0)
-  - ChameleonFramework/Default (2.1.0)
-  - ChameleonFramework/Swift (2.1.0):
-    - ChameleonFramework/Default
   - Mia (0.1.7):
     - Alamofire (~> 4.4)
     - Mia/Extensions (= 0.1.7)
@@ -20,33 +16,16 @@ PODS:
     - Alamofire (~> 4.4)
 
 DEPENDENCIES:
-  - Alamofire
-  - BNHtmlPdfKit (from `https://github.com/brentnycum/BNHtmlPdfKit`)
-  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Mia (from `../`)
 
 EXTERNAL SOURCES:
-  BNHtmlPdfKit:
-    :git: https://github.com/brentnycum/BNHtmlPdfKit
-  ChameleonFramework:
-    :git: https://github.com/ViccAlexander/Chameleon.git
   Mia:
     :path: ../
 
-CHECKOUT OPTIONS:
-  BNHtmlPdfKit:
-    :commit: f68e54bb0bed047306a7c25ff42ed95c689ea921
-    :git: https://github.com/brentnycum/BNHtmlPdfKit
-  ChameleonFramework:
-    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
-    :git: https://github.com/ViccAlexander/Chameleon.git
-
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  BNHtmlPdfKit: 566b27d1c802ade48ed042abafdc16aeb5ddc4e1
-  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Mia: cb894372996e6a26790cad1c7c6dcd44890cb134
 
-PODFILE CHECKSUM: d56d51ba0d77b23d93ab67f65f05af50a9524073
+PODFILE CHECKSUM: 1184201a31addae28c7e621f5da34ab312d2e0aa
 
 COCOAPODS: 1.3.1

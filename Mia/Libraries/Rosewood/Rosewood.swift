@@ -46,12 +46,12 @@ public struct Rosewood {
 
         if Configuration.isAsync {
             queue.async {
-                Swift.print(message)
+                print(message)
                 Rosewood.delegate?.rosewoodDidLog(message: message)
             }
         } else {
             queue.sync {
-                Swift.print(message)
+                print(message)
                 Rosewood.delegate?.rosewoodDidLog(message: message)
             }
         }
@@ -394,7 +394,7 @@ extension Rosewood {
                 let containingMeasurement = timingStack[stackPointer]
 
                 if !containingMeasurement.reported {
-                    //Swift.print(String(repeating: "\t" + "Measuring \(containingMeasurement.name):", count: stackPointer))
+                    //print(String(repeating: "\t" + "Measuring \(containingMeasurement.name):", count: stackPointer))
                     timingStack[stackPointer] = (containingMeasurement.startTime, containingMeasurement.name, true)
                 }
             }
