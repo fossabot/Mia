@@ -33,8 +33,6 @@ I will *try* to keep this as up to date as possible.
 
 ## Requirements
 
-![Requires Xcode 8.0 or higher.][xcodeBadge]
-
 ![Requires iOS 10.0 or higher.][iosBadge]
 ![Support for macOS is unknown.][macBadge]
 ![Support for tvOS is unknown.][tvBadge]
@@ -43,7 +41,7 @@ I will *try* to keep this as up to date as possible.
 ![Requires Swift 3.0 or higher.][swiftBadge]
 ![Support for Objective-C is unknown.][objcBadge]
 
-[xcodeBadge]: https://img.shields.io/badge/xcode-8.0+-a.svg?style=flat&colorA=212121&colorB=00B0FF 
+![Requires Xcode 8.0 or higher.][xcodeBadge]
 
 [iosBadge]: https://img.shields.io/badge/ios-10.0+-a.svg?style=flat&colorA=212121&colorB=616161 
 [macBadge]: https://img.shields.io/badge/macOS-unknown-a.svg?style=flat&colorA=212121&colorB=616161 
@@ -53,18 +51,20 @@ I will *try* to keep this as up to date as possible.
 [swiftBadge]: https://img.shields.io/badge/swift-3.0+-a.svg?style=flat&colorA=212121&colorB=FD7935
 [objcBadge]: https://img.shields.io/badge/objective--c-unknown-a.svg?style=flat&colorA=212121&colorB=616161 
 
+[xcodeBadge]: https://img.shields.io/badge/xcode-8.0+-a.svg?style=flat&colorA=212121&colorB=00B0FF 
+
 
 
 
 
 ## Installation
 
-![Mia is compatible with cocoapods.][cocoapodsBadge]
-![Mia is incompatible with carthage.][carthageBadge]
-![Mia is incompatible with swift package manager.][spmBadge]
+[![Mia is compatible with cocoapods.][cocoapodsBadge]][cocoapodsURL]
+[![Mia is incompatible with carthage.][carthageBadge]][carthageURL]
+[![Mia is incompatible with swift package manager.][spmBadge]][spmURL]
 
 
-### [CocoaPods](http://cocoapods.org)
+### [CocoaPods][cocoapodsURL]
 
 To integrate Mia into your project using `cocoapods`, specify it in your `podfile`.
 
@@ -73,18 +73,23 @@ pod 'Mia', :git => 'https://github.com/Multinerd/Mia.git'
 ```
 
 
-### [Carthage](https://github.com/Carthage/Carthage)
+### [Carthage][carthageURL]
 
 Not yet compatible with `carthage`. Feel free to submit a pull request.
 
 
-### [Swift Package Manager](https://swift.org/package-manager/)
+### [Swift Package Manager][spmURL]
 
 Not yet compatible with `swift package manager`. Feel free to submit a pull request.
 
 [cocoapodsBadge]: https://img.shields.io/badge/cocoapods-compatible-a.svg?style=flat&colorA=212121&colorB=00C853
 [carthageBadge]: https://img.shields.io/badge/carthage-incompatible-red.svg?style=flat&colorA=212121&colorB=E53935
 [spmBadge]: https://img.shields.io/badge/spm-incompatible-red.svg?style=flat&colorA=212121&colorB=E53935 
+
+[cocoapodsURL]: http://cocoapods.org
+[carthageURL]: https://github.com/Carthage/Carthage
+[spmURL]: https://swift.org/package-manager/
+
 
 
 
@@ -100,6 +105,7 @@ Not yet compatible with `swift package manager`. Feel free to submit a pull requ
 
 
 
+
 ## License
 
 ![License][licenseBadge]
@@ -110,5 +116,3 @@ See the [documentation][documentationURL] file for more information about each c
 [licenseBadge]: https://img.shields.io/badge/license-MIT-a.svg?style=flat&colorA=212121&colorB=616161 
 [licenseURL]: https://github.com/multinerd/Mia/blob/master/LICENSE
 [documentationURL]: https://github.com/multinerd/Mia/tree/master/Documentation
-
-
