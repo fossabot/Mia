@@ -44,9 +44,9 @@ I will *try* to keep this as up to date as possible.
 ![Requires Xcode 8.0 or higher.][xcodeBadge]
 
 [iosBadge]: https://img.shields.io/badge/ios-10.0+-a.svg?style=flat&colorA=212121&colorB=616161 
-[macBadge]: https://img.shields.io/badge/macOS-unknown-a.svg?style=flat&colorA=212121&colorB=616161 
-[tvBadge]: https://img.shields.io/badge/tvOS-unknown-a.svg?style=flat&colorA=212121&colorB=616161 
-[watchBadge]: https://img.shields.io/badge/watchOS-unknown-a.svg?style=flat&colorA=212121&colorB=616161 
+[macBadge]: https://img.shields.io/badge/macos-unknown-a.svg?style=flat&colorA=212121&colorB=616161 
+[tvBadge]: https://img.shields.io/badge/tvos-unknown-a.svg?style=flat&colorA=212121&colorB=616161 
+[watchBadge]: https://img.shields.io/badge/watchos-unknown-a.svg?style=flat&colorA=212121&colorB=616161 
 
 [swiftBadge]: https://img.shields.io/badge/swift-3.0+-a.svg?style=flat&colorA=212121&colorB=FD7935
 [objcBadge]: https://img.shields.io/badge/objective--c-unknown-a.svg?style=flat&colorA=212121&colorB=616161 
