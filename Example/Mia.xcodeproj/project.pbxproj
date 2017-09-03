@@ -44,6 +44,8 @@
 		3B81E1201F535436000D1007 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosewoodTest.swift; sourceTree = "<group>"; };
 		3BA9F8641F5B868500553ABB /* Rosewood.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Rosewood.md; path = ../Documentation/Rosewood.md; sourceTree = "<group>"; };
+		3BA9F8661F5BACF100553ABB /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
+		3BA9F8671F5BACF100553ABB /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollapsibleDataSource.swift; path = CollapsibleTableViewDemo/CollapsibleDataSource.swift; sourceTree = "<group>"; };
 		3BC26BF41F4A552600437A26 /* MiaTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiaTheme.swift; sourceTree = "<group>"; };
 		3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
@@ -62,7 +64,7 @@
 		95C4D5D983F5C817484BAFDE /* Pods-Mia_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_Example/Pods-Mia_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A1C569D8325646DE21B963AF /* Pods-Mia_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_ExampleTests/Pods-Mia_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A594C278B9DC60DA0E666ADF /* Pods_Mia_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE2D81192D0E32C441539FB7 /* Mia.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 1; includeInIndex = 1; name = Mia.podspec; path = ../Mia.podspec; sourceTree = "<group>"; };
+		BE2D81192D0E32C441539FB7 /* Mia.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; includeInIndex = 1; name = Mia.podspec; path = ../Mia.podspec; sourceTree = "<group>"; };
 		C0FEAC2062BF0A514A420216 /* Pods_Mia_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D164CBEDF968D9EB1C927526 /* Pods_Mia_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,6 +169,8 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				3BA9F8661F5BACF100553ABB /* .swift-version */,
+				3BA9F8671F5BACF100553ABB /* .travis.yml */,
 				BE2D81192D0E32C441539FB7 /* Mia.podspec */,
 				2189604B4F2559702815B670 /* README.md */,
 				4A73506625B529139DF2C083 /* LICENSE */,
