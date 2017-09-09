@@ -1,11 +1,20 @@
 PODS:
   - Alamofire (4.5.0)
+  - DeviceKit (1.2.3)
+  - Deviice (0.50.00)
+  - JBDatePicker (1.2.3)
+  - Luminous (1.0.0):
+    - Deviice
+  - MediumMenu (1.2.0)
   - Mia (0.1.7):
     - Alamofire (~> 4.5.0)
+    - Mia/DeviceKit (= 0.1.7)
     - Mia/Extensions (= 0.1.7)
     - Mia/Libraries (= 0.1.7)
     - Mia/Testing (= 0.1.7)
     - Mia/UI (= 0.1.7)
+  - Mia/DeviceKit (0.1.7):
+    - Alamofire (~> 4.5.0)
   - Mia/Extensions (0.1.7):
     - Alamofire (~> 4.5.0)
   - Mia/Libraries (0.1.7):
@@ -14,9 +23,19 @@ PODS:
     - Alamofire (~> 4.5.0)
   - Mia/UI (0.1.7):
     - Alamofire (~> 4.5.0)
+  - PageMenu (2.0.0)
+  - SwiftLint (0.22.0)
+  - UIDeviceComplete (1.0.1)
 
 DEPENDENCIES:
+  - DeviceKit
+  - JBDatePicker
+  - Luminous
+  - MediumMenu
   - Mia (from `../`)
+  - PageMenu
+  - SwiftLint
+  - UIDeviceComplete
 
 EXTERNAL SOURCES:
   Mia:
@@ -24,8 +43,16 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  Mia: 47188f70ff1becc0dabc55f1a41275ea8dcd318d
+  DeviceKit: f33cbc6e67d9bb416e42dedc647557c7c2f6d3d7
+  Deviice: c198e96944bf0b370c9c753f51f952da996c767f
+  JBDatePicker: 7130ca86cb2ba1e49d5050b311ba5a14968c18b9
+  Luminous: 591485def5858499dd0b3733f7d494baf1e0e3e3
+  MediumMenu: ccae15abe7fc85d4cc0c5bbff48735607d6087f1
+  Mia: 31e8c6cf47fa5953d77a9adde07f3b093019e79f
+  PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
+  SwiftLint: 1134786caedd2caab0560d2f36b76414a5a56808
+  UIDeviceComplete: 961993ad77841320d56efccb9aa236c6aad8559a
 
-PODFILE CHECKSUM: 8c5c0f6f8482bcdb1b98a5ae6dca83666370d3c9
+PODFILE CHECKSUM: d6d01e0ae243ecf6eaf2febef314658883291367
 
 COCOAPODS: 1.3.1

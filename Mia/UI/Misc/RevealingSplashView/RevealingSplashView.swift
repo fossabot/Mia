@@ -23,7 +23,13 @@ public class RevealingSplashView: UIView {
     // MARK: Variables
 
     /// The type of animation to use. Defaults to the twitter animation.
-    public var animationType: SplashAnimation = .default
+    public var animationType: SplashAnimation = .default {
+        didSet {
+            if animationType == .heartBeat && duration > 3.0 {
+                duration = 3.0
+            }
+        }
+    }
 
     /// The duration of the animation, default to 1.5 seconds. In the case of heartBeat animation recommended value is 3.
     public var duration: Double = 1.5
@@ -154,7 +160,7 @@ public class RevealingSplashView: UIView {
 
         if let imageView = self.imageView {
 
-            //Define the shink and grow duration based on the duration parameter
+            //Define the shrink and grow duration based on the duration parameter
             let shrinkDuration: TimeInterval = duration * 0.3
 
             //Plays the shrink animation
@@ -263,7 +269,6 @@ public class RevealingSplashView: UIView {
             let swingForce = 0.8
 
             animateLayer({
-
                              let animation = CAKeyframeAnimation(keyPath: "transform.rotation")
                              animation.values = [ 0, 0.3 * swingForce, -0.3 * swingForce, 0.3 * swingForce, 0 ]
                              animation.keyTimes = [ 0, 0.2, 0.4, 0.6, 0.8, 1 ]

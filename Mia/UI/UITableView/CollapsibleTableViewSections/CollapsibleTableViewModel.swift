@@ -12,4 +12,5 @@ public struct CollapsibleTableViewModel {
         self.name = name
         self.items = items
     }
+    
 }

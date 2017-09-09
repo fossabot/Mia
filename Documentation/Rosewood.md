@@ -86,7 +86,7 @@ Will produce the following results...
 
 ## Pretty Print
 
-Use the following methods for basic logging capabilities
+Use the following methods for pretty print logging capabilities.
 
 ```swift
 Rosewood.prettyprint()
@@ -158,7 +158,7 @@ Will produce the following results...
 
 ## Benchmark
 
-Use the following methods for basic logging capabilities
+Use the following methods for benchmarking.
 
 ```swift
 Rosewood.benchmark()

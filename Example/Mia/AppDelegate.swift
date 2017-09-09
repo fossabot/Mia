@@ -1,4 +1,5 @@
 import UIKit
+import Mia
 
 
 @UIApplicationMain
@@ -9,6 +10,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         // Override point for customization after application launch.
+        
+        
+        print(UIDevice.current.deviceModel.aspectRatio)
+        print(UIDevice.current.deviceModel.aspectRatio.description)
+        print(UIDevice.current.deviceModel.aspectRatio.size)
+        print(UIDevice.current.deviceModel.aspectRatio.size.width)
+        print(UIDevice.current.deviceModel.aspectRatio.size.height)
+        print()
+        
+        
+        print(UIDevice.current.deviceModel.screenSize.bounds.height)
+        print(UIDevice.current.deviceModel.screenSize > ._5_5inch)
+
+        
         return true
     }
 

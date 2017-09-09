@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         let colors = [UIColor.black, UIColor.orange, .purple]
         
         let asd = colors.gradient { gradient in
-            print(gradient.colors!.count)
             gradient.frame = self.view.bounds
             gradient.speed = 1.0
             self.view.layer.insertSublayer(gradient, at: 0)

@@ -25,11 +25,12 @@ public func getTopMostController() -> UIViewController? {
 
 public typealias NetworkActivityBlock = () -> ()
 
-var __internalActivityCount: Int = 0 {
-    didSet {
-        Rosewood.verbose("Network.Count: \(__internalActivityCount)")
-    }
-}
+var __internalActivityCount: Int = 0
+//{
+//    didSet {
+//        Rosewood.verbose("Network.Count: \(__internalActivityCount)")
+//    }
+//}
 
 
 //public postfix func ++ (networkActivityObserver: NetworkActivityIndicatorObserver) {
@@ -99,3 +100,4 @@ public func hideNetworkActivity(_ completion: NetworkActivityBlock? = nil) {
 
 
 // MARK: - Helpers
+

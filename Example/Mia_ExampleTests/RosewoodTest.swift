@@ -6,9 +6,23 @@ class RosewoodTest: XCTestCase {
 
     let error = NSError(domain: "Error", code: -999, userInfo: [ "Hello": "World", "Number": 0 ])
     
+    var count = 0
+    
+    func longtask() -> Void {
+        
+        count += 1
+        if count % 2 == 0 {
+            Thread.sleep(forTimeInterval: 0.25)
+        } else {
+            Thread.sleep(forTimeInterval: 0.5)
+        }
+    }
+
     class func getUserID() -> String {
         return "User: 123"
     }
+    
+    
     
     func testRosewoodLogDefaultFormat() -> Void {
         
@@ -75,9 +89,7 @@ class RosewoodTest: XCTestCase {
     
     }
     
-    
-    
-    
+
     func testRosewoodPrettyPrint() -> Void {
 
         Rosewood.prettyprint(nil)
@@ -95,16 +107,6 @@ class RosewoodTest: XCTestCase {
 
     }
 
-    var count = 0
-    func longtask() -> Void {
-
-        count += 1
-        if count % 2 == 0 {
-            Thread.sleep(forTimeInterval: 0.25)
-        } else {
-            Thread.sleep(forTimeInterval: 0.5)
-        }
-    }
 
     func testRosewoodBenchmark() -> Void {
 

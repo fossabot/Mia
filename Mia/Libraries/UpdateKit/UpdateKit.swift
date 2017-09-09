@@ -1,8 +1,6 @@
 import Alamofire
 
 
-private let queue = DispatchQueue(label: "Multinerd.UpdateKit")
-
 public typealias CheckBlock = () -> ()
 
 
@@ -93,38 +91,23 @@ public struct UpdateKit {
                     Rosewood.error(error)
 
                 case .success(let value):
-                    queue.async {
-                        if PropertyListSerialization.propertyList(value, isValidFor: .xml) {
-                            guard let dict = value as? [String: Any] else {
-                                self.failedToParse()
-                                return
-                            }
-                            guard let items = dict["items"] as? [[String: Any]] else {
-                                self.failedToParse()
-                                return
-                            }
-                            guard let meta = items[0]["metadata"] as? [String: Any] else {
-                                self.failedToParse()
-                                return
-                            }
-                            guard let newVersion = meta["bundle-version"] as? String else {
-                                self.failedToParse()
-                                return
-                            }
+                    if PropertyListSerialization.propertyList(value, isValidFor: .xml) {
+                        guard let dict = value as? [String: Any],
+                              let items = dict["items"] as? [[String: Any]],
+                              let meta = items[0]["metadata"] as? [String: Any],
+                              let newVersion = meta["bundle-version"] as? String,
+                              let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String else {
+                            self.failedToParse()
+                            return
+                        }
 
-                            guard let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String else {
-                                self.failedToParse()
-                                return
-                            }
+                        let updateAvailable = newVersion.compare(currentVersion, options: .numeric) == .orderedDescending
 
-                            let updateAvailable = newVersion.compare(currentVersion, options: .numeric) == .orderedDescending
-
-                            if updateAvailable {
-                                Rosewood.verbose("App.Update: Update Available | New: \(newVersion) | Cur: \(currentVersion)")
-                                DispatchQueue.main.async(execute: { self.showAlert() })
-                            } else {
-                                Rosewood.verbose("App.Update: No Updates Available")
-                            }
+                        if updateAvailable {
+                            Rosewood.verbose("App.Update: Update Available | New: \(newVersion) | Cur: \(currentVersion)")
+                            DispatchQueue.main.async(execute: { self.showAlert() })
+                        } else {
+                            Rosewood.verbose("App.Update: No Updates Available")
                         }
                     }
             }

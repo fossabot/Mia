@@ -35,4 +35,10 @@ Pod::Spec.new do |s|
         sp.source_files = 'Mia/Testing/**/*.{swift}'
     end
     
+    
+    s.subspec 'DeviceKit' do |sp|
+        sp.source_files = 'Mia/Libraries/DeviceKit/**/*.{swift}'
+    end
+    
+    
 end

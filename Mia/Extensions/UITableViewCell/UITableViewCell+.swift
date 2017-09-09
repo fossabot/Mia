@@ -3,7 +3,23 @@ import UIKit
 
 public extension UITableViewCell {
 
-    public func fixSeparatorInset() {
+    /// Sets the cells `backgroundColor` and `contentView.backgroundColor` properties
+    public var cBackgroundColor: UIColor {
+        get {
+            return backgroundColor!
+        }
+        
+        set {
+            
+            backgroundColor = newValue
+            contentView.backgroundColor = newValue
+            
+        }
+    }
+
+    
+    
+    public func resetSeparatorInset() {
 
         if self.responds(to: #selector(setter:UITableViewCell.separatorInset)) {
             self.separatorInset = .zero
