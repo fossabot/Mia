@@ -36,8 +36,8 @@ Pod::Spec.new do |s|
     end
     
     
-    s.subspec 'DeviceKit' do |sp|
-        sp.source_files = 'Mia/Libraries/DeviceKit/**/*.{swift}'
+    s.subspec 'Deprecated' do |sp|
+        sp.source_files = 'Mia/Deprecated/**/*.{swift}'
     end
     
     

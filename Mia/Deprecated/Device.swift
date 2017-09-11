@@ -1,6 +1,23 @@
+
+
 import AdSupport
 import SystemConfiguration.CaptiveNetwork
 import UIKit
+
+
+@available(*, deprecated, message: "Use `DeviceKit.Application` instead.")
+public struct Application {
+    
+    public static var currentVersion: String {
+        if let ver = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            return ver
+        }
+        return ""
+    }
+    
+}
+
+
 
 @available(*, deprecated, message: "Use `DeviceKit` instead.")
 public struct Device {
