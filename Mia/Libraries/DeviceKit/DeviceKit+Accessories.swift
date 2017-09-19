@@ -2,8 +2,6 @@ import AVFoundation
 import ExternalAccessory
 import UIKit
 
-// TODO: [DeviceKit] check accessories availability by name (use enum?)
-
 public extension DeviceKit.Accessories {
 
     /// The number of connected accessories

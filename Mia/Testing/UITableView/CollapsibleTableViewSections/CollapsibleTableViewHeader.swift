@@ -57,7 +57,7 @@ open class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     }
 
 
-    public func tapHeader(_ gestureRecognizer: UITapGestureRecognizer) {
+    @objc public func tapHeader(_ gestureRecognizer: UITapGestureRecognizer) {
 
         guard let cell = gestureRecognizer.view as? CollapsibleTableViewHeader else {
             return

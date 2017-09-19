@@ -1,56 +1,29 @@
 import Alamofire
 
-
 public typealias CheckBlock = () -> ()
 
+private let versionKey: String = "Multinerd.UpdateKit.CurrentVersion"
 
-// MARK: - UpdateType
-public enum UpdateType {
-
-    /// Allow the user to ignore updates.
-    case normal
-
-    /// Force the user to update.
-    case force
-
-}
-
-
-// MARK: - LastRunType
-public enum LastRunType {
-
-    // The app has not changed.
-    case noChanges
-
-    /// The app is a fresh install.
-    case freshInstall
-
-    /// The app has been updated.
-    case updated
-
-    /// The app has been downgraded.
-    case downgraded
-
-    /// I cannot think of any reason this would be called.
-    case unknown
-
-}
-
-
-// MARK: - UpdateKit
+// MARK: -
 public struct UpdateKit {
 
     // MARK: Shared
 
     public static let shared = UpdateKit()
 
-
     // MARK: Configurations
 
     public struct Configurations {
 
-        /// FOR DEBUGGING ONLY. Setting this to false will ensure the current version will not be saved. Use to test 'onFreshInstall' and 'onUpdate'
-        public static var willSaveCurrentVersion: Bool = true
+        /// FOR DEBUGGING ONLY. Setting this to false will ensure the current version will not be saved.
+        /// Use to test 'onFreshInstall' and 'onUpdate'
+        public static var willSaveCurrentVersion: Bool = true {
+            didSet {
+                if willSaveCurrentVersion == false {
+                    UserDefaults.standard.set(nil, forKey: versionKey)
+                }
+            }
+        }
 
         /// Set the update type.
         public static var updateType: UpdateType = .normal
@@ -62,16 +35,9 @@ public struct UpdateKit {
 
     }
 
-
-    // MARK: Variables
-
-    private let versionKey: String = "Multinerd.UpdateKit.CurrentVersion"
-
-
-    // MARK: Init/Deinit
-
-    private init() {}
-
+    private var currentVersion: String {
+        return DeviceKit.Application.version
+    }
 
     // MARK: Public Methods
 
@@ -79,16 +45,16 @@ public struct UpdateKit {
     public func checkForUpdates() {
 
         if Configurations.updateURL.isEmpty {
-            Rosewood.error("App.Update: 'Configurations.updateURL' is empty.")
+            print("UpdateKit: 'Configurations.updateURL' is empty.")
             return
         }
 
-        Rosewood.verbose("App.Update: Checking...")
+        print("UpdateKit: Checking...")
         Alamofire.request(Configurations.updateURL).responsePropertyList(completionHandler: { response in
             switch response.result {
 
                 case .failure(let error):
-                    Rosewood.error(error)
+                    print("UpdateKit: Error \(error)")
 
                 case .success(let value):
                     if PropertyListSerialization.propertyList(value, isValidFor: .xml) {
@@ -97,24 +63,23 @@ public struct UpdateKit {
                               let meta = items[0]["metadata"] as? [String: Any],
                               let newVersion = meta["bundle-version"] as? String,
                               let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String else {
-                            self.failedToParse()
+                            print("UpdateKit: Failed to parse results.")
                             return
                         }
 
                         let updateAvailable = newVersion.compare(currentVersion, options: .numeric) == .orderedDescending
 
                         if updateAvailable {
-                            Rosewood.verbose("App.Update: Update Available | New: \(newVersion) | Cur: \(currentVersion)")
+                            print("UpdateKit: Update Available | New: \(newVersion) | Cur: \(currentVersion)")
                             DispatchQueue.main.async(execute: { self.showAlert() })
                         } else {
-                            Rosewood.verbose("App.Update: No Updates Available")
+                            print("UpdateKit: No Updates Available")
                         }
                     }
             }
         })
 
     }
-
 
     /// Compares the last ran version with the current version.
     ///
@@ -123,9 +88,9 @@ public struct UpdateKit {
 
         if let lastSavedVersion = UserDefaults.standard.string(forKey: versionKey) {
 
-            if Application.currentVersion.compare(lastSavedVersion, options: .numeric) == .orderedSame { return .noChanges }
-            if Application.currentVersion.compare(lastSavedVersion, options: .numeric) == .orderedDescending { return .updated }
-            if Application.currentVersion.compare(lastSavedVersion, options: .numeric) == .orderedAscending { return .downgraded }
+            if currentVersion.compare(lastSavedVersion, options: .numeric) == .orderedSame { return .noChanges }
+            if currentVersion.compare(lastSavedVersion, options: .numeric) == .orderedDescending { return .updated }
+            if currentVersion.compare(lastSavedVersion, options: .numeric) == .orderedAscending { return .downgraded }
 
             return .unknown
 
@@ -133,7 +98,6 @@ public struct UpdateKit {
             return .freshInstall
         }
     }
-
 
     /// Checks if the app was a fresh install.
     ///
@@ -147,7 +111,6 @@ public struct UpdateKit {
 
     }
 
-
     /// Checks if the app was a updated.
     ///
     /// - Parameter completion: The callback block.
@@ -159,8 +122,9 @@ public struct UpdateKit {
         }
     }
 
-
     // MARK: Private Methods
+
+    private init() {}
 
     private func showAlert(isAppStore: Bool = false) {
 
@@ -183,18 +147,42 @@ public struct UpdateKit {
         getTopMostController()?.present(alert, animated: true, completion: nil)
     }
 
-
     // MARK: Helpers
 
     private func saveCurrentVersion() {
 
-        UserDefaults.standard.set(Application.currentVersion, forKey: versionKey)
+        UserDefaults.standard.set(currentVersion, forKey: versionKey)
     }
 
+}
 
-    private func failedToParse() {
+// MARK: -
+public enum UpdateType {
 
-        Rosewood.error("App.Update: Failed to parse results.")
-    }
+    /// Allow the user to ignore updates.
+    case normal
+
+    /// Force the user to update.
+    case force
+
+}
+
+// MARK: -
+public enum LastRunType {
+
+    // The app has not changed.
+    case noChanges
+
+    /// The app is a fresh install.
+    case freshInstall
+
+    /// The app has been updated.
+    case updated
+
+    /// The app has been downgraded.
+    case downgraded
+
+    /// I cannot think of any reason this would be called.
+    case unknown
 
 }

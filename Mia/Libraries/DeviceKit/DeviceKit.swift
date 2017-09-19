@@ -15,29 +15,41 @@ public struct DeviceKit {
         return UIDevice.current.identifierForVendor!
     }
 
-    public struct Accessories { }
+    public struct Accessories {
+    }
 
-    public struct Application { }
+    public struct Application {
+    }
 
-    public struct Battery { }
+    public struct Battery {
+    }
 
-    public struct Carrier { }
+    public struct Carrier {
+    }
 
-    public struct Device { }
+    public struct Device {
+    }
 
-    public struct Disk { }
+    public struct Disk {
+    }
 
-    public struct Firmware { }
+    public struct Firmware {
+    }
 
-    public struct Network { }
+    public struct Network {
+    }
 
-    public struct Processors { }
+    public struct Processors {
+    }
 
-    public struct Screen { }
+    public struct Screen {
+    }
 
-    public struct Sensors { }
-    
-    public struct Settings { }
+    public struct Sensors {
+    }
+
+    public struct Settings {
+    }
 
 }
 

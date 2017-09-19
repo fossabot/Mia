@@ -54,6 +54,8 @@
 		3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableViewDemo.swift; path = CollapsibleTableViewDemo/DefaultTableViewDemo.swift; sourceTree = "<group>"; };
 		3BD014031F4670A600CC3150 /* IBOutletTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IBOutletTableViewDemo.swift; path = CollapsibleTableViewDemo/IBOutletTableViewDemo.swift; sourceTree = "<group>"; };
+		3BE858DE1F6C64BA0088518B /* CameraKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraKit.storyboard; sourceTree = "<group>"; };
+		3BE858DF1F6C64BA0088518B /* CameraKitDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraKitDemoView.swift; sourceTree = "<group>"; };
 		3DA42F71B04516A77849EDD6 /* Pods-Mia_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_ExampleTests/Pods-Mia_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		4A73506625B529139DF2C083 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		60092FE74CF583CBBF15F716 /* Pods-Mia_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_Example/Pods-Mia_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,7 +69,7 @@
 		95C4D5D983F5C817484BAFDE /* Pods-Mia_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_Example/Pods-Mia_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A1C569D8325646DE21B963AF /* Pods-Mia_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_ExampleTests/Pods-Mia_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A594C278B9DC60DA0E666ADF /* Pods_Mia_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE2D81192D0E32C441539FB7 /* Mia.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; includeInIndex = 1; name = Mia.podspec; path = ../Mia.podspec; sourceTree = "<group>"; };
+		BE2D81192D0E32C441539FB7 /* Mia.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 1; includeInIndex = 1; name = Mia.podspec; path = ../Mia.podspec; sourceTree = "<group>"; };
 		C0FEAC2062BF0A514A420216 /* Pods_Mia_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D164CBEDF968D9EB1C927526 /* Pods_Mia_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -124,6 +126,15 @@
 			name = CollapsibleTableViewDemo;
 			sourceTree = "<group>";
 		};
+		3BE858DD1F6C64BA0088518B /* CameraKit Demo */ = {
+			isa = PBXGroup;
+			children = (
+				3BE858DE1F6C64BA0088518B /* CameraKit.storyboard */,
+				3BE858DF1F6C64BA0088518B /* CameraKitDemoView.swift */,
+			);
+			path = "CameraKit Demo";
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +164,7 @@
 				3B81E1201F535436000D1007 /* Storyboard.storyboard */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				3BC26BF41F4A552600437A26 /* MiaTheme.swift */,
+				3BE858DD1F6C64BA0088518B /* CameraKit Demo */,
 				3BD013E51F466A5000CC3150 /* CollapsibleTableViewDemo */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -256,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					3B06DE691F0B25D700804181 = {
@@ -268,7 +280,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = P5JT2EJ8DP;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -520,14 +532,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -567,14 +585,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -611,7 +635,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -628,7 +653,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

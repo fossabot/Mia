@@ -14,6 +14,14 @@ public extension DeviceKit.Device {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
 
+    public static var isSimulator: Bool {
+        #if (arch(i386) || arch(x86_64)) && os(iOS)
+            return true
+        #else
+            return false
+        #endif
+    }
+
     /// The name identifying the device (e.g. "Dennis' iPhone").
     public static var name: String {
         return UIDevice.current.name
@@ -40,6 +48,8 @@ public extension DeviceKit.Device {
     }
 
 }
+
+
 
 /// Device Model Enum
 public enum DeviceModel {
@@ -119,7 +129,7 @@ public enum DeviceModel {
         }
     }
 
-    private static var modelIdentifier: String {
+    public static var modelIdentifier: String {
         var sysinfo = utsname()
         uname(&sysinfo)
         return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
@@ -178,6 +188,15 @@ extension DeviceModel: CustomStringConvertible {
 
             case .unknown(let device): return prefix + "Unknown Device Model: \(device)"
         }
+    }
+
+}
+
+extension DeviceModel: Equatable {
+
+    public static func ==(lhs: DeviceModel, rhs: DeviceModel) -> Bool {
+
+        return lhs.description == rhs.description
     }
 
 }

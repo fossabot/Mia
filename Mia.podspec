@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '10.0'
     
     s.framework = 'UIKit'
+    
     s.dependency 'Alamofire', '~> 4.5.0'
     
     s.source_files = 'Mia/*.{swift}'

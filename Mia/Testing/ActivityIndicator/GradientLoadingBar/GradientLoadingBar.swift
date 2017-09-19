@@ -8,11 +8,11 @@ public class GradientLoadingBar {
     public static var shared: GradientLoadingBar = GradientLoadingBar()
 
 
-    private struct DefaultValues {
+    public struct DefaultValues {
 
-        static let height = 20.0
+        public static let height = 20.0
 
-        static let durations = Durations(fadeIn: 0.33, fadeOut: 0.33, progress: 3.33)
+        public static let durations = Durations(fadeIn: 0.33, fadeOut: 0.33, progress: 3.33)
 
         //        public static let gradientColors: GradientColors = [
         //            UIColor(hexString: "#4cd964").cgColor,

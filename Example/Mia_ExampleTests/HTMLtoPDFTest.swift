@@ -14,7 +14,7 @@ class HTMLtoPDFTest: XCTestCase {
 
         html = HTMLtoPDF.save(html: htmlstring) { (data, error) in
             if let error = error {
-                Rosewood.error(error)
+                Rosewood.Log.error(error)
             }
 
             if let data = data {
@@ -59,7 +59,7 @@ extension HTMLtoPDFTest: HTMLtoPDFDelegate {
 
     func htmlPdfKit(htmlPdfKit: HTMLtoPDF, didFailWithError error: Error) {
 
-        Rosewood.error(error)
+        Rosewood.Log.error(error)
 
     }
 
@@ -71,7 +71,7 @@ extension HTMLtoPDFTest: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
 
         if let error = error {
-            Rosewood.error(error)
+            Rosewood.Log.error(error)
         }
 
         getTopMostController()?.dismiss(animated: true, completion: nil)

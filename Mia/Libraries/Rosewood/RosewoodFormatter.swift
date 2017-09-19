@@ -1,46 +1,35 @@
-// MARK: - LoggingComponent
-public enum LoggingComponent {
-    /// The log date.
-    case date(String)
+// MARK: -
+public struct RosewoodFormatter {
 
-    /// The log file path.
-    case file(fullPath: Bool, fileExtension: Bool)
+    public enum Component {
 
-    /// The log function.
-    case function
+        /// The log date.
+        case date(String)
 
-    /// The log line number.
-    case line
+        /// The log file path.
+        case file(fullPath: Bool, fileExtension: Bool)
 
-    /// The severity level.
-    case level
+        /// The log function.
+        case function
 
-    /// The log message.
-    case message
+        /// The log line number.
+        case line
 
-    /// The log block.
-    case block(() -> Any?)
+        /// The severity level.
+        case level
 
-}
+        /// The log message.
+        case message
 
+        /// The log block.
+        case block(() -> Any?)
 
-// MARK: - LogFormatter
-public class LogFormatter {
+    }
 
     // MARK: Variables
 
-    /// The formatter format.
     var format: String
-
-    /// The formatter components.
-    var components: [LoggingComponent]
-
-    /// The formatter textual representation.
-    var description: String {
-        return String(format: format, arguments: components.map { (component: LoggingComponent) -> CVarArg in
-            return String(describing: component).uppercased()
-        })
-    }
+    var components: [Component]
 
     // MARK: Init/Deinit
 
@@ -49,19 +38,17 @@ public class LogFormatter {
     /// - Parameters:
     ///   - format: The formatter format.
     ///   - components: The formatter components.
-    public init(_ format: String, _ components: [LoggingComponent]) {
+    public init(_ format: String, _ components: [Component]) {
 
         self.format = format
         self.components = components
     }
 
-
     // MARK: Private Methods
 
-    // For logging use
-    func format(level: LogLevel, items: [Any], separator: String, file: String, line: Int, function: String) -> String {
+    func logFormat(level: LogLevel, items: [Any], file: String, line: Int, function: String) -> String {
 
-        let arguments = components.map { (component: LoggingComponent) -> CVarArg in
+        let arguments = components.map { (component: Component) -> CVarArg in
             switch component {
                 case .date(let dateFormat):
                     return format(date: Date(), dateFormat: dateFormat)
@@ -79,7 +66,7 @@ public class LogFormatter {
                     return level.description
 
                 case .message:
-                    return items.map({ String(describing: $0) }).joined(separator: separator)
+                    return items.map({ String(describing: $0) }).joined(separator: " ")
 
                 case .block(let block):
                     return block().flatMap({ String(describing: $0) }) ?? ""
@@ -90,11 +77,9 @@ public class LogFormatter {
         return String(format: format, arguments: arguments)
     }
 
+    func prettyFormat(level: LogLevel, item: String, file: String, line: Int, function: String) -> String {
 
-    // For prettyprint use
-    func format(level: LogLevel, item: String, file: String, line: Int, function: String) -> String {
-
-        let arguments = components.map { (component: LoggingComponent) -> CVarArg in
+        let arguments = components.map { (component: Component) -> CVarArg in
             switch component {
                 case .date(let dateFormat):
                     return format(date: Date(), dateFormat: dateFormat)
@@ -123,16 +108,15 @@ public class LogFormatter {
         return String(format: format, arguments: arguments)
     }
 
-
     // MARK: Helpers Methods
 
     func format(date: Date, dateFormat: String) -> String {
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
+
         return dateFormatter.string(from: date)
     }
-
 
     func format(file: String, fullPath: Bool, fileExtension: Bool) -> String {
 
@@ -150,18 +134,35 @@ public class LogFormatter {
 
 }
 
-
-// MARK: - LogFormatter Presets
-extension LogFormatter {
+// MARK: - Presets
+extension RosewoodFormatter {
 
     /// Default formatter provided for your convenience
-    public static let `default` = LogFormatter("\n%@ %@ " + "\n Source: %@:%@:%@" + "\nMessage: %@", [ .level, .date("yyyy-MM-dd HH:mm:ss.SSS"), .file(fullPath: false, fileExtension: false), .function, .line, .message ])
+    public static let `default` = RosewoodFormatter(
+            "\n%@ %@ " + "\n Source: %@:%@:%@" + "\nMessage: %@",
+            [ .level, .date("yyyy-MM-dd HH:mm:ss.SSS"), .file(fullPath: false, fileExtension: false), .function, .line, .message ]
+    )
 
     /// Oneline formatter provided for your convenience
-    public static let oneline = LogFormatter("➡%@%@ %@.%@:%@ %@", [ .level, .date("HH:mm:ss.SSS"), .file(fullPath: false, fileExtension: false), .function, .line, .message ])
+    public static let oneline = RosewoodFormatter(
+            "➡%@%@ %@.%@:%@ %@",
+            [ .level, .date("HH:mm:ss.SSS"), .file(fullPath: false, fileExtension: false), .function, .line, .message ]
+    )
 
     /// Detailed formatter provided for your convenience
-    public static let detailed = LogFormatter("\n%@ %@ " + "\n Source: " + "\n\t| File: %@" + "\n\t| Func: %@" + "\n\t| Line: %@" + "\n Message: %@", [ .level, .date("yyyy-MM-dd HH:mm:ss.SSS"), .file(fullPath: false, fileExtension: true), .function, .line, .message ])
+    public static let detailed = RosewoodFormatter(
+            "\n%@ %@ " + "\n Source: " + "\n\t| File: %@" + "\n\t| Func: %@" + "\n\t| Line: %@" + "\n Message: %@",
+            [ .level, .date("yyyy-MM-dd HH:mm:ss.SSS"), .file(fullPath: false, fileExtension: true), .function, .line, .message ]
+    )
 
 }
 
+extension RosewoodFormatter: CustomStringConvertible {
+
+    public var description: String {
+        return String(format: format, arguments: components.map { (component: Component) -> CVarArg in
+            return String(describing: component).uppercased()
+        })
+    }
+
+}

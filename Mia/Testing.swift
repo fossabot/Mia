@@ -1,4 +1,67 @@
 import UIKit
+import AudioToolbox
+
+
+
+
+
+
+public func vibrate()  {
+    // http://www.mikitamanko.com/blog/2017/01/29/haptic-feedback-with-uifeedbackgenerator/
+    if DeviceKit.Sensors.isHapticFeedbackAvailable {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    } else {
+        AudioServicesPlaySystemSound(1520)
+    }
+}
+
+
+protocol EnumCollection: Hashable {
+    static var allValues: [Self] { get }
+}
+
+extension EnumCollection {
+    
+    static func cases() -> AnySequence<Self> {
+        typealias S = Self
+        return AnySequence { () -> AnyIterator<S> in
+            var raw = 0
+            return AnyIterator {
+                let current : Self = withUnsafePointer(to: &raw) { $0.withMemoryRebound(to: S.self, capacity: 1) { $0.pointee } }
+                guard current.hashValue == raw else { return nil }
+                raw += 1
+                return current
+            }
+        }
+    }
+    
+    static var allValues: [Self] {
+        return Array(self.cases())
+    }
+}
+
+// nullable properties
+// https://stackoverflow.com/questions/25760088/trigger-lazy-initializer-again-in-swift-by-setting-property-to-nil
+class Lazy<T> {
+    private let _initializer: () -> T
+    private var _value: T?
+    var value: T? {
+        get {
+            if self._value == nil {
+                self._value = self._initializer()
+            }
+            return self._value
+        }
+        set {
+            self._value = newValue
+        }
+    }
+    
+    required init(initializer: @escaping () -> T) {
+        self._initializer = initializer
+    }
+}
 
 
 // MARK: - Colors
@@ -12,6 +75,17 @@ public func UIColorFromRGB(_ rgbValue: String) -> UIColor {
     )
 }
 
+public extension UIBarButtonItem {
+    var isHidden: Bool {
+        get {
+            return !self.isEnabled && self.tintColor == UIColor.clear
+        }
+        set {
+            self.tintColor = newValue ? UIColor.clear : nil
+            self.isEnabled = !newValue
+        }
+    }
+}
 
 extension String {
     var hexaToInt: Int { return Int(strtoul(self, nil, 16)) }
@@ -42,33 +116,203 @@ extension Int {
 
 
 extension Double {
+    
     public var millisecond: TimeInterval { return self / 1000 }
-
     public var milliseconds: TimeInterval { return self / 1000 }
 
-    public var ms: TimeInterval { return self / 1000 }
-
     public var second: TimeInterval { return self }
-
     public var seconds: TimeInterval { return self }
 
-    public var minute: TimeInterval { return self * 60 }
+    public var minute: TimeInterval { return second * 60 }
+    public var minutes: TimeInterval { return second * 60 }
 
-    public var minutes: TimeInterval { return self * 60 }
+    public var hour: TimeInterval { return minutes * 60 }
+    public var hours: TimeInterval { return minutes * 60 }
 
-    public var hour: TimeInterval { return self * 3600 }
+    public var day: TimeInterval { return hour * 24 }
+    public var days: TimeInterval { return hour * 24 }
+    
+    
+    var week: TimeInterval { return day * 7 }
+    var weeks: TimeInterval { return day * 7 }
+    
+    var month: TimeInterval { return day * 30 }
+    var months: TimeInterval { return day * 30 }
+    
+    var year: TimeInterval { return day * 365 }
+    var years: TimeInterval { return day * 365 }
+    
+    var ago: Date {
+        return Date(timeIntervalSinceNow: -self)
+    }
+    
+    var future: Date {
+        return Date(timeIntervalSinceNow: self)
+    }
+}
 
-    public var hours: TimeInterval { return self * 3600 }
-
-    public var day: TimeInterval { return self * 3600 * 24 }
-
-    public var days: TimeInterval { return self * 3600 * 24 }
+extension Double {
+    
+    public var millisecondString: String {
+        return String(format: "%03.2fms", self * 1000)
+    }
+    
+    public var secondsString: String {
+        return String(format: "%03.2fs", self)
+    }
+    
 }
 
 
+
+
+
+
+public extension Int64 {
+    
+    
+    public func asBytes(_ bytes: ByteCountFormatter.Units) -> String {
+        
+        let formatter = ByteCountFormatter()
+        formatter.allowedUnits = bytes
+        formatter.countStyle = ByteCountFormatter.CountStyle.binary
+        formatter.includesUnit = true
+        return formatter.string(fromByteCount: self) as String
+    }
+    
+}
+
+
+
+public extension Float {
+    
+    
+    public var asPercent: String {
+        
+        return "\(self)%"
+    }
+    
+}
+
 // MARK: - String
+
+public extension String {
+    
+    var length: Int { return characters.count }
+    var isPresent: Bool { return !isEmpty }
+    
+    func replace(_ string: String, with withString: String) -> String {
+        return replacingOccurrences(of: string, with: withString)
+    }
+    
+    func truncate(_ length: Int, suffix: String = "...") -> String {
+        return self.length > length
+            ? substring(to: characters.index(startIndex, offsetBy: length)) + suffix
+            : self
+    }
+    
+    func split(_ delimiter: String) -> [String] {
+        let components = self.components(separatedBy: delimiter)
+        return components != [""] ? components : []
+    }
+    
+    func trim() -> String {
+        return trimmingCharacters(in: CharacterSet.whitespaces)
+    }
+    
+    var uppercaseFirstLetter: String {
+        guard isPresent else { return self }
+        
+        var string = self
+        string.replaceSubrange(string.startIndex...string.startIndex,
+                               with: String(string[string.startIndex]).capitalized)
+        
+        return string
+    }
+}
+
+
+public protocol URLStringConvertible {
+    var url: URL? { get }
+    var string: String { get }
+}
+
+extension String: URLStringConvertible {
+    
+    public var url: URL? {
+        return URL(string: self)
+    }
+    
+    public var string: String {
+        return self
+    }
+}
+
+public extension String {
+    
+    public var isEmptyOrWhiteSpace: Bool {
+        return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty
+    }
+}
+
+public protocol OptionalString {}
+extension String: OptionalString {}
+
+public extension Optional where Wrapped: OptionalString {
+    
+    public var isNilOrEmpty: Bool {
+        return ((self as? String) ?? "").isEmpty
+    }
+}
+
+public enum Regex: String {
+    
+    case Email = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}$"
+    case Number = "^[0-9]+$"
+    
+    var pattern: String {
+        return rawValue
+    }
+}
+
+public extension String {
+    
+    public func match(_ pattern: String) -> Bool {
+        do {
+            let regex = try NSRegularExpression(pattern: pattern, options: [.caseInsensitive])
+            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, characters.count)) != nil
+        } catch {
+            return false
+        }
+    }
+    
+    public func isEmail() -> Bool {
+        return match(Regex.Email.pattern)
+    }
+    
+    public func isNumber() -> Bool {
+        return match(Regex.Number.pattern)
+    }
+}
+
 public extension String {
 
+    
+    var lastPathComponent: String {
+        return NSString(string: self).lastPathComponent
+    }
+    
+    var stringByDeletingPathExtension: String {
+        return NSString(string: self).deletingPathExtension
+    }
+    
+    
+    func stripNonNumeric() -> String {
+        return self.trimmingCharacters(in: CharacterSet(charactersIn: "01234567890.").inverted)
+    }
+    
+    
+    
     // MARK: Currency Methods
     func currencyWithChange() -> String {
 
@@ -342,6 +586,28 @@ class CountedColor {
     }
 }
 
+public extension UIView {
+    
+    func optimize() {
+        clipsToBounds = true
+        layer.drawsAsynchronously = true
+        isOpaque = true
+    }
+}
+
+public extension UIImage {
+    
+    public var original: UIImage? {
+        
+        return withRenderingMode(.alwaysOriginal)
+    }
+    
+    public var template: UIImage? {
+
+        return withRenderingMode(.alwaysTemplate)
+    }
+}
+
 
 //extension UIImage {
 //    
@@ -581,3 +847,4 @@ public extension UIView {
         }
     }
 }
+

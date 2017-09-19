@@ -21,13 +21,20 @@ class ViewController: UIViewController {
             return gradient
         }
         
+        
         navigationController?.navigationBar.backgroundColor = colors.pickColorAt(scale: 0.95)
         
-        
+
 
 //        view.layer.insertSublayer(gradient2, at: 0)
     }
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+
+    }
 
     
 }

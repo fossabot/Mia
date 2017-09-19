@@ -10,6 +10,11 @@
 
 // TODO: - PDF
 // TODO: [HTMLtoPDF] Extension methods to save data to file and return file path
+import UIKit
+
+
+
+
 
 public func getTopMostController() -> UIViewController? {
 
@@ -58,7 +63,7 @@ public func showNetworkActivity() {
 }
 
 
-public func hideNetworkActivity(_ completion: NetworkActivityBlock? = nil) {
+public func hideNetworkPastelViewActivity(_ completion: NetworkActivityBlock? = nil) {
 
     let shared = UIApplication.shared
     let lockQueue = DispatchQueue(label: "self")

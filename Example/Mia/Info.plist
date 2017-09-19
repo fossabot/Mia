@@ -27,6 +27,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Without camera permission, we can't take your pretty picture.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Without microphone permission, we cant foward your conversations to the NSA.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Without photo permission, we cant see how pretty you look in that dress.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

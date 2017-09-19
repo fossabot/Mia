@@ -1,9 +1,6 @@
+// MARK: -
 
-// MARK: - ThemeUser
-
-public protocol ThemeUser: class {
-}
-
+public protocol ThemeUser: class { }
 
 public extension ThemeUser {
 
@@ -15,13 +12,13 @@ public extension ThemeUser {
     ///   - type: The type of your own theme.
     ///   - apply: The function that gets called. (ThemeUser, Theme)
     @available(*, message: "use `useAnimated` instead!")
-    func use<T:Theme>(_ type: T.Type, apply: @escaping (Self, T) -> ()) {
+    func use<T: Theme>(_ type: T.Type, apply: @escaping (Self, T) -> Void) {
 
         if let theme = ThemeKit.shared.currentTheme as? T {
             apply(self, theme)
         }
 
-        theme_handler.mapping[String(describing: type.self)] = { (themeUser: ThemeUser, theme: Theme) in
+        themeHandler.mapping[String(describing: type.self)] = { (themeUser: ThemeUser, theme: Theme) in
             guard let themeUser = themeUser as? Self,
                   let theme = theme as? T else {
                 return
@@ -31,13 +28,12 @@ public extension ThemeUser {
         }
     }
 
-
     /// This is called immediately and when current theme changes.
     ///
     /// - Parameters:
     ///   - type: The type of your own theme.
     ///   - apply: The function that gets called with animation. (ThemeUser, Theme)
-    func useAnimated<T:Theme>(_ type: T.Type, apply: @escaping (Self, T) -> ()) {
+    func useAnimated<T: Theme>(_ type: T.Type, apply: @escaping (Self, T) -> Void) {
 
         if let theme = ThemeKit.shared.currentTheme as? T {
             UIView.animate(withDuration: 0.4, animations: {
@@ -45,7 +41,7 @@ public extension ThemeUser {
             })
         }
 
-        theme_handler.mapping[String(describing: type.self)] = { (themeUser: ThemeUser, theme: Theme) in
+        themeHandler.mapping[String(describing: type.self)] = { (themeUser: ThemeUser, theme: Theme) in
             guard let themeUser = themeUser as? Self,
                   let theme = theme as? T else {
                 return
@@ -57,10 +53,9 @@ public extension ThemeUser {
         }
     }
 
-
     // MARK: Private Methods
 
-    private var theme_handler: Handler {
+    private var themeHandler: Handler {
 
         var key = "theme_handler"
         if let handler = objc_getAssociatedObject(self, &key) as? Handler {
@@ -74,14 +69,11 @@ public extension ThemeUser {
     }
 }
 
+extension NSObject: ThemeUser { }
 
-extension NSObject: ThemeUser {
-}
+// MARK: -
 
-
-// MARK: - Handler
-
-fileprivate class Handler {
+private class Handler {
 
     weak var host: ThemeUser?
 
@@ -89,18 +81,15 @@ fileprivate class Handler {
 
     var mapping = [ String: (ThemeUser, Theme) -> Void ]()
 
-
     init(host: ThemeUser) {
 
         self.host = host
     }
 
-
     deinit {
 
         NotificationCenter.default.removeObserver(observer)
     }
-
 
     func observe() {
 
@@ -108,7 +97,6 @@ fileprivate class Handler {
             self?.handle()
         })
     }
-
 
     func handle() {
 

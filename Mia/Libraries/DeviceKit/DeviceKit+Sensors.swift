@@ -27,4 +27,13 @@ public extension DeviceKit.Sensors {
         return CMMotionManager().isDeviceMotionAvailable
     }
 
+    /// Determines whether haptic feedback is available
+    public static var isHapticFeedbackAvailable: Bool {
+        if #available(iOS 10.0, *) {
+            return DeviceKit.Device.model == .iPhone7 || DeviceKit.Device.model == .iPhone7Plus
+        } else {
+            return false
+        }
+    }
+
 }

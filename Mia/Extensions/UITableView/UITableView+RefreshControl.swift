@@ -12,7 +12,9 @@ public extension UITableView {
         }
 
         let myString = "Reloading Data..."
-        let myAttribute = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 14.0)!, NSForegroundColorAttributeName: useDarkColors ? UIColor.lightText : UIColor.darkText ]
+        let myAttribute = [ NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-Light", size: 14.0)!,
+                            NSAttributedStringKey.foregroundColor: useDarkColors ? UIColor.lightText : UIColor.darkText
+        ]
 
         let refresh = UIRefreshControl()
         refresh.addTarget(target, action: action, for: .valueChanged)

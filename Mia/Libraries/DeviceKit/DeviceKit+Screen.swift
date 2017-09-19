@@ -39,8 +39,16 @@ public extension DeviceKit.Screen {
     }
 
     /// The current state of the battery
-    public static var current: ScreenSize {
+    public static var size: ScreenSize {
         return ScreenSize()
+    }
+    
+    public static var pixelSize: CGSize {
+        let screenSize = UIScreen.main.bounds.size
+        let scale = UIScreen.main.scale
+        
+        return CGSize(width: screenSize.width * scale,
+                      height: screenSize.height * scale)
     }
 
 }

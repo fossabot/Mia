@@ -31,4 +31,3 @@ class Mia_ExampleTests: XCTestCase {
     }
 
 }
-

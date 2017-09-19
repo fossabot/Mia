@@ -1,13 +1,8 @@
-import UIKit
+// MARK: -
 
+public protocol Theme { }
 
-// MARK: - Theme
-
-public protocol Theme {
-}
-
-
-// MARK: - ThemeManager
+// MARK: -
 
 public class ThemeKit {
 
@@ -22,9 +17,8 @@ public class ThemeKit {
     }
 }
 
-
 // MARK: - Notification
 
 public extension Notification.Name {
-    static let themeDidChange = Notification.Name("Themes.ThemeDidChangeNotification")
+    static let themeDidChange = Notification.Name("ThemeKit.ThemeDidChangeNotification")
 }

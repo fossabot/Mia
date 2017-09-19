@@ -1,3 +1,6 @@
+import UIKit
+
+
 public extension UISegmentedControl {
 
     public var selectedTitle: String {
