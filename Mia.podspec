@@ -36,7 +36,10 @@ Pod::Spec.new do |s|
         sp.source_files = 'Mia/Testing/**/*.{swift}'
     end
     
-    
+    s.subspec 'Sugar' do |sp|
+        sp.source_files = 'Mia/Sugar/**/*.{swift}'
+    end
+
     s.subspec 'Deprecated' do |sp|
         sp.source_files = 'Mia/Deprecated/**/*.{swift}'
     end
