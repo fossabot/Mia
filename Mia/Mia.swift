@@ -14,7 +14,13 @@ import UIKit
 
 
 
-
+func openSettings()  {
+    DispatchQueue.main.async {
+        if let settingsURL = URL(string: UIApplicationOpenSettingsURLString) {
+            UIApplication.shared.openURL(settingsURL)
+        }
+    }
+}
 
 public func getTopMostController() -> UIViewController? {
 
@@ -63,7 +69,7 @@ public func showNetworkActivity() {
 }
 
 
-public func hideNetworkPastelViewActivity(_ completion: NetworkActivityBlock? = nil) {
+public func hideNetworkActivity(_ completion: NetworkActivityBlock? = nil) {
 
     let shared = UIApplication.shared
     let lockQueue = DispatchQueue(label: "self")

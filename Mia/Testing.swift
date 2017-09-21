@@ -6,13 +6,17 @@ import AudioToolbox
 
 
 
+
+
 public func vibrate()  {
     // http://www.mikitamanko.com/blog/2017/01/29/haptic-feedback-with-uifeedbackgenerator/
     if DeviceKit.Sensors.isHapticFeedbackAvailable {
         let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.prepare()
         generator.impactOccurred()
     } else {
-        AudioServicesPlaySystemSound(1520)
+        //https://github.com/TUNER88/iOSSystemSoundsLibrary
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate)) // 4095
     }
 }
 

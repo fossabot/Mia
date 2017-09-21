@@ -81,6 +81,11 @@ extension NavigationStack: UINavigationControllerDelegate {
 
         stackDelegate?.navigationController?(navigationController, willShow: viewController, animated: animated)
 
+        if #available(iOS 11.0, *) {
+            navigationBar.prefersLargeTitles = navigationController.viewControllers.count <= 1
+            navigationItem.largeTitleDisplayMode = .automatic
+        }
+        
         if navigationController.viewControllers.count > screens.count + 1 {
             screens.append(view.takeScreenshot())
         } else if navigationController.viewControllers.count == screens.count && screens.count > 0 {
