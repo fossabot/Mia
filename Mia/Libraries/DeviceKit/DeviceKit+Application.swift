@@ -50,7 +50,7 @@ private func getString(for key: String) -> String {
 }
 
 
-@available(*, deprecated, message: "Only works when launching from xCode")
+@available(*, deprecated, message: "This code only runs if your launching the application from xCode.")
 public var isBeingDebugged: Bool {
     
     var info = kinfo_proc()
