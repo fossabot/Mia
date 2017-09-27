@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name             = 'Mia'
-    s.version          = '0.1.7'
+    s.version          = '0.1.8'
     s.summary          = 'A list of tools to steamline my developement.'
     s.description      = <<-DESC
     A collection of tools and utilities to streamline .
@@ -18,7 +18,11 @@ Pod::Spec.new do |s|
     
     s.dependency 'Alamofire', '~> 4.5.0'
     
-    s.source_files = 'Mia/*.{swift}'
+    s.source_files = 'Mia/**/*.{swift}'
+    
+    s.ios.resource_bundles = {
+      'io.multinerd.mia.icons' => ['Mia/Resources/**/*.xcassets']
+    }
     
     s.subspec 'Extensions' do |sp|
         sp.source_files = 'Mia/Extensions/**/*.{swift}'
