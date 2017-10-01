@@ -1,7 +1,7 @@
 import CoreMotion
-import UIKit
 
-public extension DeviceKit.Sensors {
+// MARK: -
+public extension Device.Sensors {
 
     /// Determines whether gyro is available
     public static var isGyroAvailable: Bool {
@@ -30,10 +30,9 @@ public extension DeviceKit.Sensors {
     /// Determines whether haptic feedback is available
     public static var isHapticFeedbackAvailable: Bool {
         if #available(iOS 10.0, *) {
-            return DeviceKit.Device.model == .iPhone7 || DeviceKit.Device.model == .iPhone7Plus
+            return Device.Device.model == .iPhone7 || Device.Device.model == .iPhone7Plus
         } else {
             return false
         }
     }
-
 }

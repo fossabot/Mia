@@ -36,7 +36,7 @@ public struct UpdateKit {
     }
 
     private var currentVersion: String {
-        return DeviceKit.Application.version
+        return Application.Bundle.version.description
     }
 
     // MARK: Public Methods

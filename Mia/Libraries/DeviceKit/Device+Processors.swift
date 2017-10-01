@@ -1,8 +1,7 @@
-import UIKit
-
 // TODO: [DeviceKit] System uptime using calendar components.
 
-public extension DeviceKit.Processors {
+// MARK: -
+public extension Device.Processors {
 
     /// Determines whether the low power mode is currently enabled
     @available(iOS 9.0, *)
@@ -34,5 +33,4 @@ public extension DeviceKit.Processors {
 
         return Int64(ProcessInfo().physicalMemory)
     }
-
 }

@@ -1,7 +1,7 @@
 import CoreTelephony
-import UIKit
 
-public extension DeviceKit.Carrier {
+// MARK: -
+public extension Device.Carrier {
 
     /// The name of the carrier or nil if not available
     public static var name: String? {
@@ -32,5 +32,4 @@ public extension DeviceKit.Carrier {
 
         return CTTelephonyNetworkInfo().subscriberCellularProvider?.allowsVOIP
     }
-
 }

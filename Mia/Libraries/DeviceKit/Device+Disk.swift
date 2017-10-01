@@ -1,6 +1,5 @@
-import UIKit
-
-public extension DeviceKit.Disk {
+// MARK: -
+public extension Device.Disk {
 
     /// The total disk space in bytes
     public static var totalSpace: Int64 {
@@ -41,5 +40,4 @@ public extension DeviceKit.Disk {
 
         return (Float(usedSpace) * 100) / Float(totalSpace)
     }
-
 }

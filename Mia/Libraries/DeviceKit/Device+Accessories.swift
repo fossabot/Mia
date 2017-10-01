@@ -1,8 +1,8 @@
 import AVFoundation
 import ExternalAccessory
-import UIKit
 
-public extension DeviceKit.Accessories {
+// MARK: -
+public extension Device.Accessories {
 
     /// The number of connected accessories
     public static var count: Int {
@@ -32,5 +32,4 @@ public extension DeviceKit.Accessories {
         let route = AVAudioSession.sharedInstance().currentRoute
         return !route.outputs.filter({ $0.portType == AVAudioSessionPortHeadphones }).isEmpty
     }
-
 }

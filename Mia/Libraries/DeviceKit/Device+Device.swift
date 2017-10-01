@@ -1,6 +1,7 @@
 import UIKit
 
-public extension DeviceKit.Device {
+// MARK: -
+public extension Device.Device {
 
     /// Determines whether device is an iPhone.
     public static var isPhone: Bool {
@@ -46,11 +47,16 @@ public extension DeviceKit.Device {
     public static var systemName: String {
         return UIDevice.current.systemName
     }
+    
+    /// The name of the operating system running on the device represented by the receiver (e.g. "iPhone OS" or "tvOS").
+    public static var firmware: String {
+        return UIDevice.current.systemVersion
+    }
 
 }
 
 
-
+// MARK: -
 /// Device Model Enum
 public enum DeviceModel {
 
@@ -137,6 +143,7 @@ public enum DeviceModel {
 
 }
 
+// MARK: -
 extension DeviceModel: CustomStringConvertible {
 
     public var description: String {
@@ -192,6 +199,7 @@ extension DeviceModel: CustomStringConvertible {
 
 }
 
+// MARK: -
 extension DeviceModel: Equatable {
 
     public static func ==(lhs: DeviceModel, rhs: DeviceModel) -> Bool {
