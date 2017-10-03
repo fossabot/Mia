@@ -3,13 +3,6 @@
 // MARK: -
 public extension Device.Processors {
 
-    /// Determines whether the low power mode is currently enabled
-    @available(iOS 9.0, *)
-    public static var isLowPowerModeEnabled: Bool {
-
-        return ProcessInfo().isLowPowerModeEnabled
-    }
-
     /// Number of processors
     public static var processorsNumber: Int {
 

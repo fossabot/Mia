@@ -1,59 +1,45 @@
-import UIKit
+public final class BlurredBackgroundView: UIView {
 
-
-public class BlurredBackgroundView: UIView {
-
-    public var blurView: UIVisualEffectView
-
-    public var imageView: UIImageView? {
-        didSet {
-            self.insertSubview(imageView!, at: 0)
-        }
-    }
-
-
-    public init(style: UIBlurEffectStyle, image: UIImage?) {
+    public final var imageView: UIImageView? = nil
+    public final var blurView: UIVisualEffectView
+    public final var separatorEffect: UIVibrancyEffect
+    
+    
+    public init(style: UIBlurEffectStyle, image: UIImage? = nil) {
 
         let blurEffect = UIBlurEffect(style: style)
         blurView = UIVisualEffectView(effect: blurEffect)
+        separatorEffect = UIVibrancyEffect(blurEffect: blurEffect)
+        if let image = image { imageView = UIImageView(image: image) }
 
         super.init(frame: .zero)
 
-        if let image = image {
-            imageView = UIImageView(image: image)
-        }
-
+        if let imageView = imageView { addSubview(imageView) }
         addSubview(blurView)
-
     }
 
+    public required init?(coder aDecoder: NSCoder) {
 
-    public init(frame: CGRect, style: UIBlurEffectStyle, image: UIImage?) {
-
-        let blurEffect = UIBlurEffect(style: style)
+        let blurEffect = UIBlurEffect(style: .dark)
         blurView = UIVisualEffectView(effect: blurEffect)
+        separatorEffect = UIVibrancyEffect(blurEffect: blurEffect)
 
-        super.init(frame: frame)
+        super.init(coder: aDecoder)
 
-        if let image = image {
-            imageView = UIImageView(image: image)
+        if let imageView = imageView {
+            addSubview(imageView)
         }
-
         addSubview(blurView)
-
     }
-
-
-    public convenience required init?(coder aDecoder: NSCoder) {
-
-        self.init(coder: aDecoder)
-    }
-
 
     public override func layoutSubviews() {
 
         super.layoutSubviews()
-        imageView?.frame = bounds
+        if let imageView = imageView {
+            imageView.frame = bounds
+        }
         blurView.frame = bounds
     }
 }
+
+

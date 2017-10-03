@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		3B06DE6D1F0B25D700804181 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06DE6C1F0B25D700804181 /* ExampleTests.swift */; };
 		3B0F87B01F37E6A100111280 /* HTMLtoPDFTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F87AF1F37E6A100111280 /* HTMLtoPDFTest.swift */; };
+		3B574B1D1F7C055600148B63 /* WebViewDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B574B191F7C053A00148B63 /* WebViewDemo.storyboard */; };
+		3B574B1E1F7C056700148B63 /* WebViewDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B574B151F7C053A00148B63 /* WebViewDemoView.swift */; };
 		3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B81E1201F535436000D1007 /* Storyboard.storyboard */; };
 		3B8EF8D31F1315CB002D8387 /* RosewoodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */; };
-		3BA9F8651F5B868500553ABB /* Rosewood.md in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9F8641F5B868500553ABB /* Rosewood.md */; };
 		3BB469B21F647A81007B98CB /* DeviceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB469B11F647A81007B98CB /* DeviceKitTests.swift */; };
 		3BC26BED1F4A37A800437A26 /* CollapsibleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */; };
 		3BC26BF51F4A552600437A26 /* MiaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BF41F4A552600437A26 /* MiaTheme.swift */; };
@@ -36,6 +37,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3B4C46FD1F80B310009D121D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2189604B4F2559702815B670 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3B06DE6A1F0B25D700804181 /* Mia_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mia_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +57,8 @@
 		3B06DE6E1F0B25D700804181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B0F87AF1F37E6A100111280 /* HTMLtoPDFTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLtoPDFTest.swift; sourceTree = "<group>"; };
 		3B4FBA1C1F66159500C474DD /* .swiftlint.yml */ = {isa = PBXFileReference; explicitFileType = text.script.sh; fileEncoding = 4; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
+		3B574B151F7C053A00148B63 /* WebViewDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoView.swift; sourceTree = "<group>"; };
+		3B574B1A1F7C053A00148B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WebViewDemo.storyboard; sourceTree = "<group>"; };
 		3B81E1201F535436000D1007 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosewoodTest.swift; sourceTree = "<group>"; };
 		3BA9F8641F5B868500553ABB /* Rosewood.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Rosewood.md; path = ../Documentation/Rosewood.md; sourceTree = "<group>"; };
@@ -107,6 +123,15 @@
 			path = Mia_ExampleTests;
 			sourceTree = "<group>";
 		};
+		3B574B141F7C053A00148B63 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				3B574B151F7C053A00148B63 /* WebViewDemoView.swift */,
+				3B574B191F7C053A00148B63 /* WebViewDemo.storyboard */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		3BA9F8621F5B5D3A00553ABB /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +189,7 @@
 				3B81E1201F535436000D1007 /* Storyboard.storyboard */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				3BC26BF41F4A552600437A26 /* MiaTheme.swift */,
+				3B574B141F7C053A00148B63 /* WebView */,
 				3BE858DD1F6C64BA0088518B /* CameraKit Demo */,
 				3BD013E51F466A5000CC3150 /* CollapsibleTableViewDemo */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -251,6 +277,7 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				66FBE2DB9EFD46D0423CA6B5 /* [CP] Embed Pods Frameworks */,
 				B5A80592EBC6198E872BBF20 /* [CP] Copy Pods Resources */,
+				3B4C46FD1F80B310009D121D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B574B1D1F7C055600148B63 /* WebViewDemo.storyboard in Resources */,
 				607FACDB1AFB9204008FA782 /* CollapsibleTableViewDemo.storyboard in Resources */,
 				3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
@@ -445,10 +473,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				3BA9F8651F5B868500553ABB /* Rosewood.md in Sources */,
 				3BD014041F4670A600CC3150 /* IBOutletTableViewDemo.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				3BD013FB1F466AAF00CC3150 /* DefaultTableViewDemo.swift in Sources */,
+				3B574B1E1F7C056700148B63 /* WebViewDemoView.swift in Sources */,
 				3BC26BED1F4A37A800437A26 /* CollapsibleDataSource.swift in Sources */,
 				3BC26BF51F4A552600437A26 /* MiaTheme.swift in Sources */,
 			);
@@ -465,6 +493,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3B574B191F7C053A00148B63 /* WebViewDemo.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B574B1A1F7C053A00148B63 /* Base */,
+			);
+			name = WebViewDemo.storyboard;
+			sourceTree = "<group>";
+		};
 		607FACD91AFB9204008FA782 /* CollapsibleTableViewDemo.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -633,7 +669,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.multinerd.Mia-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -651,7 +687,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.multinerd.Mia-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

@@ -1,20 +1,11 @@
-//
-//  Icons.swift
-//  Mia
-//
-//  Created by Michael Hedaitulla on 9/27/17.
-//
-
-import UIKit
-
-// Resources.Icon / Resources.Font...
+// TODO: Peek at icon frameworks
 public struct Icon {
 
     /// An internal reference to the icons bundle.
     private static var internalBundle: Bundle?
     
     public static var bundle: Bundle {
-        if nil == Icon.internalBundle {
+        if Icon.internalBundle == nil {
             Icon.internalBundle = Bundle(for: MiaDummy.self)
             let url = Icon.internalBundle!.resourceURL!
             let b = Bundle(url: url.appendingPathComponent("io.multinerd.mia.icons.bundle"))
@@ -43,3 +34,4 @@ public struct Icon {
     
     
 }
+

@@ -17,11 +17,13 @@ Pod::Spec.new do |s|
     s.framework = 'UIKit'
     
     s.dependency 'Alamofire', '~> 4.5.0'
+    #s.dependency 'Material'
     
     s.source_files = 'Mia/**/*.{swift}'
     
     s.ios.resource_bundles = {
-      'io.multinerd.mia.icons' => ['Mia/Resources/**/*.xcassets']
+      'io.multinerd.mia.icons' => ['Mia/Resources/**/*.xcassets'],
+      'io.multinerd.mia.fonts' => ['Mia/Resources/**/*.ttf']
     }
     
     s.subspec 'Extensions' do |sp|

@@ -5,7 +5,7 @@ import Foundation
 extension Device.Settings {
 
     public enum PreferenceType: String {
-        
+
         case about = "General&path=About"
         case accessibility = "General&path=ACCESSIBILITY"
         case airplaneMode = "AIRPLANE_MODE"
@@ -49,8 +49,8 @@ extension Device.Settings {
         case tethering = "INTERNET_TETHERING"
         case blocked = "Phone&path=Blocked"
         case doNotDisturb = "DO_NOT_DISTURB"
-        
     }
+
     public static func open(_ preferenceType: PreferenceType) {
 
         let appPath = "App-Prefs:root=\(preferenceType.rawValue)"
@@ -62,7 +62,4 @@ extension Device.Settings {
             }
         }
     }
-
 }
-
-

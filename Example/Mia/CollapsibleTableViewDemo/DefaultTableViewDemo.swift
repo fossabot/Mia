@@ -5,11 +5,13 @@ import Mia
 class DefaultTableViewDemo: CollapsibleTableSectionViewController {
 
     var sections: [Section] = sectionsData
-
+    var runOnce = true
     override func viewDidLoad() {
 
         super.viewDidLoad()
         self.delegate = self
+        
+
     }
 
 }
@@ -19,6 +21,13 @@ extension DefaultTableViewDemo: CollapsibleTableSectionDelegate {
 
     func numberOfSections(_ tableView: UITableView) -> Int {
 
+        if runOnce {
+            let blurredBackgroundView = BlurredBackgroundView(style: .extraLight, image: UIImage(named: "tableViewBG"))
+            tableView.backgroundView = blurredBackgroundView
+            tableView.separatorEffect = blurredBackgroundView.separatorEffect
+            runOnce = false
+        }
+        
         return sections.count
     }
 
@@ -32,6 +41,7 @@ extension DefaultTableViewDemo: CollapsibleTableSectionDelegate {
         let item: Item = sections[indexPath.section].items[indexPath.row] as! Item
 
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "BasicCell")
+        cell.backgroundColor = .clear
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = item.detail
 

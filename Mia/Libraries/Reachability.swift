@@ -95,11 +95,11 @@ public class Reachability {
     private var previousFlags: SCNetworkReachabilityFlags?
 
     private var isRunningOnDevice: Bool = {
-#if (arch(i386) || arch(x86_64)) && os(iOS)
-        return false
-#else
-        return true
-#endif
+        #if (arch(i386) || arch(x86_64)) && os(iOS)
+            return false
+        #else
+            return true
+        #endif
     }()
 
     private var notifierRunning = false

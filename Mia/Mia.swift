@@ -1,3 +1,7 @@
+// TODO: - Mia
+// TODO: [MIA] Fonts/Icons (see Material)
+
+
 // TODO: - Logging
 // TODO: [Rosewood] Implement a crash reporter
 
@@ -12,12 +16,13 @@
 // TODO: [HTMLtoPDF] Extension methods to save data to file and return file path
 import UIKit
 
+public class MiaDummy: NSObject { }
 
 
 func openSettings()  {
     DispatchQueue.main.async {
         if let settingsURL = URL(string: UIApplicationOpenSettingsURLString) {
-            UIApplication.shared.openURL(settingsURL)
+            UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
         }
     }
 }

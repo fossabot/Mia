@@ -10,7 +10,7 @@ import AudioToolbox
 
 public func vibrate()  {
     // http://www.mikitamanko.com/blog/2017/01/29/haptic-feedback-with-uifeedbackgenerator/
-    if DeviceKit.Sensors.isHapticFeedbackAvailable {
+    if Device.Sensors.isHapticFeedbackAvailable {
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.prepare()
         generator.impactOccurred()
@@ -851,4 +851,72 @@ public extension UIView {
         }
     }
 }
+
+
+
+
+
+
+class HighlightableButton: UIButton {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup() {
+        backgroundColor = UIColor.green
+        layer.cornerRadius = 5
+        layer.masksToBounds = true
+    }
+    
+    override var isHighlighted: Bool{
+        set{
+            UIView.animate(withDuration: 0.1) { [weak self] in
+                self?.alpha = newValue ? 0.5 : 1
+                self?.transform = newValue ? CGAffineTransform(scaleX: 0.95, y: 0.95) : .identity
+            }
+            super.isHighlighted = newValue
+        }get{
+            return super.isHighlighted
+        }
+    }
+}
+
+
+
+
+public class ModalController: UINavigationController {
+    
+    public override init(rootViewController: UIViewController) {
+        
+        super.init(rootViewController: rootViewController)
+//        `motionDismissViewController` uses material
+//        let doneButton = UIBarButtonItem(image: Icon.WebView.dismiss, style: .plain, target: self, action: #selector(motionDismissViewController))
+//        doneButton.tintColor = .red
+        
+//        if (UIDevice.current.userInterfaceIdiom == .pad) {
+//            rootViewController.navigationItem.leftBarButtonItem = doneButton
+//        } else {
+//            rootViewController.navigationItem.rightBarButtonItem = doneButton
+//        }
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+    }
+    
+}
+
+
+
 
