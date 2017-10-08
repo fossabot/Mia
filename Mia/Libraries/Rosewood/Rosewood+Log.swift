@@ -1,3 +1,10 @@
+// MARK: -
+extension Rosewood {
+    public struct Log {
+    }
+}
+
+// MARK: -
 extension Rosewood.Log {
 
     // MARK: Public Methods
@@ -66,12 +73,9 @@ extension Rosewood.Log {
 
     private static func log(_ level: LogLevel, _ items: [Any], _ file: String, _ line: Int, _ function: String) {
 
-        guard Rosewood.Configuration.enabled && level >= Rosewood.Configuration.minLevel else {
-            return
-        }
+        guard Rosewood.Configuration.enabled && level >= Rosewood.Configuration.minLevel else { return }
 
-        let log = Rosewood.Configuration.formatter.logFormat(level: level, items: items, file: file, line: line, function: function)
+        let log = Rosewood.Configuration.formatter.logFormat(level, items: items, file: file, line: line, function: function)
         Rosewood.printToDebugger(log)
     }
-
 }

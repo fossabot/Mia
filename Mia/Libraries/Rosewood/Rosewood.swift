@@ -1,11 +1,11 @@
-import UIKit
-
+// MARK: - TODO's
 // TODO: Print to a text file when used on a device.
 // TODO: Crash Reporter
 
-private let queue = DispatchQueue(label: "Multinerd.Rosewood")
-
+// MARK: -
 public struct Rosewood {
+
+    // MARK: Configurations
 
     /// The logging configurations.
     public struct Configuration {
@@ -17,18 +17,16 @@ public struct Rosewood {
         public static var minLevel: LogLevel = .verbose
 
         /// The logger formatter.
-        public static var formatter: RosewoodFormatter = .oneline
+        public static var formatter: RosewoodFormatter = .oneLine
 
         /// The logger state.
         public static var isAsync: Bool = true
 
+        /// The logger state for Mia Framework.
+        public static var enableFramework: Bool = true
     }
 
-    public struct Log { }
-
-    public struct Benchmark { }
-
-    public struct PrettyPrint { }
+    private static let queue = DispatchQueue(label: "Multinerd.Rosewood")
 
     // MARK: Private Methods
 
@@ -37,55 +35,9 @@ public struct Rosewood {
     static func printToDebugger(_ message: String) {
 
         if Configuration.isAsync {
-            queue.async {
-                print(message)
-            }
+            queue.async { print(message) }
         } else {
-            queue.sync {
-                print(message)
-            }
+            queue.sync { print(message) }
         }
-    }
-
-}
-
-// MARK: - LogLevel Extensions
-public enum LogLevel: Int {
-
-    case verbose
-    case info
-    case warning
-    case debug
-    case error
-    case pretty
-    case bench
-}
-
-extension LogLevel: CustomStringConvertible {
-
-    public var description: String {
-        switch self {
-            case .verbose:  return "💚VERBOSE   "
-            case .info:     return "💙INFO      "
-            case .warning:  return "💛WARNING   "
-            case .debug:    return "💜DEBUG     "
-            case .error:    return "❤️️ERROR     "
-            case .pretty:   return "💖PRETTIFY  "
-            case .bench:    return "🖤BENCHMARK "
-
-        }
-    }
-}
-
-extension LogLevel: Comparable {
-
-    public static func ==(x: LogLevel, y: LogLevel) -> Bool {
-
-        return x.hashValue == y.hashValue
-    }
-
-    public static func <(x: LogLevel, y: LogLevel) -> Bool {
-
-        return x.hashValue < y.hashValue
     }
 }

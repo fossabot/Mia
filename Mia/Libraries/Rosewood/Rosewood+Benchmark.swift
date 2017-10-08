@@ -1,6 +1,13 @@
-public typealias BenchmarkBlock = () -> ()
+// MARK: -
+extension Rosewood {
+    public struct Benchmark {
+    }
+}
 
+// MARK: -
 extension Rosewood.Benchmark {
+
+    public typealias BenchmarkBlock = () -> Void
 
     // MARK: Public Methods
 
@@ -14,14 +21,10 @@ extension Rosewood.Benchmark {
     @discardableResult
     public static func task(_ name: String, iterations: Int = 1, block: BenchmarkBlock) -> [String: Double] {
 
-        guard Rosewood.Configuration.enabled else {
-            return [:]
-        }
-
+        guard Rosewood.Configuration.enabled else { return [:] }
         precondition(iterations > 0, "Iterations must be a positive integer")
 
         var data: [String: Double] = [:]
-
         var total: Double = 0
         var samples = [ Double ]()
 
@@ -57,7 +60,6 @@ extension Rosewood.Benchmark {
             Rosewood.printToDebugger("🖤\t- Total: \(total.millisecondString)")
             Rosewood.printToDebugger("🖤\t- Average: \(average.millisecondString)")
             Rosewood.printToDebugger("🖤\t- STD Dev: \(variance.millisecondString)")
-
         }
 
         return data
@@ -122,13 +124,12 @@ extension Rosewood.Benchmark {
                 let containingMeasurement = timingStack[stackPointer]
 
                 if !containingMeasurement.reported {
-                    //print(String(repeating: "\t" + "Measuring \(containingMeasurement.name):", count: stackPointer))
+                    print(String(repeating: "\t" + "Measuring \(containingMeasurement.name):", count: stackPointer))
                     timingStack[stackPointer] = (containingMeasurement.startTime, containingMeasurement.name, true)
                 }
             }
         }
     }
-
 }
 
 private var depth = 0

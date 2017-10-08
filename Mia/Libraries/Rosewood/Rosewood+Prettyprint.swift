@@ -1,3 +1,10 @@
+// MARK: -
+extension Rosewood {
+    public struct PrettyPrint {
+    }
+}
+
+// MARK: -
 extension Rosewood.PrettyPrint {
 
     // MARK: Public Methods
@@ -20,9 +27,7 @@ extension Rosewood.PrettyPrint {
 
     private static func log(_ level: LogLevel, _ item: Any?, _ file: String, _ line: Int, _ function: String) {
 
-        guard Rosewood.Configuration.enabled else {
-            return
-        }
+        guard Rosewood.Configuration.enabled else { return }
 
         var type = "nil"
         var jsonString: String? = nil
@@ -39,10 +44,12 @@ extension Rosewood.PrettyPrint {
                 case let array as NSArray: jsonString = prettyPrint(NSObject.reflect(objects: array))
                 case let dict as NSDictionary: jsonString = prettyPrint(dict) ?? "\n\(dict)"
                 case let error as NSError:
+                    //@formatter:off
                     let properties: [String: Any] = [ "domain": error.domain,
                                                       "code": error.code,
                                                       "localizedDescription": error.localizedDescription,
                                                       "userInfo": error.userInfo ]
+                    //@formatter:on
                     jsonString = prettyPrint(properties)
                     break
 
@@ -56,7 +63,7 @@ extension Rosewood.PrettyPrint {
         }
 
         let message = "[\(type)] \(jsonString ?? addDash(item ?? "nil"))"
-        let result = Rosewood.Configuration.formatter.prettyFormat(level: .pretty, item: message, file: file, line: line, function: function)
+        let result = Rosewood.Configuration.formatter.prettyFormat(.pretty, item: message, file: file, line: line, function: function)
         Rosewood.printToDebugger(result)
     }
 
@@ -80,12 +87,12 @@ extension Rosewood.PrettyPrint {
         let string = "\(x)"
         return "- " + (string.isEmpty ? "\"\"" : string)
     }
-
 }
 
-extension NSObject {
+// MARK: - Helpers
+private extension NSObject {
 
-    public class func reflect(objects: NSArray?) -> [Any] {
+    class func reflect(objects: NSArray?) -> [Any] {
 
         guard let objects = objects else { return [] }
 
@@ -118,7 +125,7 @@ extension NSObject {
         }
     }
 
-    public class func reflect(object: Any?) -> [String: Any] {
+    class func reflect(object: Any?) -> [String: Any] {
 
         guard let object = object else { return [:] }
 
@@ -172,5 +179,4 @@ extension NSObject {
 
         return dictionary
     }
-
 }

@@ -1,4 +1,4 @@
-// MARK: -
+// MARK: - RosewoodFormatter
 public struct RosewoodFormatter {
 
     public enum Component {
@@ -23,7 +23,6 @@ public struct RosewoodFormatter {
 
         /// The log block.
         case block(() -> Any?)
-
     }
 
     // MARK: Variables
@@ -46,7 +45,7 @@ public struct RosewoodFormatter {
 
     // MARK: Private Methods
 
-    func logFormat(level: LogLevel, items: [Any], file: String, line: Int, function: String) -> String {
+    func logFormat(_ level: LogLevel, items: [Any], file: String, line: Int, function: String) -> String {
 
         let arguments = components.map { (component: Component) -> CVarArg in
             switch component {
@@ -70,14 +69,13 @@ public struct RosewoodFormatter {
 
                 case .block(let block):
                     return block().flatMap({ String(describing: $0) }) ?? ""
-
             }
         }
 
         return String(format: format, arguments: arguments)
     }
 
-    func prettyFormat(level: LogLevel, item: String, file: String, line: Int, function: String) -> String {
+    func prettyFormat(_ level: LogLevel, item: String, file: String, line: Int, function: String) -> String {
 
         let arguments = components.map { (component: Component) -> CVarArg in
             switch component {
@@ -101,7 +99,6 @@ public struct RosewoodFormatter {
 
                 case .block(let block):
                     return block().flatMap({ String(describing: $0) }) ?? ""
-
             }
         }
 
@@ -131,32 +128,47 @@ public struct RosewoodFormatter {
 
         return file
     }
-
 }
 
 // MARK: - Presets
-extension RosewoodFormatter {
+extension RosewoodFormatter { //@formatter:off
 
     /// Default formatter provided for your convenience
     public static let `default` = RosewoodFormatter(
-            "\n%@ %@ " + "\n Source: %@:%@:%@" + "\nMessage: %@",
-            [ .level, .date("yyyy-MM-dd HH:mm:ss.SSS"), .file(fullPath: false, fileExtension: false), .function, .line, .message ]
+            "\n%@ %@ " +
+            "\n Source: %@:%@:%@" +
+            "\nMessage: %@",
+            [ .level, .date("yyyy-MM-dd HH:mm:ss.SSS"),
+              .file(fullPath: false, fileExtension: false), .function, .line,
+              .message
+            ]
     )
 
-    /// Oneline formatter provided for your convenience
-    public static let oneline = RosewoodFormatter(
+    /// OneLine formatter provided for your convenience
+    public static let oneLine = RosewoodFormatter(
             "➡%@%@ %@.%@:%@ %@",
             [ .level, .date("HH:mm:ss.SSS"), .file(fullPath: false, fileExtension: false), .function, .line, .message ]
     )
 
     /// Detailed formatter provided for your convenience
     public static let detailed = RosewoodFormatter(
-            "\n%@ %@ " + "\n Source: " + "\n\t| File: %@" + "\n\t| Func: %@" + "\n\t| Line: %@" + "\n Message: %@",
-            [ .level, .date("yyyy-MM-dd HH:mm:ss.SSS"), .file(fullPath: false, fileExtension: true), .function, .line, .message ]
+            "\n%@ %@ " +
+            "\n Source: " +
+            "\n\t| File: %@" +
+            "\n\t| Func: %@" +
+            "\n\t| Line: %@" +
+            "\n Message: %@",
+            [ .level, .date("yyyy-MM-dd HH:mm:ss.SSS"),
+              .file(fullPath: false, fileExtension: true),
+              .function,
+              .line,
+              .message
+            ]
     )
+} //@formatter:on
 
-}
-
+// MARK: - LogLevel Protocol
+// MARK: CustomStringConvertible
 extension RosewoodFormatter: CustomStringConvertible {
 
     public var description: String {
@@ -164,5 +176,4 @@ extension RosewoodFormatter: CustomStringConvertible {
             return String(describing: component).uppercased()
         })
     }
-
 }
