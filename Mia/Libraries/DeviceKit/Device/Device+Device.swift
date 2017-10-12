@@ -1,7 +1,7 @@
 import UIKit
 
 // MARK: -
-public extension Device.Device {
+public extension Device {
 
     /// Determines whether device is an iPhone.
     public static var isPhone: Bool {

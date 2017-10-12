@@ -36,12 +36,13 @@ extension Application.BundleInfo: CustomStringConvertible {
     }
 }
 
+
 // MARK: - *** Environment ***
 
 extension Application {
 
     /// Determines whether the application was launched from Xcode
-    @available(*, deprecated, message: "This code only runs if your launching the application from Xcode.")
+    @available(*, deprecated, message: "This code will only execute when launching from Xcode.")
     public static var isBeingDebugged: Bool {
 
         var info = kinfo_proc()

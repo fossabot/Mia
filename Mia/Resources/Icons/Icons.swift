@@ -1,4 +1,3 @@
-// TODO: Peek at icon frameworks
 public struct Icon {
 
     /// An internal reference to the icons bundle.
@@ -6,7 +5,7 @@ public struct Icon {
     
     public static var bundle: Bundle {
         if Icon.internalBundle == nil {
-            Icon.internalBundle = Bundle(for: MiaDummy.self)
+            Icon.internalBundle = Mia.bundle
             let url = Icon.internalBundle!.resourceURL!
             let b = Bundle(url: url.appendingPathComponent("io.multinerd.mia.icons.bundle"))
             if let v = b {

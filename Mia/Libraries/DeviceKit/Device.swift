@@ -9,9 +9,6 @@ public struct Device {
     public struct Carrier {
     }
 
-    public struct Device {
-    }
-
     public struct Disk {
     }
 
@@ -71,6 +68,7 @@ extension Device {
     public struct Network {
 
         /// Determines whether the device is connected to the WiFi network
+        @available(*, deprecated, message: "Doesnt seem to work.")
         public static var isConnected: Bool {
 
             return Reachability()?.connection != .none

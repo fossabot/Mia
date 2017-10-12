@@ -18,6 +18,8 @@
 		3BC26BF51F4A552600437A26 /* MiaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BF41F4A552600437A26 /* MiaTheme.swift */; };
 		3BD013FB1F466AAF00CC3150 /* DefaultTableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */; };
 		3BD014041F4670A600CC3150 /* IBOutletTableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD014031F4670A600CC3150 /* IBOutletTableViewDemo.swift */; };
+		3BD9948D1F85831300318151 /* Fonts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD9948C1F85831300318151 /* Fonts.storyboard */; };
+		3BD9948F1F85833100318151 /* FontStuffs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9948E1F85833100318151 /* FontStuffs.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* CollapsibleTableViewDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* CollapsibleTableViewDemo.storyboard */; };
@@ -70,6 +72,8 @@
 		3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableViewDemo.swift; path = CollapsibleTableViewDemo/DefaultTableViewDemo.swift; sourceTree = "<group>"; };
 		3BD014031F4670A600CC3150 /* IBOutletTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IBOutletTableViewDemo.swift; path = CollapsibleTableViewDemo/IBOutletTableViewDemo.swift; sourceTree = "<group>"; };
+		3BD9948C1F85831300318151 /* Fonts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fonts.storyboard; sourceTree = "<group>"; };
+		3BD9948E1F85833100318151 /* FontStuffs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStuffs.swift; sourceTree = "<group>"; };
 		3BE858DE1F6C64BA0088518B /* CameraKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraKit.storyboard; sourceTree = "<group>"; };
 		3BE858DF1F6C64BA0088518B /* CameraKitDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraKitDemoView.swift; sourceTree = "<group>"; };
 		3DA42F71B04516A77849EDD6 /* Pods-Mia_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_ExampleTests/Pods-Mia_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +155,15 @@
 			name = CollapsibleTableViewDemo;
 			sourceTree = "<group>";
 		};
+		3BD9948B1F85830600318151 /* FontKit */ = {
+			isa = PBXGroup;
+			children = (
+				3BD9948C1F85831300318151 /* Fonts.storyboard */,
+				3BD9948E1F85833100318151 /* FontStuffs.swift */,
+			);
+			path = FontKit;
+			sourceTree = "<group>";
+		};
 		3BE858DD1F6C64BA0088518B /* CameraKit Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +202,7 @@
 				3B81E1201F535436000D1007 /* Storyboard.storyboard */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				3BC26BF41F4A552600437A26 /* MiaTheme.swift */,
+				3BD9948B1F85830600318151 /* FontKit */,
 				3B574B141F7C053A00148B63 /* WebView */,
 				3BE858DD1F6C64BA0088518B /* CameraKit Demo */,
 				3BD013E51F466A5000CC3150 /* CollapsibleTableViewDemo */,
@@ -347,6 +361,7 @@
 				3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				3BD9948D1F85831300318151 /* Fonts.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +492,7 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				3BD013FB1F466AAF00CC3150 /* DefaultTableViewDemo.swift in Sources */,
 				3B574B1E1F7C056700148B63 /* WebViewDemoView.swift in Sources */,
+				3BD9948F1F85833100318151 /* FontStuffs.swift in Sources */,
 				3BC26BED1F4A37A800437A26 /* CollapsibleDataSource.swift in Sources */,
 				3BC26BF51F4A552600437A26 /* MiaTheme.swift in Sources */,
 			);

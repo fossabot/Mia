@@ -13,9 +13,10 @@ class WebViewDemoView: UIViewController {
         super.viewDidLoad()
         generator.prepare()
         
-        pushButton.titleLabel?.font  = RobotoFont.light(with: 14)
-        modalLightButton.titleLabel?.font  = RobotoFont.light(with: 14)
-        modalDarkButton.titleLabel?.font  = RobotoFont.light(with: 14)
+        let font = FontKit.Font.robotoLight.of(size: 14)
+        pushButton.titleLabel?.font = font
+        modalLightButton.titleLabel?.font = font
+        modalDarkButton.titleLabel?.font = font
     }
     
     

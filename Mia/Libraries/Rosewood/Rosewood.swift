@@ -1,7 +1,3 @@
-// MARK: - TODO's
-// TODO: Print to a text file when used on a device.
-// TODO: Crash Reporter
-
 // MARK: -
 public struct Rosewood {
 

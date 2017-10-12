@@ -1,5 +1,7 @@
 // MARK: -
 
+private var duration: TimeInterval = 0.1
+
 public protocol ThemeUser: class { }
 
 public extension ThemeUser {
@@ -36,7 +38,7 @@ public extension ThemeUser {
     func useAnimated<T: Theme>(_ type: T.Type, apply: @escaping (Self, T) -> Void) {
 
         if let theme = ThemeKit.shared.currentTheme as? T {
-            UIView.animate(withDuration: 0.4, animations: {
+            UIView.animate(withDuration: duration, animations: {
                 apply(self, theme)
             })
         }
@@ -47,7 +49,7 @@ public extension ThemeUser {
                 return
             }
 
-            UIView.animate(withDuration: 0.4, animations: {
+            UIView.animate(withDuration: duration, animations: {
                 apply(themeUser, theme)
             })
         }

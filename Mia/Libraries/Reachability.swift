@@ -55,19 +55,21 @@ public class Reachability {
     public var whenUnreachable: NetworkUnreachable?
 
     /// Set to `false` to force Reachability.connection to .none when on cellular connection (default value `true`)
-    public var allowsCellularConnection: Bool = true
+    public var allowsCellularConnection: Bool
 
     // The notification center on which "reachability changed" events are being posted
     public var notificationCenter: NotificationCenter = NotificationCenter.default
 
     public var connection: Connection {
 
-        guard isReachableFlagSet
-        else { return .none }
+        guard isReachableFlagSet else {
+            return .none
+        }
 
         // If we're reachable, but not on an iOS device (i.e. simulator), we must be on WiFi
-        guard isRunningOnDevice
-        else { return .wifi }
+        guard isRunningOnDevice else {
+            return .wifi
+        }
 
         var connection = Connection.none
 
@@ -95,11 +97,11 @@ public class Reachability {
     private var previousFlags: SCNetworkReachabilityFlags?
 
     private var isRunningOnDevice: Bool = {
-        #if (arch(i386) || arch(x86_64)) && os(iOS)
-            return false
-        #else
-            return true
-        #endif
+#if (arch(i386) || arch(x86_64)) && os(iOS)
+        return false
+#else
+        return true
+#endif
     }()
 
     private var notifierRunning = false
@@ -115,8 +117,9 @@ public class Reachability {
 
     public convenience init?(hostname: String) {
 
-        guard let ref = SCNetworkReachabilityCreateWithName(nil, hostname)
-        else { return nil }
+        guard let ref = SCNetworkReachabilityCreateWithName(nil, hostname) else {
+            return nil
+        }
 
         self.init(reachabilityRef: ref)
     }
@@ -127,8 +130,9 @@ public class Reachability {
         zeroAddress.sa_len = UInt8(MemoryLayout<sockaddr>.size)
         zeroAddress.sa_family = sa_family_t(AF_INET)
 
-        guard let ref = SCNetworkReachabilityCreateWithAddress(nil, &zeroAddress)
-        else { return nil }
+        guard let ref = SCNetworkReachabilityCreateWithAddress(nil, &zeroAddress) else {
+            return nil
+        }
 
         self.init(reachabilityRef: ref)
     }
@@ -144,8 +148,9 @@ public extension Reachability {
     // MARK: - *** Notifier methods ***
     func startNotifier() throws {
 
-        guard !notifierRunning
-        else { return }
+        guard !notifierRunning else {
+            return
+        }
 
         var context = SCNetworkReachabilityContext(version: 0, info: nil, retain: nil, release: nil, copyDescription: nil)
         context.info = UnsafeMutableRawPointer(Unmanaged<Reachability>.passUnretained(self).toOpaque())
@@ -169,7 +174,9 @@ public extension Reachability {
 
     func stopNotifier() {
 
-        defer { notifierRunning = false }
+        defer {
+            notifierRunning = false
+        }
 
         SCNetworkReachabilitySetCallback(reachabilityRef, nil, nil)
         SCNetworkReachabilitySetDispatchQueue(reachabilityRef, nil)
@@ -200,43 +207,33 @@ private extension Reachability {
         return false
 #endif
     }
-
     var isReachableFlagSet: Bool {
         return flags.contains(.reachable)
     }
-
     var isConnectionRequiredFlagSet: Bool {
         return flags.contains(.connectionRequired)
     }
-
     var isInterventionRequiredFlagSet: Bool {
         return flags.contains(.interventionRequired)
     }
-
     var isConnectionOnTrafficFlagSet: Bool {
         return flags.contains(.connectionOnTraffic)
     }
-
     var isConnectionOnDemandFlagSet: Bool {
         return flags.contains(.connectionOnDemand)
     }
-
     var isConnectionOnTrafficOrDemandFlagSet: Bool {
         return !flags.intersection([ .connectionOnTraffic, .connectionOnDemand ]).isEmpty
     }
-
     var isTransientConnectionFlagSet: Bool {
         return flags.contains(.transientConnection)
     }
-
     var isLocalAddressFlagSet: Bool {
         return flags.contains(.isLocalAddress)
     }
-
     var isDirectFlagSet: Bool {
         return flags.contains(.isDirect)
     }
-
     var isConnectionRequiredAndTransientFlagSet: Bool {
         return flags.intersection([ .connectionRequired, .transientConnection ]) == [ .connectionRequired, .transientConnection ]
     }
@@ -252,8 +249,9 @@ private extension Reachability {
 
     func reachabilityChanged() {
 
-        guard previousFlags != flags
-        else { return }
+        guard previousFlags != flags else {
+            return
+        }
 
         let block = connection != .none ? whenReachable : whenUnreachable
 
@@ -272,8 +270,9 @@ extension Notification.Name {
 
 func callback(reachability: SCNetworkReachability, flags: SCNetworkReachabilityFlags, info: UnsafeMutableRawPointer?) {
 
-    guard let info = info
-    else { return }
+    guard let info = info else {
+        return
+    }
 
     let reachability = Unmanaged<Reachability>.fromOpaque(info).takeUnretainedValue()
     reachability.reachabilityChanged()

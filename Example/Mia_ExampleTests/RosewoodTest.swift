@@ -26,6 +26,8 @@ class RosewoodTest: XCTestCase {
     
     func testRosewoodLogDefaultFormat() -> Void {
         
+        Rosewood.Configuration.formatter = .default
+        
         Rosewood.Log.verbose("Who am I?: ", self)
         Rosewood.Log.debug("1 + 1 = ", 1 + 1)
         Rosewood.Log.info("IsMainThread: ", Thread.current.isMainThread)
@@ -37,13 +39,13 @@ class RosewoodTest: XCTestCase {
     
     func testRosewoodLogOneLineFormat() -> Void {
         
-        Rosewood.Configuration.formatter = .oneline
+        Rosewood.Configuration.formatter = .oneLine
         
         Rosewood.Log.verbose("Who am I?: ", self)
         Rosewood.Log.debug("1 + 1 = ", 1 + 1)
         Rosewood.Log.info("IsMainThread: ", Thread.current.isMainThread)
         Rosewood.Log.warning(1, 2, "3")
-        Rosewood.Log.error("Error: ", NSError.init(domain: "Error", code: -999, userInfo: [ "Hello": "World", "Number": 0 ]))
+        Rosewood.Log.error("Error: ", error)
         Thread.sleep(forTimeInterval: 1.0)
         
     }
@@ -56,7 +58,7 @@ class RosewoodTest: XCTestCase {
         Rosewood.Log.debug("1 + 1 = ", 1 + 1)
         Rosewood.Log.info("IsMainThread: ", Thread.current.isMainThread)
         Rosewood.Log.warning(1, 2, "3")
-        Rosewood.Log.error("Error: ", NSError.init(domain: "Error", code: -999, userInfo: [ "Hello": "World", "Number": 0 ]))
+        Rosewood.Log.error("Error: ", error)
         Thread.sleep(forTimeInterval: 1.0)
         
     }
@@ -93,6 +95,8 @@ class RosewoodTest: XCTestCase {
     func testRosewoodPrettyPrint() -> Void {
 
         Rosewood.PrettyPrint.items(nil)
+        return
+            
         Rosewood.PrettyPrint.items(Int(5))
         Rosewood.PrettyPrint.items(Double(5.0))
         Rosewood.PrettyPrint.items(Float(2.0))

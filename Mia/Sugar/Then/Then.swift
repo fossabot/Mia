@@ -22,9 +22,8 @@
 
 import Foundation
 import CoreGraphics
-#if os(iOS) || os(tvOS)
-  import UIKit.UIGeometry
-#endif
+import UIKit.UIGeometry
+
 
 public protocol Then {}
 
@@ -78,8 +77,8 @@ extension CGRect: Then {}
 extension CGSize: Then {}
 extension CGVector: Then {}
 
-#if os(iOS) || os(tvOS)
-  extension UIEdgeInsets: Then {}
-  extension UIOffset: Then {}
-  extension UIRectEdge: Then {}
-#endif
+
+extension UIEdgeInsets: Then {}
+extension UIOffset: Then {}
+extension UIRectEdge: Then {}
+

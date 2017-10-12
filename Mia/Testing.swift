@@ -1,10 +1,93 @@
 import UIKit
 import AudioToolbox
+import CoreData
 
 
 
-
-
+public struct BundleK {
+    // MARK: .DocumentDirectory
+    
+    /// URL to bundle .DocumentDirectory
+    static public var documentsDirectoryURL: URL {
+        return documentsDirectoryURL(.documentDirectory)
+    }
+    
+    /// Path to file in bundle .DocumentDirectory
+    static public func filePathInDocumentsDirectory(toFile file: String) -> String {
+        return filePathInDocumentsDirectory(.documentDirectory, toFile: file)
+    }
+    
+    // MARK: .CachesDirectory
+    
+    /// URL to bundle .CachesDirectory
+    static public var cachesDirectoryURL: URL {
+        return documentsDirectoryURL(.cachesDirectory)
+    }
+    
+    /// Path to file in bundle .CachesDirectory
+    static public func filePathInCachesDirectory(toFile file: String) -> String {
+        return filePathInDocumentsDirectory(.cachesDirectory, toFile: file)
+    }
+    
+    // MARK: Helpers
+    
+    static fileprivate func documentsDirectoryURL(_ directory: FileManager.SearchPathDirectory) -> URL {
+        let URLs = FileManager.default.urls(for: directory, in: .userDomainMask)
+        return URLs.first!
+    }
+    
+    static public func filePathInDocumentsDirectory(_ directory: FileManager.SearchPathDirectory, toFile file: String) -> String {
+        let URLs = FileManager.default.urls(for: directory, in: .userDomainMask)
+        let URL = URLs.first!
+        return (URL.absoluteString as NSString).appendingPathComponent(file)
+    }
+    
+    
+    
+    ////// OS Version
+    
+    /// Current iOS version as string
+    static public var osVersionString: String {
+        return UIDevice.current.systemVersion
+    }
+    
+    /// Detect iOS version is equal to
+    static public func osVersionEqualTo(_ version: String) -> Bool {
+        return compareVersionEqual(version, result: ComparisonResult.orderedSame)
+    }
+    
+    /// Detect iOS version is greater than
+    static public func osVersionGreaterThan(_ version: String) -> Bool {
+        return compareVersionEqual(version, result: ComparisonResult.orderedDescending)
+    }
+    
+    /// Detect iOS version is greater than or equal to
+    static public func osVersionGreaterThanOrEqualTo(_ version: String) -> Bool {
+        return compareVersionNotEqual(version, result: ComparisonResult.orderedAscending)
+    }
+    
+    /// Detect iOS version is less than
+    static public func osVersionLessThan(_ version: String) -> Bool {
+        return compareVersionEqual(version, result: ComparisonResult.orderedAscending)
+    }
+    
+    /// Detect iOS version is less than or equal
+    static public func osVersionLessThanOrEqualTo(_ version: String) -> Bool {
+        return compareVersionNotEqual(version, result: ComparisonResult.orderedAscending)
+    }
+    
+    // MARK: Helpers
+    
+    static private func compareVersionEqual(_ version: String, result: ComparisonResult) -> Bool {
+        let currentVersion = UIDevice.current.systemVersion
+        return currentVersion.compare(version, options: NSString.CompareOptions.numeric) == result
+    }
+    
+    static private func compareVersionNotEqual(_ version: String, result: ComparisonResult) -> Bool {
+        let currentVersion = UIDevice.current.systemVersion
+        return currentVersion.compare(version, options: NSString.CompareOptions.numeric) != result
+    }
+}
 
 
 
@@ -896,27 +979,153 @@ public class ModalController: UINavigationController {
     public override init(rootViewController: UIViewController) {
         
         super.init(rootViewController: rootViewController)
-//        `motionDismissViewController` uses material
-//        let doneButton = UIBarButtonItem(image: Icon.WebView.dismiss, style: .plain, target: self, action: #selector(motionDismissViewController))
-//        doneButton.tintColor = .red
+        let doneButton = UIBarButtonItem(image: Icon.WebView.dismiss, style: .plain, target: self, action: #selector(motionDismissViewController))
+        doneButton.tintColor = .red
         
-//        if (UIDevice.current.userInterfaceIdiom == .pad) {
-//            rootViewController.navigationItem.leftBarButtonItem = doneButton
-//        } else {
-//            rootViewController.navigationItem.rightBarButtonItem = doneButton
-//        }
+        if (UIDevice.current.userInterfaceIdiom == .pad) {
+            rootViewController.navigationItem.leftBarButtonItem = doneButton
+        } else {
+            rootViewController.navigationItem.rightBarButtonItem = doneButton
+        }
     }
     
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    public required override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
+    }
+    
+    @objc func motionDismissViewController() {
+        if let v = navigationController, self != v.viewControllers.first {
+            v.popViewController(animated: true)
+        } else {
+            dismiss(animated: true)
+        }
+    }
+}
+
+
+
+public extension UISearchController {
+    
+    public var isEmpty: Bool {
+        return self.searchBar.text?.isEmpty ?? true
+    }
+    
+    public var isFiltering: Bool {
+        return self.isActive && !isEmpty
+    }
+    
+}
+
+
+public class SearchFooter: UIView {
+    
+    let label: UILabel = UILabel()
+    
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        configureView()
+    }
+    
+    required public init?(coder: NSCoder) {
+        super.init(coder: coder)
+        configureView()
+    }
+    
+    func configureView() {
+//        backgroundColor = UIColor.candyGreen
+        alpha = 0.0
+        
+        // Configure label
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        addSubview(label)
+    }
+    
+    public override func draw(_ rect: CGRect) {
+        label.frame = bounds
+    }
+    
+    //MARK: - Animation
+    
+    fileprivate func hideFooter() {
+        UIView.animate(withDuration: 0.7) {[unowned self] in
+            self.alpha = 0.0
+        }
+    }
+    
+    fileprivate func showFooter() {
+        UIView.animate(withDuration: 0.7) {[unowned self] in
+            self.alpha = 1.0
+        }
+    }
+}
+
+extension SearchFooter {
+    //MARK: - Public API
+    
+    public func setNotFiltering() {
+        label.text = ""
+        hideFooter()
+    }
+    
+    public func setIsFilteringToShow(filteredItemCount: Int, of totalItemCount: Int) {
+        if (filteredItemCount == totalItemCount) {
+            setNotFiltering()
+        } else if (filteredItemCount == 0) {
+            label.text = "No items match your query"
+            showFooter()
+        } else {
+            label.text = "Filtering \(filteredItemCount) of \(totalItemCount)"
+            showFooter()
+        }
     }
     
 }
 
 
 
+
+
+
+
+public extension String {
+    
+    //"abcde"[0] == "a"
+    //"abcde"[0...2] == "abc"
+    //"abcde"[2..<4] == "cd"
+    
+    
+    subscript (i: Int) -> Character {
+        return self[self.characters.index(self.startIndex, offsetBy: i)]
+    }
+    
+    subscript (i: Int) -> String {
+        return String(self[i] as Character)
+    }
+    
+    subscript (r: Range<Int>) -> String {
+        let start = characters.index(startIndex, offsetBy: r.lowerBound)
+        let end = characters.index(start, offsetBy: r.upperBound - r.lowerBound)
+        return String(self[Range(start ..< end)])
+    }
+
+}
+
+
+
+public extension NSManagedObject {
+    func toDict() -> [String:Any] {
+        let keys = Array(entity.attributesByName.keys)
+        return dictionaryWithValues(forKeys:keys)
+    }
+}
 

@@ -30,7 +30,7 @@ public extension Device.Sensors {
     /// Determines whether haptic feedback is available
     public static var isHapticFeedbackAvailable: Bool {
         if #available(iOS 10.0, *) {
-            return Device.Device.model == .iPhone7 || Device.Device.model == .iPhone7Plus
+            return Device.model == .iPhone7 || Device.model == .iPhone7Plus
         } else {
             return false
         }

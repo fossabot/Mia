@@ -4,19 +4,14 @@
 
 // TODO: - Logging
 // TODO: [Rosewood] Implement a crash reporter
+// TODO: [Rosewood] Implement a way to measure/monitor FPS | Watchdog
 
-// TODO: - Performance
-// TODO: [Monica] Implement a way to measure/monitor FPS | Watchdog
-
-// TODO: - JSON
-// TODO: [Reflect] Document all the things
-// TODO: [Reflect] Replace With EVReflection
-
-// TODO: - PDF
-// TODO: [HTMLtoPDF] Extension methods to save data to file and return file path
 import UIKit
 
 public class MiaDummy: NSObject { }
+public struct Mia {
+    public static let bundle: Bundle = Bundle(for: MiaDummy.self)
+}
 
 
 func openSettings()  {
@@ -39,7 +34,8 @@ public func getTopMostController() -> UIViewController? {
 }
 
 
-public typealias NetworkActivityBlock = () -> ()
+
+public typealias NetworkActivityBlock = () -> Void
 
 var __internalActivityCount: Int = 0
 //{

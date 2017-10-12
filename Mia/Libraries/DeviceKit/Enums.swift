@@ -18,7 +18,7 @@ public enum DeviceModel: CustomStringConvertible {
     /// Create and returns a DeviceModel from a model identifier.
     ///
     /// - Parameter identifier: The device identifier. Defaults to the current device's model identifier.
-    public init(identifier: String = Device.Device.modelIdentifier) {
+    public init(identifier: String = Device.modelIdentifier) {
 
         switch identifier {
 
@@ -108,7 +108,7 @@ public enum DeviceType: String {
     /// Create and returns a DeviceType for the current device.
     public init() {
 
-        let identifier: String = Device.Device.modelIdentifier
+        let identifier: String = Device.modelIdentifier
         if [ "i386", "x86_64" ].contains(identifier) {
             self = .simulator
         } else if identifier.contains("iPhone") {
@@ -146,7 +146,7 @@ public enum ScreenSize: CGFloat, CustomStringConvertible {
 
         func iPad1024() -> ScreenSize {
 
-            switch Device.Device.model {
+            switch Device.model {
                 case .iPadMini2, .simulator(.iPadMini2), .iPadMini3, .simulator(.iPadMini3), .iPadMini4, .simulator(.iPadMini4): return .screen7dot9
                 case .iPadPro10Inch, .simulator(.iPadPro10Inch): return .screen10dot5
                 default: return .screen9dot7

@@ -50,5 +50,18 @@ Pod::Spec.new do |s|
         sp.source_files = 'Mia/Deprecated/**/*.{swift}'
     end
     
+#    s.subspec 'Fonts' do |sp|
+#        sp.source_files = 'Mia/Resources/Fonts/**/*.{swift}'
+#        s.ios.resource_bundles = {
+#            'io.multinerd.mia.fonts' => ['Mia/Resources/**/*.ttf']
+#        }
+#    end
     
+#    s.subspec 'Icons' do |sp|
+#        sp.source_files = 'Mia/Resources/Icons/**/*.{swift}'
+#        s.ios.resource_bundles = {
+#            'io.multinerd.mia.icons' => ['Mia/Resources/**/*.xcassets']
+#        }
+#    end
+
 end
