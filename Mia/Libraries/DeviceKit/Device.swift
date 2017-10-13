@@ -67,23 +67,28 @@ extension Device {
 
     public struct Network {
 
+        private static var connection: Reachability.Connection {
+            
+            return Reachability()!.connection
+        }
+        
+        
         /// Determines whether the device is connected to the WiFi network
-        @available(*, deprecated, message: "Doesnt seem to work.")
         public static var isConnected: Bool {
-
-            return Reachability()?.connection != .none
+            
+            return connection != .none
         }
 
         /// Determines whether the device is connected to the WiFi network
         public static var isConnectedViaWiFi: Bool {
 
-            return Reachability()?.connection == .wifi
+            return connection == .wifi
         }
 
         /// Determines whether the device is connected to the cellular network
         public static var isConnectedViaCellular: Bool {
 
-            return Reachability()?.connection == .cellular
+            return connection == .cellular
         }
 
         /// Get the name of the network the device is currently connected to. Does not work on Simulator.
