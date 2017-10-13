@@ -20,18 +20,13 @@ extension FontKit.Loader {
     // MARK: Public Methods
 
     /// Load all fonts found in a Mia.
-    ///
-    /// - Parameters:
-    ///   - bundle: The bundle to check for fonts. Defaults to `Bundle.main`
-    ///   - handler: A callback with a [String] object containing all loaded fonts.
     public static func loadMia() {
-        
+
         let bundle = Bundle(for: MiaDummy.self)
         loadFontsForBundle(withPath: bundle.bundlePath)
         loadFontsFromBundlesFoundInBundle(path: bundle.bundlePath)
     }
-    
-    
+
     /// Load all fonts found in a specific bundle.
     ///
     /// - Parameters:

@@ -183,14 +183,13 @@ public enum ScreenSize: CGFloat, CustomStringConvertible {
 }
 
 // MARK: - *** Screen Family ***
-
 public enum ScreenFamily: String {
 
     case unknown
     case old
     case small
     case medium
-    case big
+    case large
 
     /// Create and returns a ScreenFamily for the current device.
     public init() {
@@ -200,7 +199,7 @@ public enum ScreenFamily: String {
             case .screen3dot5, .screen4dot0: self = .old
             case .screen4dot7: self = .small
             case .screen5dot5, .screen5dot8, .screen7dot9: self = .medium
-            case .screen9dot7, .screen10dot5, .screen12dot9: self = .big
+            case .screen9dot7, .screen10dot5, .screen12dot9: self = .large
             default: self = .unknown
         }
     }

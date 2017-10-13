@@ -43,33 +43,3 @@ extension FontKit {
         case robotoSlabThin = "RobotoSlab-Thin"
     }
 }
-
-// MARK: -
-public protocol FontRepresentable: RawRepresentable {
-}
-
-extension FontRepresentable where Self.RawValue == String {
-
-    /// Initializes and return a `UIFont` using a FontKit.Font` value.
-    /// Returns `systemFont` if custom font is unavailable.
-    ///
-    /// - Parameter size: The size of the font.
-    /// - Returns: A `UIFont` from `FontKit.Font`. Returns `systemFont` if custom font is unavailable.
-    public func of(size: CGFloat) -> UIFont {
-
-        if let font = UIFont(name: rawValue, size: size) {
-            return font
-        }
-
-        FontKit.debug(message: "Unable to load \(self.rawValue)... using system font instead")
-        return UIFont.systemFont(ofSize: size)
-    }
-
-    private static func makeSize(size: Float) -> CGFloat {
-
-        if Device.isPad {
-            return CGFloat(size * FontKit.Configuration.iPadScaleFactor)
-        }
-        return CGFloat(size)
-    }
-}
