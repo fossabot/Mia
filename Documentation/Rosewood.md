@@ -1,5 +1,6 @@
 ## Table of contents 
 
+* [Configuration](#configuration)
 * [Logging](#logging)
 * [Pretty Print](#pretty-print)
 * [Benchmark](#benchmark)
@@ -10,7 +11,7 @@
 
 
 
-## Rosewood
+## Configuration
 
 The following examples can be found in the `RosewoodTest.swift` file.
 
