@@ -18,8 +18,8 @@
 		3BC26BF51F4A552600437A26 /* MiaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BF41F4A552600437A26 /* MiaTheme.swift */; };
 		3BD013FB1F466AAF00CC3150 /* DefaultTableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */; };
 		3BD014041F4670A600CC3150 /* IBOutletTableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD014031F4670A600CC3150 /* IBOutletTableViewDemo.swift */; };
-		3BD9948D1F85831300318151 /* Fonts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD9948C1F85831300318151 /* Fonts.storyboard */; };
-		3BD9948F1F85833100318151 /* FontStuffs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9948E1F85833100318151 /* FontStuffs.swift */; };
+		3BD9948D1F85831300318151 /* FontKitDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD9948C1F85831300318151 /* FontKitDemo.storyboard */; };
+		3BD9948F1F85833100318151 /* FontKitDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9948E1F85833100318151 /* FontKitDemoView.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* CollapsibleTableViewDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* CollapsibleTableViewDemo.storyboard */; };
@@ -61,6 +61,7 @@
 		3B4FBA1C1F66159500C474DD /* .swiftlint.yml */ = {isa = PBXFileReference; explicitFileType = text.script.sh; fileEncoding = 4; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
 		3B574B151F7C053A00148B63 /* WebViewDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoView.swift; sourceTree = "<group>"; };
 		3B574B1A1F7C053A00148B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WebViewDemo.storyboard; sourceTree = "<group>"; };
+		3B5BF14C1F92C62A006152ED /* FontKit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = FontKit.md; path = ../Documentation/FontKit.md; sourceTree = "<group>"; };
 		3B81E1201F535436000D1007 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosewoodTest.swift; sourceTree = "<group>"; };
 		3BA9F8641F5B868500553ABB /* Rosewood.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Rosewood.md; path = ../Documentation/Rosewood.md; sourceTree = "<group>"; };
@@ -69,11 +70,11 @@
 		3BB469B11F647A81007B98CB /* DeviceKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceKitTests.swift; sourceTree = "<group>"; };
 		3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollapsibleDataSource.swift; path = CollapsibleTableViewDemo/CollapsibleDataSource.swift; sourceTree = "<group>"; };
 		3BC26BF41F4A552600437A26 /* MiaTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiaTheme.swift; sourceTree = "<group>"; };
-		3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableViewDemo.swift; path = CollapsibleTableViewDemo/DefaultTableViewDemo.swift; sourceTree = "<group>"; };
 		3BD014031F4670A600CC3150 /* IBOutletTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IBOutletTableViewDemo.swift; path = CollapsibleTableViewDemo/IBOutletTableViewDemo.swift; sourceTree = "<group>"; };
-		3BD9948C1F85831300318151 /* Fonts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fonts.storyboard; sourceTree = "<group>"; };
-		3BD9948E1F85833100318151 /* FontStuffs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStuffs.swift; sourceTree = "<group>"; };
+		3BD9948C1F85831300318151 /* FontKitDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FontKitDemo.storyboard; sourceTree = "<group>"; };
+		3BD9948E1F85833100318151 /* FontKitDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontKitDemoView.swift; sourceTree = "<group>"; };
 		3BE858DE1F6C64BA0088518B /* CameraKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraKit.storyboard; sourceTree = "<group>"; };
 		3BE858DF1F6C64BA0088518B /* CameraKitDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraKitDemoView.swift; sourceTree = "<group>"; };
 		3DA42F71B04516A77849EDD6 /* Pods-Mia_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_ExampleTests/Pods-Mia_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA9F8641F5B868500553ABB /* Rosewood.md */,
+				3B5BF14C1F92C62A006152ED /* FontKit.md */,
 			);
 			name = Documentation;
 			sourceTree = "<group>";
@@ -155,13 +157,13 @@
 			name = CollapsibleTableViewDemo;
 			sourceTree = "<group>";
 		};
-		3BD9948B1F85830600318151 /* FontKit */ = {
+		3BD9948B1F85830600318151 /* Demo - FontKit */ = {
 			isa = PBXGroup;
 			children = (
-				3BD9948C1F85831300318151 /* Fonts.storyboard */,
-				3BD9948E1F85833100318151 /* FontStuffs.swift */,
+				3BD9948C1F85831300318151 /* FontKitDemo.storyboard */,
+				3BD9948E1F85833100318151 /* FontKitDemoView.swift */,
 			);
-			path = FontKit;
+			path = "Demo - FontKit";
 			sourceTree = "<group>";
 		};
 		3BE858DD1F6C64BA0088518B /* CameraKit Demo */ = {
@@ -199,16 +201,16 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				3B81E1201F535436000D1007 /* Storyboard.storyboard */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				3BC26BF41F4A552600437A26 /* MiaTheme.swift */,
-				3BD9948B1F85830600318151 /* FontKit */,
-				3B574B141F7C053A00148B63 /* WebView */,
 				3BE858DD1F6C64BA0088518B /* CameraKit Demo */,
 				3BD013E51F466A5000CC3150 /* CollapsibleTableViewDemo */,
+				3BD9948B1F85830600318151 /* Demo - FontKit */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				3BC26BF41F4A552600437A26 /* MiaTheme.swift */,
+				3B81E1201F535436000D1007 /* Storyboard.storyboard */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				3B574B141F7C053A00148B63 /* WebView */,
 			);
 			name = "Example for Mia";
 			path = Mia;
@@ -308,7 +310,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -361,7 +363,7 @@
 				3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				3BD9948D1F85831300318151 /* Fonts.storyboard in Resources */,
+				3BD9948D1F85831300318151 /* FontKitDemo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +494,7 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				3BD013FB1F466AAF00CC3150 /* DefaultTableViewDemo.swift in Sources */,
 				3B574B1E1F7C056700148B63 /* WebViewDemoView.swift in Sources */,
-				3BD9948F1F85833100318151 /* FontStuffs.swift in Sources */,
+				3BD9948F1F85833100318151 /* FontKitDemoView.swift in Sources */,
 				3BC26BED1F4A37A800437A26 /* CollapsibleDataSource.swift in Sources */,
 				3BC26BF51F4A552600437A26 /* MiaTheme.swift in Sources */,
 			);

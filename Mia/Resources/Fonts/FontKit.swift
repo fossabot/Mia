@@ -1,95 +1,164 @@
-// FontKit.Loader was inspired by https://github.com/ArtSabintsev/FontBlaster
-// FontRepresentable was inspired by https://github.com/Nirma/UIFontComplete
-
 // MARK: -
 public struct FontKit {
 
-    /// FontKit configurations.
+    public typealias FontLoadedHandler = ([String]) -> Void
+    private typealias FontPath = String
+    private typealias FontName = String
+    private typealias FontExtension = String
+    private typealias FontTuple = (path: FontPath, name: FontName, ext: FontExtension)
+
+    // MARK: *** Configuration ***
     public struct Configuration {
 
-        /// Toggles debug print statements. Defaults to false.
+        /// Determines whether debug messages will be logged. Defaults to false.
         public static var debugMode = false
+    }
 
-        /// Scale factor for iPhone Plus & iPhone X. Defaults to 1.2.
-        public static var mediumScaleFactor: CGFloat = 1.2
+    // MARK: *** Properties ***
 
-        /// Scale factor for iPads. Defaults to 1.5.
-        public static var largeScaleFactor: CGFloat = 1.5
+    /// A list of loaded fonts.
+    public static var loadedFonts: [String] = []
+
+    // MARK: *** Public Methods ***
+
+    /// Load all fonts found in a Mia.
+    public static func loadMia() {
+
+        let bundle = Bundle(for: MiaDummy.self)
+        loadFontsInBundle(withPath: bundle.bundlePath)
+        loadFontsFromBundlesFoundInBundle(path: bundle.bundlePath)
+    }
+
+    /// Load all fonts found in a specific bundle.
+    ///
+    /// - Parameters:
+    ///   - bundle: The bundle to check. Defaults to `Bundle.main`
+    ///   - handler: The callback with a [String] containing the loaded font's names.
+    public static func load(bundle: Bundle = Bundle.main, completion handler: FontLoadedHandler? = nil) {
+
+        loadFontsInBundle(withPath: bundle.bundlePath)
+        loadFontsFromBundlesFoundInBundle(path: bundle.bundlePath)
+        handler?(loadedFonts)
+    }
+
+    // MARK: *** Private Methods ***
+
+    /// Loads all fonts found in a bundle.
+    ///
+    /// - Parameter path: The absolute path to the bundle.
+    private static func loadFontsInBundle(withPath path: String) {
+
+        do {
+            let contents = try FileManager.default.contentsOfDirectory(atPath: path) as [String]
+            let loadedFonts = fonts(fromPath: path, withContents: contents)
+            if !loadedFonts.isEmpty {
+                for font in loadedFonts {
+                    loadFont(font: font)
+                }
+            } else {
+                FontKit.debug(message: "No fonts were found in the bundle path: \(path).")
+            }
+        } catch let error as NSError {
+            FontKit.debug(message: "There was an error loading from the bundle.\nPath: \(path).\nError: \(error)")
+        }
+    }
+
+    /// Loads all fonts found in a bundle that is loaded within another bundle.
+    ///
+    /// - Parameter path: The absolute path to the bundle.
+    private static func loadFontsFromBundlesFoundInBundle(path: String) {
+
+        do {
+            let contents = try FileManager.default.contentsOfDirectory(atPath: path)
+            for item in contents {
+                if let url = URL(string: path), item.contains(".bundle") {
+                    let urlPathString = url.appendingPathComponent(item).absoluteString
+                    loadFontsInBundle(withPath: urlPathString)
+                }
+            }
+        } catch let error as NSError {
+            FontKit.debug(message: "There was an error accessing the bundle. \nPath: \(path).\nError: \(error)")
+        }
+    }
+
+    /// Loads a specific font.
+    ///
+    /// - Parameter font: The font to load.
+    private static func loadFont(font: FontTuple) {
+
+        let path: FontPath = font.path
+        let name: FontName = font.name
+        let ext: FontExtension = font.ext
+        let url = URL(fileURLWithPath: path).appendingPathComponent(name).appendingPathExtension(ext)
+
+        var fontError: Unmanaged<CFError>?
+
+        guard let data = try? Data(contentsOf: url) as CFData, let dataProvider = CGDataProvider(data: data) else {
+            guard let fontError = fontError?.takeRetainedValue() else {
+                FontKit.debug(message: "Failed to load font '\(name)'.")
+                return
+            }
+
+            let errorDescription = CFErrorCopyDescription(fontError)
+            FontKit.debug(message: "Failed to load font '\(name)': \(String(describing: errorDescription))")
+            return
+        }
+
+        /// Fixes deadlocking issue caused by `let fontRef = CGFont(dataProvider)`.
+        /// Temporary fix until rdar://18778790 is addressed.
+        /// Open Radar at http://www.openradar.me/18778790
+        /// Discussion at https://github.com/ArtSabintsev/FontBlaster/issues/19
+        _ = UIFont()
+
+        let fontRef = CGFont(dataProvider)
+        if CTFontManagerRegisterGraphicsFont(fontRef!, &fontError) {
+
+            if let postScriptName = fontRef?.postScriptName {
+                FontKit.debug(message: "Successfully loaded font: '\(postScriptName)'.")
+                loadedFonts.append(String(postScriptName))
+            }
+        } else if let fontError = fontError?.takeRetainedValue() {
+            let errorDescription = CFErrorCopyDescription(fontError)
+            FontKit.debug(message: "Failed to load font '\(name)': \(String(describing: errorDescription))")
+        }
+    }
+
+    /// Parses all of the fonts into their name and extension components.
+    ///
+    /// - Parameters:
+    ///   - path: The absolute path to the font file.
+    ///   - contents: The contents of an Bundle as an array of String objects.
+    /// - Returns: An  array of `FontTuple` containing all fonts found at the specified path.
+    private static func fonts(fromPath path: String, withContents contents: [String]) -> [FontTuple] {
+
+        func splitComponents(fromName name: String) -> (FontName, FontExtension) {
+
+            let components = name.characters.split { $0 == "." }.map { String($0) }
+            return (components[0], components[1])
+        }
+
+        var fonts = [ FontTuple ]()
+        for fontName in contents {
+            var parsedFont: (FontName, FontExtension)?
+
+            if fontName.contains(".ttf") || fontName.contains(".otf") {
+                parsedFont = splitComponents(fromName: fontName)
+            }
+
+            if let parsedFont = parsedFont {
+                let font: FontTuple = (path, parsedFont.0, parsedFont.1)
+                fonts.append(font)
+            }
+        }
+
+        return fonts
     }
 
     /// Prints debug messages to the console if debugEnabled is set to true.
     ///
-    /// - Parameter message: The status to print to the console.
+    /// - Parameter message: The message to print to the console.
     static func debug(message: String) {
 
         Rosewood.Framework.print(framework: "FontKit", message: message, debugEnabled: Configuration.debugMode)
-    }
-
-    /// Return size for a specific device (iPhone/iPod or iPad)
-    ///
-    /// - Parameters:
-    ///   - phone: Value for iPhones/iPods
-    ///   - pad: Value for iPads.
-    /// - Returns: The value for the current device.
-    public static func sizeFor<T>(phone: T, pad: T) -> T {
-
-        return (Device.isPad ? pad : phone)
-    }
-
-    /// Return size depending on specific screen family.
-    /// Defaults to small value if device size cannot be determined.
-    ///
-    /// - Parameters:
-    ///   - old: Value for 3.5 and 4.0 inch devices.
-    ///   - small: Value for 4.7 inch devices.
-    ///   - medium: Value for 5.5, 5.8, and 7.9 inch devices.
-    ///   - large: Value for 9.7, 10.5 and 12.9 inch devices (iPads).
-    /// - Returns: The value for the current device.
-    public static func sizeFor<T>(old: T? = nil, small: T, medium: T, large: T) -> T {
-
-        let family = Device.Screen.family
-
-        switch family {
-            case .old: return old ?? small
-            case .small: return small
-            case .medium: return medium
-            case .large: return large
-            default: return small
-        }
-    }
-
-    /// Return value for specific screen size.
-    /// Defaults to nearest value if undefined.
-    ///
-    /// - Parameter sizes: Dictionary array representing [ScreenSize: Value] to check against
-    /// - Returns: The value from the `size` parameter based on the current device.
-    public static func sizeFor<T>(sizes: [ScreenSize: T]) -> T {
-
-        let screen = Device.Screen.size
-        var nearestValue: T?
-        var distance = CGFloat.greatestFiniteMagnitude
-
-        for (key, value) in sizes {
-            if key == screen {
-                return value
-            }
-
-            let actualDistance = fabs(key.rawValue - screen.rawValue)
-            if actualDistance < distance {
-                nearestValue = value
-                distance = actualDistance
-            }
-        }
-
-        return nearestValue!
-    }
-
-    public static func scale(size: CGFloat, byDevice: Bool = false) -> CGFloat {
-
-        if byDevice {
-            return sizeFor(phone: size, pad: size * FontKit.Configuration.largeScaleFactor)
-        } else {
-            return sizeFor(small: size, medium: size * FontKit.Configuration.mediumScaleFactor, large: size * FontKit.Configuration.largeScaleFactor)
-        }
     }
 }

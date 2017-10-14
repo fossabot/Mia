@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Font Stuffs-->
+        <!--Font Kit Demo View-->
         <scene sceneID="mmq-Wc-xtu">
             <objects>
-                <viewController id="iQY-Ix-CYT" customClass="FontStuffs" customModule="Mia_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iQY-Ix-CYT" customClass="FontKitDemoView" customModule="Mia_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XjU-83-ruy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

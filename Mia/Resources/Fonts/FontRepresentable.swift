@@ -4,17 +4,16 @@ public protocol FontRepresentable: RawRepresentable {
 
 extension FontRepresentable where Self.RawValue == String {
 
-    /// Initializes and return a `UIFont` using a FontKit.Font` value.
-    /// Returns `systemFont` if custom font is unavailable.
+    /// Initializes and return a `UIFont` using the `FontRepresentable` value.
     ///
     /// - Parameter
-    ///   - size: The size of the font.
-    ///   - scalable: Determines if the size parameter will be scaled for device.
-    /// - Returns: A `UIFont` from `FontKit.Font`. Returns `systemFont` if custom font is unavailable.
-    public func of(size: CGFloat, scalable: Bool = false) -> UIFont {
+    ///   - size: The size of the font to use.
+    ///   - willScale: Determines if the size will be scaled for device.
+    /// - Returns: The `UIFont`. Returns `systemFont` if custom font is unavailable.
+    public func of(size: CGFloat, willScale: Bool = false) -> UIFont {
 
-        let size = scalable ? FontKit.scale(size: size) : size
-        if let font = UIFont(name: rawValue, size: size) {
+        let newSize = willScale ? Scale.size(size) : size
+        if let font = UIFont(name: rawValue, size: newSize) {
             return font
         }
 
