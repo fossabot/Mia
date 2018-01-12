@@ -1,6 +1,6 @@
 import UIKit
 import MessageUI
-import Mia
+import Mia.Swift
 
 
 class ViewController: UIViewController {

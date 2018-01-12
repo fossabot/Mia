@@ -6,6 +6,10 @@ public class GradientLoadingBar {
 
     // Instance variable for singleton
     public static var shared: GradientLoadingBar = GradientLoadingBar()
+    
+    public static var orange: GradientLoadingBar = GradientLoadingBar(height: DefaultValues.height,
+                                                                      durations: DefaultValues.durations,
+                                                                      gradientColors: DefaultValues.gradientOrangeColors)
 
 
     public struct DefaultValues {
@@ -28,6 +32,14 @@ public class GradientLoadingBar {
             UIColor(hexString: "#0DE5A8").cgColor,
             UIColor(hexString: "#7CF49A").cgColor,
             UIColor(hexString: "#B8FD99").cgColor
+        ]
+        
+        public static let gradientOrangeColors: GradientColors = [
+            UIColor(hexString: "#FC580C").cgColor,
+            UIColor(hexString: "#FC6B0A").cgColor,
+            UIColor(hexString: "#F8872E").cgColor,
+            UIColor(hexString: "#FFA927").cgColor,
+            UIColor(hexString: "#FDCA49").cgColor
         ]
     }
 

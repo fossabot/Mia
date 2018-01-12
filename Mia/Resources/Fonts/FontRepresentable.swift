@@ -12,8 +12,8 @@ extension FontRepresentable where Self.RawValue == String {
     /// - Returns: The `UIFont`. Returns `systemFont` if custom font is unavailable.
     public func of(size: CGFloat, willScale: Bool = false) -> UIFont {
 
-        let newSize = willScale ? Scale.size(size) : size
-        if let font = UIFont(name: rawValue, size: newSize) {
+//        let newSize = willScale ? Scale.size(size) : size
+        if let font = UIFont(name: rawValue, size: size) {
             return font
         }
 

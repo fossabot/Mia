@@ -4,6 +4,9 @@ import CoreData
 
 
 
+
+
+
 public struct BundleK {
     // MARK: .DocumentDirectory
     
@@ -104,29 +107,7 @@ public func vibrate()  {
 }
 
 
-protocol EnumCollection: Hashable {
-    static var allValues: [Self] { get }
-}
 
-extension EnumCollection {
-    
-    static func cases() -> AnySequence<Self> {
-        typealias S = Self
-        return AnySequence { () -> AnyIterator<S> in
-            var raw = 0
-            return AnyIterator {
-                let current : Self = withUnsafePointer(to: &raw) { $0.withMemoryRebound(to: S.self, capacity: 1) { $0.pointee } }
-                guard current.hashValue == raw else { return nil }
-                raw += 1
-                return current
-            }
-        }
-    }
-    
-    static var allValues: [Self] {
-        return Array(self.cases())
-    }
-}
 
 // nullable properties
 // https://stackoverflow.com/questions/25760088/trigger-lazy-initializer-again-in-swift-by-setting-property-to-nil
@@ -319,21 +300,7 @@ public extension String {
 }
 
 
-public protocol URLStringConvertible {
-    var url: URL? { get }
-    var string: String { get }
-}
 
-extension String: URLStringConvertible {
-    
-    public var url: URL? {
-        return URL(string: self)
-    }
-    
-    public var string: String {
-        return self
-    }
-}
 
 public extension String {
     
@@ -979,7 +946,7 @@ public class ModalController: UINavigationController {
     public override init(rootViewController: UIViewController) {
         
         super.init(rootViewController: rootViewController)
-        let doneButton = UIBarButtonItem(image: Icon.WebView.dismiss, style: .plain, target: self, action: #selector(motionDismissViewController))
+        let doneButton = UIBarButtonItem(image: Icon.WebView.dismiss, style: .plain, target: self, action: #selector(dismissViewController))
         doneButton.tintColor = .red
         
         if (UIDevice.current.userInterfaceIdiom == .pad) {
@@ -1002,7 +969,7 @@ public class ModalController: UINavigationController {
         super.viewWillAppear(false)
     }
     
-    @objc func motionDismissViewController() {
+    @objc func dismissViewController() {
         if let v = navigationController, self != v.viewControllers.first {
             v.popViewController(animated: true)
         } else {
@@ -1128,4 +1095,5 @@ public extension NSManagedObject {
         return dictionaryWithValues(forKeys:keys)
     }
 }
+
 

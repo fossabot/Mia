@@ -4,7 +4,7 @@ import UIKit
 // MARK: - A collection of UIColor initializations. 
 public extension UIColor {
 
-    // MARK: - RGB
+    // MARK: RGB
 
     /// Initializes and returns a UIColor using a red, green, blue and alpha value.
     /// Notes that values out of range are clipped
@@ -20,7 +20,7 @@ public extension UIColor {
     }
 
 
-    // MARK: - HSL
+    // MARK: HSL
 
     /// Initializes and returns a UIColor using a hue, saturation, lightness and alpha value.
     ///
@@ -38,7 +38,7 @@ public extension UIColor {
     }
 
 
-    // MARK: - Lab
+    // MARK: Lab
 
     /// Initializes and returns a color using CIE XYZ color space component values with an observer at 2° and a D65 illuminant.
     /// Notes that values out of range are clipped
@@ -70,7 +70,7 @@ public extension UIColor {
     }
 
 
-    // MARK: - XYZ
+    // MARK: XYZ
 
     /// Initializes and returns a UIColor using CIE XYZ color space component values with an observer at 2° and a D65 illuminant.
     /// Notes that values out of range are clipped.
@@ -100,7 +100,7 @@ public extension UIColor {
     }
 
 
-    // MARK: - Hex
+    // MARK: Hex
 
     /// Initializes and returns a UIColor fro a hex String.
     ///
@@ -195,6 +195,40 @@ public extension UIColor {
                   green: CGFloat((hex8Value & 0x00FF0000) >> 16) / 255.0,
                   blue: CGFloat((hex8Value & 0x0000FF00) >> 8) / 255.0,
                   alpha: CGFloat(hex8Value & 0x000000FF) / 255.0)
+    }
+    
+    
+    /// Initalize and return a UIColor generated from a seed string.
+    ///
+    /// - Parameter seed: The seed to use.
+    public convenience init(seed: String) {
+        /// Identical seeds will lead to identical colors
+        /// randomColor(seed: "ben")
+        /// randomColor(seed: "ben")
+        ///
+        /// Similarly, seeds with the same character values will lead to identical colors
+        /// randomColor(seed: "ben")
+        /// randomColor(seed: "neb")
+        ///
+        /// However, this works well enough for something like article titles
+        /// randomColor(seed: "iPhone 7: Jet Black vs. Black")
+        /// randomColor(seed: "Vesper, Adieu")
+        
+        var total: Int = 0
+        for u in seed.unicodeScalars {
+            total += Int(UInt32(u))
+        }
+        
+        srand48(total * 200)
+        let r = CGFloat(drand48())
+        
+        srand48(total)
+        let g = CGFloat(drand48())
+        
+        srand48(total / 200)
+        let b = CGFloat(drand48())
+        
+        self.init(red: r, green: g, blue: b, alpha: 1)
     }
 
 }

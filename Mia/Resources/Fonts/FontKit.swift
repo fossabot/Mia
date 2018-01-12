@@ -2,6 +2,7 @@
 public struct FontKit {
 
     public typealias FontLoadedHandler = ([String]) -> Void
+    
     private typealias FontPath = String
     private typealias FontName = String
     private typealias FontExtension = String

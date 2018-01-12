@@ -6,13 +6,13 @@ target 'Mia_Example' do
 
     pod 'Mia', :path => '../'
 
-#    pod 'PageMenu'
-#    pod 'MediumMenu'
-#    pod 'JBDatePicker'
-    
 
-    
-    
+    # pod 'SwiftIcons'
+    # pod 'SwiftIconFont'
+
+
+
+
     target 'Mia_ExampleTests' do
         inherit! :search_paths
     end

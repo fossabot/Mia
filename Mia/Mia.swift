@@ -62,7 +62,16 @@ public func showNetworkActivity() {
         DispatchQueue.main.async(execute: { () -> Void in
             if !shared.isNetworkActivityIndicatorVisible && __internalActivityCount > 0 {
                 shared.isNetworkActivityIndicatorVisible = true
-                GradientLoadingBar.shared.show()
+                
+                switch Bundle.main.bundleIdentifier! {
+                    
+                case "com.multinerd.CactusQueue":
+                    GradientLoadingBar.orange.show()
+                    
+                default:
+                    GradientLoadingBar.shared.show()
+                }
+               
 
             }
         })
@@ -82,7 +91,16 @@ public func hideNetworkActivity(_ completion: NetworkActivityBlock? = nil) {
         DispatchQueue.main.async(execute: { () -> Void in
             if shared.isNetworkActivityIndicatorVisible && __internalActivityCount == 0 {
                 shared.isNetworkActivityIndicatorVisible = false
-                GradientLoadingBar.shared.hide()
+                
+                switch Bundle.main.bundleIdentifier! {
+                    
+                case "com.multinerd.CactusQueue":
+                    GradientLoadingBar.orange.hide()
+                    
+                default:
+                    GradientLoadingBar.shared.hide()
+                }
+                
                 completion?()
             }
         })

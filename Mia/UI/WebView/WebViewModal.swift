@@ -3,7 +3,9 @@ import UIKit
 public class WebViewModal: UINavigationController {
 
     public enum Theme {
-        case light, dark
+        case light
+        case dark
+        case color(UIColor)
     }
 
     weak var webViewDelegate: UIWebViewDelegate? = nil
@@ -51,6 +53,12 @@ public class WebViewModal: UINavigationController {
                 webViewController.buttonColor = .white
                 webViewController.titleColor = .groupTableViewBackground
                 UINavigationBar.appearance().barStyle = .black
+            
+            case .color(let color):
+                doneButton.tintColor = color
+                webViewController.buttonColor = color
+                webViewController.titleColor = color
+            
         }
 
         if (UIDevice.current.userInterfaceIdiom == .pad) {

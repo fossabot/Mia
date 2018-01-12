@@ -1,11 +1,3 @@
-//
-//  DeviceKitTests.swift
-//  Mia
-//
-//  Created by Michael Hedaitulla on 9/9/17.
-//  Copyright © 2017 CocoaPods. All rights reserved.
-//
-
 import XCTest
 import Mia
 

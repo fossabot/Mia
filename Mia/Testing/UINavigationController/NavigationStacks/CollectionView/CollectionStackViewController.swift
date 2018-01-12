@@ -1,17 +1,17 @@
 import UIKit
 
 
-fileprivate func <<T:Comparable>(lhs: T?, rhs: T?) -> Bool {
-
-    switch (lhs, rhs) {
-        case let (l?, r?):
-            return l < r
-        case (nil, _?):
-            return true
-        default:
-            return false
-    }
-}
+//fileprivate func <<T:Comparable>(lhs: T?, rhs: T?) -> Bool {
+//
+//    switch (lhs, rhs) {
+//        case let (l?, r?):
+//            return l < r
+//        case (nil, _?):
+//            return true
+//        default:
+//            return false
+//    }
+//}
 
 
 // MARK: - CollectionStackViewControllerDelegate
@@ -144,7 +144,7 @@ extension CollectionStackViewController {
                        animations: { () -> Void in
                            for cell in self.collectionView!.visibleCells where cell != currentCell {
                                let row = (self.collectionView?.indexPath(for: cell) as NSIndexPath?)?.row
-                               let xPosition = row < (indexPath as NSIndexPath).row ? cell.center.x - self.view.bounds.size.width * 2
+                            let xPosition = row! < (indexPath as NSIndexPath).row ? cell.center.x - self.view.bounds.size.width * 2
                                        : cell.center.x + self.view.bounds.size.width * 2
 
                                cell.center = CGPoint(x: xPosition, y: cell.center.y)
