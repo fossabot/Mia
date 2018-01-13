@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name             = 'Mia'
-    s.version          = '0.1.9'
+    s.version          = '0.1.10'
     s.summary          = 'A list of tools to steamline my developement.'
     s.description      = <<-DESC
     A collection of tools and utilities to streamline .
@@ -47,6 +47,10 @@ Pod::Spec.new do |s|
 
     s.subspec 'Deprecated' do |sp|
         sp.source_files = 'Mia/Deprecated/**/*.{swift}'
+    end
+    
+    s.subspec 'Toolkits' do |sp|
+        sp.source_files = 'Mia/Toolkits/**/*.{swift}'
     end
     
 #    s.subspec 'Fonts' do |sp|
