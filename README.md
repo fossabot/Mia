@@ -96,11 +96,18 @@ Not yet compatible with `swift package manager`. Feel free to submit a pull requ
 
 ## Usage
 
-- [![Rosewood][rosewoodBadge] A simple to use logging utility.][rosewoodURL]
+- `Data Management`
+    - `JSON`  
+        - [![Codable][codableBadge]][codableURL]
+- `Logging` 
+    - [![Rosewood][rosewoodBadge]][rosewoodURL]
 
 
-[rosewoodBadge]: https://img.shields.io/badge/logging-rosewood-a.svg?style=flat&colorA=212121&colorB=F48FB1 
+[rosewoodBadge]: https://img.shields.io/badge/rosewood-a_simple_to_use_logging_framework-a.svg?style=flat&colorA=212121&colorB=F48FB1 
 [rosewoodURL]: https://github.com/multinerd/Mia/blob/master/Documentation/Rosewood.md
+
+[codableBadge]: https://img.shields.io/badge/codablekit-encode_objects_to_json_and_back_(based_on_swift_4's_codable_protocol)-a.svg?style=flat&colorA=212121&colorB=26C6DA 
+[codableURL]: https://github.com/multinerd/Mia/blob/master/Documentation/Codable.md
 
 
 
