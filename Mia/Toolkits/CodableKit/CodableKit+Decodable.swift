@@ -1,48 +1,68 @@
 extension Decodable {
 
-    /// Initializes a new model from a decoded Data object.
+    /// Decodes a new model from a decoded JSON string.
     ///
-    /// - Parameter data: The data to pass.
-    /// - Returns: Returns the model or nil.
-    public static func decode(from data: Data) -> Self? {
+    /// - Parameters:
+    ///   - json: The json string.
+    ///   - keyPath: Optional root path.
+    /// - Returns: The model or nil.
+    public static func decode(json: String, keyPath: String? = nil) -> Self? {
+
+        guard let data = json.data(using: .utf8) else { return nil }
+        return decode(data: data, keyPath: keyPath)
+    }
+
+    /// Decodes a new model from a decoded Data object.
+    ///
+    /// - Parameters:
+    ///   - data: The json data
+    ///   - keyPath: Optional root path.
+    /// - Returns: The model or nil.
+    public static func decode(data: Data, keyPath: String? = nil) -> Self? {
+
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = CodableKit.Configurations.Decoding.dateStrategy
+        decoder.dataDecodingStrategy = CodableKit.Configurations.Decoding.dataStrategy
 
         do {
-            return try CodableKit.decoder.decode(self, from: data)
+            if let keyPath = keyPath, !keyPath.isEmpty {
+                let topLevel = try JSONSerialization.jsonObject(with: data, options: [ .allowFragments ])
+                guard let nestedJson = (topLevel as AnyObject).value(forKeyPath: keyPath) else { return nil }
+                let nestedData = try JSONSerialization.data(withJSONObject: nestedJson)
+                return try decoder.decode(self, from: nestedData)
+            }
+            return try decoder.decode(self, from: data)
         } catch let error {
             CodableKit.log(message: error.localizedDescription)
             return nil
         }
     }
+}
 
-    /// Initializes a new model from a decoded JSON string.
-    ///
-    /// - Parameters:
-    ///   - string: the string to pass.
-    ///   - keyPath: optional keyPath. Use if JSON string has a root container.
-    /// - Returns: Returns the model or nil.
-    public static func decode(from string: String, keyPath: String? = nil) -> Self? {
+extension JSONDecoder.DateDecodingStrategy {
 
-        guard let data = string.data(using: .utf8) else {
-            CodableKit.log(message: "Data is nil")
-            return nil
+    public static var datetimeDotNet: JSONDecoder.DateDecodingStrategy {
+        let dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .custom {
+            let container = try $0.singleValueContainer()
+            let dateStr = try container.decode(String.self)
+            return Date(dateTimeString: dateStr)!
         }
+        return dateDecodingStrategy
+    }
 
-        if let keyPath = keyPath, !keyPath.isEmpty {
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                let object = (json as AnyObject).value(forKeyPath: keyPath)
-                do {
-                    let objKeypath = try JSONSerialization.data(withJSONObject: object ?? "", options: .prettyPrinted)
-                    return decode(from: objKeypath)
-                } catch let error {
-                    CodableKit.log(message: error.localizedDescription)
-                }
-            } catch let error {
-                CodableKit.log(message: error.localizedDescription)
-            }
-        } else {
-            return decode(from: data)
-        }
-        return nil
+    public static var yyyyMMdd: JSONDecoder.DateDecodingStrategy {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+
+        let dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .formatted(dateFormatter)
+        return dateDecodingStrategy
+    }
+
+    public static var short: JSONDecoder.DateDecodingStrategy {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+
+        let dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .formatted(dateFormatter)
+        return dateDecodingStrategy
     }
 }

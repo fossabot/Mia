@@ -3,34 +3,26 @@ public typealias JSONArray = [[String: Any]]
 
 public class CodableKit {
 
-    public static var isLoggingEnabled = true
+    public struct Configurations {
 
-    public static var encoder: JSONEncoder {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMdd"
+        public static var isLoggingEnabled = true
 
-        let encoder = JSONEncoder()
-        encoder.dateEncodingStrategy = .formatted(dateFormatter)
-
-        return encoder
-    }
-
-    public static var decoder: JSONDecoder {
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .custom {
-            let container = try $0.singleValueContainer()
-            let dateStr = try container.decode(String.self)
-            return Date(dateTimeString: dateStr)!
+        public struct Encoding {
+            public static var outputFormatting: JSONEncoder.OutputFormatting = []
+            public static var dateStrategy: JSONEncoder.DateEncodingStrategy = .iso8601
+            public static var dataStrategy: JSONEncoder.DataEncodingStrategy = .base64
         }
 
-        return decoder
+        public struct Decoding {
+            public static var dateStrategy: JSONDecoder.DateDecodingStrategy = .iso8601
+            public static var dataStrategy: JSONDecoder.DataDecodingStrategy = .base64
+        }
     }
 
     static func log(message: String) {
 
-        if isLoggingEnabled {
+        if Configurations.isLoggingEnabled {
             Rosewood.Framework.print(framework: String(describing: self), message: message)
         }
     }
 }
-

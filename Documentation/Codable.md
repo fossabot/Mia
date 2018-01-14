@@ -1,10 +1,9 @@
 ## Table of contents
 
 * [Configuration](#configuration)
+* [TypeAlias](#typealias)
 * [Encoding](#encoding)
 * [Decoding](#decoding)
-* [Helpers](#helpers)
-
 
 
 
@@ -13,9 +12,20 @@
 ## Configuration
 
 ```swift
-CodableKit.isLoggingEnabled = true
+CodableKit.Configurations.isLoggingEnabled = true
 ```
 
+
+
+
+
+## TypeAlias 
+
+There are 2 typealias for your convenience.
+```swift
+public typealias JSONDictionary = [String: Any]
+public typealias JSONArray = [[String: Any]]
+```
 
 
 
@@ -106,7 +116,6 @@ let arrayData = array.toData()
 
 
 
-
 ## Decoding
 
 Use the following methods to Decode
@@ -163,12 +172,3 @@ print(array) // Returns [[String: Any]]
 
 
 
-
-
-## Helpers 
-
-There are 2 typealias for your convenience.
-```swift
-public typealias JSONDictionary = [String: Any]
-public typealias JSONArray = [[String: Any]]
-```
