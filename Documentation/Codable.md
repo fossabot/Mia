@@ -21,7 +21,7 @@ CodableKit.Configurations.isLoggingEnabled = true
 
 ## TypeAlias 
 
-There are 2 typealias for your convenience.
+There are 2 typealias
 ```swift
 public typealias JSONDictionary = [String: Any]
 public typealias JSONArray = [[String: Any]]
@@ -56,7 +56,7 @@ print(mike.toDictionary())
 ```swift
 let sara = Person(name: "Sara", age: 23, dob: Date(year: 1994, month: 9, day: 22))
 let array = [ mike, sara ]
-print(array.toArray()) // Returns [[String: Any]]
+print(array.toArray())
 ```
 > [  
 > &nbsp;&nbsp;["name": Michael, "age": 26, "dob": 1991-08-15T04:00:00Z],  
@@ -140,7 +140,7 @@ print(mike)
 
 ```swift
 let array = [ Person ].decode(from: arrayData)!
-print(array) // Returns [[String: Any]]
+print(array)
 ```
 
 > [  
@@ -161,7 +161,7 @@ print(mike)
 
 ```swift
 let array = [ Person ].decode(from: arrayJsonString)!
-print(array) // Returns [[String: Any]]
+print(array)
 ```
 
 > [  
