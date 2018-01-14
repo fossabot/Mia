@@ -1,5 +1,8 @@
 extension Encodable {
 
+    /// Encode the model to a Data object.
+    ///
+    /// - Returns: The data object.
     public func toData() -> Data {
 
         do {
@@ -10,11 +13,17 @@ extension Encodable {
         }
     }
 
+    /// Encodes the model to a JSON string.
+    ///
+    /// - Returns: The JSON string.
     public func toString() -> String {
 
         return String(data: toData(), encoding: .utf8) ?? ""
     }
 
+    /// Encode the model to a Dictionary.
+    ///
+    /// - Returns: The Dictionary.
     public func toDictionary() -> JSONDictionary {
 
         do {
@@ -25,6 +34,9 @@ extension Encodable {
         }
     }
 
+    /// Encode the model to an Array.
+    ///
+    /// - Returns: The Array.
     public func toArray() -> JSONArray {
 
         do {

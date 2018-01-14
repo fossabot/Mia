@@ -1,5 +1,9 @@
 extension Decodable {
 
+    /// Initializes a new model from a decoded Data object.
+    ///
+    /// - Parameter data: The data to pass.
+    /// - Returns: Returns the model or nil.
     public static func decode(from data: Data) -> Self? {
 
         do {
@@ -10,6 +14,12 @@ extension Decodable {
         }
     }
 
+    /// Initializes a new model from a decoded JSON string.
+    ///
+    /// - Parameters:
+    ///   - string: the string to pass.
+    ///   - keyPath: optional keyPath. Use if JSON string has a root container.
+    /// - Returns: Returns the model or nil.
     public static func decode(from string: String, keyPath: String? = nil) -> Self? {
 
         guard let data = string.data(using: .utf8) else {
