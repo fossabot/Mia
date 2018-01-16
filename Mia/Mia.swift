@@ -14,6 +14,7 @@ public struct Mia {
 }
 
 
+
 func openSettings()  {
     DispatchQueue.main.async {
         if let settingsURL = URL(string: UIApplicationOpenSettingsURLString) {
@@ -63,16 +64,12 @@ public func showNetworkActivity() {
             if !shared.isNetworkActivityIndicatorVisible && __internalActivityCount > 0 {
                 shared.isNetworkActivityIndicatorVisible = true
                 
-                switch Bundle.main.bundleIdentifier! {
-                    
-                case "com.multinerd.CactusQueue":
+                
+                if (Bundle.main.bundleIdentifier!.contains("CactusQueue")) {
                     GradientLoadingBar.orange.show()
-                    
-                default:
+                } else {
                     GradientLoadingBar.shared.show()
                 }
-               
-
             }
         })
     }
@@ -92,12 +89,9 @@ public func hideNetworkActivity(_ completion: NetworkActivityBlock? = nil) {
             if shared.isNetworkActivityIndicatorVisible && __internalActivityCount == 0 {
                 shared.isNetworkActivityIndicatorVisible = false
                 
-                switch Bundle.main.bundleIdentifier! {
-                    
-                case "com.multinerd.CactusQueue":
+                if (Bundle.main.bundleIdentifier!.contains("CactusQueue")) {
                     GradientLoadingBar.orange.hide()
-                    
-                default:
+                } else {
                     GradientLoadingBar.shared.hide()
                 }
                 
