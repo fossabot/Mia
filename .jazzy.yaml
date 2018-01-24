@@ -1,0 +1,18 @@
+module: Mia
+module_version: 0.9.3
+github_url: https://github.com/multinerd/Mia
+github_file_prefix: https://github.com/multinerd/Mia/tree/master
+
+author: Multinerd
+author_url: https://www.multinerd.io
+root_url: https://multinerd.github.io/Mia
+
+clean: true
+readme: README.md
+
+podspec: Mia.podspec
+
+skip_undocumented: false
+hide_documentation_coverage: false
+
+xcodebuild_arguments: [-scheme, Mia]

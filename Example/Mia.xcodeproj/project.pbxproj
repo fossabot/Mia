@@ -68,6 +68,7 @@
 		3BA9F8661F5BACF100553ABB /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
 		3BA9F8671F5BACF100553ABB /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		3BB469B11F647A81007B98CB /* DeviceKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceKitTests.swift; sourceTree = "<group>"; };
+		3BB8D90020111A7D008EF0E5 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .jazzy.yaml; path = ../.jazzy.yaml; sourceTree = "<group>"; };
 		3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollapsibleDataSource.swift; path = CollapsibleTableViewDemo/CollapsibleDataSource.swift; sourceTree = "<group>"; };
 		3BC26BF41F4A552600437A26 /* MiaTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiaTheme.swift; sourceTree = "<group>"; };
 		3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -229,6 +230,7 @@
 			children = (
 				3BA9F8661F5BACF100553ABB /* .swift-version */,
 				3B4FBA1C1F66159500C474DD /* .swiftlint.yml */,
+				3BB8D90020111A7D008EF0E5 /* .jazzy.yaml */,
 				3BA9F8671F5BACF100553ABB /* .travis.yml */,
 				BE2D81192D0E32C441539FB7 /* Mia.podspec */,
 				2189604B4F2559702815B670 /* README.md */,
