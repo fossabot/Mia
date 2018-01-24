@@ -18,7 +18,12 @@ extension UIViewController: ViewControllerInitializer {
     }
 
     /// Instantiates and returns the view controller loaded from a nib with the same name.
-    /// - Important: Be sure to set file's owner class and connect the view outlet.
+    /// - Important: Be sure to set the file's owner class and connect the view outlet.
+    ///
+    /// ````swift
+    /// let vc = MyViewController.instantiateFromNib()
+    /// self.navigationController?.pushViewController(vc, animated: true)
+    /// ````
     ///
     /// - Returns: The view controller.
     public static func instantiateFromNib() -> Self {
@@ -32,6 +37,12 @@ extension UIViewController: ViewControllerInitializer {
     }
 
     /// Instantiates and returns the view controller from a storyboard.
+    /// - Important: Be sure to set the class name as the view controller's storyboard id.
+    ///
+    /// ````swift
+    /// let vc = MyViewController.instantiateFromStoryboard(name: "MyStoryboard")
+    /// self.navigationController?.pushViewController(vc, animated: true)
+    /// ````
     ///
     /// - Parameter name: The name of the storyboard where the view controller resides.
     /// - Returns: The view controller.
