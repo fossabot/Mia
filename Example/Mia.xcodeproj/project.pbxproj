@@ -12,6 +12,9 @@
 		3B574B1D1F7C055600148B63 /* WebViewDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B574B191F7C053A00148B63 /* WebViewDemo.storyboard */; };
 		3B574B1E1F7C056700148B63 /* WebViewDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B574B151F7C053A00148B63 /* WebViewDemoView.swift */; };
 		3B7FA1272018316C000D11EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA1262018316B000D11EB /* Constants.swift */; };
+		3B7FA12B201831D5000D11EB /* ViewControllerInitializerDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA12A201831D5000D11EB /* ViewControllerInitializerDemo.storyboard */; };
+		3B7FA12D20183208000D11EB /* ViewControllerInitializerDemoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA12C20183208000D11EB /* ViewControllerInitializerDemoViews.swift */; };
+		3B7FA12F20183377000D11EB /* OrangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA12E20183376000D11EB /* OrangeViewController.xib */; };
 		3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B81E1201F535436000D1007 /* Storyboard.storyboard */; };
 		3B8EF8D31F1315CB002D8387 /* RosewoodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */; };
 		3BB469B21F647A81007B98CB /* DeviceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB469B11F647A81007B98CB /* DeviceKitTests.swift */; };
@@ -64,6 +67,9 @@
 		3B574B1A1F7C053A00148B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WebViewDemo.storyboard; sourceTree = "<group>"; };
 		3B5BF14C1F92C62A006152ED /* FontKit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = FontKit.md; path = ../Documentation/FontKit.md; sourceTree = "<group>"; };
 		3B7FA1262018316B000D11EB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3B7FA12A201831D5000D11EB /* ViewControllerInitializerDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewControllerInitializerDemo.storyboard; sourceTree = "<group>"; };
+		3B7FA12C20183208000D11EB /* ViewControllerInitializerDemoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInitializerDemoViews.swift; sourceTree = "<group>"; };
+		3B7FA12E20183376000D11EB /* OrangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrangeViewController.xib; sourceTree = "<group>"; };
 		3B81E1201F535436000D1007 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosewoodTest.swift; sourceTree = "<group>"; };
 		3BA9F8641F5B868500553ABB /* Rosewood.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Rosewood.md; path = ../Documentation/Rosewood.md; sourceTree = "<group>"; };
@@ -140,6 +146,24 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		3B7FA128201831B5000D11EB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA129201831C5000D11EB /* ViewControllerInitializer */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3B7FA129201831C5000D11EB /* ViewControllerInitializer */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA12E20183376000D11EB /* OrangeViewController.xib */,
+				3B7FA12A201831D5000D11EB /* ViewControllerInitializerDemo.storyboard */,
+				3B7FA12C20183208000D11EB /* ViewControllerInitializerDemoViews.swift */,
+			);
+			path = ViewControllerInitializer;
+			sourceTree = "<group>";
+		};
 		3BA9F8621F5B5D3A00553ABB /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +229,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				3B7FA1262018316B000D11EB /* Constants.swift */,
+				3B7FA128201831B5000D11EB /* Protocols */,
 				3BE858DD1F6C64BA0088518B /* CameraKit Demo */,
 				3BD013E51F466A5000CC3150 /* CollapsibleTableViewDemo */,
 				3BD9948B1F85830600318151 /* Demo - FontKit */,
@@ -366,7 +391,9 @@
 			files = (
 				3B574B1D1F7C055600148B63 /* WebViewDemo.storyboard in Resources */,
 				607FACDB1AFB9204008FA782 /* CollapsibleTableViewDemo.storyboard in Resources */,
+				3B7FA12B201831D5000D11EB /* ViewControllerInitializerDemo.storyboard in Resources */,
 				3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */,
+				3B7FA12F20183377000D11EB /* OrangeViewController.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				3BD9948D1F85831300318151 /* FontKitDemo.storyboard in Resources */,
@@ -510,6 +537,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				3BD014041F4670A600CC3150 /* IBOutletTableViewDemo.swift in Sources */,
+				3B7FA12D20183208000D11EB /* ViewControllerInitializerDemoViews.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				3BD013FB1F466AAF00CC3150 /* DefaultTableViewDemo.swift in Sources */,
 				3B574B1E1F7C056700148B63 /* WebViewDemoView.swift in Sources */,
