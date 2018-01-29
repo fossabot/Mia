@@ -1,65 +1,65 @@
 import UIKit
+import Mia
+
+// MARK: - *** ViewControllerInitializerDemoViews ***
 
 class ViewControllerInitializerDemoViews: UIViewController {
 
-    @IBAction func pressRed(_ sender: Any) {
+    // MARK: *** Properties ***
+
+    @IBOutlet weak var switchLabel: UILabel!
+
+    @IBOutlet weak var switcher: UISwitch! {
+        didSet {
+            switcher.on.valueChanged {
+                self.switchLabel.text = self.switcher.isOn ? "Push" : "Present"
+            }
+        }
+    }
+
+    // MARK: *** Actions ***
+
+    @IBAction func createRedViewController(_ sender: Any) {
 
         let vc = RedViewController.instantiateFromStoryboard(name: "ViewControllerInitializerDemo")
-        self.navigationController?.pushViewController(vc, animated: true)
+        show(vc: vc)
     }
 
-    @IBAction func pressGreen(_ sender: Any) {
+    @IBAction func createGreenViewController(_ sender: Any) {
 
-        let vc = GreenViewController.instantiateFromStoryboard(name: "ViewControllerInitializerDemo")
-        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = GreenViewController.instantiateFromNib()
+        show(vc: vc)
     }
 
-    @IBAction func pressBlue(_ sender: Any) {
+    @IBAction func createBlueViewController(_ sender: Any) {
 
         let vc = BlueViewController.instantiateFromStoryboard(name: "ViewControllerInitializerDemo")
-        self.navigationController?.pushViewController(vc, animated: true)
+        show(vc: vc)
     }
 
-    @IBAction func pressOrange(_ sender: Any) {
+    // MARK: *** Helpers ***
+    private func show(vc: UIViewController) {
 
-        let vc = OrangeViewController.instantiateFromNib()
-        self.navigationController?.pushViewController(vc, animated: true)
+        if switcher.isOn {
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let navi = vc.embedInNavigationController(dismissType: .button)
+            self.present(navi, animated: true, completion: nil)
+        }
     }
 }
+
+// MARK: - *** RedViewController ***
 
 class RedViewController: UIViewController {
-
-    override func viewDidLoad() {
-
-        super.viewDidLoad()
-        view.backgroundColor = .red
-    }
 }
+
+// MARK: - *** GreenViewController ***
 
 class GreenViewController: UIViewController {
-
-    override func viewDidLoad() {
-
-        super.viewDidLoad()
-        view.backgroundColor = .green
-    }
 }
+
+// MARK: - *** BlueViewController ***
 
 class BlueViewController: UIViewController {
-
-    override func viewDidLoad() {
-
-        super.viewDidLoad()
-        view.backgroundColor = .blue
-    }
 }
-
-class OrangeViewController: UIViewController {
-
-    override func viewDidLoad() {
-
-        super.viewDidLoad()
-        view.backgroundColor = .orange
-    }
-}
-

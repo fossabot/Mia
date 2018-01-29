@@ -14,12 +14,12 @@
 		3B7FA1272018316C000D11EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA1262018316B000D11EB /* Constants.swift */; };
 		3B7FA12B201831D5000D11EB /* ViewControllerInitializerDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA12A201831D5000D11EB /* ViewControllerInitializerDemo.storyboard */; };
 		3B7FA12D20183208000D11EB /* ViewControllerInitializerDemoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA12C20183208000D11EB /* ViewControllerInitializerDemoViews.swift */; };
-		3B7FA12F20183377000D11EB /* OrangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA12E20183376000D11EB /* OrangeViewController.xib */; };
 		3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B81E1201F535436000D1007 /* Storyboard.storyboard */; };
 		3B8EF8D31F1315CB002D8387 /* RosewoodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */; };
 		3BB469B21F647A81007B98CB /* DeviceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB469B11F647A81007B98CB /* DeviceKitTests.swift */; };
 		3BC26BED1F4A37A800437A26 /* CollapsibleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */; };
 		3BC26BF51F4A552600437A26 /* MiaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BF41F4A552600437A26 /* MiaTheme.swift */; };
+		3BC95ABF201F6DBB000DEA5F /* GreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC95ABD201F6DBB000DEA5F /* GreenViewController.xib */; };
 		3BD013FB1F466AAF00CC3150 /* DefaultTableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */; };
 		3BD014041F4670A600CC3150 /* IBOutletTableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD014031F4670A600CC3150 /* IBOutletTableViewDemo.swift */; };
 		3BD9948D1F85831300318151 /* FontKitDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD9948C1F85831300318151 /* FontKitDemo.storyboard */; };
@@ -69,7 +69,6 @@
 		3B7FA1262018316B000D11EB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3B7FA12A201831D5000D11EB /* ViewControllerInitializerDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewControllerInitializerDemo.storyboard; sourceTree = "<group>"; };
 		3B7FA12C20183208000D11EB /* ViewControllerInitializerDemoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInitializerDemoViews.swift; sourceTree = "<group>"; };
-		3B7FA12E20183376000D11EB /* OrangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrangeViewController.xib; sourceTree = "<group>"; };
 		3B81E1201F535436000D1007 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosewoodTest.swift; sourceTree = "<group>"; };
 		3BA9F8641F5B868500553ABB /* Rosewood.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Rosewood.md; path = ../Documentation/Rosewood.md; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollapsibleDataSource.swift; path = CollapsibleTableViewDemo/CollapsibleDataSource.swift; sourceTree = "<group>"; };
 		3BC26BF41F4A552600437A26 /* MiaTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiaTheme.swift; sourceTree = "<group>"; };
 		3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3BC95ABD201F6DBB000DEA5F /* GreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreenViewController.xib; sourceTree = "<group>"; };
 		3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableViewDemo.swift; path = CollapsibleTableViewDemo/DefaultTableViewDemo.swift; sourceTree = "<group>"; };
 		3BD014031F4670A600CC3150 /* IBOutletTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IBOutletTableViewDemo.swift; path = CollapsibleTableViewDemo/IBOutletTableViewDemo.swift; sourceTree = "<group>"; };
 		3BD9948C1F85831300318151 /* FontKitDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FontKitDemo.storyboard; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		3B7FA129201831C5000D11EB /* ViewControllerInitializer */ = {
 			isa = PBXGroup;
 			children = (
-				3B7FA12E20183376000D11EB /* OrangeViewController.xib */,
+				3BC95ABD201F6DBB000DEA5F /* GreenViewController.xib */,
 				3B7FA12A201831D5000D11EB /* ViewControllerInitializerDemo.storyboard */,
 				3B7FA12C20183208000D11EB /* ViewControllerInitializerDemoViews.swift */,
 			);
@@ -391,9 +391,9 @@
 			files = (
 				3B574B1D1F7C055600148B63 /* WebViewDemo.storyboard in Resources */,
 				607FACDB1AFB9204008FA782 /* CollapsibleTableViewDemo.storyboard in Resources */,
+				3BC95ABF201F6DBB000DEA5F /* GreenViewController.xib in Resources */,
 				3B7FA12B201831D5000D11EB /* ViewControllerInitializerDemo.storyboard in Resources */,
 				3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */,
-				3B7FA12F20183377000D11EB /* OrangeViewController.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				3BD9948D1F85831300318151 /* FontKitDemo.storyboard in Resources */,
