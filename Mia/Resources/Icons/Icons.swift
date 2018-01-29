@@ -29,6 +29,9 @@ public struct Icon {
         public static let dismiss = Icon.icon("webview_dismiss")
     }
     
+    public static let close = Icon.icon("mn_close")
+    
+    
     
     
     
