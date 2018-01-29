@@ -1,6 +1,3 @@
-import Foundation
-import UIKit
-
 public protocol ViewControllerInitializer {
 
     static var storyboardIdentifier: String { get }
@@ -8,6 +5,8 @@ public protocol ViewControllerInitializer {
     static func instantiateFromStoryboard(name: String) -> Self
 
     static func instantiateFromNib() -> Self
+
+    func embedInNavigationController(dismissType: DismissType) -> ModalNavigationController
 }
 
 extension UIViewController: ViewControllerInitializer {
@@ -17,9 +16,15 @@ extension UIViewController: ViewControllerInitializer {
         return String(describing: self)
     }
 
-    /// Instantiates and returns the view controller loaded from a nib with the same name.
-    /// - Important: Be sure to set the file's owner class and connect the view outlet.
+    /// Instantiates and returns the view controller loaded from a nib of the same name.
     ///
+    /// # Important Notes: #
+    /// 1. Set the file's owner class.
+    /// 2. Connect the view outlet.
+    ///
+    /// If the view was created with '`Also create XIB file`' enabled, this should automatically be done by Xcode.
+    ///
+    /// # Usage Example: #
     /// ````swift
     /// let vc = MyViewController.instantiateFromNib()
     /// self.navigationController?.pushViewController(vc, animated: true)
@@ -37,8 +42,11 @@ extension UIViewController: ViewControllerInitializer {
     }
 
     /// Instantiates and returns the view controller from a storyboard.
-    /// - Important: Be sure to set the class name as the view controller's storyboard id.
     ///
+    /// # Important Notes: #
+    /// 1. Set the class name as the view controller's storyboard Id.
+    ///
+    /// # Usage Example: #
     /// ````swift
     /// let vc = MyViewController.instantiateFromStoryboard(name: "MyStoryboard")
     /// self.navigationController?.pushViewController(vc, animated: true)
@@ -55,5 +63,27 @@ extension UIViewController: ViewControllerInitializer {
         }
 
         return instantiateFromStoryboard(self)
+    }
+
+    /// Instantiates and returns a modal navigation controller with the view controller as the `rootViewController`.
+    ///
+    /// # Usage Example: #
+    /// ````swift
+    /// let vc = MyViewController.instantiateFromStoryboard(name: "MyStoryboard")
+    /// let nc = vc.embedInNavigationController()
+    /// self.present(nc, animated: true, completion: nil)
+    /// ````
+    ///
+    /// - Parameter dismissType: The dismiss type.
+    /// - Returns: The navigation controller.
+    public func embedInNavigationController(dismissType: DismissType) -> ModalNavigationController {
+
+        switch dismissType {
+
+            case .none: return ModalNavigationController(rootViewController: self, dismissWithButton: false, dismissWithSwipe: false)
+            case .button: return ModalNavigationController(rootViewController: self, dismissWithButton: true, dismissWithSwipe: false)
+            case .swipe: return ModalNavigationController(rootViewController: self, dismissWithButton: false, dismissWithSwipe: true)
+            case .both: return ModalNavigationController(rootViewController: self, dismissWithButton: true, dismissWithSwipe: true)
+        }
     }
 }
