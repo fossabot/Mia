@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name             = 'Mia'
-    s.version          = '0.1.10'
+    s.version          = '0.1.11'
     s.summary          = 'A list of tools to steamline my developement.'
     s.description      = <<-DESC
     A collection of tools and utilities to streamline .
