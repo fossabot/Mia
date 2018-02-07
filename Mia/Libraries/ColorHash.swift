@@ -86,7 +86,7 @@ public class ColorHash {
     public final func rgbColor(_ str: String) -> UIColor {
         let hslValue = hsl(str)
         var rgb =  hsl2rgb(hslValue.h, s: hslValue.s, l: hslValue.l)
-        return UIColor(r: CGFloat(rgb.r), g: CGFloat(rgb.g), b: CGFloat(rgb.b))
+        return UIColor(red: CGFloat(rgb.r), green: CGFloat(rgb.g), blue: CGFloat(rgb.b), alpha: 1.0)
     }
     
     public final func hex(_ str: String) -> String {

@@ -1,19 +1,18 @@
 import Alamofire
 
-public typealias CheckBlock = () -> ()
-
 private let versionKey: String = "Multinerd.UpdateKit.CurrentVersion"
 
-// MARK: -
 public struct UpdateKit {
 
-    // MARK: Shared
+    // MARK: - *** Shared ***
 
     public static let shared = UpdateKit()
 
-    // MARK: Configurations
+    // MARK: - *** Configurations ***
 
     public struct Configurations {
+
+        public static var isLoggingEnabled: Bool = true
 
         /// FOR DEBUGGING ONLY. Setting this to false will ensure the current version will not be saved.
         /// Use to test 'onFreshInstall' and 'onUpdate'
@@ -32,53 +31,56 @@ public struct UpdateKit {
         public static var updateURL: String = ""
 
         fileprivate static var updateLink = "itms-services://?action=download-manifest&url=\(updateURL)"
-
     }
+
+    // MARK: - *** Properties ***
 
     private var currentVersion: String {
         return Application.BundleInfo.version.description
     }
 
-    // MARK: Public Methods
+    // MARK: - *** Init/Deinit Methods ***
+
+    private init() {}
+
+    // MARK: - *** Public Methods ***
 
     /// Check for updates OTA
     public func checkForUpdates() {
 
         if Configurations.updateURL.isEmpty {
-            print("UpdateKit: 'Configurations.updateURL' is empty.")
+            log(message: "'Configurations.updateURL' is empty.")
             return
         }
 
-        print("UpdateKit: Checking...")
+        log(message: "Checking for updates...")
         Alamofire.request(Configurations.updateURL).responsePropertyList(completionHandler: { response in
             switch response.result {
 
                 case .failure(let error):
-                    print("UpdateKit: Error \(error)")
+                    self.log(message: "Error \(error)")
 
                 case .success(let value):
                     if PropertyListSerialization.propertyList(value, isValidFor: .xml) {
                         guard let dict = value as? [String: Any],
                               let items = dict["items"] as? [[String: Any]],
                               let meta = items[0]["metadata"] as? [String: Any],
-                              let newVersion = meta["bundle-version"] as? String,
-                              let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String else {
-                            print("UpdateKit: Failed to parse results.")
+                              let newVersion = meta["bundle-version"] as? String else {
+                            self.log(message: "Failed to parse results.")
                             return
                         }
 
-                        let updateAvailable = newVersion.compare(currentVersion, options: .numeric) == .orderedDescending
+                        let updateAvailable = newVersion.compare(self.currentVersion, options: .numeric) == .orderedDescending
 
                         if updateAvailable {
-                            print("UpdateKit: Update Available | New: \(newVersion) | Cur: \(currentVersion)")
+                            self.log(message: "Update Available | New: \(newVersion) | Cur: \(self.currentVersion)")
                             DispatchQueue.main.async(execute: { self.showAlert() })
                         } else {
-                            print("UpdateKit: No Updates Available")
+                            self.log(message: "No Updates Available")
                         }
                     }
             }
         })
-
     }
 
     /// Compares the last ran version with the current version.
@@ -93,7 +95,6 @@ public struct UpdateKit {
             if currentVersion.compare(lastSavedVersion, options: .numeric) == .orderedAscending { return .downgraded }
 
             return .unknown
-
         } else {
             return .freshInstall
         }
@@ -108,7 +109,6 @@ public struct UpdateKit {
             if Configurations.willSaveCurrentVersion { saveCurrentVersion() }
             completion()
         }
-
     }
 
     /// Checks if the app was a updated.
@@ -122,9 +122,7 @@ public struct UpdateKit {
         }
     }
 
-    // MARK: Private Methods
-
-    private init() {}
+    // MARK: - *** Private Methods ***
 
     private func showAlert(isAppStore: Bool = false) {
 
@@ -147,42 +145,17 @@ public struct UpdateKit {
         getTopMostController()?.present(alert, animated: true, completion: nil)
     }
 
-    // MARK: Helpers
+    // MARK: - *** Helper Methods ***
 
     private func saveCurrentVersion() {
 
         UserDefaults.standard.set(currentVersion, forKey: versionKey)
     }
 
-}
+    private func log(message: String) {
 
-// MARK: -
-public enum UpdateType {
-
-    /// Allow the user to ignore updates.
-    case normal
-
-    /// Force the user to update.
-    case force
-
-}
-
-// MARK: -
-public enum LastRunType {
-
-    // The app has not changed.
-    case noChanges
-
-    /// The app is a fresh install.
-    case freshInstall
-
-    /// The app has been updated.
-    case updated
-
-    /// The app has been downgraded.
-    case downgraded
-
-    /// I cannot think of any reason this would be called.
-    case unknown
-
+        if Configurations.isLoggingEnabled {
+            Rosewood.Framework.print(framework: String(describing: self), message: message)
+        }
+    }
 }
