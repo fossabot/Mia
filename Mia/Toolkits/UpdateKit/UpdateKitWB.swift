@@ -3,7 +3,7 @@ import Alamofire
 private let versionKey: String = "Multinerd.UpdateKitWB.CurrentVersion"
 
 // This class has a very specific use case. Not for public use.
-struct UpdateKitWB {
+public struct UpdateKitWB {
 
     // MARK: - *** Shared ***
 
