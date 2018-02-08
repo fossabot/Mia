@@ -27,15 +27,16 @@ public enum LastRunType {
     case unknown
 }
 
+@objcMembers
 public class AppStore_Apps_Version: Codable {
     
-    var Id: Int
-    var AppId: Int
-    var vMajor: Int
-    var vMinor: Int
-    var vPatch: Int
-    var PList_URL: String
-    var ReleaseDate: Date
+    var Id: Int = 0
+    var AppId: Int = 0
+    var vMajor: Int = 0
+    var vMinor: Int = 0
+    var vPatch: Int = 0
+    var PList_URL: String = ""
+    var ReleaseDate: Date = Date()
     
     var versionString: String {
         return "\(vMajor).\(vMinor).\(vPatch)"
