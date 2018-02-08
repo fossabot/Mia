@@ -60,10 +60,7 @@ public class UpdateKitWBObjC: NSObject {
         let parameters: [String: Any] = [ "BundleId": bundleIdentifier, "Version": currentVersion ]
         
         let oldDecodeDate = CodableKit.Configurations.Decoding.dateStrategy
-        let oldEncodeDate = CodableKit.Configurations.Encoding.dateStrategy
-        
         CodableKit.Configurations.Decoding.dateStrategy = .datetimeDotNet
-        CodableKit.Configurations.Encoding.dateStrategy = .short
         
         log(message: "Checking for updates...")
         Alamofire.request(url, method: .post, parameters: parameters, encoding: encoding, headers: postHeaders).responseData { (response) in
@@ -81,7 +78,6 @@ public class UpdateKitWBObjC: NSObject {
                 }
                 
                 CodableKit.Configurations.Decoding.dateStrategy = oldDecodeDate
-                CodableKit.Configurations.Encoding.dateStrategy = oldEncodeDate
             }
         }
     }

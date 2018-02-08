@@ -52,6 +52,9 @@ public struct UpdateKitWB {
         let encoding: JSONEncoding = JSONEncoding.default
         let parameters: [String: Any] = [ "BundleId": bundleIdentifier, "Version": currentVersion ]
 
+        let oldDecodeDate = CodableKit.Configurations.Decoding.dateStrategy
+        CodableKit.Configurations.Decoding.dateStrategy = .datetimeDotNet
+        
         log(message: "Checking for updates...")
         Alamofire.request(url, method: .post, parameters: parameters, encoding: encoding, headers: postHeaders).responseData { (response) in
             switch response.result {
@@ -66,6 +69,8 @@ public struct UpdateKitWB {
                     } else {
                         self.log(message: "No Updates Available")
                     }
+                
+                    CodableKit.Configurations.Decoding.dateStrategy = oldDecodeDate
             }
         }
     }
