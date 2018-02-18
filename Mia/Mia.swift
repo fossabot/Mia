@@ -8,6 +8,8 @@
 
 import UIKit
 
+let internalKey = "io.multinerd"
+
 public class MiaDummy: NSObject { }
 public struct Mia {
     public static let bundle: Bundle = Bundle(for: MiaDummy.self)
@@ -102,26 +104,23 @@ public func hideNetworkActivity(_ completion: NetworkActivityBlock? = nil) {
 }
 
 
-// MARK: - Delegate
+public func localThreadSingleton<T: AnyObject>(key: String, create: () -> T) -> T {
+    if let cachedObj = Thread.current.threadDictionary[key] as? T {
+        return cachedObj
+    } else {
+        let newObject = create()
+        Thread.current.threadDictionary[key] = newObject
+        return newObject
+    }
+}
 
 
-// MARK: - Shared
+// MARK: - *** Delegate ***
+// MARK: - *** Shared ***
+// MARK: - *** Configurations ***
+// MARK: - *** Init / Deinit ***
+// MARK: - *** Variables ***
+// MARK: - *** Public Methods ***
+// MARK: - *** Private / Helper Methods ***
 
-
-// MARK: - Configurations
-
-
-// MARK: - Init/Deinit
-
-
-// MARK: - Variables
-
-
-// MARK: - Public Methods
-
-
-// MARK: - Private Methods
-
-
-// MARK: - Helpers
 

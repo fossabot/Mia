@@ -45,7 +45,7 @@ extension JSONDecoder.DateDecodingStrategy {
         let dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .custom {
             let container = try $0.singleValueContainer()
             let dateStr = try container.decode(String.self)
-            return Date(dateTimeString: dateStr)!
+            return Date(fromString: dateStr, format: .dotNet)!
         }
         return dateDecodingStrategy
     }

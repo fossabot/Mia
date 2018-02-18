@@ -7,4 +7,14 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:../Playgrounds"
+      name = "Playgrounds">
+      <FileRef
+         location = "group:/Users/multinerd/Desktop/Mia/Playgrounds/Global Functions Demo.playground">
+      </FileRef>
+      <FileRef
+         location = "group:ExtensionsDemo.playground">
+      </FileRef>
+   </Group>
 </Workspace>

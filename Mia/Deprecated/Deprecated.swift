@@ -50,3 +50,23 @@ public class ModalController: UINavigationController {
         }
     }
 }
+
+
+extension Date {
+    
+    @available(*, deprecated, message: "Replaced with `init?(fromString:format:)`.")
+    public init?(dateTimeString: String) {
+        
+        let pattern = "\\\\?/Date\\((\\d+)(([+-]\\d{2})(\\d{2}))?\\)\\\\?/"
+        let regex = try! NSRegularExpression(pattern: pattern)
+        guard let match = regex.firstMatch(in: dateTimeString, range: NSRange(location: 0, length: dateTimeString.utf16.count)) else {
+            print("Failed to find a match for datetime: \(dateTimeString)")
+            return nil
+        }
+        
+        let dateString = (dateTimeString as NSString).substring(with: match.range(at: 1))     // Extract milliseconds
+        let timeStamp = Double(dateString)! / 1000.0 // Convert to UNIX timestamp in seconds
+        
+        self.init(timeIntervalSince1970: timeStamp) // Create Date from timestamp
+    }
+}
