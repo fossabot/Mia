@@ -72,7 +72,7 @@ public class UpdateKitWBObjC: NSObject {
             case .success(let value):
                 if !value.isEmpty, let entities = AppStore_Apps_Version.decode(data: value) {
                     self.log(message: "Update Available | New: \(entities.versionString) | Cur: \(self.currentVersion)")
-                    DispatchQueue.main.async(execute: { self.showAlert(url: "itms-services://?action=download-manifest&url=\(entities.PList_URL)") })
+                    DispatchQueue.main.async(execute: { self.showAlert(url: entities.PList_URL) })
                 } else {
                     self.log(message: "No Updates Available")
                 }
