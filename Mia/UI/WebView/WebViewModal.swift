@@ -5,7 +5,7 @@ public class WebViewModal: UINavigationController {
     public enum Theme {
         case light
         case dark
-        case color(UIColor)
+        case color(UIColor, UIColor) // tint, buttons
     }
 
     weak var webViewDelegate: UIWebViewDelegate? = nil
@@ -54,10 +54,10 @@ public class WebViewModal: UINavigationController {
                 webViewController.titleColor = .groupTableViewBackground
                 UINavigationBar.appearance().barStyle = .black
             
-            case .color(let color):
-                doneButton.tintColor = color
-                webViewController.buttonColor = color
-                webViewController.titleColor = color
+            case .color(let tint, let buttoncolor):
+                doneButton.tintColor = tint
+                webViewController.buttonColor = buttoncolor
+                webViewController.titleColor = tint
             
         }
 

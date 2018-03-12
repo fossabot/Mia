@@ -33,7 +33,7 @@ public struct Rosewood {
         if Configuration.isAsync {
             queue.async { print(message) }
         } else {
-            queue.sync { print(message) }
+            print(message)
         }
     }
 }

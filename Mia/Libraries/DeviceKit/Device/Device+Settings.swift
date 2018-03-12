@@ -55,11 +55,7 @@ extension Device.Settings {
 
         let appPath = "App-Prefs:root=\(preferenceType.rawValue)"
         if let url = URL(string: appPath) {
-            if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
         }
     }
 }

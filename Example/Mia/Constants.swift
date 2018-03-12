@@ -15,13 +15,12 @@ public enum TableViewCellReuseIdentifier : String {
 
 public enum ViewControllerStoryboardIdentifier : String {
     case BlueViewController
-    case GreenViewController
     case RedViewController
     case StoryboardExampleViewController
     case ViewControllerInitializerDemoViews
 }
 
 public enum XibNames : String {
+    case GreenViewController
     case LaunchScreen
-    case OrangeViewController
 }

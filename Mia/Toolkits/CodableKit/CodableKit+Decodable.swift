@@ -32,8 +32,8 @@ extension Decodable {
                 return try decoder.decode(self, from: nestedData)
             }
             return try decoder.decode(self, from: data)
-        } catch let error {
-            CodableKit.log(message: error.localizedDescription)
+        } catch let error as NSError {
+            CodableKit.log(message: "\(error.userInfo)")
             return nil
         }
     }

@@ -1,24 +1,27 @@
 PODS:
   - Alamofire (4.5.1)
-  - Mia (0.1.8):
+  - Mia (0.1.12):
     - Alamofire (~> 4.5.0)
-    - Mia/Deprecated (= 0.1.8)
-    - Mia/Extensions (= 0.1.8)
-    - Mia/Libraries (= 0.1.8)
-    - Mia/Sugar (= 0.1.8)
-    - Mia/Testing (= 0.1.8)
-    - Mia/UI (= 0.1.8)
-  - Mia/Deprecated (0.1.8):
+    - Mia/Deprecated (= 0.1.12)
+    - Mia/Extensions (= 0.1.12)
+    - Mia/Libraries (= 0.1.12)
+    - Mia/Sugar (= 0.1.12)
+    - Mia/Testing (= 0.1.12)
+    - Mia/Toolkits (= 0.1.12)
+    - Mia/UI (= 0.1.12)
+  - Mia/Deprecated (0.1.12):
     - Alamofire (~> 4.5.0)
-  - Mia/Extensions (0.1.8):
+  - Mia/Extensions (0.1.12):
     - Alamofire (~> 4.5.0)
-  - Mia/Libraries (0.1.8):
+  - Mia/Libraries (0.1.12):
     - Alamofire (~> 4.5.0)
-  - Mia/Sugar (0.1.8):
+  - Mia/Sugar (0.1.12):
     - Alamofire (~> 4.5.0)
-  - Mia/Testing (0.1.8):
+  - Mia/Testing (0.1.12):
     - Alamofire (~> 4.5.0)
-  - Mia/UI (0.1.8):
+  - Mia/Toolkits (0.1.12):
+    - Alamofire (~> 4.5.0)
+  - Mia/UI (0.1.12):
     - Alamofire (~> 4.5.0)
 
 DEPENDENCIES:
@@ -30,8 +33,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Mia: d277469adc1ec12993df63e8fe4d208039fa402f
+  Mia: de27c168308d6a525713229dd36e439dbdd4665b
 
 PODFILE CHECKSUM: cf2f000f330d600b931c82c7eb14dd01fa418bbb
 
-COCOAPODS: 1.4.0.beta.1
+COCOAPODS: 1.4.0

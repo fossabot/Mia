@@ -16,6 +16,7 @@
 		3B7FA12D20183208000D11EB /* ViewControllerInitializerDemoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA12C20183208000D11EB /* ViewControllerInitializerDemoViews.swift */; };
 		3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B81E1201F535436000D1007 /* Storyboard.storyboard */; };
 		3B8EF8D31F1315CB002D8387 /* RosewoodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */; };
+		3BA5387D2038D9F4002EE6B5 /* Global Functions Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA5387C2038D9F4002EE6B5 /* Global Functions Tests.swift */; };
 		3BB469B21F647A81007B98CB /* DeviceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB469B11F647A81007B98CB /* DeviceKitTests.swift */; };
 		3BC26BED1F4A37A800437A26 /* CollapsibleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */; };
 		3BC26BF51F4A552600437A26 /* MiaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BF41F4A552600437A26 /* MiaTheme.swift */; };
@@ -71,6 +72,7 @@
 		3B7FA12C20183208000D11EB /* ViewControllerInitializerDemoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInitializerDemoViews.swift; sourceTree = "<group>"; };
 		3B81E1201F535436000D1007 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosewoodTest.swift; sourceTree = "<group>"; };
+		3BA5387C2038D9F4002EE6B5 /* Global Functions Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Functions Tests.swift"; sourceTree = "<group>"; };
 		3BA9F8641F5B868500553ABB /* Rosewood.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Rosewood.md; path = ../Documentation/Rosewood.md; sourceTree = "<group>"; };
 		3BA9F8661F5BACF100553ABB /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
 		3BA9F8671F5BACF100553ABB /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
@@ -78,7 +80,6 @@
 		3BB8D90020111A7D008EF0E5 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .jazzy.yaml; path = ../.jazzy.yaml; sourceTree = "<group>"; };
 		3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollapsibleDataSource.swift; path = CollapsibleTableViewDemo/CollapsibleDataSource.swift; sourceTree = "<group>"; };
 		3BC26BF41F4A552600437A26 /* MiaTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiaTheme.swift; sourceTree = "<group>"; };
-		3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3BC95ABD201F6DBB000DEA5F /* GreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreenViewController.xib; sourceTree = "<group>"; };
 		3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableViewDemo.swift; path = CollapsibleTableViewDemo/DefaultTableViewDemo.swift; sourceTree = "<group>"; };
 		3BD014031F4670A600CC3150 /* IBOutletTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IBOutletTableViewDemo.swift; path = CollapsibleTableViewDemo/IBOutletTableViewDemo.swift; sourceTree = "<group>"; };
@@ -99,7 +100,7 @@
 		95C4D5D983F5C817484BAFDE /* Pods-Mia_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_Example/Pods-Mia_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A1C569D8325646DE21B963AF /* Pods-Mia_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mia_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mia_ExampleTests/Pods-Mia_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A594C278B9DC60DA0E666ADF /* Pods_Mia_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE2D81192D0E32C441539FB7 /* Mia.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 1; includeInIndex = 1; name = Mia.podspec; path = ../Mia.podspec; sourceTree = "<group>"; };
+		BE2D81192D0E32C441539FB7 /* Mia.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 1; includeInIndex = 1; name = Mia.podspec; path = ../Mia.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C0FEAC2062BF0A514A420216 /* Pods_Mia_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D164CBEDF968D9EB1C927526 /* Pods_Mia_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mia_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				3B06DE6C1F0B25D700804181 /* ExampleTests.swift */,
+				3BA5387C2038D9F4002EE6B5 /* Global Functions Tests.swift */,
 				3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */,
 				3B0F87AF1F37E6A100111280 /* HTMLtoPDFTest.swift */,
 				3BB469B11F647A81007B98CB /* DeviceKitTests.swift */,
@@ -205,7 +207,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				3BC26BF91F4A5F2900437A26 /* MyPlayground.playground */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for Mia */,
 				3B06DE6B1F0B25D700804181 /* ExampleTests for Mia */,
@@ -324,7 +325,6 @@
 				66FBE2DB9EFD46D0423CA6B5 /* [CP] Embed Pods Frameworks */,
 				B5A80592EBC6198E872BBF20 /* [CP] Copy Pods Resources */,
 				3B4C46FD1F80B310009D121D /* Embed Frameworks */,
-				3B7FA11320181B42000D11EB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -417,19 +417,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mia_ExampleTests/Pods-Mia_ExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		3B7FA11320181B42000D11EB /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sbconstants ${SRCROOT}/${PROJECT}/Constants.swift --swift";
 		};
 		419DE7DCE28B505347ADE526 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -524,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BA5387D2038D9F4002EE6B5 /* Global Functions Tests.swift in Sources */,
 				3B0F87B01F37E6A100111280 /* HTMLtoPDFTest.swift in Sources */,
 				3B06DE6D1F0B25D700804181 /* ExampleTests.swift in Sources */,
 				3BB469B21F647A81007B98CB /* DeviceKitTests.swift in Sources */,

@@ -10,6 +10,7 @@ extension Encodable {
             encoder.outputFormatting = CodableKit.Configurations.Encoding.outputFormatting
             encoder.dateEncodingStrategy = CodableKit.Configurations.Encoding.dateStrategy
             encoder.dataEncodingStrategy = CodableKit.Configurations.Encoding.dataStrategy
+            
             return try encoder.encode(self)
         } catch let error {
             CodableKit.log(message: error.localizedDescription)
