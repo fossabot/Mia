@@ -59,28 +59,37 @@ I will *try* to keep this as up to date as possible.
 
 ## Installation
 
+
+
+
+
+    
+    
+### [CocoaPods][cocoapodsURL]  
 [![Mia is compatible with cocoapods.][cocoapodsBadge]][cocoapodsURL]
-[![Mia is incompatible with carthage.][carthageBadge]][carthageURL]
-[![Mia is incompatible with swift package manager.][spmBadge]][spmURL]
-
-
-### [CocoaPods][cocoapodsURL]
-
+<details>
+     <summary>Instructions</summary>
 To integrate Mia into your project using `cocoapods`, specify it in your `podfile`.
 
 ```ruby
 pod 'Mia', :git => 'https://github.com/Multinerd/Mia.git'
 ```
+</details>
 
 
-### [Carthage][carthageURL]
-
+### [Carthage][carthageURL]  
+[![Mia is incompatible with carthage.][carthageBadge]][carthageURL]
+<details>
+     <summary>Instructions</summary>
 Not yet compatible with `carthage`. Feel free to submit a pull request.
+</details>
 
-
-### [Swift Package Manager][spmURL]
-
+### [Swift Package Manager][spmURL]  
+[![Mia is incompatible with swift package manager.][spmBadge]][spmURL]
+<details>
+     <summary>Instructions</summary>
 Not yet compatible with `swift package manager`. Feel free to submit a pull request.
+</details>
 
 [cocoapodsBadge]: https://img.shields.io/badge/cocoapods-compatible-a.svg?style=flat&colorA=212121&colorB=00C853
 [carthageBadge]: https://img.shields.io/badge/carthage-incompatible-red.svg?style=flat&colorA=212121&colorB=E53935
