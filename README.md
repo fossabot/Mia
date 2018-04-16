@@ -120,6 +120,14 @@ Not yet compatible with `swift package manager`. Feel free to submit a pull requ
 
 
 
+## Todo
+
+- [ ] Complete Example App that showcases all functionalities of Mia.
+- [ ] 100% Documentation
+- [ ] 100% Code Coverage w/ Unit Tests
+- [ ] Refactor Code to get an _A_ from codebeat.
+
+
 
 ## License
 
