@@ -134,7 +134,7 @@ public class UpdateKitWBObjC: NSObject {
         
         alert.addAction(UIAlertAction(title: okButtonTitle, style: .default, handler: { Void in
             guard let url = URL(string: self.createDownloadLink(url: url)) else { return }
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.shared.open(url, options: [:]) { if ($0 == true) { exit(0) } }
         }))
         
         if updateType == .normal {
