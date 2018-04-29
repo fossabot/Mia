@@ -18,9 +18,23 @@ extension UnicodeScalar {
 }
 
 
+extension Double {
+    
+    /// Rounds the double to decimal places value
+    public func rounded(toPlaces places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+    
+    public func roundToDecimal(_ fractionDigits: Int) -> Double {
+        let multiplier = pow(10, Double(fractionDigits))
+        return Darwin.round(self * multiplier) / multiplier
+    }
+    
+}
 
 
-
+// https://stackoverflow.com/questions/28288148/making-my-function-calculate-average-of-array-swift
 extension Array where Element: Numeric {
     
     /// Returns the total sum of all elements in the array
@@ -38,6 +52,14 @@ extension Array where Element: BinaryInteger {
 }
 
 extension Array where Element: FloatingPoint {
+    
+    /// Returns the average of all elements in the array
+    public var average: Element {
+        return isEmpty ? 0 : total / Element(count)
+    }
+}
+
+extension Array where Element == Decimal {
     
     /// Returns the average of all elements in the array
     public var average: Element {
@@ -414,41 +436,41 @@ public extension Float {
 }
 
 // MARK: - String
-
-public extension String {
-    
-    var length: Int { return characters.count }
-    var isPresent: Bool { return !isEmpty }
-    
-    func replace(_ string: String, with withString: String) -> String {
-        return replacingOccurrences(of: string, with: withString)
-    }
-    
-    func truncate(_ length: Int, suffix: String = "...") -> String {
-        return self.length > length
-            ? substring(to: characters.index(startIndex, offsetBy: length)) + suffix
-            : self
-    }
-    
-    func split(_ delimiter: String) -> [String] {
-        let components = self.components(separatedBy: delimiter)
-        return components != [""] ? components : []
-    }
-    
-    func trim() -> String {
-        return trimmingCharacters(in: CharacterSet.whitespaces)
-    }
-    
-    var uppercaseFirstLetter: String {
-        guard isPresent else { return self }
-        
-        var string = self
-        string.replaceSubrange(string.startIndex...string.startIndex,
-                               with: String(string[string.startIndex]).capitalized)
-        
-        return string
-    }
-}
+//
+//public extension String {
+//
+//    var length: Int { return characters.count }
+//    var isPresent: Bool { return !isEmpty }
+//
+//    func replace(_ string: String, with withString: String) -> String {
+//        return replacingOccurrences(of: string, with: withString)
+//    }
+//
+//    func truncate(_ length: Int, suffix: String = "...") -> String {
+//        return self.length > length
+//            ? substring(to: characters.index(startIndex, offsetBy: length)) + suffix
+//            : self
+//    }
+//
+//    func split(_ delimiter: String) -> [String] {
+//        let components = self.components(separatedBy: delimiter)
+//        return components != [""] ? components : []
+//    }
+//
+//    func trim() -> String {
+//        return trimmingCharacters(in: CharacterSet.whitespaces)
+//    }
+//
+//    var uppercaseFirstLetter: String {
+//        guard isPresent else { return self }
+//
+//        var string = self
+//        string.replaceSubrange(string.startIndex...string.startIndex,
+//                               with: String(string[string.startIndex]).capitalized)
+//
+//        return string
+//    }
+//}
 
 
 
@@ -456,7 +478,11 @@ public extension String {
 public extension String {
     
     public var isEmptyOrWhiteSpace: Bool {
-        return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty
+        return trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+    
+    public var trim: String {
+        return self.trimmingCharacters(in: .whitespaces)
     }
 }
 
@@ -479,26 +505,26 @@ public enum Regex: String {
         return rawValue
     }
 }
-
-public extension String {
-    
-    public func match(_ pattern: String) -> Bool {
-        do {
-            let regex = try NSRegularExpression(pattern: pattern, options: [.caseInsensitive])
-            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, characters.count)) != nil
-        } catch {
-            return false
-        }
-    }
-    
-    public func isEmail() -> Bool {
-        return match(Regex.Email.pattern)
-    }
-    
-    public func isNumber() -> Bool {
-        return match(Regex.Number.pattern)
-    }
-}
+//
+//public extension String {
+//    
+//    public func match(_ pattern: String) -> Bool {
+//        do {
+//            let regex = try NSRegularExpression(pattern: pattern, options: [.caseInsensitive])
+//            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, characters.count)) != nil
+//        } catch {
+//            return false
+//        }
+//    }
+//    
+//    public func isEmail() -> Bool {
+//        return match(Regex.Email.pattern)
+//    }
+//    
+//    public func isNumber() -> Bool {
+//        return match(Regex.Number.pattern)
+//    }
+//}
 
 public extension String {
 
@@ -521,9 +547,7 @@ public extension String {
     // MARK: Currency Methods
     func currencyWithChange() -> String {
 
-        guard let amount = NSDecimalNumber(string: self) as NSDecimalNumber! else {
-            return "-"
-        }
+        let amount = NSDecimalNumber(string: self)
         let formatter: NumberFormatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = Locale.current
@@ -538,9 +562,7 @@ public extension String {
 
     func currencyWithoutChange() -> String {
 
-        guard let amount = NSDecimalNumber(string: self) as NSDecimalNumber! else {
-            return "-"
-        }
+        let amount = NSDecimalNumber(string: self)
         let formatter: NumberFormatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = Locale.current
@@ -556,9 +578,7 @@ public extension String {
     // MARK: Number Methods
     func numberWithDecimal(_ decimalPlaces: Int = 2) -> String {
 
-        guard let amount = NSDecimalNumber(string: self) as NSDecimalNumber! else {
-            return "-"
-        }
+        let amount = NSDecimalNumber(string: self)
         let formatter: NumberFormatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.locale = Locale.current
@@ -573,10 +593,7 @@ public extension String {
 
     func numberWithoutDecimal() -> String {
 
-        guard let amount = NSDecimalNumber(string: self) as NSDecimalNumber! else {
-            return "-"
-        }
-
+        let amount = NSDecimalNumber(string: self)
         let formatter: NumberFormatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.locale = Locale.current
@@ -591,10 +608,7 @@ public extension String {
 
     func kValue() -> String {
 
-        guard let amount = NSDecimalNumber(string: self) as NSDecimalNumber! else {
-            return "-"
-        }
-
+        let amount = NSDecimalNumber(string: self)
         let formatter: NumberFormatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.locale = Locale.current
@@ -1103,8 +1117,7 @@ public extension UISearchController {
     
     public var isFiltering: Bool {
         return self.isActive && !isEmpty
-    }
-    
+    }    
 }
 
 
@@ -1179,28 +1192,6 @@ extension SearchFooter {
 
 
 
-public extension String {
-    
-    //"abcde"[0] == "a"
-    //"abcde"[0...2] == "abc"
-    //"abcde"[2..<4] == "cd"
-    
-    
-    subscript (i: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: i)]
-    }
-    
-    subscript (i: Int) -> String {
-        return String(self[i] as Character)
-    }
-    
-    subscript (r: Range<Int>) -> String {
-        let start = characters.index(startIndex, offsetBy: r.lowerBound)
-        let end = characters.index(start, offsetBy: r.upperBound - r.lowerBound)
-        return String(self[Range(start ..< end)])
-    }
-
-}
 
 
 
@@ -1211,4 +1202,46 @@ public extension NSManagedObject {
     }
 }
 
+
+
+
+
+// https://stackoverflow.com/questions/24380535/how-to-apply-gradient-to-background-view-of-ios-swift-app
+@IBDesignable
+public class IBGradientView: UIView {
+    
+    @IBInspectable var startColor:   UIColor = .black { didSet { updateColors() }}
+    @IBInspectable var endColor:     UIColor = .white { didSet { updateColors() }}
+    @IBInspectable var startLocation: Double =   0.05 { didSet { updateLocations() }}
+    @IBInspectable var endLocation:   Double =   0.95 { didSet { updateLocations() }}
+    @IBInspectable var horizontalMode:  Bool =  false { didSet { updatePoints() }}
+    @IBInspectable var diagonalMode:    Bool =  false { didSet { updatePoints() }}
+    
+    public class override var layerClass: AnyClass { return CAGradientLayer.self }
+    
+    var gradientLayer: CAGradientLayer { return layer as! CAGradientLayer }
+    
+    func updatePoints() {
+        if horizontalMode {
+            gradientLayer.startPoint = diagonalMode ? CGPoint(x: 1, y: 0) : CGPoint(x: 0, y: 0.5)
+            gradientLayer.endPoint   = diagonalMode ? CGPoint(x: 0, y: 1) : CGPoint(x: 1, y: 0.5)
+        } else {
+            gradientLayer.startPoint = diagonalMode ? CGPoint(x: 0, y: 0) : CGPoint(x: 0.5, y: 0)
+            gradientLayer.endPoint   = diagonalMode ? CGPoint(x: 1, y: 1) : CGPoint(x: 0.5, y: 1)
+        }
+    }
+    func updateLocations() {
+        gradientLayer.locations = [startLocation as NSNumber, endLocation as NSNumber]
+    }
+    func updateColors() {
+        gradientLayer.colors    = [startColor.cgColor, endColor.cgColor]
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        updatePoints()
+        updateLocations()
+        updateColors()
+    }
+}
 

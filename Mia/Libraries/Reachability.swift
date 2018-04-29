@@ -97,7 +97,7 @@ public class Reachability {
     private var previousFlags: SCNetworkReachabilityFlags?
 
     private var isRunningOnDevice: Bool = {
-#if (arch(i386) || arch(x86_64)) && os(iOS)
+        #if targetEnvironment(simulator)
         return false
 #else
         return true

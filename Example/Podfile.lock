@@ -1,40 +1,62 @@
 PODS:
-  - Alamofire (4.5.1)
-  - Mia (0.1.12):
-    - Alamofire (~> 4.5.0)
-    - Mia/Deprecated (= 0.1.12)
-    - Mia/Extensions (= 0.1.12)
-    - Mia/Libraries (= 0.1.12)
-    - Mia/Sugar (= 0.1.12)
-    - Mia/Testing (= 0.1.12)
-    - Mia/Toolkits (= 0.1.12)
-    - Mia/UI (= 0.1.12)
-  - Mia/Deprecated (0.1.12):
-    - Alamofire (~> 4.5.0)
-  - Mia/Extensions (0.1.12):
-    - Alamofire (~> 4.5.0)
-  - Mia/Libraries (0.1.12):
-    - Alamofire (~> 4.5.0)
-  - Mia/Sugar (0.1.12):
-    - Alamofire (~> 4.5.0)
-  - Mia/Testing (0.1.12):
-    - Alamofire (~> 4.5.0)
-  - Mia/Toolkits (0.1.12):
-    - Alamofire (~> 4.5.0)
-  - Mia/UI (0.1.12):
-    - Alamofire (~> 4.5.0)
+  - Alamofire (4.7.1)
+  - Mia (0.1.13):
+    - Alamofire (~> 4.7.0)
+    - Mia/Deprecated (= 0.1.13)
+    - Mia/Extensions (= 0.1.13)
+    - Mia/Libraries (= 0.1.13)
+    - Mia/Sugar (= 0.1.13)
+    - Mia/Testing (= 0.1.13)
+    - Mia/Toolkits (= 0.1.13)
+    - Mia/UI (= 0.1.13)
+    - Moya (~> 11.0.1)
+  - Mia/Deprecated (0.1.13):
+    - Alamofire (~> 4.7.0)
+    - Moya (~> 11.0.1)
+  - Mia/Extensions (0.1.13):
+    - Alamofire (~> 4.7.0)
+    - Moya (~> 11.0.1)
+  - Mia/Libraries (0.1.13):
+    - Alamofire (~> 4.7.0)
+    - Moya (~> 11.0.1)
+  - Mia/Sugar (0.1.13):
+    - Alamofire (~> 4.7.0)
+    - Moya (~> 11.0.1)
+  - Mia/Testing (0.1.13):
+    - Alamofire (~> 4.7.0)
+    - Moya (~> 11.0.1)
+  - Mia/Toolkits (0.1.13):
+    - Alamofire (~> 4.7.0)
+    - Moya (~> 11.0.1)
+  - Mia/UI (0.1.13):
+    - Alamofire (~> 4.7.0)
+    - Moya (~> 11.0.1)
+  - Moya (11.0.2):
+    - Moya/Core (= 11.0.2)
+  - Moya/Core (11.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Result (3.2.4)
 
 DEPENDENCIES:
   - Mia (from `../`)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Moya
+    - Result
+
 EXTERNAL SOURCES:
   Mia:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Mia: de27c168308d6a525713229dd36e439dbdd4665b
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  Mia: 6bf29c664e4e8d4d45d54e03cf17309ba21489aa
+  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
 
 PODFILE CHECKSUM: cf2f000f330d600b931c82c7eb14dd01fa418bbb
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

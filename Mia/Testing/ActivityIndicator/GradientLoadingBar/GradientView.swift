@@ -50,8 +50,7 @@ final class GradientView: UIView {
         reversedColors.removeFirst() // Remove first and last item to prevent duplicate values
         reversedColors.removeLast()  // destroying infinite animation.
 
-        gradientLayer.colors =
-        gradientColors + reversedColors + gradientColors
+        gradientLayer.colors = gradientColors + reversedColors + gradientColors
 
         // Add layer to view
         layer.insertSublayer(gradientLayer, at: 0)

@@ -15,6 +15,8 @@
 		3B7FA12B201831D5000D11EB /* ViewControllerInitializerDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA12A201831D5000D11EB /* ViewControllerInitializerDemo.storyboard */; };
 		3B7FA12D20183208000D11EB /* ViewControllerInitializerDemoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA12C20183208000D11EB /* ViewControllerInitializerDemoViews.swift */; };
 		3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B81E1201F535436000D1007 /* Storyboard.storyboard */; };
+		3B82D3D12056450D0096BCC0 /* ExtensionsDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B82D3D02056450D0096BCC0 /* ExtensionsDemo.storyboard */; };
+		3B82D3D3205645280096BCC0 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82D3D2205645280096BCC0 /* DemoView.swift */; };
 		3B8EF8D31F1315CB002D8387 /* RosewoodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */; };
 		3BA5387D2038D9F4002EE6B5 /* Global Functions Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA5387C2038D9F4002EE6B5 /* Global Functions Tests.swift */; };
 		3BB469B21F647A81007B98CB /* DeviceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB469B11F647A81007B98CB /* DeviceKitTests.swift */; };
@@ -62,6 +64,11 @@
 		3B06DE6A1F0B25D700804181 /* Mia_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mia_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B06DE6C1F0B25D700804181 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 		3B06DE6E1F0B25D700804181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B0AEAA020959F9500B35153 /* 0_pod-install.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "0_pod-install.command"; path = "../0_pod-install.command"; sourceTree = "<group>"; };
+		3B0AEAA120959F9500B35153 /* 2_generate-docs.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "2_generate-docs.command"; path = "../2_generate-docs.command"; sourceTree = "<group>"; };
+		3B0AEAA220959F9500B35153 /* 1_lint.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = 1_lint.command; path = ../1_lint.command; sourceTree = "<group>"; };
+		3B0AEAA320959F9500B35153 /* 3_validate.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = 3_validate.command; path = ../3_validate.command; sourceTree = "<group>"; };
+		3B0AEAA420959F9500B35153 /* 4_deploy.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = 4_deploy.command; path = ../4_deploy.command; sourceTree = "<group>"; };
 		3B0F87AF1F37E6A100111280 /* HTMLtoPDFTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLtoPDFTest.swift; sourceTree = "<group>"; };
 		3B4FBA1C1F66159500C474DD /* .swiftlint.yml */ = {isa = PBXFileReference; explicitFileType = text.script.sh; fileEncoding = 4; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
 		3B574B151F7C053A00148B63 /* WebViewDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoView.swift; sourceTree = "<group>"; };
@@ -71,7 +78,11 @@
 		3B7FA12A201831D5000D11EB /* ViewControllerInitializerDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewControllerInitializerDemo.storyboard; sourceTree = "<group>"; };
 		3B7FA12C20183208000D11EB /* ViewControllerInitializerDemoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInitializerDemoViews.swift; sourceTree = "<group>"; };
 		3B81E1201F535436000D1007 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		3B82D3D02056450D0096BCC0 /* ExtensionsDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExtensionsDemo.storyboard; sourceTree = "<group>"; };
+		3B82D3D2205645280096BCC0 /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosewoodTest.swift; sourceTree = "<group>"; };
+		3B99391F20864662007CF47C /* INSPIRATION.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = INSPIRATION.md; path = ../INSPIRATION.md; sourceTree = "<group>"; };
+		3B99392020864662007CF47C /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		3BA5387C2038D9F4002EE6B5 /* Global Functions Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Functions Tests.swift"; sourceTree = "<group>"; };
 		3BA9F8641F5B868500553ABB /* Rosewood.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Rosewood.md; path = ../Documentation/Rosewood.md; sourceTree = "<group>"; };
 		3BA9F8661F5BACF100553ABB /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
@@ -139,6 +150,29 @@
 			path = Mia_ExampleTests;
 			sourceTree = "<group>";
 		};
+		3B0AEA9E20959F5F00B35153 /* Misc Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BB8D90020111A7D008EF0E5 /* .jazzy.yaml */,
+				3BA9F8661F5BACF100553ABB /* .swift-version */,
+				3B4FBA1C1F66159500C474DD /* .swiftlint.yml */,
+				3BA9F8671F5BACF100553ABB /* .travis.yml */,
+			);
+			name = "Misc Files";
+			sourceTree = "<group>";
+		};
+		3B0AEA9F20959F8900B35153 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				3B0AEAA020959F9500B35153 /* 0_pod-install.command */,
+				3B0AEAA220959F9500B35153 /* 1_lint.command */,
+				3B0AEAA120959F9500B35153 /* 2_generate-docs.command */,
+				3B0AEAA320959F9500B35153 /* 3_validate.command */,
+				3B0AEAA420959F9500B35153 /* 4_deploy.command */,
+			);
+			name = Commands;
+			sourceTree = "<group>";
+		};
 		3B574B141F7C053A00148B63 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +198,15 @@
 				3B7FA12C20183208000D11EB /* ViewControllerInitializerDemoViews.swift */,
 			);
 			path = ViewControllerInitializer;
+			sourceTree = "<group>";
+		};
+		3B82D3CF205645040096BCC0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3B82D3D02056450D0096BCC0 /* ExtensionsDemo.storyboard */,
+				3B82D3D2205645280096BCC0 /* DemoView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3BA9F8621F5B5D3A00553ABB /* Documentation */ = {
@@ -230,6 +273,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				3B7FA1262018316B000D11EB /* Constants.swift */,
+				3B82D3CF205645040096BCC0 /* Extensions */,
 				3B7FA128201831B5000D11EB /* Protocols */,
 				3BE858DD1F6C64BA0088518B /* CameraKit Demo */,
 				3BD013E51F466A5000CC3150 /* CollapsibleTableViewDemo */,
@@ -257,14 +301,14 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				3BA9F8661F5BACF100553ABB /* .swift-version */,
-				3B4FBA1C1F66159500C474DD /* .swiftlint.yml */,
-				3BB8D90020111A7D008EF0E5 /* .jazzy.yaml */,
-				3BA9F8671F5BACF100553ABB /* .travis.yml */,
-				BE2D81192D0E32C441539FB7 /* Mia.podspec */,
-				2189604B4F2559702815B670 /* README.md */,
 				4A73506625B529139DF2C083 /* LICENSE */,
+				3B99392020864662007CF47C /* CHANGELOG.md */,
+				3B99391F20864662007CF47C /* INSPIRATION.md */,
+				2189604B4F2559702815B670 /* README.md */,
+				BE2D81192D0E32C441539FB7 /* Mia.podspec */,
+				3B0AEA9F20959F8900B35153 /* Commands */,
 				3BA9F8621F5B5D3A00553ABB /* Documentation */,
+				3B0AEA9E20959F5F00B35153 /* Misc Files */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -301,8 +345,6 @@
 				3B06DE661F0B25D700804181 /* Sources */,
 				3B06DE671F0B25D700804181 /* Frameworks */,
 				3B06DE681F0B25D700804181 /* Resources */,
-				2D406A0E8E42A0E2B2826B83 /* [CP] Embed Pods Frameworks */,
-				E4272A3634AA6EF9BC715A00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,7 +365,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				66FBE2DB9EFD46D0423CA6B5 /* [CP] Embed Pods Frameworks */,
-				B5A80592EBC6198E872BBF20 /* [CP] Copy Pods Resources */,
 				3B4C46FD1F80B310009D121D /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -342,7 +383,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					3B06DE691F0B25D700804181 = {
@@ -392,6 +433,7 @@
 				3B574B1D1F7C055600148B63 /* WebViewDemo.storyboard in Resources */,
 				607FACDB1AFB9204008FA782 /* CollapsibleTableViewDemo.storyboard in Resources */,
 				3BC95ABF201F6DBB000DEA5F /* GreenViewController.xib in Resources */,
+				3B82D3D12056450D0096BCC0 /* ExtensionsDemo.storyboard in Resources */,
 				3B7FA12B201831D5000D11EB /* ViewControllerInitializerDemo.storyboard in Resources */,
 				3B81E1211F535436000D1007 /* Storyboard.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
@@ -403,21 +445,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D406A0E8E42A0E2B2826B83 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mia_ExampleTests/Pods-Mia_ExampleTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		419DE7DCE28B505347ADE526 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,11 +472,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mia_Example/Pods-Mia_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Mia/Mia.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -472,36 +503,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B5A80592EBC6198E872BBF20 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mia_Example/Pods-Mia_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E4272A3634AA6EF9BC715A00 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mia_ExampleTests/Pods-Mia_ExampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -530,6 +531,7 @@
 				3BD013FB1F466AAF00CC3150 /* DefaultTableViewDemo.swift in Sources */,
 				3B574B1E1F7C056700148B63 /* WebViewDemoView.swift in Sources */,
 				3BD9948F1F85833100318151 /* FontKitDemoView.swift in Sources */,
+				3B82D3D3205645280096BCC0 /* DemoView.swift in Sources */,
 				3BC26BED1F4A37A800437A26 /* CollapsibleDataSource.swift in Sources */,
 				3BC26BF51F4A552600437A26 /* MiaTheme.swift in Sources */,
 				3B7FA1272018316C000D11EB /* Constants.swift in Sources */,
@@ -626,12 +628,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -679,12 +683,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

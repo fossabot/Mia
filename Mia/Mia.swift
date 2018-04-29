@@ -124,3 +124,24 @@ public func localThreadSingleton<T: AnyObject>(key: String, create: () -> T) -> 
 // MARK: - *** Private / Helper Methods ***
 
 
+/// Description
+///
+/// # ⚠️ Important Notes: #
+/// 1. Do Shit....
+///
+/// More Notes
+///
+/// # ⌨️ Usage Example: #
+/// ````swift
+/// let i = I()
+/// ````
+///
+/// - Parameter p: paramater desc.
+/// - Returns: whatever it returns
+
+
+
+// Resources
+// -Font
+// -Icons
+// -Color

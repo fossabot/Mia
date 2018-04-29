@@ -1,0 +1,7 @@
+- Assure `CarthageSupport/APExtensions-example.xcodeproj` and `Example/APExtensions.xcworkspace` projects compile properly
+- Change version in podspec
+- Update CHANGELOG.md
+- Run `updateDocs.command`
+- Push changes in git
+- Add git tag
+- Run `podPush.command`

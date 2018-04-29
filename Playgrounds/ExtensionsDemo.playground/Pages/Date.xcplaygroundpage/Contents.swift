@@ -1,5 +1,8 @@
 //: Playground - noun: a place where people can play
 
+//: [Previous](@previous)
+//: [Next](@next)
+
 import UIKit
 import Mia
 

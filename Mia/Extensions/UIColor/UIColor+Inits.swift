@@ -115,7 +115,7 @@ public extension UIColor {
         let scanner = Scanner(string: hexString)
         var hexValue: UInt32 = 0
         if scanner.scanHexInt32(&hexValue) {
-            switch hexString.characters.count {
+            switch hexString.count {
                 case 3:
                     self.init(red: CGFloat((hexValue & 0xF00) >> 8) / 15.0,
                               green: CGFloat((hexValue & 0x0F0) >> 4) / 15.0,
