@@ -1,18 +1,77 @@
-module: Mia
-module_version: 0.9.3
-github_url: https://github.com/multinerd/Mia
-github_file_prefix: https://github.com/multinerd/Mia/tree/master
+# OUTPUT
+output: ./docs
 
+# CLEAN
+clean: true
+
+# SWIFT VERSION
+swift_version: '4.1'
+
+# AUTHOR NAME
 author: Multinerd
+
+# AUTHOR URL
 author_url: https://www.multinerd.io
+
+# MODULE NAME
+module: Mia
+
+# VERSION
+module_version: 0.0.1
+
+# COPYRIGHT
+copyright: Made with &#9829; by Multinerd
+
+# README PATH
+readme: ./README.md
+
+# PODSPEC
+podspec: ./Mia.podspec
+
+# DOCSET ICON
+docset_icon: ./Assets/icon.png
+
+# ROOT URL
 root_url: https://multinerd.github.io/Mia
 
-clean: true
-readme: README.md
+# DASH URL
+dash_url: https://multinerd.github.io/Mia/docsets/realm.xml
 
-podspec: Mia.podspec
+# GITHUB URL
+github_url: https://github.com/multinerd/Mia
 
+# GITHUB FILE PREFIX
+github_file_prefix: https://github.com/multinerd/Mia/tree/master/Mia
+
+# DISABLE SEARCH
+disable_search: false
+
+# SKIP DOCUMENTATION
+skip_documentation: false
+
+# MIN ACL
+min_acl: fileprivate # private | fileprivate | internal | public | open
+
+# SKIP UNDOCUMENTED
 skip_undocumented: false
+
+# HIDE DOCUMENTATION COVERAGE
 hide_documentation_coverage: false
 
-xcodebuild_arguments: [-scheme, Mia]
+# THEME DIRECTORY
+theme: fullwidth
+
+# USE SAFE FILENAMES
+use_safe_filenames: true
+
+# UNDOCUMENTED TEXT
+undocumented_text: <small>[undocumented]</small>
+
+
+# CUSTOM CATEGORIES
+# Config file:   custom_categories
+#
+# Custom navigation categories to replace the standard “Classes, Protocols, etc.”
+# Types not explicitly named in a custom category appear in generic groups at the end.
+# Example: http://git.io/v4Bcp
+# Default: []

@@ -2,112 +2,196 @@
   "warnings": [
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 9,
+      "line": 19,
+      "symbol": "UpdateKit",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 19,
+      "symbol": "UpdateKit",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 23,
+      "symbol": "UpdateKit.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 23,
+      "symbol": "UpdateKit.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 27,
+      "symbol": "UpdateKit.Configurations",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 27,
+      "symbol": "UpdateKit.Configurations",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 29,
+      "symbol": "UpdateKit.Configurations.isLoggingEnabled",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 29,
+      "symbol": "UpdateKit.Configurations.isLoggingEnabled",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 47,
+      "symbol": "UpdateKit.Configurations.updateLink",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 47,
+      "symbol": "UpdateKit.Configurations.updateLink",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 181,
       "symbol": "StoryboardConvertible",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 9,
+      "line": 181,
       "symbol": "StoryboardConvertible",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 11,
+      "line": 183,
       "symbol": "StoryboardConvertible.storyboardInit()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 11,
+      "line": 183,
       "symbol": "StoryboardConvertible.storyboardInit()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 16,
+      "line": 189,
       "symbol": "ModalController",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 16,
+      "line": 189,
       "symbol": "ModalController",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 19,
+      "line": 192,
       "symbol": "ModalController.init(rootViewController:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 19,
+      "line": 192,
       "symbol": "ModalController.init(rootViewController:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 32,
+      "line": 205,
       "symbol": "ModalController.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 32,
+      "line": 205,
       "symbol": "ModalController.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 37,
+      "line": 210,
       "symbol": "ModalController.init(nibName:bundle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 37,
+      "line": 210,
       "symbol": "ModalController.init(nibName:bundle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 41,
+      "line": 214,
       "symbol": "ModalController.viewWillAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 41,
+      "line": 214,
       "symbol": "ModalController.viewWillAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 58,
+      "line": 218,
+      "symbol": "ModalController.dismissViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 218,
+      "symbol": "ModalController.dismissViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
+      "line": 232,
       "symbol": "Date.init(dateTimeString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Deprecated/Deprecated.swift",
-      "line": 58,
+      "line": 232,
       "symbol": "Date.init(dateTimeString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -152,6 +236,76 @@
       "line": 14,
       "symbol": "Date.component(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/Date/Date+Constants.swift",
+      "line": 6,
+      "symbol": "Date.minuteInSeconds",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/Date/Date+Constants.swift",
+      "line": 6,
+      "symbol": "Date.minuteInSeconds",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/Date/Date+Constants.swift",
+      "line": 7,
+      "symbol": "Date.hourInSeconds",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/Date/Date+Constants.swift",
+      "line": 7,
+      "symbol": "Date.hourInSeconds",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/Date/Date+Constants.swift",
+      "line": 8,
+      "symbol": "Date.dayInSeconds",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/Date/Date+Constants.swift",
+      "line": 8,
+      "symbol": "Date.dayInSeconds",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/Date/Date+Constants.swift",
+      "line": 9,
+      "symbol": "Date.weekInSeconds",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/Date/Date+Constants.swift",
+      "line": 9,
+      "symbol": "Date.weekInSeconds",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/Date/Date+Constants.swift",
+      "line": 10,
+      "symbol": "Date.yearInSeconds",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/Date/Date+Constants.swift",
+      "line": 10,
+      "symbol": "Date.yearInSeconds",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
@@ -1233,6 +1387,48 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/DateFormatter/DateFormatter+Cache.swift",
+      "line": 6,
+      "symbol": "DateFormatter.cachedDateFormatters",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/DateFormatter/DateFormatter+Cache.swift",
+      "line": 6,
+      "symbol": "DateFormatter.cachedDateFormatters",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/DateFormatter/DateFormatter+Cache.swift",
+      "line": 8,
+      "symbol": "DateFormatter.cachedFormatter(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/DateFormatter/DateFormatter+Cache.swift",
+      "line": 8,
+      "symbol": "DateFormatter.cachedFormatter(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/DateFormatter/DateFormatter+Cache.swift",
+      "line": 23,
+      "symbol": "DateFormatter.cachedFormatter(_:timeStyle:doesRelativeDateFormatting:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/DateFormatter/DateFormatter+Cache.swift",
+      "line": 23,
+      "symbol": "DateFormatter.cachedFormatter(_:timeStyle:doesRelativeDateFormatting:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/DateFormatter/DateFormatter+Presets.swift",
       "line": 5,
       "symbol": "DateFormatter.Presets",
@@ -1429,6 +1625,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/DateFormatter/DateFormatter+Presets.swift",
+      "line": 15,
+      "symbol": "DateFormatter.Presets.stringFormat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/DateFormatter/DateFormatter+Presets.swift",
+      "line": 15,
+      "symbol": "DateFormatter.Presets.stringFormat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/Int/Int+DateComponents.swift",
       "line": 68,
       "symbol": "Int.nanosecond",
@@ -1552,6 +1762,20 @@
       "line": 12,
       "symbol": "Int.ordinal",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/NumberFormatter/NumberFormatter+Cache.swift",
+      "line": 6,
+      "symbol": "NumberFormatter.cachedNumberFormatter",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/Foundation/NumberFormatter/NumberFormatter+Cache.swift",
+      "line": 6,
+      "symbol": "NumberFormatter.cachedNumberFormatter",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
@@ -1807,6 +2031,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/PFScreenShot/UIScrollView+PFScreenshot.swift",
+      "line": 13,
+      "symbol": "PFSceenshot.screenshotOfVisibleContent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/PFScreenShot/UIScrollView+PFScreenshot.swift",
+      "line": 13,
+      "symbol": "PFSceenshot.screenshotOfVisibleContent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/PFScreenShot/UITableView+PFScreenshot.swift",
       "line": 11,
       "symbol": "SelectedType",
@@ -2032,6 +2270,34 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/PFScreenShot/UIView+PFScreenshot.swift",
+      "line": 14,
+      "symbol": "PFSceenshot.screenshot",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/PFScreenShot/UIView+PFScreenshot.swift",
+      "line": 14,
+      "symbol": "PFSceenshot.screenshot",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/PFScreenShot/UIView+PFScreenshot.swift",
+      "line": 18,
+      "symbol": "PFSceenshot.isContainsWKWebView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/PFScreenShot/UIView+PFScreenshot.swift",
+      "line": 18,
+      "symbol": "PFSceenshot.isContainsWKWebView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/PFScreenShot/UIView+PFScreenshot.swift",
       "line": 30,
       "symbol": "PFSceenshot.screenshot(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -2228,6 +2494,20 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/UIColor/UIColor+Validation.swift",
+      "line": 17,
+      "symbol": "UIColor.ContrastDisplayContext.minimumContrastRatio",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/UIColor/UIColor+Validation.swift",
+      "line": 17,
+      "symbol": "UIColor.ContrastDisplayContext.minimumContrastRatio",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Extensions/UIColor/UIColor+Validation.swift",
       "line": 104,
       "symbol": "UIColor.isDistinctFrom(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -2340,6 +2620,20 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
+      "line": 1,
+      "symbol": "randomColor(seed:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
+      "line": 1,
+      "symbol": "randomColor(seed:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
       "line": 20,
       "symbol": "ColorHash",
       "symbol_kind": "source.lang.swift.decl.class",
@@ -2350,6 +2644,48 @@
       "line": 20,
       "symbol": "ColorHash",
       "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
+      "line": 22,
+      "symbol": "ColorHash.lightness",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
+      "line": 22,
+      "symbol": "ColorHash.lightness",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
+      "line": 24,
+      "symbol": "ColorHash.saturation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
+      "line": 24,
+      "symbol": "ColorHash.saturation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
+      "line": 26,
+      "symbol": "ColorHash.hash",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
+      "line": 26,
+      "symbol": "ColorHash.hash",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -2475,6 +2811,20 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
       "line": 92,
       "symbol": "ColorHash.hex(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
+      "line": 133,
+      "symbol": "Character.unicodeScalarCodePoint()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/ColorHash.swift",
+      "line": 133,
+      "symbol": "Character.unicodeScalarCodePoint()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -4734,6 +5084,20 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Reachability.swift",
+      "line": 140,
+      "symbol": "Reachability.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Reachability.swift",
+      "line": 140,
+      "symbol": "Reachability.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Reachability.swift",
       "line": 149,
       "symbol": "Reachability.startNotifier()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -4789,6 +5153,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Reachability.swift",
+      "line": 271,
+      "symbol": "callback(reachability:flags:info:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Reachability.swift",
+      "line": 271,
+      "symbol": "callback(reachability:flags:info:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/Rosewood+Benchmark.swift",
       "line": null,
       "symbol": "Rosewood.Benchmark",
@@ -4828,6 +5206,20 @@
       "line": 10,
       "symbol": "Rosewood.Benchmark.BenchmarkBlock",
       "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/Rosewood+Framework.swift",
+      "line": null,
+      "symbol": "Rosewood.Framework",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/Rosewood+Framework.swift",
+      "line": null,
+      "symbol": "Rosewood.Framework",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -4971,6 +5363,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/Rosewood.swift",
+      "line": 31,
+      "symbol": "Rosewood.printToDebugger(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/Rosewood.swift",
+      "line": 31,
+      "symbol": "Rosewood.printToDebugger(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
       "line": null,
       "symbol": "RosewoodFormatter",
@@ -5024,6 +5430,90 @@
       "line": 4,
       "symbol": "RosewoodFormatter.Component",
       "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 30,
+      "symbol": "RosewoodFormatter.format",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 30,
+      "symbol": "RosewoodFormatter.format",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 31,
+      "symbol": "RosewoodFormatter.components",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 31,
+      "symbol": "RosewoodFormatter.components",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 48,
+      "symbol": "RosewoodFormatter.logFormat(_:items:file:line:function:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 48,
+      "symbol": "RosewoodFormatter.logFormat(_:items:file:line:function:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 78,
+      "symbol": "RosewoodFormatter.prettyFormat(_:item:file:line:function:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 78,
+      "symbol": "RosewoodFormatter.prettyFormat(_:item:file:line:function:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 110,
+      "symbol": "RosewoodFormatter.format(date:dateFormat:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 110,
+      "symbol": "RosewoodFormatter.format(date:dateFormat:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 118,
+      "symbol": "RosewoodFormatter.format(file:fullPath:fileExtension:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Libraries/Rosewood/RosewoodFormatter.swift",
+      "line": 118,
+      "symbol": "RosewoodFormatter.format(file:fullPath:fileExtension:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -5164,6 +5654,13 @@
       "line": 9,
       "symbol": "LogLevel.bench",
       "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Mia.swift",
+      "line": 11,
+      "symbol": "internalKey",
+      "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
@@ -5189,6 +5686,13 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Mia.swift",
+      "line": 20,
+      "symbol": "openSettings()",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Mia.swift",
       "line": 28,
       "symbol": "getTopMostController()",
       "symbol_kind": "source.lang.swift.decl.function.free",
@@ -5199,6 +5703,13 @@
       "line": 41,
       "symbol": "NetworkActivityBlock",
       "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Mia.swift",
+      "line": 43,
+      "symbol": "__internalActivityCount",
+      "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
@@ -5311,34 +5822,6 @@
       "line": 1,
       "symbol": "ViewControllerInitializer",
       "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Protocols/ViewControllerInitializer.swift",
-      "line": 3,
-      "symbol": "ViewControllerInitializer.storyboardIdentifier",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Protocols/ViewControllerInitializer.swift",
-      "line": 5,
-      "symbol": "ViewControllerInitializer.instantiateFromStoryboard(name:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Protocols/ViewControllerInitializer.swift",
-      "line": 7,
-      "symbol": "ViewControllerInitializer.instantiateFromNib()",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Protocols/ViewControllerInitializer.swift",
-      "line": 9,
-      "symbol": "ViewControllerInitializer.embedInNavigationController(dismissType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -5855,13 +6338,20 @@
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
       "line": 4,
-      "symbol": "StringAction",
+      "symbol": "BoolAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
       "line": 4,
+      "symbol": "BoolAction",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 5,
       "symbol": "StringAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
@@ -5869,13 +6359,13 @@
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
       "line": 5,
-      "symbol": "FloatAction",
+      "symbol": "StringAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
-      "line": 5,
+      "line": 6,
       "symbol": "FloatAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
@@ -5883,13 +6373,13 @@
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
       "line": 6,
-      "symbol": "DateAction",
+      "symbol": "FloatAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
-      "line": 6,
+      "line": 7,
       "symbol": "DateAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
@@ -5897,13 +6387,13 @@
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
       "line": 7,
-      "symbol": "AnyAction",
+      "symbol": "DateAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
-      "line": 7,
+      "line": 8,
       "symbol": "AnyAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
@@ -5911,29 +6401,232 @@
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
       "line": 8,
+      "symbol": "AnyAction",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 9,
       "symbol": "NotificationAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
-      "line": 8,
+      "line": 9,
       "symbol": "NotificationAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
-      "line": 10,
+      "line": 11,
       "symbol": "Container",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
-      "line": 10,
+      "line": 11,
       "symbol": "Container",
       "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 13,
+      "symbol": "Container.host",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 13,
+      "symbol": "Container.host",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 15,
+      "symbol": "Container.init(host:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 15,
+      "symbol": "Container.init(host:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 21,
+      "symbol": "Container.controlTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 21,
+      "symbol": "Container.controlTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 22,
+      "symbol": "Container.buttonTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 22,
+      "symbol": "Container.buttonTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 23,
+      "symbol": "Container.sliderTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 23,
+      "symbol": "Container.sliderTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 24,
+      "symbol": "Container.gestureTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 24,
+      "symbol": "Container.gestureTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 25,
+      "symbol": "Container.datePickerTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 25,
+      "symbol": "Container.datePickerTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 26,
+      "symbol": "Container.barButtonItemTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 26,
+      "symbol": "Container.barButtonItemTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 27,
+      "symbol": "Container.searchBarTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 27,
+      "symbol": "Container.searchBarTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 28,
+      "symbol": "Container.textFieldTargets",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 28,
+      "symbol": "Container.textFieldTargets",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 29,
+      "symbol": "Container.textViewTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 29,
+      "symbol": "Container.textViewTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 30,
+      "symbol": "Container.timerTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 30,
+      "symbol": "Container.timerTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 31,
+      "symbol": "Container.keyPathTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 31,
+      "symbol": "Container.keyPathTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 32,
+      "symbol": "Container.notificationTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Core/Container.swift",
+      "line": 32,
+      "symbol": "Container.notificationTarget",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -6035,6 +6728,132 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 26,
+      "symbol": "KeyPathTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 26,
+      "symbol": "KeyPathTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 27,
+      "symbol": "KeyPathTarget.Item",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 27,
+      "symbol": "KeyPathTarget.Item",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 28,
+      "symbol": "KeyPathTarget.Item.object",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 28,
+      "symbol": "KeyPathTarget.Item.object",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 30,
+      "symbol": "KeyPathTarget.Item.keyPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 30,
+      "symbol": "KeyPathTarget.Item.keyPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 32,
+      "symbol": "KeyPathTarget.Item.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 32,
+      "symbol": "KeyPathTarget.Item.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 34,
+      "symbol": "KeyPathTarget.Item.init(object:keyPath:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 34,
+      "symbol": "KeyPathTarget.Item.init(object:keyPath:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 42,
+      "symbol": "KeyPathTarget.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 42,
+      "symbol": "KeyPathTarget.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 44,
+      "symbol": "KeyPathTarget.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 44,
+      "symbol": "KeyPathTarget.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 55,
+      "symbol": "KeyPathTarget.observeValue(forKeyPath:of:change:context:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/KeyPath.swift",
+      "line": 55,
+      "symbol": "KeyPathTarget.observeValue(forKeyPath:of:change:context:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Notification.swift",
       "line": 5,
       "symbol": "Container.observe(notification:_:)",
@@ -6063,6 +6882,48 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Notification.swift",
+      "line": 25,
+      "symbol": "NotificationTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Notification.swift",
+      "line": 25,
+      "symbol": "NotificationTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Notification.swift",
+      "line": 27,
+      "symbol": "NotificationTarget.mapping",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Notification.swift",
+      "line": 27,
+      "symbol": "NotificationTarget.mapping",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Notification.swift",
+      "line": 29,
+      "symbol": "NotificationTarget.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Notification.swift",
+      "line": 29,
+      "symbol": "NotificationTarget.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Timer.swift",
       "line": 5,
       "symbol": "Container.tick(_:)",
@@ -6073,6 +6934,48 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Timer.swift",
       "line": 5,
       "symbol": "Container.tick(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Timer.swift",
+      "line": 11,
+      "symbol": "TimerTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Timer.swift",
+      "line": 11,
+      "symbol": "TimerTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Timer.swift",
+      "line": 12,
+      "symbol": "TimerTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Timer.swift",
+      "line": 12,
+      "symbol": "TimerTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Timer.swift",
+      "line": 15,
+      "symbol": "TimerTarget.didFire()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/Timer.swift",
+      "line": 15,
+      "symbol": "TimerTarget.didFire()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6105,6 +7008,62 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIBarButtonItem.swift",
+      "line": 13,
+      "symbol": "BarButtonItemTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIBarButtonItem.swift",
+      "line": 13,
+      "symbol": "BarButtonItemTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIBarButtonItem.swift",
+      "line": 14,
+      "symbol": "BarButtonItemTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIBarButtonItem.swift",
+      "line": 14,
+      "symbol": "BarButtonItemTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIBarButtonItem.swift",
+      "line": 16,
+      "symbol": "BarButtonItemTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIBarButtonItem.swift",
+      "line": 16,
+      "symbol": "BarButtonItemTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIBarButtonItem.swift",
+      "line": 28,
+      "symbol": "BarButtonItemTarget.handleTap(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIBarButtonItem.swift",
+      "line": 28,
+      "symbol": "BarButtonItemTarget.handleTap(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIButton.swift",
       "line": 5,
       "symbol": "Container.tap(_:)",
@@ -6115,6 +7074,62 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIButton.swift",
       "line": 5,
       "symbol": "Container.tap(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIButton.swift",
+      "line": 12,
+      "symbol": "ButtonTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIButton.swift",
+      "line": 12,
+      "symbol": "ButtonTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIButton.swift",
+      "line": 13,
+      "symbol": "ButtonTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIButton.swift",
+      "line": 13,
+      "symbol": "ButtonTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIButton.swift",
+      "line": 15,
+      "symbol": "ButtonTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIButton.swift",
+      "line": 15,
+      "symbol": "ButtonTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIButton.swift",
+      "line": 26,
+      "symbol": "ButtonTarget.handleTap(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIButton.swift",
+      "line": 26,
+      "symbol": "ButtonTarget.handleTap(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6133,6 +7148,62 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIControl.swift",
+      "line": 12,
+      "symbol": "ControlTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIControl.swift",
+      "line": 12,
+      "symbol": "ControlTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIControl.swift",
+      "line": 13,
+      "symbol": "ControlTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIControl.swift",
+      "line": 13,
+      "symbol": "ControlTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIControl.swift",
+      "line": 15,
+      "symbol": "ControlTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIControl.swift",
+      "line": 15,
+      "symbol": "ControlTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIControl.swift",
+      "line": 26,
+      "symbol": "ControlTarget.handleChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIControl.swift",
+      "line": 26,
+      "symbol": "ControlTarget.handleChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIDatePicker.swift",
       "line": 5,
       "symbol": "Container.dateSelected(_:)",
@@ -6143,6 +7214,62 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIDatePicker.swift",
       "line": 5,
       "symbol": "Container.dateSelected(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIDatePicker.swift",
+      "line": 12,
+      "symbol": "DatePickerTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIDatePicker.swift",
+      "line": 12,
+      "symbol": "DatePickerTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIDatePicker.swift",
+      "line": 13,
+      "symbol": "DatePickerTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIDatePicker.swift",
+      "line": 13,
+      "symbol": "DatePickerTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIDatePicker.swift",
+      "line": 15,
+      "symbol": "DatePickerTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIDatePicker.swift",
+      "line": 15,
+      "symbol": "DatePickerTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIDatePicker.swift",
+      "line": 26,
+      "symbol": "DatePickerTarget.handleChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIDatePicker.swift",
+      "line": 26,
+      "symbol": "DatePickerTarget.handleChange(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6161,6 +7288,62 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIGestureRecognizer.swift",
+      "line": 12,
+      "symbol": "GestureTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIGestureRecognizer.swift",
+      "line": 12,
+      "symbol": "GestureTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIGestureRecognizer.swift",
+      "line": 13,
+      "symbol": "GestureTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIGestureRecognizer.swift",
+      "line": 13,
+      "symbol": "GestureTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIGestureRecognizer.swift",
+      "line": 15,
+      "symbol": "GestureTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIGestureRecognizer.swift",
+      "line": 15,
+      "symbol": "GestureTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIGestureRecognizer.swift",
+      "line": 26,
+      "symbol": "GestureTarget.didOccur(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UIGestureRecognizer.swift",
+      "line": 26,
+      "symbol": "GestureTarget.didOccur(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISearchBar.swift",
       "line": 5,
       "symbol": "Container.textChange(_:)",
@@ -6171,6 +7354,62 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISearchBar.swift",
       "line": 5,
       "symbol": "Container.textChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISearchBar.swift",
+      "line": 12,
+      "symbol": "SearchBarTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISearchBar.swift",
+      "line": 12,
+      "symbol": "SearchBarTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISearchBar.swift",
+      "line": 13,
+      "symbol": "SearchBarTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISearchBar.swift",
+      "line": 13,
+      "symbol": "SearchBarTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISearchBar.swift",
+      "line": 15,
+      "symbol": "SearchBarTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISearchBar.swift",
+      "line": 15,
+      "symbol": "SearchBarTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISearchBar.swift",
+      "line": 25,
+      "symbol": "SearchBarTarget.searchBar(_:textDidChange:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISearchBar.swift",
+      "line": 25,
+      "symbol": "SearchBarTarget.searchBar(_:textDidChange:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6185,6 +7424,62 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISlider.swift",
       "line": 5,
       "symbol": "Container.valueChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISlider.swift",
+      "line": 12,
+      "symbol": "SliderTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISlider.swift",
+      "line": 12,
+      "symbol": "SliderTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISlider.swift",
+      "line": 13,
+      "symbol": "SliderTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISlider.swift",
+      "line": 13,
+      "symbol": "SliderTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISlider.swift",
+      "line": 15,
+      "symbol": "SliderTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISlider.swift",
+      "line": 15,
+      "symbol": "SliderTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISlider.swift",
+      "line": 26,
+      "symbol": "SliderTarget.handleChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UISlider.swift",
+      "line": 26,
+      "symbol": "SliderTarget.handleChange(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6217,6 +7512,104 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 18,
+      "symbol": "TextFieldTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 18,
+      "symbol": "TextFieldTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 19,
+      "symbol": "TextFieldTarget.didEndEditingAction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 19,
+      "symbol": "TextFieldTarget.didEndEditingAction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 21,
+      "symbol": "TextFieldTarget.textAction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 21,
+      "symbol": "TextFieldTarget.textAction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 23,
+      "symbol": "TextFieldTarget.init(host:didEndEditingAction:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 23,
+      "symbol": "TextFieldTarget.init(host:didEndEditingAction:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 31,
+      "symbol": "TextFieldTarget.init(host:textAction:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 31,
+      "symbol": "TextFieldTarget.init(host:textAction:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 42,
+      "symbol": "TextFieldTarget.handleTextChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 42,
+      "symbol": "TextFieldTarget.handleTextChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 49,
+      "symbol": "TextFieldTarget.textFieldDidEndEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextField.swift",
+      "line": 49,
+      "symbol": "TextFieldTarget.textFieldDidEndEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextView.swift",
       "line": 5,
       "symbol": "Container.textChange(_:)",
@@ -6227,6 +7620,62 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextView.swift",
       "line": 5,
       "symbol": "Container.textChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextView.swift",
+      "line": 12,
+      "symbol": "TextViewTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextView.swift",
+      "line": 12,
+      "symbol": "TextViewTarget",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextView.swift",
+      "line": 13,
+      "symbol": "TextViewTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextView.swift",
+      "line": 13,
+      "symbol": "TextViewTarget.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextView.swift",
+      "line": 15,
+      "symbol": "TextViewTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextView.swift",
+      "line": 15,
+      "symbol": "TextViewTarget.init(host:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextView.swift",
+      "line": 25,
+      "symbol": "TextViewTarget.textViewDidChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Sugar/On/UITextView.swift",
+      "line": 25,
+      "symbol": "TextViewTarget.textViewDidChange(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6284,6 +7733,48 @@
       "line": 4,
       "symbol": "Durations",
       "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/Durations.swift",
+      "line": 5,
+      "symbol": "Durations.fadeIn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/Durations.swift",
+      "line": 5,
+      "symbol": "Durations.fadeIn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/Durations.swift",
+      "line": 7,
+      "symbol": "Durations.fadeOut",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/Durations.swift",
+      "line": 7,
+      "symbol": "Durations.fadeOut",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/Durations.swift",
+      "line": 9,
+      "symbol": "Durations.progress",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/Durations.swift",
+      "line": 9,
+      "symbol": "Durations.progress",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -6428,6 +7919,20 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientLoadingBar.swift",
+      "line": 73,
+      "symbol": "GradientLoadingBar.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientLoadingBar.swift",
+      "line": 73,
+      "symbol": "GradientLoadingBar.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientLoadingBar.swift",
       "line": 111,
       "symbol": "GradientLoadingBar.saveInstance()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -6484,6 +7989,20 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": null,
+      "symbol": "GradientView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": null,
+      "symbol": "GradientView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
       "line": 4,
       "symbol": "GradientColors",
       "symbol_kind": "source.lang.swift.decl.typealias",
@@ -6494,6 +8013,160 @@
       "line": 4,
       "symbol": "GradientColors",
       "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 11,
+      "symbol": "GradientView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 11,
+      "symbol": "GradientView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 13,
+      "symbol": "GradientView.gradientLayer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 13,
+      "symbol": "GradientView.gradientLayer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 15,
+      "symbol": "GradientView.durations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 15,
+      "symbol": "GradientView.durations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 17,
+      "symbol": "GradientView.gradientColors",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 17,
+      "symbol": "GradientView.gradientColors",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 22,
+      "symbol": "GradientView.init(durations:gradientColors:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 22,
+      "symbol": "GradientView.init(durations:gradientColors:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 33,
+      "symbol": "GradientView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 33,
+      "symbol": "GradientView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 62,
+      "symbol": "GradientView.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 62,
+      "symbol": "GradientView.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 97,
+      "symbol": "GradientView.show()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 97,
+      "symbol": "GradientView.show()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 104,
+      "symbol": "GradientView.hide()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 104,
+      "symbol": "GradientView.hide()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 114,
+      "symbol": "GradientView.animationDidStart(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 114,
+      "symbol": "GradientView.animationDidStart(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 131,
+      "symbol": "GradientView.animationDidStop(_:finished:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/ActivityIndicator/GradientLoadingBar/GradientView.swift",
+      "line": 131,
+      "symbol": "GradientView.animationDidStop(_:finished:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -6606,6 +8279,104 @@
       "line": 20,
       "symbol": "HTMLtoPDF.baseUrl",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 22,
+      "symbol": "HTMLtoPDF.completion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 22,
+      "symbol": "HTMLtoPDF.completion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 24,
+      "symbol": "HTMLtoPDF.webView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 24,
+      "symbol": "HTMLtoPDF.webView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 25,
+      "symbol": "HTMLtoPDF.pageSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 25,
+      "symbol": "HTMLtoPDF.pageSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 26,
+      "symbol": "HTMLtoPDF.landscape",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 26,
+      "symbol": "HTMLtoPDF.landscape",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 28,
+      "symbol": "HTMLtoPDF.topBottomMarginSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 28,
+      "symbol": "HTMLtoPDF.topBottomMarginSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 29,
+      "symbol": "HTMLtoPDF.leftRightMarginSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 29,
+      "symbol": "HTMLtoPDF.leftRightMarginSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 31,
+      "symbol": "HTMLtoPDF.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 31,
+      "symbol": "HTMLtoPDF.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -6932,6 +8703,34 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 221,
+      "symbol": "HTMLtoPDF.timeout()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 221,
+      "symbol": "HTMLtoPDF.timeout()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 226,
+      "symbol": "HTMLtoPDF.savePdf()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
+      "line": 226,
+      "symbol": "HTMLtoPDF.savePdf()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
       "line": 266,
       "symbol": "HTMLtoPDF.webViewDidFinishLoad(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -6955,6 +8754,90 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDF.swift",
       "line": 278,
       "symbol": "HTMLtoPDF.webView(_:didFailLoadWithError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 4,
+      "symbol": "HTMLtoPDFPrintPageRenderer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 4,
+      "symbol": "HTMLtoPDFPrintPageRenderer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 6,
+      "symbol": "HTMLtoPDFPrintPageRenderer.topBottomMarginSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 6,
+      "symbol": "HTMLtoPDFPrintPageRenderer.topBottomMarginSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 7,
+      "symbol": "HTMLtoPDFPrintPageRenderer.leftRightMarginSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 7,
+      "symbol": "HTMLtoPDFPrintPageRenderer.leftRightMarginSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 9,
+      "symbol": "HTMLtoPDFPrintPageRenderer.paperRect",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 9,
+      "symbol": "HTMLtoPDFPrintPageRenderer.paperRect",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 13,
+      "symbol": "HTMLtoPDFPrintPageRenderer.printableRect",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 13,
+      "symbol": "HTMLtoPDFPrintPageRenderer.printableRect",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 17,
+      "symbol": "HTMLtoPDFPrintPageRenderer.init(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/HTMLtoPDFPrintPageRenderer.swift",
+      "line": 17,
+      "symbol": "HTMLtoPDFPrintPageRenderer.init(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -7729,6 +9612,34 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/PageSize.swift",
+      "line": 17,
+      "symbol": "PageSize.makeSizeWithPPI(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/PageSize.swift",
+      "line": 17,
+      "symbol": "PageSize.makeSizeWithPPI(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/PageSize.swift",
+      "line": 24,
+      "symbol": "PageSize.size(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/HTMLtoPDF/PageSize.swift",
+      "line": 24,
+      "symbol": "PageSize.size(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/Misc/RevealingSplashView/RevealingSplashView.swift",
       "line": 4,
       "symbol": "RevealingSplashViewCompletion",
@@ -7897,6 +9808,48 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NetworkKit/NetworkKit.swift",
+      "line": 2,
+      "symbol": "NetworkKit",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NetworkKit/NetworkKit.swift",
+      "line": 2,
+      "symbol": "NetworkKit",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NetworkKit/NetworkKit.swift",
+      "line": 5,
+      "symbol": "NetworkKit.NetworkIndicator",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NetworkKit/NetworkKit.swift",
+      "line": 5,
+      "symbol": "NetworkKit.NetworkIndicator",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NetworkKit/NetworkKit.swift",
+      "line": 7,
+      "symbol": "NetworkKit.Alamofire",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NetworkKit/NetworkKit.swift",
+      "line": 7,
+      "symbol": "NetworkKit.Alamofire",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NotificationAlerts/SANotificationView.swift",
       "line": 5,
       "symbol": "SANotificationView",
@@ -7908,6 +9861,48 @@
       "line": 5,
       "symbol": "SANotificationView",
       "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NotificationAlerts/SANotificationView.swift",
+      "line": 8,
+      "symbol": "SANotificationView.mainInstance",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NotificationAlerts/SANotificationView.swift",
+      "line": 8,
+      "symbol": "SANotificationView.mainInstance",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NotificationAlerts/SANotificationView.swift",
+      "line": 16,
+      "symbol": "SANotificationView.currentViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NotificationAlerts/SANotificationView.swift",
+      "line": 16,
+      "symbol": "SANotificationView.currentViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NotificationAlerts/SANotificationView.swift",
+      "line": 27,
+      "symbol": "SANotificationView.currentWindow()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/NotificationAlerts/SANotificationView.swift",
+      "line": 27,
+      "symbol": "SANotificationView.currentWindow()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -8009,6 +10004,636 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": null,
+      "symbol": "CollectionStackViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": null,
+      "symbol": "CollectionStackViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": null,
+      "symbol": "CollectionStackViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": null,
+      "symbol": "CollectionStackViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 19,
+      "symbol": "CollectionStackViewControllerDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 19,
+      "symbol": "CollectionStackViewControllerDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 20,
+      "symbol": "CollectionStackViewControllerDelegate.controllerDidSelected(index:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 20,
+      "symbol": "CollectionStackViewControllerDelegate.controllerDidSelected(index:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 26,
+      "symbol": "CollectionStackViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 26,
+      "symbol": "CollectionStackViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 30,
+      "symbol": "CollectionStackViewController.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 30,
+      "symbol": "CollectionStackViewController.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 35,
+      "symbol": "CollectionStackViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 35,
+      "symbol": "CollectionStackViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 41,
+      "symbol": "CollectionStackViewController.init(images:delegate:overlay:scaleRatio:scaleValue:bgColor:bgView:decelerationRate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 41,
+      "symbol": "CollectionStackViewController.init(images:delegate:overlay:scaleRatio:scaleValue:bgColor:bgView:decelerationRate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 60,
+      "symbol": "CollectionStackViewController.screens",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 60,
+      "symbol": "CollectionStackViewController.screens",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 62,
+      "symbol": "CollectionStackViewController.overlay",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 62,
+      "symbol": "CollectionStackViewController.overlay",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 67,
+      "symbol": "CollectionStackViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 67,
+      "symbol": "CollectionStackViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 74,
+      "symbol": "CollectionStackViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 74,
+      "symbol": "CollectionStackViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 87,
+      "symbol": "CollectionStackViewController.configureCollectionView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 87,
+      "symbol": "CollectionStackViewController.configureCollectionView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 101,
+      "symbol": "CollectionStackViewController.scrollToIndex(_:animated:position:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 101,
+      "symbol": "CollectionStackViewController.scrollToIndex(_:animated:position:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 114,
+      "symbol": "CollectionStackViewController.collectionView(_:numberOfItemsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 114,
+      "symbol": "CollectionStackViewController.collectionView(_:numberOfItemsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 120,
+      "symbol": "CollectionStackViewController.collectionView(_:willDisplay:forItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 120,
+      "symbol": "CollectionStackViewController.collectionView(_:willDisplay:forItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 128,
+      "symbol": "CollectionStackViewController.collectionView(_:cellForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 128,
+      "symbol": "CollectionStackViewController.collectionView(_:cellForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 136,
+      "symbol": "CollectionStackViewController.collectionView(_:didSelectItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 136,
+      "symbol": "CollectionStackViewController.collectionView(_:didSelectItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 181,
+      "symbol": "CollectionStackViewController.collectionView(_:layout:sizeForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 181,
+      "symbol": "CollectionStackViewController.collectionView(_:layout:sizeForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 187,
+      "symbol": "CollectionStackViewController.collectionView(_:layout:minimumLineSpacingForSectionAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionStackViewController.swift",
+      "line": 187,
+      "symbol": "CollectionStackViewController.collectionView(_:layout:minimumLineSpacingForSectionAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 4,
+      "symbol": "CollectionViewStackCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 4,
+      "symbol": "CollectionViewStackCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 8,
+      "symbol": "CollectionViewStackCell.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 8,
+      "symbol": "CollectionViewStackCell.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 16,
+      "symbol": "CollectionViewStackCell.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 16,
+      "symbol": "CollectionViewStackCell.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 24,
+      "symbol": "CollectionViewStackCell.imageView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 24,
+      "symbol": "CollectionViewStackCell.imageView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 29,
+      "symbol": "CollectionViewStackCell.prepareForReuse()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 29,
+      "symbol": "CollectionViewStackCell.prepareForReuse()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 35,
+      "symbol": "CollectionViewStackCell.createImageView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 35,
+      "symbol": "CollectionViewStackCell.createImageView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 51,
+      "symbol": "CollectionViewStackCell.createConstraint(_:toItem:attribute:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 51,
+      "symbol": "CollectionViewStackCell.createConstraint(_:toItem:attribute:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 57,
+      "symbol": "CollectionViewStackCell.createShadow()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 57,
+      "symbol": "CollectionViewStackCell.createShadow()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 69,
+      "symbol": "CollectionViewStackCell.addBlurOnImage(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackCell.swift",
+      "line": 69,
+      "symbol": "CollectionViewStackCell.addBlurOnImage(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 4,
+      "symbol": "CollectionViewStackFlowLayout",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 4,
+      "symbol": "CollectionViewStackFlowLayout",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 8,
+      "symbol": "CollectionViewStackFlowLayout.init(itemsCount:overlay:scaleRatio:scale:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 8,
+      "symbol": "CollectionViewStackFlowLayout.init(itemsCount:overlay:scaleRatio:scale:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 18,
+      "symbol": "CollectionViewStackFlowLayout.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 18,
+      "symbol": "CollectionViewStackFlowLayout.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 26,
+      "symbol": "CollectionViewStackFlowLayout.itemsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 26,
+      "symbol": "CollectionViewStackFlowLayout.itemsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 28,
+      "symbol": "CollectionViewStackFlowLayout.overlay",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 28,
+      "symbol": "CollectionViewStackFlowLayout.overlay",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 30,
+      "symbol": "CollectionViewStackFlowLayout.maxScale",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 30,
+      "symbol": "CollectionViewStackFlowLayout.maxScale",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 32,
+      "symbol": "CollectionViewStackFlowLayout.scaleRatio",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 32,
+      "symbol": "CollectionViewStackFlowLayout.scaleRatio",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 34,
+      "symbol": "CollectionViewStackFlowLayout.additionScale",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 34,
+      "symbol": "CollectionViewStackFlowLayout.additionScale",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 36,
+      "symbol": "CollectionViewStackFlowLayout.openAnimating",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 36,
+      "symbol": "CollectionViewStackFlowLayout.openAnimating",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 38,
+      "symbol": "CollectionViewStackFlowLayout.dxOffset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 38,
+      "symbol": "CollectionViewStackFlowLayout.dxOffset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 43,
+      "symbol": "CollectionViewStackFlowLayout.layoutAttributesForElements(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 43,
+      "symbol": "CollectionViewStackFlowLayout.layoutAttributesForElements(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 61,
+      "symbol": "CollectionViewStackFlowLayout.shouldInvalidateLayout(forBoundsChange:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 61,
+      "symbol": "CollectionViewStackFlowLayout.shouldInvalidateLayout(forBoundsChange:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 69,
+      "symbol": "CollectionViewStackFlowLayout.updateCellAttributes(_:headerAttributes:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 69,
+      "symbol": "CollectionViewStackFlowLayout.updateCellAttributes(_:headerAttributes:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 93,
+      "symbol": "CollectionViewStackFlowLayout.transformScale(_:allWidth:offset:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 93,
+      "symbol": "CollectionViewStackFlowLayout.transformScale(_:allWidth:offset:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 107,
+      "symbol": "CollectionViewStackFlowLayout.transformMove(_:itemWidth:offset:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 107,
+      "symbol": "CollectionViewStackFlowLayout.transformMove(_:itemWidth:offset:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 122,
+      "symbol": "CollectionViewStackFlowLayout.calculateAlpha(_:itemWidth:offset:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/CollectionView/CollectionViewStackFlowLayout.swift",
+      "line": 122,
+      "symbol": "CollectionViewStackFlowLayout.calculateAlpha(_:itemWidth:offset:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
       "line": 25,
       "symbol": "NavigationStack.init(nibName:bundle:)",
@@ -8034,6 +10659,62 @@
       "line": 31,
       "symbol": "NavigationStack.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
+      "line": 49,
+      "symbol": "NavigationStack.overlay",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
+      "line": 49,
+      "symbol": "NavigationStack.overlay",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
+      "line": 51,
+      "symbol": "NavigationStack.scaleRatio",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
+      "line": 51,
+      "symbol": "NavigationStack.scaleRatio",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
+      "line": 53,
+      "symbol": "NavigationStack.scaleValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
+      "line": 53,
+      "symbol": "NavigationStack.scaleValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
+      "line": 55,
+      "symbol": "NavigationStack.screens",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
+      "line": 55,
+      "symbol": "NavigationStack.screens",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -8089,6 +10770,20 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
       "line": 109,
       "symbol": "NavigationStack.navigationController(_:animationControllerFor:from:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
+      "line": 131,
+      "symbol": "NavigationStack.controllerDidSelected(index:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UINavigationController/NavigationStacks/NavigationStack.swift",
+      "line": 131,
+      "symbol": "NavigationStack.controllerDidSelected(index:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -8304,6 +10999,48 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UITableView/CollapsibleTableViewSections/CollapsibleTableSectionViewController.swift",
+      "line": 45,
+      "symbol": "CollapsibleTableSectionViewController._tableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UITableView/CollapsibleTableViewSections/CollapsibleTableSectionViewController.swift",
+      "line": 45,
+      "symbol": "CollapsibleTableSectionViewController._tableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UITableView/CollapsibleTableViewSections/CollapsibleTableSectionViewController.swift",
+      "line": 47,
+      "symbol": "CollapsibleTableSectionViewController._sectionsState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UITableView/CollapsibleTableViewSections/CollapsibleTableSectionViewController.swift",
+      "line": 47,
+      "symbol": "CollapsibleTableSectionViewController._sectionsState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UITableView/CollapsibleTableViewSections/CollapsibleTableSectionViewController.swift",
+      "line": 49,
+      "symbol": "CollapsibleTableSectionViewController.tableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UITableView/CollapsibleTableViewSections/CollapsibleTableSectionViewController.swift",
+      "line": 49,
+      "symbol": "CollapsibleTableSectionViewController.tableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UITableView/CollapsibleTableViewSections/CollapsibleTableSectionViewController.swift",
       "line": 60,
       "symbol": "CollapsibleTableSectionViewController.isSectionCollapsed(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -8313,6 +11050,20 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UITableView/CollapsibleTableViewSections/CollapsibleTableSectionViewController.swift",
       "line": 60,
       "symbol": "CollapsibleTableSectionViewController.isSectionCollapsed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UITableView/CollapsibleTableViewSections/CollapsibleTableSectionViewController.swift",
+      "line": 69,
+      "symbol": "CollapsibleTableSectionViewController.getSectionsNeedReload(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing/UITableView/CollapsibleTableViewSections/CollapsibleTableSectionViewController.swift",
+      "line": 69,
+      "symbol": "CollapsibleTableSectionViewController.getSectionsNeedReload(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -8962,6 +11713,13 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 210,
+      "symbol": "BundleK.documentsDirectoryURL(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
       "line": 215,
       "symbol": "BundleK.filePathInDocumentsDirectory(_:toFile:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -8976,6 +11734,27 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 287,
+      "symbol": "Lazy",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 290,
+      "symbol": "Lazy.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 302,
+      "symbol": "Lazy.init(initializer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
       "line": 309,
       "symbol": "UIColorFromRGB(_:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
@@ -8985,6 +11764,139 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
       "line": 320,
       "symbol": "UIBarButtonItem.isHidden",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 332,
+      "symbol": "String.hexaToInt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 334,
+      "symbol": "String.hexaToDouble",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 336,
+      "symbol": "String.hexaToBinary",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 338,
+      "symbol": "String.decimalToHexa",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 340,
+      "symbol": "String.decimalToBinary",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 342,
+      "symbol": "String.binaryToInt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 344,
+      "symbol": "String.binaryToDouble",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 346,
+      "symbol": "String.binaryToHexa",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 351,
+      "symbol": "Int.binaryString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 353,
+      "symbol": "Int.hexaString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 355,
+      "symbol": "Int.doubleValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 377,
+      "symbol": "Double.week",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 378,
+      "symbol": "Double.weeks",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 380,
+      "symbol": "Double.month",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 381,
+      "symbol": "Double.months",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 383,
+      "symbol": "Double.year",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 384,
+      "symbol": "Double.years",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 386,
+      "symbol": "Double.ago",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 390,
+      "symbol": "Double.future",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -9025,320 +11937,537 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 485,
+      "line": 484,
+      "symbol": "String.trim",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 489,
       "symbol": "OptionalString",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 490,
+      "line": 494,
       "symbol": "Optional.isNilOrEmpty",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 495,
+      "line": 499,
       "symbol": "Regex",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 497,
+      "line": 501,
       "symbol": "Regex.Email",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 498,
+      "line": 502,
       "symbol": "Regex.Number",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 528,
-      "symbol": "String.lastPathComponent",
+      "line": 504,
+      "symbol": "Regex.pattern",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
       "line": 532,
+      "symbol": "String.lastPathComponent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 536,
       "symbol": "String.stringByDeletingPathExtension",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 537,
+      "line": 541,
       "symbol": "String.stripNonNumeric()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 544,
+      "line": 548,
       "symbol": "String.currencyWithChange()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 559,
+      "line": 563,
       "symbol": "String.currencyWithoutChange()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 575,
+      "line": 579,
       "symbol": "String.numberWithDecimal(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 590,
+      "line": 594,
       "symbol": "String.numberWithoutDecimal()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 605,
+      "line": 609,
       "symbol": "String.kValue()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 626,
+      "line": 630,
       "symbol": "NSNumber.currencyWithChange(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 640,
+      "line": 644,
       "symbol": "NSNumber.currencyWithoutChange()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 655,
+      "line": 659,
       "symbol": "NSNumber.numberWithDecimal(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 669,
+      "line": 673,
       "symbol": "NSNumber.numberWithoutDecimal()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 683,
+      "line": 687,
       "symbol": "NSNumber.kValue(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 701,
+      "line": 705,
       "symbol": "NSNumber.percentValue(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 720,
+      "line": 724,
       "symbol": "UITableView.hideAllCellSeparators()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 727,
+      "line": 731,
       "symbol": "UITableView.setSeparatorInsetLeft()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 752,
+      "line": 756,
       "symbol": "UITableView.blurSeperator()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 766,
+      "line": 770,
       "symbol": "UITableView.basicCleanup()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 806,
+      "line": 782,
+      "symbol": "UIView.insertBlurView(_:style:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 795,
+      "symbol": "CountedColor",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 796,
+      "symbol": "CountedColor.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 798,
+      "symbol": "CountedColor.count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 801,
+      "symbol": "CountedColor.init(color:count:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 810,
       "symbol": "UIView.optimize()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 815,
+      "line": 819,
       "symbol": "UIImage.original",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 820,
+      "line": 824,
       "symbol": "UIImage.template",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 991,
+      "line": 995,
       "symbol": "XibView",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 996,
+      "line": 997,
+      "symbol": "XibView.contentView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 998,
+      "symbol": "XibView.nibName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1000,
       "symbol": "XibView.awakeFromNib()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1001,
+      "line": 1005,
       "symbol": "XibView.xibSetup()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1009,
+      "line": 1013,
       "symbol": "XibView.loadViewFromNib()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1016,
+      "line": 1020,
       "symbol": "XibView.prepareForInterfaceBuilder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1026,
+      "line": 1030,
       "symbol": "UIView.fromNib(nibNameOrNil:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1030,
+      "line": 1034,
       "symbol": "UIView.fromNib(nibNameOrNil:type:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1035,
+      "line": 1039,
       "symbol": "UIView.fromNib(nibNameOrNil:type:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1053,
+      "line": 1057,
       "symbol": "UIView.nibName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1057,
+      "line": 1061,
       "symbol": "UIView.nib",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1110,
-      "symbol": "UISearchController.isEmpty",
+      "line": 1075,
+      "symbol": "HighlightableButton",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1077,
+      "symbol": "HighlightableButton.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1082,
+      "symbol": "HighlightableButton.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1087,
+      "symbol": "HighlightableButton.setup()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1093,
+      "symbol": "HighlightableButton.isHighlighted",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
       "line": 1114,
+      "symbol": "UISearchController.isEmpty",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1118,
       "symbol": "UISearchController.isFiltering",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1120,
+      "line": 1124,
       "symbol": "SearchFooter",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1124,
+      "line": 1126,
+      "symbol": "SearchFooter.label",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1128,
       "symbol": "SearchFooter.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1129,
+      "line": 1133,
       "symbol": "SearchFooter.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1144,
+      "line": 1138,
+      "symbol": "SearchFooter.configureView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1148,
       "symbol": "SearchFooter.draw(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1166,
+      "line": 1154,
+      "symbol": "SearchFooter.hideFooter()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1160,
+      "symbol": "SearchFooter.showFooter()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1170,
       "symbol": "SearchFooter.setNotFiltering()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1171,
+      "line": 1175,
       "symbol": "SearchFooter.setIsFilteringToShow(filteredItemCount:of:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
-      "line": 1195,
+      "line": 1199,
       "symbol": "NSManagedObject.toDict()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1211,
+      "symbol": "IBGradientView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1213,
+      "symbol": "IBGradientView.startColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1214,
+      "symbol": "IBGradientView.endColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1215,
+      "symbol": "IBGradientView.startLocation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1216,
+      "symbol": "IBGradientView.endLocation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1217,
+      "symbol": "IBGradientView.horizontalMode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1218,
+      "symbol": "IBGradientView.diagonalMode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1220,
+      "symbol": "IBGradientView.layerClass",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1222,
+      "symbol": "IBGradientView.gradientLayer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1224,
+      "symbol": "IBGradientView.updatePoints()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1233,
+      "symbol": "IBGradientView.updateLocations()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1236,
+      "symbol": "IBGradientView.updateColors()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Testing.swift",
+      "line": 1240,
+      "symbol": "IBGradientView.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/CodableKit/CodableKit+Decodable.swift",
       "line": 44,
       "symbol": "JSONDecoder.DateDecodingStrategy.datetimeDotNet",
@@ -9577,6 +12706,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/CodableKit/CodableKit.swift",
+      "line": 22,
+      "symbol": "CodableKit.log(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/CodableKit/CodableKit.swift",
+      "line": 22,
+      "symbol": "CodableKit.log(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/ThemeKit/ThemeKit.swift",
       "line": 3,
       "symbol": "Theme",
@@ -9717,59 +12860,115 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit.swift",
-      "line": 5,
-      "symbol": "UpdateKit",
-      "symbol_kind": "source.lang.swift.decl.struct",
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 33,
+      "symbol": "AppStore_Apps_Version.Id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit.swift",
-      "line": 5,
-      "symbol": "UpdateKit",
-      "symbol_kind": "source.lang.swift.decl.struct",
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 33,
+      "symbol": "AppStore_Apps_Version.Id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit.swift",
-      "line": 9,
-      "symbol": "UpdateKit.shared",
-      "symbol_kind": "source.lang.swift.decl.var.static",
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 34,
+      "symbol": "AppStore_Apps_Version.AppId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit.swift",
-      "line": 9,
-      "symbol": "UpdateKit.shared",
-      "symbol_kind": "source.lang.swift.decl.var.static",
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 34,
+      "symbol": "AppStore_Apps_Version.AppId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit.swift",
-      "line": 13,
-      "symbol": "UpdateKit.Configurations",
-      "symbol_kind": "source.lang.swift.decl.struct",
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 35,
+      "symbol": "AppStore_Apps_Version.vMajor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit.swift",
-      "line": 13,
-      "symbol": "UpdateKit.Configurations",
-      "symbol_kind": "source.lang.swift.decl.struct",
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 35,
+      "symbol": "AppStore_Apps_Version.vMajor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit.swift",
-      "line": 15,
-      "symbol": "UpdateKit.Configurations.isLoggingEnabled",
-      "symbol_kind": "source.lang.swift.decl.var.static",
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 36,
+      "symbol": "AppStore_Apps_Version.vMinor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit.swift",
-      "line": 15,
-      "symbol": "UpdateKit.Configurations.isLoggingEnabled",
-      "symbol_kind": "source.lang.swift.decl.var.static",
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 36,
+      "symbol": "AppStore_Apps_Version.vMinor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 37,
+      "symbol": "AppStore_Apps_Version.vPatch",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 37,
+      "symbol": "AppStore_Apps_Version.vPatch",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 38,
+      "symbol": "AppStore_Apps_Version.PList_URL",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 38,
+      "symbol": "AppStore_Apps_Version.PList_URL",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 39,
+      "symbol": "AppStore_Apps_Version.ReleaseDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 39,
+      "symbol": "AppStore_Apps_Version.ReleaseDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 41,
+      "symbol": "AppStore_Apps_Version.versionString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/Toolkits/UpdateKit/UpdateKit-Enums.swift",
+      "line": 41,
+      "symbol": "AppStore_Apps_Version.versionString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -10138,6 +13337,34 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/UI/UINavigationController/ModalNavigationController.swift",
+      "line": 13,
+      "symbol": "ModalNavigationController.Configurations",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/UINavigationController/ModalNavigationController.swift",
+      "line": 13,
+      "symbol": "ModalNavigationController.Configurations",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/UINavigationController/ModalNavigationController.swift",
+      "line": 14,
+      "symbol": "ModalNavigationController.Configurations.dragThreshold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/UINavigationController/ModalNavigationController.swift",
+      "line": 14,
+      "symbol": "ModalNavigationController.Configurations.dragThreshold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/UINavigationController/ModalNavigationController.swift",
       "line": 22,
       "symbol": "ModalNavigationController.init(rootViewController:dismissWithButton:dismissWithSwipe:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -10176,6 +13403,34 @@
       "line": 40,
       "symbol": "ModalNavigationController.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": null,
+      "symbol": "WebView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": null,
+      "symbol": "WebView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": null,
+      "symbol": "WebView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": null,
+      "symbol": "WebView",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -10264,6 +13519,174 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 15,
+      "symbol": "WebView.storedStatusColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 15,
+      "symbol": "WebView.storedStatusColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 16,
+      "symbol": "WebView.navBarTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 16,
+      "symbol": "WebView.navBarTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 18,
+      "symbol": "WebView.buttonColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 18,
+      "symbol": "WebView.buttonColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 19,
+      "symbol": "WebView.titleColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 19,
+      "symbol": "WebView.titleColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 21,
+      "symbol": "WebView.closing",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 21,
+      "symbol": "WebView.closing",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 22,
+      "symbol": "WebView.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 22,
+      "symbol": "WebView.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 24,
+      "symbol": "WebView.webView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 24,
+      "symbol": "WebView.webView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 32,
+      "symbol": "WebView.backBarButtonItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 32,
+      "symbol": "WebView.backBarButtonItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 39,
+      "symbol": "WebView.forwardBarButtonItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 39,
+      "symbol": "WebView.forwardBarButtonItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 46,
+      "symbol": "WebView.refreshBarButtonItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 46,
+      "symbol": "WebView.refreshBarButtonItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 52,
+      "symbol": "WebView.stopBarButtonItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 52,
+      "symbol": "WebView.stopBarButtonItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 58,
+      "symbol": "WebView.actionBarButtonItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 58,
+      "symbol": "WebView.actionBarButtonItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
       "line": 65,
       "symbol": "WebView.init(urlString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -10301,6 +13724,20 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
       "line": 79,
       "symbol": "WebView.init(aRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 85,
+      "symbol": "WebView.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 85,
+      "symbol": "WebView.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -10376,6 +13813,104 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 148,
+      "symbol": "WebView.updateToolbarItems()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 148,
+      "symbol": "WebView.updateToolbarItems()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 197,
+      "symbol": "WebView.goBackTapped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 197,
+      "symbol": "WebView.goBackTapped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 202,
+      "symbol": "WebView.goForwardTapped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 202,
+      "symbol": "WebView.goForwardTapped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 207,
+      "symbol": "WebView.reloadTapped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 207,
+      "symbol": "WebView.reloadTapped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 212,
+      "symbol": "WebView.stopTapped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 212,
+      "symbol": "WebView.stopTapped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 218,
+      "symbol": "WebView.actionButtonTapped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 218,
+      "symbol": "WebView.actionButtonTapped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 239,
+      "symbol": "WebView.doneButtonTapped()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 239,
+      "symbol": "WebView.doneButtonTapped()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
       "line": 258,
       "symbol": "WebView.webView(_:didStartProvisionalNavigation:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -10427,6 +13962,20 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
       "line": 285,
       "symbol": "WebView.webView(_:decidePolicyFor:decisionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 335,
+      "symbol": "WebView.openCustomApp(urlScheme:additional_info:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebView.swift",
+      "line": 335,
+      "symbol": "WebView.openCustomApp(urlScheme:additional_info:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -10502,6 +14051,20 @@
     },
     {
       "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebViewModal.swift",
+      "line": 11,
+      "symbol": "WebViewModal.webViewDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebViewModal.swift",
+      "line": 11,
+      "symbol": "WebViewModal.webViewDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebViewModal.swift",
       "line": 13,
       "symbol": "WebViewModal.init(urlString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -10567,6 +14130,20 @@
       "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebViewModal.swift",
       "line": 37,
       "symbol": "WebViewModal.init(request:theme:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebViewModal.swift",
+      "line": 73,
+      "symbol": "WebViewModal.init(nibName:bundle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/multinerd/Desktop/Mia/Mia/UI/WebView/WebViewModal.swift",
+      "line": 73,
+      "symbol": "WebViewModal.init(nibName:bundle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -10599,5 +14176,5 @@
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/multinerd/Desktop/Mia/Mia"
+  "source_directory": "/Users/multinerd/Desktop/Mia"
 }
