@@ -8,12 +8,9 @@ extension Encodable {
         do {
             let encoder = JSONEncoder()
             encoder.outputFormatting = CodableKit.Configurations.Encoding.outputFormatting
-            if #available(iOS 10.0, *) {
-                encoder.dateEncodingStrategy = CodableKit.Configurations.Encoding.dateStrategy
-            } else {
-                // Fallback on earlier versions
-            }
+            encoder.dateEncodingStrategy = CodableKit.Configurations.Encoding.dateStrategy
             encoder.dataEncodingStrategy = CodableKit.Configurations.Encoding.dataStrategy
+
             
             return try encoder.encode(self)
         } catch let error {
