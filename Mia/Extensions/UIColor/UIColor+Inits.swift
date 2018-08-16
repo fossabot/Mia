@@ -179,10 +179,12 @@ public extension UIColor {
     /// - Parameter hex: The hex value representing the color. Example: `0xFF0000`.
     public convenience init(hex6Value: UInt32, alpha: CGFloat = 1) {
 
-        self.init(red: CGFloat((hex6Value & 0xFF0000) >> 16) / 255.0,
-                  green: CGFloat((hex6Value & 0x00FF00) >> 8) / 255.0,
-                  blue: CGFloat(hex6Value & 0x0000FF) / 255.0,
-                  alpha: alpha)
+        let rgba  = min(hex6Value, 0xFFFFFF)
+        let red   = CGFloat((rgba & 0xFF0000) >> 16) / 255.0
+        let green = CGFloat((rgba & 0x00FF00) >> 8)  / 255.0
+        let blue  = CGFloat((rgba & 0x0000FF) >> 0)  / 255.0
+        
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
 
 
@@ -190,11 +192,28 @@ public extension UIColor {
     ///
     /// - Parameter hex: The hex value representing the color. Example: `0xFF0000FF`.
     public convenience init(hex8Value: UInt32) {
-
-        self.init(red: CGFloat((hex8Value & 0xFF000000) >> 24) / 255.0,
-                  green: CGFloat((hex8Value & 0x00FF0000) >> 16) / 255.0,
-                  blue: CGFloat((hex8Value & 0x0000FF00) >> 8) / 255.0,
-                  alpha: CGFloat(hex8Value & 0x000000FF) / 255.0)
+        
+        let rgba  = min(hex8Value, 0xFFFFFFFF)
+        let red   = CGFloat((rgba & 0xFF000000) >> 24) / 255.0
+        let green = CGFloat((rgba & 0x00FF0000) >> 16) / 255.0
+        let blue  = CGFloat((rgba & 0x0000FF00) >> 8)  / 255.0
+        let alpha = CGFloat((rgba & 0x000000FF) >> 0)  / 255.0
+        
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
+    /// Initializes and returns a UIColor from a hex UInt.
+    ///
+    /// - Parameter hex: The hex value representing the color. Example: `0xFF0000FF`.
+    public convenience init(rgba: UInt) {
+        
+        let rgba  = min(rgba, 0xFFFFFFFF)
+        let red   = CGFloat((rgba & 0xFF000000) >> 24) / 255.0
+        let green = CGFloat((rgba & 0x00FF0000) >> 16) / 255.0
+        let blue  = CGFloat((rgba & 0x0000FF00) >> 8)  / 255.0
+        let alpha = CGFloat((rgba & 0x000000FF) >> 0)  / 255.0
+        
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     

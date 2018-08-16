@@ -149,7 +149,11 @@ public struct UpdateKit {
         
         alert.addAction(UIAlertAction(title: okButtonTitle, style: .default, handler: { Void in
             guard let url = URL(string: Configurations.updateLink) else { return }
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
         }))
         
         if Configurations.updateType == .normal {

@@ -3,7 +3,7 @@ platform :ios, '10.0'
 
 target 'Mia_Example' do
     use_frameworks!
-
+    inhibit_all_warnings!
     pod 'Mia', :path => '../'
 
 

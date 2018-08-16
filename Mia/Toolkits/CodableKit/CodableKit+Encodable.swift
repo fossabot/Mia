@@ -1,5 +1,5 @@
 extension Encodable {
-
+    
     /// Encode the model to a Data object.
     ///
     /// - Returns: The Data object.
@@ -8,7 +8,11 @@ extension Encodable {
         do {
             let encoder = JSONEncoder()
             encoder.outputFormatting = CodableKit.Configurations.Encoding.outputFormatting
-            encoder.dateEncodingStrategy = CodableKit.Configurations.Encoding.dateStrategy
+            if #available(iOS 10.0, *) {
+                encoder.dateEncodingStrategy = CodableKit.Configurations.Encoding.dateStrategy
+            } else {
+                // Fallback on earlier versions
+            }
             encoder.dataEncodingStrategy = CodableKit.Configurations.Encoding.dataStrategy
             
             return try encoder.encode(self)

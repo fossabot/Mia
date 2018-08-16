@@ -128,6 +128,22 @@ Not yet compatible with `swift package manager`. Feel free to submit a pull requ
 - [ ] Refactor Code to get an _A_ from codebeat.
 
 
+## Why Open-Source?
+
+Look, ladies and gents, you are much smarter than I. I am a working developer who is still learning everyday. I made this open-source for one reasons:
+
+- If smarter, more experienced Swift developers can suggest improvements or fix my bugs, I will learn from them.
+
+Which is a nice segue to...
+
+## How to Contribute
+
+1. Fork.
+2. Create your feature branch (`git checkout -b my-new-feature`).
+3. Commit your changes (`git commit -am 'Added some feature'`).
+4. Push to the branch (`git push origin my-new-feature`).
+5. Create new Pull Request.
+
 
 ## License
 

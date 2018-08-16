@@ -21,7 +21,11 @@ extension Decodable {
     public static func decode(data: Data, keyPath: String? = nil) -> Self? {
 
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = CodableKit.Configurations.Decoding.dateStrategy
+        if #available(iOS 10.0, *) {
+            decoder.dateDecodingStrategy = CodableKit.Configurations.Decoding.dateStrategy
+        } else {
+            // Fallback on earlier versions
+        }
         decoder.dataDecodingStrategy = CodableKit.Configurations.Decoding.dataStrategy
 
         do {

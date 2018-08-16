@@ -291,14 +291,22 @@ extension WebView: WKNavigationDelegate {
 
         if (navigationAction.targetFrame == nil) {
             if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
             }
         }
 
         // To connnect app store
         if url.host == "itunes.apple.com" {
             if UIApplication.shared.canOpenURL(navigationAction.request.url!) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
                 decisionHandler(.cancel)
                 return
             }
@@ -337,7 +345,11 @@ extension WebView {
         if let requestUrl: URL = URL(string: "\(urlScheme)\(additional_info)") {
             let application: UIApplication = UIApplication.shared
             if application.canOpenURL(requestUrl) {
-                application.open(requestUrl, options: [:], completionHandler: nil)
+                if #available(iOS 10.0, *) {
+                    application.open(requestUrl, options: [:], completionHandler: nil)
+                } else {
+                    application.openURL(requestUrl)
+                }
             }
         }
     }

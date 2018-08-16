@@ -17,10 +17,25 @@ public struct Mia {
 
 
 
+
+func BG(_ block: @escaping ()->Void) {
+    DispatchQueue.global(qos: .default).async(execute: block)
+}
+
+func UI(_ block: @escaping ()->Void) {
+    DispatchQueue.main.async(execute: block)
+}
+
+
+
 func openSettings()  {
     DispatchQueue.main.async {
         if let settingsURL = URL(string: UIApplicationOpenSettingsURLString) {
-            UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(settingsURL)
+            }
         }
     }
 }

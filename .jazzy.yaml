@@ -41,7 +41,7 @@ dash_url: https://multinerd.github.io/Mia/docsets/realm.xml
 github_url: https://github.com/multinerd/Mia
 
 # GITHUB FILE PREFIX
-github_file_prefix: https://github.com/multinerd/Mia/tree/master/Mia
+github_file_prefix: https://github.com/multinerd/Mia/tree/master
 
 # DISABLE SEARCH
 disable_search: false

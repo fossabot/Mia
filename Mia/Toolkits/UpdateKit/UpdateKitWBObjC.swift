@@ -12,6 +12,7 @@ private let versionKey: String = "Multinerd.UpdateKitWB.CurrentVersion"
 
 // This class has a very specific use case. Not for public use.
 @objcMembers
+@available(iOS 10.0, *)
 public class UpdateKitWBObjC: NSObject {
     
     // MARK: - *** Shared ***

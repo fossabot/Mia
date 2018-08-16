@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name             = 'Mia'
-    s.version          = '0.1.13'
+    s.version          = '0.1.14'
     s.summary          = 'A list of tools to steamline my development.'
     s.description      = <<-DESC
     A collection of tools and utilities to streamline .
@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
     s.author           = { 'multinerd' => 'multinerd@users.noreply.github.com' }
     s.source = { :git => 'https://github.com/multinerd/Mia.git', :tag => s.version.to_s }
     
-    s.ios.deployment_target = '10.0'
+    s.ios.deployment_target = '9.0'
     
     s.framework = 'UIKit'
     
-    s.dependency 'Alamofire', '~> 4.7.0'
+    s.dependency 'Alamofire', '~> 4.7.2'
     s.dependency 'Moya', '~> 11.0.1'
     
     s.source_files = 'Mia/**/*.{swift}'

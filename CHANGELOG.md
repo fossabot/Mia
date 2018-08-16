@@ -14,6 +14,9 @@
 
 #### Security
 
+## Version 0.1.14
+
+- iOS 9.0 Compatible
 
 
 ## Version 0.1.13

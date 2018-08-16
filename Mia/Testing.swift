@@ -269,7 +269,7 @@ public struct BundleK {
 
 public func vibrate()  {
     // http://www.mikitamanko.com/blog/2017/01/29/haptic-feedback-with-uifeedbackgenerator/
-    if Device.Sensors.isHapticFeedbackAvailable {
+    if #available(iOS 10.0, *), Device.Sensors.isHapticFeedbackAvailable {
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.prepare()
         generator.impactOccurred()

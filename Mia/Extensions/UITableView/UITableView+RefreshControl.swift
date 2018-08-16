@@ -20,7 +20,11 @@ public extension UITableView {
         refresh.addTarget(target, action: action, for: .valueChanged)
         refresh.attributedTitle = NSAttributedString(string: myString, attributes: myAttribute)
 
-        refreshControl = refresh
+        if #available(iOS 10.0, *) {
+            refreshControl = refresh
+        } else {
+            addSubview(refresh)
+        }
 
     }
 
@@ -28,7 +32,16 @@ public extension UITableView {
     func endRefreshing() {
 
         reloadData()
-        refreshControl?.endRefreshing()
+        if #available(iOS 10.0, *) {
+            refreshControl?.endRefreshing()
+        } else {
+            let subviews = subViews(type: UIRefreshControl.self)
+            for subview in subviews {
+                if let view = subview as? UIRefreshControl {
+                    view.endRefreshing()
+                }
+            }
+        }
 
     }
 

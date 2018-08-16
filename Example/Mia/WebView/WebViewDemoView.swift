@@ -2,6 +2,8 @@
 import UIKit
 import Mia
 
+
+@available(iOS 10.0, *)
 class WebViewDemoView: UIViewController {
 
     let generator = UIImpactFeedbackGenerator(style: .heavy)
@@ -44,6 +46,7 @@ class WebViewDemoView: UIViewController {
 
 }
 
+@available(iOS 10.0, *)
 extension WebViewDemoView: WebViewDelegate {
     
     func didStartLoading() {
