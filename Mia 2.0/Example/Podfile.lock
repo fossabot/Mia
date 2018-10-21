@@ -1,0 +1,16 @@
+PODS:
+  - Mia (0.1.0)
+
+DEPENDENCIES:
+  - Mia (from `../`)
+
+EXTERNAL SOURCES:
+  Mia:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Mia: d43a39ebcfa7a3d32129d567e3bd2abec404e760
+
+PODFILE CHECKSUM: 2e5824bfbe797699f1b388267de680cabf16aaf5
+
+COCOAPODS: 1.6.0.beta.2

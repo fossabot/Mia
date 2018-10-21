@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Mia_Example' do
+  pod 'Mia', :path => '../'
+
+  target 'Mia_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
