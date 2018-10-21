@@ -3,7 +3,6 @@ import Alamofire
 private let versionKey: String = "Multinerd.UpdateKitWB.CurrentVersion"
 
 // This class has a very specific use case. Not for public use.
-@available(iOS 10.0, *)
 public struct UpdateKitWB {
 
     // MARK: - *** Shared ***
@@ -53,25 +52,27 @@ public struct UpdateKitWB {
         let encoding: JSONEncoding = JSONEncoding.default
         let parameters: [String: Any] = [ "BundleId": bundleIdentifier, "Version": currentVersion ]
 
-        let oldDecodeDate = CodableKit.Configurations.Decoding.dateStrategy
-        CodableKit.Configurations.Decoding.dateStrategy = .datetimeDotNet
         
         log(message: "Checking for updates...")
+        
+        var oldDecodeDate = CodableKit.Configurations.Decoding.dateStrategy
+        CodableKit.Configurations.Decoding.dateStrategy = .datetimeDotNet
+        
         Alamofire.request(url, method: .post, parameters: parameters, encoding: encoding, headers: postHeaders).responseData { (response) in
             switch response.result {
-
-                case .failure(let error):
-                    self.log(message: "Error \(error)")
-
-                case .success(let value):
-                    if !value.isEmpty, let entities = AppStore_Apps_Version.decode(data: value) {
-                        self.log(message: "Update Available | New: \(entities.versionString) | Cur: \(self.currentVersion)")
-                        DispatchQueue.main.async(execute: { self.showAlert(url: entities.PList_URL) })
-                    } else {
-                        self.log(message: "No Updates Available")
-                    }
                 
-                    CodableKit.Configurations.Decoding.dateStrategy = oldDecodeDate
+            case .failure(let error):
+                self.log(message: "Error \(error)")
+                
+            case .success(let value):
+                if !value.isEmpty, let entities = AppStore_Apps_Version.decode(data: value) {
+                    self.log(message: "Update Available | New: \(entities.versionString) | Cur: \(self.currentVersion)")
+                    DispatchQueue.main.async(execute: { self.showAlert(url: entities.PList_URL) })
+                } else {
+                    self.log(message: "No Updates Available")
+                }
+                
+                CodableKit.Configurations.Decoding.dateStrategy = oldDecodeDate
             }
         }
     }
@@ -128,7 +129,12 @@ public struct UpdateKitWB {
 
         alert.addAction(UIAlertAction(title: okButtonTitle, style: .default, handler: { Void in
             guard let url = URL(string: self.createDownloadLink(url: url)) else { return }
-            UIApplication.shared.open(url, options: [:]) { if ($0 == true) { exit(0) } }
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:]) { if ($0 == true) { exit(0) } }
+            } else {
+                UIApplication.shared.openURL(url)
+                exit(0)
+            }
         }))
 
         if Configurations.updateType == .normal {

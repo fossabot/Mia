@@ -19,9 +19,11 @@
 		3B82D3D3205645280096BCC0 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82D3D2205645280096BCC0 /* DemoView.swift */; };
 		3B8EF8D31F1315CB002D8387 /* RosewoodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */; };
 		3BA5387D2038D9F4002EE6B5 /* Global Functions Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA5387C2038D9F4002EE6B5 /* Global Functions Tests.swift */; };
+		3BA5FAD0212B113D00A3DA9D /* Swift+Url_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA5FACF212B113D00A3DA9D /* Swift+Url_Tests.swift */; };
 		3BB469B21F647A81007B98CB /* DeviceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB469B11F647A81007B98CB /* DeviceKitTests.swift */; };
 		3BC26BED1F4A37A800437A26 /* CollapsibleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */; };
 		3BC26BF51F4A552600437A26 /* MiaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC26BF41F4A552600437A26 /* MiaTheme.swift */; };
+		3BC614F92169FDD900535E0F /* ThenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC614F82169FDD900535E0F /* ThenTests.swift */; };
 		3BC95ABF201F6DBB000DEA5F /* GreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC95ABD201F6DBB000DEA5F /* GreenViewController.xib */; };
 		3BD013FB1F466AAF00CC3150 /* DefaultTableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */; };
 		3BD014041F4670A600CC3150 /* IBOutletTableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD014031F4670A600CC3150 /* IBOutletTableViewDemo.swift */; };
@@ -84,6 +86,7 @@
 		3B99391F20864662007CF47C /* INSPIRATION.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = INSPIRATION.md; path = ../INSPIRATION.md; sourceTree = "<group>"; };
 		3B99392020864662007CF47C /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		3BA5387C2038D9F4002EE6B5 /* Global Functions Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Functions Tests.swift"; sourceTree = "<group>"; };
+		3BA5FACF212B113D00A3DA9D /* Swift+Url_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Url_Tests.swift"; sourceTree = "<group>"; };
 		3BA9F8641F5B868500553ABB /* Rosewood.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Rosewood.md; path = ../Documentation/Rosewood.md; sourceTree = "<group>"; };
 		3BA9F8661F5BACF100553ABB /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
 		3BA9F8671F5BACF100553ABB /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		3BB8D90020111A7D008EF0E5 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .jazzy.yaml; path = ../.jazzy.yaml; sourceTree = "<group>"; };
 		3BC26BEC1F4A37A800437A26 /* CollapsibleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollapsibleDataSource.swift; path = CollapsibleTableViewDemo/CollapsibleDataSource.swift; sourceTree = "<group>"; };
 		3BC26BF41F4A552600437A26 /* MiaTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiaTheme.swift; sourceTree = "<group>"; };
+		3BC614F82169FDD900535E0F /* ThenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThenTests.swift; sourceTree = "<group>"; };
 		3BC95ABD201F6DBB000DEA5F /* GreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreenViewController.xib; sourceTree = "<group>"; };
 		3BD013F41F466AAF00CC3150 /* DefaultTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableViewDemo.swift; path = CollapsibleTableViewDemo/DefaultTableViewDemo.swift; sourceTree = "<group>"; };
 		3BD014031F4670A600CC3150 /* IBOutletTableViewDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IBOutletTableViewDemo.swift; path = CollapsibleTableViewDemo/IBOutletTableViewDemo.swift; sourceTree = "<group>"; };
@@ -139,7 +143,9 @@
 		3B06DE6B1F0B25D700804181 /* ExampleTests for Mia */ = {
 			isa = PBXGroup;
 			children = (
+				3BC614F52169FD9700535E0F /* V2 */,
 				3B06DE6C1F0B25D700804181 /* ExampleTests.swift */,
+				3BA5FACC212B10AE00A3DA9D /* Extensions */,
 				3BA5387C2038D9F4002EE6B5 /* Global Functions Tests.swift */,
 				3B8EF8D21F1315CB002D8387 /* RosewoodTest.swift */,
 				3B0F87AF1F37E6A100111280 /* HTMLtoPDFTest.swift */,
@@ -209,6 +215,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		3BA5FACC212B10AE00A3DA9D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3BA5FACE212B112100A3DA9D /* Swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3BA5FACE212B112100A3DA9D /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				3BA5FACF212B113D00A3DA9D /* Swift+Url_Tests.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		3BA9F8621F5B5D3A00553ABB /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +238,30 @@
 				3B5BF14C1F92C62A006152ED /* FontKit.md */,
 			);
 			name = Documentation;
+			sourceTree = "<group>";
+		};
+		3BC614F52169FD9700535E0F /* V2 */ = {
+			isa = PBXGroup;
+			children = (
+				3BC614F62169FD9B00535E0F /* Syntax Sugar */,
+			);
+			path = V2;
+			sourceTree = "<group>";
+		};
+		3BC614F62169FD9B00535E0F /* Syntax Sugar */ = {
+			isa = PBXGroup;
+			children = (
+				3BC614F72169FDA700535E0F /* Then */,
+			);
+			path = "Syntax Sugar";
+			sourceTree = "<group>";
+		};
+		3BC614F72169FDA700535E0F /* Then */ = {
+			isa = PBXGroup;
+			children = (
+				3BC614F82169FDD900535E0F /* ThenTests.swift */,
+			);
+			path = Then;
 			sourceTree = "<group>";
 		};
 		3BD013E51F466A5000CC3150 /* CollapsibleTableViewDemo */ = {
@@ -469,7 +515,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Mia_Example/Pods-Mia_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Mia_Example/Pods-Mia_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Mia/Mia.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -484,7 +530,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mia_Example/Pods-Mia_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mia_Example/Pods-Mia_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		89053456F6F22615EF674810 /* [CP] Check Pods Manifest.lock */ = {
@@ -517,6 +563,8 @@
 				3B06DE6D1F0B25D700804181 /* ExampleTests.swift in Sources */,
 				3BB469B21F647A81007B98CB /* DeviceKitTests.swift in Sources */,
 				3B8EF8D31F1315CB002D8387 /* RosewoodTest.swift in Sources */,
+				3BC614F92169FDD900535E0F /* ThenTests.swift in Sources */,
+				3BA5FAD0212B113D00A3DA9D /* Swift+Url_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

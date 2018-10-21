@@ -1,36 +1,8 @@
 PODS:
   - Alamofire (4.7.3)
-  - Mia (0.1.14):
-    - Alamofire (~> 4.7.2)
-    - Mia/Deprecated (= 0.1.14)
-    - Mia/Extensions (= 0.1.14)
-    - Mia/Libraries (= 0.1.14)
-    - Mia/Sugar (= 0.1.14)
-    - Mia/Testing (= 0.1.14)
-    - Mia/Toolkits (= 0.1.14)
-    - Mia/UI (= 0.1.14)
-    - Moya (~> 11.0.1)
-  - Mia/Deprecated (0.1.14):
-    - Alamofire (~> 4.7.2)
-    - Moya (~> 11.0.1)
-  - Mia/Extensions (0.1.14):
-    - Alamofire (~> 4.7.2)
-    - Moya (~> 11.0.1)
-  - Mia/Libraries (0.1.14):
-    - Alamofire (~> 4.7.2)
-    - Moya (~> 11.0.1)
-  - Mia/Sugar (0.1.14):
-    - Alamofire (~> 4.7.2)
-    - Moya (~> 11.0.1)
-  - Mia/Testing (0.1.14):
-    - Alamofire (~> 4.7.2)
-    - Moya (~> 11.0.1)
-  - Mia/Toolkits (0.1.14):
-    - Alamofire (~> 4.7.2)
-    - Moya (~> 11.0.1)
-  - Mia/UI (0.1.14):
-    - Alamofire (~> 4.7.2)
-    - Moya (~> 11.0.1)
+  - Mia (0.1.15):
+    - Alamofire
+    - Moya
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
   - Moya/Core (11.0.2):
@@ -53,10 +25,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  Mia: 46cd59f74a2ed2648db0792969b0ac31c4d71434
+  Mia: 5a4ff2da5ebcaaa2696d1821c8f88cef199acf51
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
 
 PODFILE CHECKSUM: f254fa3963f7b602555f8744393499410b64988c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1

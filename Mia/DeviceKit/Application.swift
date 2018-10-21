@@ -1,3 +1,9 @@
+#if os(OSX)
+import Cocoa
+#else
+import UIKit
+#endif
+
 // MARK: - *** Application ***
 
 public struct Application {

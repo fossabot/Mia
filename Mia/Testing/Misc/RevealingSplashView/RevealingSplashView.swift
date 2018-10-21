@@ -339,7 +339,7 @@ public class RevealingSplashView: UIView {
                              let animation = CAKeyframeAnimation(keyPath: "transform.scale")
                              animation.values = [ 0, 0.1 * popForce, 0.015 * popForce, 0.2 * popForce, 0 ]
                              animation.keyTimes = [ 0, 0.25, 0.35, 0.55, 1 ]
-                             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+                             //animation.timingFunction = CAMediaTimingFunction.easeInEaseOut //  CAMediaTimingFunction(name: .easeInEaseOut)
                              animation.duration = CFTimeInterval(self.duration / 2)
                              animation.isAdditive = true
                              animation.repeatCount = Float(minimumBeats > 0 ? minimumBeats : 1)

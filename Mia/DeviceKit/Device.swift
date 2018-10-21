@@ -51,7 +51,7 @@ extension Device {
         }
 
         /// The battery's current
-        public static var state: UIDeviceBatteryState {
+        public static var state: UIDevice.BatteryState {
 
             UIDevice.current.isBatteryMonitoringEnabled = true
             let batteryState = UIDevice.current.batteryState
@@ -63,6 +63,7 @@ extension Device {
 }
 
 // MARK: - *** Network ***
+@available(*, deprecated, message: "Use Devices.Network instead.")
 extension Device {
 
     public struct Network {

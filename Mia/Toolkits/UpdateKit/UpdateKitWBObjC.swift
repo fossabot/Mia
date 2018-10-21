@@ -12,7 +12,6 @@ private let versionKey: String = "Multinerd.UpdateKitWB.CurrentVersion"
 
 // This class has a very specific use case. Not for public use.
 @objcMembers
-@available(iOS 10.0, *)
 public class UpdateKitWBObjC: NSObject {
     
     // MARK: - *** Shared ***
@@ -135,7 +134,11 @@ public class UpdateKitWBObjC: NSObject {
         
         alert.addAction(UIAlertAction(title: okButtonTitle, style: .default, handler: { Void in
             guard let url = URL(string: self.createDownloadLink(url: url)) else { return }
-            UIApplication.shared.open(url, options: [:]) { if ($0 == true) { exit(0) } }
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:]) { if ($0 == true) { exit(0) } }
+            } else {
+                UIApplication.shared.openURL(url)
+            }
         }))
         
         if updateType == .normal {

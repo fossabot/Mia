@@ -11,6 +11,9 @@
       location = "group:../Playgrounds"
       name = "Playgrounds">
       <FileRef
+         location = "group:Syntax Sugar.playground">
+      </FileRef>
+      <FileRef
          location = "group:/Users/multinerd/Desktop/Mia/Playgrounds/Global Functions Demo.playground">
       </FileRef>
       <FileRef

@@ -9,8 +9,8 @@ class FontKitDemoView: UIViewController {
 
         super.viewDidLoad()
 
-        loadFontKit()
-        addLabels()
+//        loadFontKit()
+//        addLabels()
     }
 
     func loadFontKit() {
