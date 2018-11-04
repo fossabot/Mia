@@ -12,8 +12,8 @@ public extension UICollectionView {
         }
 
         let myString = "Reloading Data..."
-        let myAttribute = [ NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-Light", size: 14.0)!,
-                            NSAttributedStringKey.foregroundColor: useDarkColors ? UIColor.lightText : UIColor.darkText
+        let myAttribute = [ NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 14.0)!,
+                            NSAttributedString.Key.foregroundColor: useDarkColors ? UIColor.lightText : UIColor.darkText
         ]
 
         let refresh = UIRefreshControl()

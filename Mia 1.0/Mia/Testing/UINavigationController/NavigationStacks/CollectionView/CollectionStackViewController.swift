@@ -50,7 +50,7 @@ class CollectionStackViewController: UICollectionViewController {
         if let collectionView = self.collectionView {
             collectionView.backgroundColor = bgColor
             collectionView.backgroundView = bgView
-            collectionView.decelerationRate = decelerationRate
+            collectionView.decelerationRate = UIScrollView.DecelerationRate(rawValue: decelerationRate)
         }
     }
 
@@ -98,7 +98,7 @@ class CollectionStackViewController: UICollectionViewController {
 
     // MARK: Helpers
 
-    fileprivate func scrollToIndex(_ index: Int, animated: Bool, position: UICollectionViewScrollPosition) {
+    fileprivate func scrollToIndex(_ index: Int, animated: Bool, position: UICollectionView.ScrollPosition) {
 
         let indexPath = IndexPath(item: index, section: 0)
         collectionView?.scrollToItem(at: indexPath, at: position, animated: animated)

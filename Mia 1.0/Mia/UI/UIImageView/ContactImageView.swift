@@ -135,12 +135,12 @@ open class ContactImageView: UIImageView {
      - returns: [String: AnyObject] to be used as an NSAttribute
      */
 
-    func getAttributedText(text: String, color: UIColor, textFont: UIFont) -> [NSAttributedStringKey: AnyObject] {
+    func getAttributedText(text: String, color: UIColor, textFont: UIFont) -> [NSAttributedString.Key: AnyObject] {
 
         let area: CGFloat = self.bounds.width * textFont.pointSize
         let size = sqrt(area / CGFloat(text.count))
-        let attribute: [NSAttributedStringKey: AnyObject] = [ NSAttributedStringKey.foregroundColor: color,
-                                                              NSAttributedStringKey.font: textFont.withSize(size) ]
+        let attribute: [NSAttributedString.Key: AnyObject] = [ NSAttributedString.Key.foregroundColor: color,
+                                                              NSAttributedString.Key.font: textFont.withSize(size) ]
         return attribute
     }
 

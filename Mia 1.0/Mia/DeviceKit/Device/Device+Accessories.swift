@@ -30,6 +30,6 @@ public extension Device.Accessories {
     public static var isHeadsetPluggedIn: Bool {
 
         let route = AVAudioSession.sharedInstance().currentRoute
-        return !route.outputs.filter({ $0.portType == AVAudioSessionPortHeadphones }).isEmpty
+        return !route.outputs.filter({ $0.portType == AVAudioSession.Port.headphones }).isEmpty
     }
 }

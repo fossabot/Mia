@@ -16,10 +16,6 @@ public extension ThemeUser {
     @available(*, message: "use `useAnimated` instead!")
     func use<T: Theme>(_ type: T.Type, apply: @escaping (Self, T) -> Void) {
 
-        if let theme = ThemeKit.shared.currentTheme as? T {
-            apply(self, theme)
-        }
-
         themeHandler.mapping[String(describing: type.self)] = { (themeUser: ThemeUser, theme: Theme) in
             guard let themeUser = themeUser as? Self,
                   let theme = theme as? T else {
@@ -36,12 +32,6 @@ public extension ThemeUser {
     ///   - type: The type of your own theme.
     ///   - apply: The function that gets called with animation. (ThemeUser, Theme)
     func useAnimated<T: Theme>(_ type: T.Type, apply: @escaping (Self, T) -> Void) {
-
-        if let theme = ThemeKit.shared.currentTheme as? T {
-            UIView.animate(withDuration: duration, animations: {
-                apply(self, theme)
-            })
-        }
 
         themeHandler.mapping[String(describing: type.self)] = { (themeUser: ThemeUser, theme: Theme) in
             guard let themeUser = themeUser as? Self,

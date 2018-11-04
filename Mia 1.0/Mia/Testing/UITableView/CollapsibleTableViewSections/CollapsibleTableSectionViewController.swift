@@ -52,7 +52,7 @@ open class CollapsibleTableSectionViewController: UIViewController {
             tableView!.delegate = self
 
             tableView!.estimatedRowHeight = 44.0
-            tableView!.rowHeight = UITableViewAutomaticDimension
+            tableView!.rowHeight = UITableView.automaticDimension
         }
     }
 
@@ -99,7 +99,7 @@ open class CollapsibleTableSectionViewController: UIViewController {
             _tableView.delegate = self
 
             _tableView.estimatedRowHeight = 44.0
-            _tableView.rowHeight = UITableViewAutomaticDimension
+            _tableView.rowHeight = UITableView.automaticDimension
 
             view.addSubview(_tableView)
             _tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -133,13 +133,13 @@ extension CollapsibleTableSectionViewController: UITableViewDataSource, UITableV
     // Cell
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        return delegate?.collapsibleTableView?(tableView, cellForRowAt: indexPath) ?? UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "DefaultCell")
+        return delegate?.collapsibleTableView?(tableView, cellForRowAt: indexPath) ?? UITableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: "DefaultCell")
     }
 
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
-        return delegate?.collapsibleTableView?(tableView, heightForRowAt: indexPath) ?? UITableViewAutomaticDimension
+        return delegate?.collapsibleTableView?(tableView, heightForRowAt: indexPath) ?? UITableView.automaticDimension
     }
 
 

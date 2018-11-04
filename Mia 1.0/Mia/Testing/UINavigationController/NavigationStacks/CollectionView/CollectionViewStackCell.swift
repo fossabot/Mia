@@ -48,7 +48,7 @@ class CollectionViewStackCell: UICollectionViewCell {
     }
 
 
-    fileprivate func createConstraint(_ item: UIImageView, toItem: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
+    fileprivate func createConstraint(_ item: UIImageView, toItem: UIView, attribute: NSLayoutConstraint.Attribute) -> NSLayoutConstraint {
 
         return NSLayoutConstraint(item: item, attribute: attribute, relatedBy: .equal, toItem: toItem, attribute: attribute, multiplier: 1, constant: 0)
     }

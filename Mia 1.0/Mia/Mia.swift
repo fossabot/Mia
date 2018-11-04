@@ -30,7 +30,7 @@ func UI(_ block: @escaping ()->Void) {
 
 func openSettings()  {
     DispatchQueue.main.async {
-        if let settingsURL = URL(string: UIApplicationOpenSettingsURLString) {
+        if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
             } else {

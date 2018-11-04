@@ -39,7 +39,7 @@ public class WebViewModal: UINavigationController {
         let webViewController = WebView(aRequest: request)
         webViewController.storedStatusColor = UINavigationBar.appearance().barStyle
 
-        let doneButton = UIBarButtonItem(image: Icon.WebView.dismiss, style: UIBarButtonItemStyle.plain, target: webViewController, action: #selector(WebView.doneButtonTapped))
+        let doneButton = UIBarButtonItem(image: Icon.WebView.dismiss, style: UIBarButtonItem.Style.plain, target: webViewController, action: #selector(WebView.doneButtonTapped))
 
         switch theme {
             case .light:

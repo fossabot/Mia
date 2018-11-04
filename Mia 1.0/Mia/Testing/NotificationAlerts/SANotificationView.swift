@@ -78,7 +78,7 @@ open class SANotificationView {
                 //                mainInstance.statusBarView.frame =  CGRect(x: 0, y:UIApplication.shared.statusBarFrame.height, width: mainInstance.currentWindow().frame.width, height: 20)
                 //                mainInstance.statusBarLabel.frame = CGRect(x: 0, y:0, width: mainInstance.currentWindow().frame.width, height: 20)
             }else{
-                mainInstance.statusBarView.window?.windowLevel = UIWindowLevelStatusBar+1
+                mainInstance.statusBarView.window?.windowLevel = UIWindow.Level.statusBar+1
                 mainInstance.statusBarView.frame =  CGRect(x: 0, y:0, width: mainInstance.currentWindow().frame.width, height: UIApplication.shared.statusBarFrame.height)
                 mainInstance.statusBarLabel.frame = CGRect(x: 0, y:0, width: mainInstance.currentWindow().frame.width, height: UIApplication.shared.statusBarFrame.height)
                 
@@ -145,7 +145,7 @@ open class SANotificationView {
         
         //Gesture
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(removeBarView))
-        swipeUp.direction = UISwipeGestureRecognizerDirection.up
+        swipeUp.direction = UISwipeGestureRecognizer.Direction.up
         mainInstance.SABarView.addGestureRecognizer(swipeUp)
         
         //Animation
@@ -217,7 +217,7 @@ open class SANotificationView {
                 mainInstance.statusBarView.frame =  CGRect(x: 0, y:44+UIApplication.shared.statusBarFrame.height, width: mainInstance.currentWindow().frame.width, height: 20)
                 mainInstance.statusBarLabel.frame = CGRect(x: 0, y:0, width: mainInstance.currentWindow().frame.width, height: 20)
             }else{
-                mainInstance.statusBarView.window?.windowLevel = UIWindowLevelStatusBar+1
+                mainInstance.statusBarView.window?.windowLevel = UIWindow.Level.statusBar+1
                 mainInstance.statusBarView.frame =  CGRect(x: 0, y:0, width: mainInstance.currentWindow().frame.width, height: UIApplication.shared.statusBarFrame.height+20)
                 mainInstance.statusBarLabel.frame = CGRect(x: 0, y:UIApplication.shared.statusBarFrame.height, width: mainInstance.currentWindow().frame.width, height: 20)
             }
@@ -251,7 +251,7 @@ open class SANotificationView {
             mainInstance.statusBarView.frame =  CGRect(x: 0, y:0, width: mainInstance.currentWindow().frame.width, height: 0)
             mainInstance.statusBarLabel.frame = CGRect(x: 0, y:0, width: mainInstance.currentWindow().frame.width, height: 0)
         }) { (true) in
-            mainInstance.statusBarView.window?.windowLevel = UIWindowLevelStatusBar-1
+            mainInstance.statusBarView.window?.windowLevel = UIWindow.Level.statusBar-1
         }
         
     }
@@ -281,7 +281,7 @@ open class SANotificationView {
                 mainInstance.statusBarView.frame =  CGRect(x: 0, y:44+UIApplication.shared.statusBarFrame.height, width: mainInstance.currentWindow().frame.width, height: 0)
             }else{
                 mainInstance.statusBarView.frame =  CGRect(x: 0, y:0, width: mainInstance.currentWindow().frame.width, height: 0)
-                mainInstance.statusBarView.window?.windowLevel = UIWindowLevelStatusBar-1
+                mainInstance.statusBarView.window?.windowLevel = UIWindow.Level.statusBar-1
             }
             mainInstance.statusBarLabel.frame = CGRect(x: 0, y:0, width: mainInstance.currentWindow().frame.width, height: 0)
         }

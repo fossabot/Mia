@@ -65,6 +65,7 @@ public extension Then where Self: AnyObject {
     ///     $0.textColor = .black
     /// }
     /// ````
+    @discardableResult
     public func then(_ block: (Self) throws -> Void) rethrows -> Self {
 
         try block(self)

@@ -51,7 +51,7 @@ public class HyperLabel: UILabel {
         self.isUserInteractionEnabled = true
 
         self.linkAttributeDefault = [ NSAttributedString.Key.foregroundColor: hyperlinkColour,
-                                      NSAttributedString.Key.underlineStyle: NSUnderlineStyle.styleSingle.rawValue ]
+                                      NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue ]
     }
 
     public func setLinkFor(substring: String, url: URL, attributes: [NSAttributedString.Key: Any]? = nil) {

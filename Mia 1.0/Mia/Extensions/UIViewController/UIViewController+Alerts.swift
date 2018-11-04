@@ -52,7 +52,7 @@ public extension UIViewController {
 
     // MARK: Private
 
-    private func internal_showAlert(_ title: String?, message: String?, preferredStyle: UIAlertControllerStyle, alertActions: [UIAlertAction]) {
+    private func internal_showAlert(_ title: String?, message: String?, preferredStyle: UIAlertController.Style, alertActions: [UIAlertAction]) {
 
         let alertController = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
 

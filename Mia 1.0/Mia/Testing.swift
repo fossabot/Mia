@@ -170,8 +170,8 @@ extension Timer {
     /// By default, the timer is scheduled on the current run loop for the default mode.
     /// Specify `runLoop` or `modes` to override these defaults.
     
-    public func start(runLoop: RunLoop = .current, modes: RunLoopMode...) {
-        let modes = modes.isEmpty ? [.defaultRunLoopMode] : modes
+    public func start(runLoop: RunLoop = .current, modes: RunLoop.Mode...) {
+        let modes = modes.isEmpty ? [RunLoop.Mode.default] : modes
         
         for mode in modes {
             runLoop.add(self, forMode: mode)
@@ -755,7 +755,7 @@ public extension UITableView {
 
     func blurSeperator() {
 
-        if (!UIAccessibilityIsReduceTransparencyEnabled()) {
+        if (!UIAccessibility.isReduceTransparencyEnabled) {
             self.backgroundColor = UIColor.clear
             let blurEffect = UIBlurEffect(style: .light)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -779,7 +779,7 @@ public extension UITableView {
 
 extension UIView {
     // use self instead of passing view
-    func insertBlurView(_ view: UIView, style: UIBlurEffectStyle) {
+    func insertBlurView(_ view: UIView, style: UIBlurEffect.Style) {
 
         view.backgroundColor = UIColor.clear
 

@@ -5,7 +5,7 @@ public final class BlurredBackgroundView: UIView {
     public final var separatorEffect: UIVibrancyEffect
     
     
-    public init(style: UIBlurEffectStyle, image: UIImage? = nil) {
+    public init(style: UIBlurEffect.Style, image: UIImage? = nil) {
 
         let blurEffect = UIBlurEffect(style: style)
         blurView = UIVisualEffectView(effect: blurEffect)

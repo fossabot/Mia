@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.author           = { 'multinerd' => 'multinerd@users.noreply.github.com' }
     s.source = { :git => 'https://github.com/multinerd/Mia.git', :tag => s.version.to_s }
     
-    s.ios.deployment_target = '9.0'
+    s.ios.deployment_target = '10.0'
     
     s.framework = 'UIKit'
     
@@ -21,10 +21,11 @@ Pod::Spec.new do |s|
     
     s.source_files = 'Mia/**/*.{swift}'
     
-    s.ios.resource_bundles = {
-      'io.multinerd.mia.icons' => ['Mia/Resources/**/*.xcassets'],
-      'io.multinerd.mia.fonts' => ['Mia/Resources/**/*.ttf']
+    s.resource_bundles = {
+      'io.multinerd.mia.icons' => ['Mia/Resources/Fonts/**/*.xcassets'],
+      'io.multinerd.mia.fonts' => ['Mia/Resources/Icons/**/*.ttf']
     }
+
 #
 #    s.subspec 'Extensions' do |sp|
 #        sp.source_files = 'Mia/Extensions/**/*.{swift}'

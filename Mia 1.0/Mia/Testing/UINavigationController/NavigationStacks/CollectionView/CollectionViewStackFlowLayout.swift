@@ -48,7 +48,7 @@ class CollectionViewStackFlowLayout: UICollectionViewFlowLayout {
         items.enumerateObjects({ (object, idex, stop) -> Void in
             let attributes = object as! UICollectionViewLayoutAttributes
 
-            if attributes.representedElementKind == UICollectionElementKindSectionHeader {
+            if attributes.representedElementKind == UICollectionView.elementKindSectionHeader {
                 headerAttributes = attributes
             } else {
                 self.updateCellAttributes(attributes, headerAttributes: headerAttributes)

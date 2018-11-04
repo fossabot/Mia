@@ -46,7 +46,7 @@ public class ModalNavigationController: UINavigationController {
 
     private func setupButton(on viewController: UIViewController) {
 
-        let doneButton = UIBarButtonItem(image: Icon.close, style: .done, target: self, action: #selector(dismissViewController(_:)))
+        let doneButton = UIBarButtonItem.init(barButtonSystemItem: .cancel, target: self, action: #selector(dismissViewController(_:)))
         if (UIDevice.current.userInterfaceIdiom == .pad) {
             viewController.navigationItem.leftBarButtonItem = doneButton
         } else {

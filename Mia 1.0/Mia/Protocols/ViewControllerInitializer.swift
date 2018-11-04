@@ -47,7 +47,7 @@ extension UIViewController: ViewControllerInitializer {
 
         func instantiateFromNib<T: UIViewController>(_: T.Type) -> T {
 
-            return T.init(nibName: String(describing: T.self), bundle: Bundle.main)
+            return T.init(nibName: String(describing: T.self), bundle: Bundle(for: T.self))
         }
 
         return instantiateFromNib(self)
