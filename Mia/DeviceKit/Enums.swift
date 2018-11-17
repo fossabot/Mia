@@ -1,100 +1,4 @@
-// MARK: - *** Device Model ***
-public enum DeviceModel: CustomStringConvertible {
 
-    case unknown(String)
-    indirect case simulator(DeviceModel)
-
-    case iPodTouch5G, iPodTouch6G
-
-    case iPhone5, iPhone5C, iPhone5S, iPhoneSE
-    case iPhone6, iPhone6Plus, iPhone6S, iPhone6SPlus
-    case iPhone7, iPhone7Plus, iPhone8, iPhone8Plus, iPhoneX
-
-    case iPad5
-    case iPadAir, iPadAir2
-    case iPadMini2, iPadMini3, iPadMini4
-    case iPadPro9Inch, iPadPro10Inch, iPadPro12Inch
-
-    /// Create and returns a DeviceModel from a model identifier.
-    ///
-    /// - Parameter identifier: The device identifier. Defaults to the current device's model identifier.
-    public init(identifier: String = Device.modelIdentifier) {
-
-        switch identifier {
-
-            case "i386", "x86_64":
-                let device = DeviceModel(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS")
-                self = .simulator(device)
-
-            case "iPod5,1":                         self = .iPodTouch5G
-            case "iPod7,1":                         self = .iPodTouch6G
-
-            case "iPhone5,1", "iPhone5,2":          self = .iPhone5
-            case "iPhone5,3", "iPhone5,4":          self = .iPhone5C
-            case "iPhone6,1", "iPhone6,2":          self = .iPhone5S
-            case "iPhone7,2":                       self = .iPhone6
-            case "iPhone7,1":                       self = .iPhone6Plus
-            case "iPhone8,1":                       self = .iPhone6S
-            case "iPhone8,2":                       self = .iPhone6SPlus
-            case "iPhone8,4":                       self = .iPhoneSE
-            case "iPhone9,1", "iPhone9,3":          self = .iPhone7
-            case "iPhone9,2", "iPhone9,4":          self = .iPhone7Plus
-            case "iPhone10,1", "iPhone10,4":        self = .iPhone8
-            case "iPhone10,2", "iPhone10,5":        self = .iPhone8Plus
-            case "iPhone10,3", "iPhone10,6":        self = .iPhoneX
-
-            case "iPad4,4", "iPad4,5", "iPad4,6":   self = .iPadMini2
-            case "iPad4,7", "iPad4,8", "iPad4,9":   self = .iPadMini3
-            case "iPad5,1", "iPad5,2":              self = .iPadMini4
-            case "iPad6,11", "iPad6,12":            self = .iPad5
-            case "iPad4,1", "iPad4,2", "iPad4,3":   self = .iPadAir
-            case "iPad5,3", "iPad5,4":              self = .iPadAir2
-            case "iPad6,3", "iPad6,4":              self = .iPadPro9Inch
-            case "iPad6,7", "iPad6,8":              self = .iPadPro12Inch
-            case "iPad7,1", "iPad7,2":              self = .iPadPro12Inch
-            case "iPad7,3", "iPad7,4":              self = .iPadPro10Inch
-
-            default:                                self = .unknown(identifier)
-        }
-    }
-
-    public var description: String {
-
-        let prefix = "[Device] "
-        switch self {
-
-            case .unknown(let device):  return prefix + "unknown: \(device)"
-            case .simulator(let model): return "\(model) simulator"
-
-            case .iPodTouch5G:          return prefix + "iPod Touch 5"
-            case .iPodTouch6G:          return prefix + "iPod Touch 6"
-
-            case .iPhone5:              return prefix + "iPhone 5"
-            case .iPhone5C:             return prefix + "iPhone 5C"
-            case .iPhone5S:             return prefix + "iPhone 5S"
-            case .iPhone6:              return prefix + "iPhone 6"
-            case .iPhone6Plus:          return prefix + "iPhone 6+"
-            case .iPhone6S:             return prefix + "iPhone 6S"
-            case .iPhone6SPlus:         return prefix + "iPhone 6S+"
-            case .iPhone7:              return prefix + "iPhone 7"
-            case .iPhone7Plus:          return prefix + "iPhone 7+"
-            case .iPhone8:              return prefix + "iPhone 8+"
-            case .iPhone8Plus:          return prefix + "iPhone 8+"
-            case .iPhoneSE:             return prefix + "iPhone SE"
-            case .iPhoneX:              return prefix + "iPhone X"
-
-            case .iPadMini2:            return prefix + "iPad Mini 2"
-            case .iPadMini3:            return prefix + "iPad Mini 3"
-            case .iPadMini4:            return prefix + "iPad Mini 4"
-            case .iPad5:                return prefix + "iPad 5"
-            case .iPadAir:              return prefix + "iPad Air"
-            case .iPadAir2:             return prefix + "iPad Air 2"
-            case .iPadPro9Inch:         return prefix + "iPad Pro 9.7"
-            case .iPadPro10Inch:        return prefix + "iPad Pro 10.5"
-            case .iPadPro12Inch:        return prefix + "iPad Pro 12.9"
-        }
-    }
-}
 
 // MARK: - *** Device Type ***
 public enum DeviceType: String {
@@ -124,7 +28,7 @@ public enum DeviceType: String {
 }
 
 // MARK: - *** Screen Size ***
-public enum ScreenSize: CGFloat, CustomStringConvertible {
+public enum ScreenSize2: CGFloat, CustomStringConvertible {
 
     case unknown = 0
     case screen3dot5 = 3.5
