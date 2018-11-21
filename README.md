@@ -3,6 +3,7 @@
 [![CI Status](http://img.shields.io/travis/multinerd/Mia.svg?style=flat)](https://travis-ci.org/multinerd/Mia)
 [![codebeat badge](https://codebeat.co/badges/c2d27f95-2d07-4e0f-a321-2c98c629fd1f)](https://codebeat.co/projects/github-com-multinerd-mia-master)
 [![codecov](https://codecov.io/gh/multinerd/Mia/branch/master/graph/badge.svg)](https://codecov.io/gh/multinerd/Mia)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmultinerd%2FMia.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmultinerd%2FMia?ref=badge_shield)
 
 Mia is a bunch of tools to streamline my developement. See [usage](#usage) for more information.
 
@@ -155,3 +156,6 @@ See the [documentation][documentationURL] file for more information about each c
 [licenseBadge]: https://img.shields.io/badge/license-MIT-a.svg?style=flat&colorA=212121&colorB=616161 
 [licenseURL]: https://github.com/multinerd/Mia/blob/master/LICENSE
 [documentationURL]: https://github.com/multinerd/Mia/tree/master/Documentation
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmultinerd%2FMia.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmultinerd%2FMia?ref=badge_large)
